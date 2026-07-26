@@ -1,0 +1,40 @@
+{
+  "device": "0",
+  "cuda_available": true,
+  "weights": "E:\\PythonProject\\Tools\\ModelAutoLabelTool\\weights\\yolov5\\ryw.pt",
+  "img_size": 1536,
+  "conf_thres": 0.25,
+  "iou_thres": 0.45,
+  "manifest_requested": 1072,
+  "images_with_meta": 1072,
+  "coverage": 1.0,
+  "missing_count": 0,
+  "missing_path": "E:\\PythonProject\\优化\\dianji_grade_v2\\detections_1536\\missing_images.csv",
+  "boxes_csv": "E:\\PythonProject\\优化\\dianji_grade_v2\\detections_1536\\all_boxes.csv",
+  "feature_csvs": {
+    "conf_0p25": "E:\\PythonProject\\优化\\dianji_grade_v2\\features_v2b_imgsz1536_conf0p25.csv",
+    "conf_0p40": "E:\\PythonProject\\优化\\dianji_grade_v2\\features_v2b_imgsz1536_conf0p40.csv"
+  },
+  "class_names": [
+    "wuzi",
+    "waterstain",
+    "yellowstain",
+    "nodule",
+    "airhole",
+    "bubble",
+    "bump",
+    "fawu",
+    "overfire",
+    "NiOH",
+    "greenstain",
+    "suanwuran",
+    "quejiao",
+    "watermark",
+    "youpao",
+    "heibian",
+    "mijixiaokeng",
+    "fanxitong"
+  ],
+  "elapsed_sec": 363.4731798171997,
+  "status": "unconfirmed_pending_enterprise"
+}

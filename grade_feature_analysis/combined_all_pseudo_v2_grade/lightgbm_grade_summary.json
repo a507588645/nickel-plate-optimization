@@ -1,0 +1,126 @@
+{
+  "total": 3264,
+  "feature_count": 46,
+  "feature_columns": [
+    "plate_area",
+    "detection_count",
+    "max_confidence",
+    "total_bbox_union_image_ratio",
+    "A_ratio",
+    "B_ratio",
+    "C_ratio",
+    "Airhole_ratio",
+    "has_nodule",
+    "nodule_status",
+    "count__wuzi",
+    "area_ratio__wuzi",
+    "count__waterstain",
+    "area_ratio__waterstain",
+    "count__yellowstain",
+    "area_ratio__yellowstain",
+    "count__nodule",
+    "area_ratio__nodule",
+    "count__airhole",
+    "area_ratio__airhole",
+    "count__bubble",
+    "area_ratio__bubble",
+    "count__bump",
+    "area_ratio__bump",
+    "count__fawu",
+    "area_ratio__fawu",
+    "count__overfire",
+    "area_ratio__overfire",
+    "count__NiOH",
+    "area_ratio__NiOH",
+    "count__greenstain",
+    "area_ratio__greenstain",
+    "count__suanwuran",
+    "area_ratio__suanwuran",
+    "count__quejiao",
+    "area_ratio__quejiao",
+    "count__watermark",
+    "area_ratio__watermark",
+    "count__youpao",
+    "area_ratio__youpao",
+    "count__heibian",
+    "area_ratio__heibian",
+    "count__mijixiaokeng",
+    "area_ratio__mijixiaokeng",
+    "count__fanxitong",
+    "area_ratio__fanxitong"
+  ],
+  "overall_distribution": {
+    "3号板": {
+      "count": 7,
+      "rate": 0.0021
+    },
+    "烫洗板": {
+      "count": 3,
+      "rate": 0.0009
+    },
+    "合格整版": {
+      "count": 2813,
+      "rate": 0.8618
+    },
+    "合格600": {
+      "count": 433,
+      "rate": 0.1327
+    },
+    "2号板": {
+      "count": 8,
+      "rate": 0.0025
+    }
+  },
+  "split_distribution": {
+    "test": {
+      "合格整版": {
+        "count": 421,
+        "rate": 0.8609
+      },
+      "合格600": {
+        "count": 66,
+        "rate": 0.135
+      },
+      "2号板": {
+        "count": 2,
+        "rate": 0.0041
+      }
+    },
+    "train": {
+      "3号板": {
+        "count": 7,
+        "rate": 0.0031
+      },
+      "烫洗板": {
+        "count": 3,
+        "rate": 0.0013
+      },
+      "合格整版": {
+        "count": 1958,
+        "rate": 0.8569
+      },
+      "合格600": {
+        "count": 312,
+        "rate": 0.1365
+      },
+      "2号板": {
+        "count": 5,
+        "rate": 0.0022
+      }
+    },
+    "val": {
+      "合格整版": {
+        "count": 434,
+        "rate": 0.8857
+      },
+      "合格600": {
+        "count": 55,
+        "rate": 0.1122
+      },
+      "2号板": {
+        "count": 1,
+        "rate": 0.002
+      }
+    }
+  }
+}

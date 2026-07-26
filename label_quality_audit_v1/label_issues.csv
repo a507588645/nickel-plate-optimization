@@ -1,0 +1,5 @@
+﻿image_name,label_file,line_number,issue,detail
+dianjienie__train__20260212-2674,dianjienie__train__20260212-2674.txt,14,box_out_of_bounds,4 0.615479 0.966095 0.098633 0.067811
+enterprise_label_dedup_v1__all__电积镍板0309__defect__image__423,enterprise_label_dedup_v1__all__电积镍板0309__defect__image__423.txt,1,box_out_of_bounds,8 0.857422 0.572032 0.096680 0.855937
+enterprise_label_dedup_v1__all__电积镍板0309__defect__image__930,enterprise_label_dedup_v1__all__电积镍板0309__defect__image__930.txt,5,box_out_of_bounds,1 0.730103 0.974536 0.128174 0.050929
+enterprise_label_dedup_v1__all__电积镍板0309__defect__image__930,enterprise_label_dedup_v1__all__电积镍板0309__defect__image__930.txt,11,box_out_of_bounds,0 0.497803 0.861424 0.027832 0.277153

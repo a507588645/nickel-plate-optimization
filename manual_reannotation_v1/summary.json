@@ -1,0 +1,11 @@
+{
+  "generated_at": "2026-07-24T01:13:52",
+  "union": "E:\\PythonProject\\datasets\\union_original_labels_v1",
+  "images": 40,
+  "with_original_labels": 40,
+  "include_unlabelled": false,
+  "priority_source": "E:\\PythonProject\\优化\\label_quality_audit_v1\\review_priority.csv",
+  "review_html": "E:\\PythonProject\\优化\\manual_reannotation_v1\\review.html",
+  "review_scope": "E:\\PythonProject\\优化\\manual_reannotation_v1\\review_scope.txt",
+  "export_format": "manual_reannotation_result.jsonl"
+}

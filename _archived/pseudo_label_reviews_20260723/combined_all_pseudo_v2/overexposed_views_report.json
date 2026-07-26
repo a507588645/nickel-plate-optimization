@@ -1,0 +1,14 @@
+{
+ "dataset": "E:\\PythonProject\\datasets\\combined_all_pseudo_v2",
+ "threshold": 105.0,
+ "views": [
+  "strong"
+ ],
+ "jpeg_quality": 88,
+ "selected": 3264,
+ "generated": 3260,
+ "skipped_existing": 4,
+ "failed": [],
+ "bytes_written": 5865523104,
+ "elapsed_sec": 2274.7
+}

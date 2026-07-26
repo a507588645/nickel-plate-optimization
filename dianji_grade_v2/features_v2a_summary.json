@@ -1,0 +1,28 @@
+{
+  "manifest_total": 1072,
+  "joined": 156,
+  "missing": 916,
+  "coverage": 0.1455223880597015,
+  "grade_counts_joined": {
+    "3#": 15,
+    "9950": 106,
+    "9996": 34,
+    "bad": 1
+  },
+  "grade_counts_missing": {
+    "3#": 31,
+    "9950": 440,
+    "9996": 418,
+    "bad": 27
+  },
+  "source_counts_joined": {
+    "classify_4types_dianji": 70,
+    "enterprise_dianji_0309_classification": 86
+  },
+  "source_counts_missing": {
+    "classify_4types_dianji": 916
+  },
+  "samples_csv": "E:\\PythonProject\\优化\\grade_feature_analysis\\combined_all_pseudo_v2_grade\\samples.csv",
+  "detection_params_note": "历史口径 ryw.pt conf=0.25 iou=0.45 imgsz=1024",
+  "status": "unconfirmed_pending_enterprise"
+}

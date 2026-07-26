@@ -1,0 +1,8 @@
+{
+  "dataset": "E:\\PythonProject\\优化\\label_review_v1\\gt",
+  "images": 1455,
+  "boxes": 20808,
+  "multi_view": false,
+  "views": [],
+  "review_html": "E:\\PythonProject\\优化\\pseudo_label_reviews\\gt\\review.html"
+}

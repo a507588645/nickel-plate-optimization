@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "kernel": "lly3323w/l1-ryw18-yolo11m-anchorv1-fold01",
+  "kernel_status": "CANCEL_ACKNOWLEDGED",
+  "retrieved_at": "2026-07-26T01:32:00+08:00",
+  "classification": "incomplete_cancelled_run_not_for_models_runs",
+  "reason": "The remote output has only a zero-byte best.pt and lacks last.pt, environment.json, README.md, dataset_config, and the required result ZIP.",
+  "files": [
+    {
+      "relative_path": "dianjienie_ryw18_anchor_v1/.config_manifest_sha256",
+      "bytes": 65,
+      "sha256": "643ef0d24d8592b3616f6e813ae7b035bc19db062acf90b56511fb5e5ec8f7d9"
+    },
+    {
+      "relative_path": "dianjienie_ryw18_anchor_v1/labels.cache",
+      "bytes": 191755,
+      "sha256": "b092b9d57da096192f2b7035a29c59ef9915a4b69e30c0e4ab7159bbde050454"
+    },
+    {
+      "relative_path": "kaggle_live_log.json",
+      "bytes": 5016830,
+      "sha256": "05ea585152a9b40f01c695913221608cc9d1f5aa5a2626be305861e6ff4d8316"
+    },
+    {
+      "relative_path": "runs/dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_anchorv1_fold01/args.yaml",
+      "bytes": 1799,
+      "sha256": "530a6fcf1a80cfb142d832f21320ed33aaebc58c467e9fe494319f41bad97d5c"
+    },
+    {
+      "relative_path": "runs/dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_anchorv1_fold01/labels.jpg",
+      "bytes": 166469,
+      "sha256": "3082aada40dacc73f09bdd5dfa7dc3a806e0e7f18eec5b44e667766add831e70"
+    },
+    {
+      "relative_path": "runs/dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_anchorv1_fold01/results.csv",
+      "bytes": 29485,
+      "sha256": "a9abe8df639d5c18b163c1ae464ebd025a8903d61dda19044ef9e25cc1992c48"
+    },
+    {
+      "relative_path": "runs/dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_anchorv1_fold01/train_batch0.jpg",
+      "bytes": 385669,
+      "sha256": "f6297e48fe84ec28130f48003f165e499d9adee9b150f9e3b8983dbf20edfb03"
+    },
+    {
+      "relative_path": "runs/dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_anchorv1_fold01/train_batch1.jpg",
+      "bytes": 430876,
+      "sha256": "d7a3101b26ed43bfd54ffe9623e5e912595fcb5a45182c3e664face85d97142e"
+    },
+    {
+      "relative_path": "runs/dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_anchorv1_fold01/train_batch2.jpg",
+      "bytes": 349241,
+      "sha256": "e37ceb5d22d3019d4e7905569ee5d74945ba20ee728e328059dd1b27ffc69267"
+    },
+    {
+      "relative_path": "runs/dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_anchorv1_fold01/weights/best.pt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

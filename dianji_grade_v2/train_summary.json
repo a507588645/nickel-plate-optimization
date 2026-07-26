@@ -1,0 +1,168 @@
+{
+  "created_at": "2026-07-23T02:52:22",
+  "feature_csvs": [
+    "E:\\PythonProject\\优化\\dianji_grade_v2\\features_v2a.csv",
+    "E:\\PythonProject\\优化\\dianji_grade_v2\\features_v2b_imgsz1536_conf0p25.csv",
+    "E:\\PythonProject\\优化\\dianji_grade_v2\\features_v2b_imgsz1536_conf0p40.csv"
+  ],
+  "best_feature_version": "v2b_imgsz1536_conf0.25",
+  "best_model_on_valid": {
+    "name": "lightgbm",
+    "macro_f1": 0.3561601831599174
+  },
+  "final_test_selected": {
+    "model": "lightgbm",
+    "metrics": {
+      "accuracy": 0.639751552795031,
+      "macro_f1": 0.4131336405529954,
+      "weighted_f1": 0.6523704572993292,
+      "per_class": {
+        "3#": {
+          "precision": 0.125,
+          "recall": 0.14285714285714285,
+          "f1": 0.13333333333333333,
+          "support": 7
+        },
+        "9950": {
+          "precision": 0.7534246575342466,
+          "recall": 0.6707317073170732,
+          "f1": 0.7096774193548387,
+          "support": 82
+        },
+        "9996": {
+          "precision": 0.6571428571428571,
+          "recall": 0.6764705882352942,
+          "f1": 0.6666666666666666,
+          "support": 68
+        },
+        "bad": {
+          "precision": 0.1,
+          "recall": 0.25,
+          "f1": 0.14285714285714285,
+          "support": 4
+        }
+      },
+      "confusion_matrix": [
+        [
+          1,
+          5,
+          1,
+          0
+        ],
+        [
+          4,
+          55,
+          21,
+          2
+        ],
+        [
+          2,
+          13,
+          46,
+          7
+        ],
+        [
+          1,
+          0,
+          2,
+          1
+        ]
+      ],
+      "confusion_matrix_labels": [
+        "3#",
+        "9950",
+        "9996",
+        "bad"
+      ],
+      "other_rate": 0.0,
+      "other_count": 0,
+      "classification_report": "              precision    recall  f1-score   support\n\n          3#       0.12      0.14      0.13         7\n        9950       0.75      0.67      0.71        82\n        9996       0.66      0.68      0.67        68\n         bad       0.10      0.25      0.14         4\n\n    accuracy                           0.64       161\n   macro avg       0.41      0.44      0.41       161\nweighted avg       0.67      0.64      0.65       161\n",
+      "backend": "lightgbm",
+      "best_iteration": 128,
+      "feature_importance_top15": [
+        {
+          "feature": "B_ratio",
+          "gain": 2872.8393958444176
+        },
+        {
+          "feature": "area_ratio__bubble",
+          "gain": 1577.23061521411
+        },
+        {
+          "feature": "total_bbox_union_image_ratio",
+          "gain": 1535.2838289991741
+        },
+        {
+          "feature": "A_ratio",
+          "gain": 1292.1740317316035
+        },
+        {
+          "feature": "area_ratio__watermark",
+          "gain": 1132.3399139365647
+        },
+        {
+          "feature": "area_ratio__bump",
+          "gain": 1054.6820057890982
+        },
+        {
+          "feature": "detection_count",
+          "gain": 986.4168668345519
+        },
+        {
+          "feature": "area_ratio__wuzi",
+          "gain": 872.8463037636684
+        },
+        {
+          "feature": "count__bump",
+          "gain": 842.0078676335324
+        },
+        {
+          "feature": "count__waterstain",
+          "gain": 816.1598637835996
+        },
+        {
+          "feature": "count__wuzi",
+          "gain": 781.6365789461779
+        },
+        {
+          "feature": "area_ratio__suanwuran",
+          "gain": 542.0438336302759
+        },
+        {
+          "feature": "area_ratio__greenstain",
+          "gain": 534.5259958779206
+        },
+        {
+          "feature": "area_ratio__waterstain",
+          "gain": 444.17710010634687
+        },
+        {
+          "feature": "C_ratio",
+          "gain": 413.0410095589905
+        }
+      ],
+      "params": {
+        "num_leaves": 8,
+        "max_depth": 4,
+        "min_data_in_leaf": 10,
+        "seed": 42
+      },
+      "9950_vs_9996": {
+        "n": 150,
+        "accuracy_on_subset": 0.6733333333333333,
+        "9950_as_9996": 21,
+        "9996_as_9950": 13,
+        "9950_support": 82,
+        "9996_support": 68
+      }
+    },
+    "note": "test 未参与调参/早停/阈值选择"
+  },
+  "n_disagreements": 58,
+  "disagreement_vs_cm": {
+    "disagreements": 58,
+    "cm_offdiag": 58,
+    "match": true
+  },
+  "status": "unconfirmed_pending_enterprise"
+}

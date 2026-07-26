@@ -1,0 +1,11 @@
+﻿pair,count,feature_version,status
+9950->9996,21,v2b_imgsz1536_conf0.25,unconfirmed_pending_enterprise
+9996->9950,13,v2b_imgsz1536_conf0.25,unconfirmed_pending_enterprise
+9996->bad,7,v2b_imgsz1536_conf0.25,unconfirmed_pending_enterprise
+3#->9950,5,v2b_imgsz1536_conf0.25,unconfirmed_pending_enterprise
+9950->3#,4,v2b_imgsz1536_conf0.25,unconfirmed_pending_enterprise
+9950->bad,2,v2b_imgsz1536_conf0.25,unconfirmed_pending_enterprise
+9996->3#,2,v2b_imgsz1536_conf0.25,unconfirmed_pending_enterprise
+bad->9996,2,v2b_imgsz1536_conf0.25,unconfirmed_pending_enterprise
+bad->3#,1,v2b_imgsz1536_conf0.25,unconfirmed_pending_enterprise
+3#->9996,1,v2b_imgsz1536_conf0.25,unconfirmed_pending_enterprise

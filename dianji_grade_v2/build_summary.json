@@ -1,0 +1,95 @@
+{
+  "created_at": "2026-07-23T02:44:24",
+  "status": "unconfirmed_pending_enterprise",
+  "dedup": {
+    "classify_count": 986,
+    "enterprise_count": 86,
+    "raw_total": 1072,
+    "exact_duplicate_groups": 0,
+    "exact_duplicate_images_involved": 0,
+    "exact_removed": 0,
+    "kept_after_exact_dedup": 1072,
+    "hash_method": "dHash",
+    "phash_size": 16,
+    "phash_bits": 256,
+    "phash_threshold": 10,
+    "near_dup_same_grade_only": true,
+    "near_duplicate_pairs": 22,
+    "near_duplicate_groups": 18,
+    "near_duplicate_images_in_multi_groups": 39,
+    "near_duplicate_group_size_top10": [
+      4,
+      3,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "grade_counts_kept": {
+      "3#": 46,
+      "9950": 546,
+      "9996": 452,
+      "bad": 28
+    },
+    "source_counts_kept": {
+      "classify_4types_dianji": 986,
+      "enterprise_dianji_0309_classification": 86
+    },
+    "split_counts_kept": {
+      "train": 759,
+      "valid": 227,
+      "enterprise_all": 86
+    },
+    "note": "完整重复(SHA-256)只留一份；近重复(dHash)不删，仅同一 dup_group_id 防泄漏。默认同 grade 内比较，阈值 hamming≤10/256bit。"
+  },
+  "manifest_rows": 1072,
+  "small_sample_warning": {
+    "3#_total": 46,
+    "bad_total": 28,
+    "message": "3# 与 bad 仍为小样本，指标方差大，禁止过拟合后宣称可用"
+  },
+  "v2b": {
+    "device": "0",
+    "cuda_available": true,
+    "weights": "E:\\PythonProject\\Tools\\ModelAutoLabelTool\\weights\\yolov5\\ryw.pt",
+    "img_size": 1536,
+    "conf_thres": 0.25,
+    "iou_thres": 0.45,
+    "manifest_requested": 1072,
+    "images_with_meta": 1072,
+    "coverage": 1.0,
+    "missing_count": 0,
+    "missing_path": "E:\\PythonProject\\优化\\dianji_grade_v2\\detections_1536\\missing_images.csv",
+    "boxes_csv": "E:\\PythonProject\\优化\\dianji_grade_v2\\detections_1536\\all_boxes.csv",
+    "feature_csvs": {
+      "conf_0p25": "E:\\PythonProject\\优化\\dianji_grade_v2\\features_v2b_imgsz1536_conf0p25.csv",
+      "conf_0p40": "E:\\PythonProject\\优化\\dianji_grade_v2\\features_v2b_imgsz1536_conf0p40.csv"
+    },
+    "class_names": [
+      "wuzi",
+      "waterstain",
+      "yellowstain",
+      "nodule",
+      "airhole",
+      "bubble",
+      "bump",
+      "fawu",
+      "overfire",
+      "NiOH",
+      "greenstain",
+      "suanwuran",
+      "quejiao",
+      "watermark",
+      "youpao",
+      "heibian",
+      "mijixiaokeng",
+      "fanxitong"
+    ],
+    "elapsed_sec": 363.4731798171997,
+    "status": "unconfirmed_pending_enterprise"
+  }
+}

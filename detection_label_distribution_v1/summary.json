@@ -1,0 +1,189 @@
+{
+  "generated_at": "2026-07-23T15:28:24",
+  "dataset": "E:\\PythonProject\\datasets\\combined_all_pseudo_v2",
+  "label_files": 3265,
+  "thresholds": {
+    "accepted": 0.7,
+    "uncertain": 0.4,
+    "rejected": 0.15
+  },
+  "box_totals": {
+    "accepted": 18028,
+    "uncertain": 23602,
+    "rejected": 32701
+  },
+  "boxes_below_0.15_ignored": 0,
+  "empty_images_after_floor": 27,
+  "per_image_box_stats": {
+    "min": 0,
+    "p50": 16,
+    "p90": 44,
+    "max": 854,
+    "mean": 22.77
+  },
+  "per_class": [
+    {
+      "class": "wuzi",
+      "box_accepted": 2246,
+      "img_accepted": 984,
+      "box_uncertain": 5213,
+      "img_uncertain": 1786,
+      "box_rejected": 7010,
+      "img_rejected": 2062
+    },
+    {
+      "class": "waterstain",
+      "box_accepted": 10829,
+      "img_accepted": 1917,
+      "box_uncertain": 11372,
+      "img_uncertain": 2131,
+      "box_rejected": 14048,
+      "img_rejected": 2300
+    },
+    {
+      "class": "yellowstain",
+      "box_accepted": 24,
+      "img_accepted": 10,
+      "box_uncertain": 70,
+      "img_uncertain": 24,
+      "box_rejected": 88,
+      "img_rejected": 33
+    },
+    {
+      "class": "nodule",
+      "box_accepted": 103,
+      "img_accepted": 80,
+      "box_uncertain": 134,
+      "img_uncertain": 114,
+      "box_rejected": 183,
+      "img_rejected": 146
+    },
+    {
+      "class": "airhole",
+      "box_accepted": 882,
+      "img_accepted": 392,
+      "box_uncertain": 1479,
+      "img_uncertain": 517,
+      "box_rejected": 3086,
+      "img_rejected": 602
+    },
+    {
+      "class": "bubble",
+      "box_accepted": 99,
+      "img_accepted": 86,
+      "box_uncertain": 441,
+      "img_uncertain": 239,
+      "box_rejected": 1716,
+      "img_rejected": 368
+    },
+    {
+      "class": "bump",
+      "box_accepted": 661,
+      "img_accepted": 425,
+      "box_uncertain": 1620,
+      "img_uncertain": 882,
+      "box_rejected": 2322,
+      "img_rejected": 1154
+    },
+    {
+      "class": "fawu",
+      "box_accepted": 0,
+      "img_accepted": 0,
+      "box_uncertain": 2,
+      "img_uncertain": 2,
+      "box_rejected": 7,
+      "img_rejected": 7
+    },
+    {
+      "class": "overfire",
+      "box_accepted": 145,
+      "img_accepted": 103,
+      "box_uncertain": 190,
+      "img_uncertain": 139,
+      "box_rejected": 286,
+      "img_rejected": 215
+    },
+    {
+      "class": "NiOH",
+      "box_accepted": 1,
+      "img_accepted": 1,
+      "box_uncertain": 4,
+      "img_uncertain": 1,
+      "box_rejected": 9,
+      "img_rejected": 8
+    },
+    {
+      "class": "greenstain",
+      "box_accepted": 62,
+      "img_accepted": 32,
+      "box_uncertain": 205,
+      "img_uncertain": 75,
+      "box_rejected": 470,
+      "img_rejected": 163
+    },
+    {
+      "class": "suanwuran",
+      "box_accepted": 31,
+      "img_accepted": 19,
+      "box_uncertain": 59,
+      "img_uncertain": 45,
+      "box_rejected": 68,
+      "img_rejected": 58
+    },
+    {
+      "class": "quejiao",
+      "box_accepted": 29,
+      "img_accepted": 26,
+      "box_uncertain": 68,
+      "img_uncertain": 54,
+      "box_rejected": 64,
+      "img_rejected": 56
+    },
+    {
+      "class": "watermark",
+      "box_accepted": 2916,
+      "img_accepted": 1101,
+      "box_uncertain": 2741,
+      "img_uncertain": 1215,
+      "box_rejected": 3214,
+      "img_rejected": 1354
+    },
+    {
+      "class": "youpao",
+      "box_accepted": 0,
+      "img_accepted": 0,
+      "box_uncertain": 0,
+      "img_uncertain": 0,
+      "box_rejected": 0,
+      "img_rejected": 0
+    },
+    {
+      "class": "heibian",
+      "box_accepted": 0,
+      "img_accepted": 0,
+      "box_uncertain": 0,
+      "img_uncertain": 0,
+      "box_rejected": 0,
+      "img_rejected": 0
+    },
+    {
+      "class": "mijixiaokeng",
+      "box_accepted": 0,
+      "img_accepted": 0,
+      "box_uncertain": 4,
+      "img_uncertain": 1,
+      "box_rejected": 130,
+      "img_rejected": 2
+    },
+    {
+      "class": "fanxitong",
+      "box_accepted": 0,
+      "img_accepted": 0,
+      "box_uncertain": 0,
+      "img_uncertain": 0,
+      "box_rejected": 0,
+      "img_rejected": 0
+    }
+  ],
+  "note": "审查前审计；划分须等 labels_reviewed 生成后按本分布做分组分层"
+}

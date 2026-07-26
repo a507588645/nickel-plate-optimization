@@ -1,0 +1,222 @@
+{
+  "status": "unconfirmed_pending_enterprise",
+  "generated_at": "2026-07-23T01:49:17",
+  "sample_count": 86,
+  "grades_present": [
+    "3#",
+    "9950"
+  ],
+  "grades_absent": [
+    "9996",
+    "bad"
+  ],
+  "class_names": [
+    "wuzi",
+    "waterstain",
+    "yellowstain",
+    "nodule",
+    "airhole",
+    "bubble",
+    "bump",
+    "fawu",
+    "overfire",
+    "NiOH",
+    "greenstain",
+    "suanwuran",
+    "quejiao",
+    "watermark",
+    "youpao",
+    "heibian",
+    "mijixiaokeng",
+    "fanxitong"
+  ],
+  "groups": {
+    "A": [
+      0,
+      1
+    ],
+    "B": [
+      2,
+      4,
+      5,
+      6,
+      10,
+      12,
+      13
+    ],
+    "C": [
+      7,
+      8,
+      11
+    ],
+    "AIRHOLE": [
+      4
+    ],
+    "NODULE": [
+      3
+    ]
+  },
+  "feature_columns": [
+    "A_ratio",
+    "B_ratio",
+    "C_ratio",
+    "Airhole_ratio",
+    "has_nodule",
+    "total_bbox_union_image_ratio",
+    "detection_count",
+    "count__wuzi",
+    "count__waterstain",
+    "count__yellowstain",
+    "count__nodule",
+    "count__airhole",
+    "count__bubble",
+    "count__bump",
+    "count__fawu",
+    "count__overfire",
+    "count__NiOH",
+    "count__greenstain",
+    "count__suanwuran",
+    "count__quejiao",
+    "count__watermark",
+    "count__youpao",
+    "count__heibian",
+    "count__mijixiaokeng",
+    "count__fanxitong",
+    "area_ratio__wuzi",
+    "area_ratio__waterstain",
+    "area_ratio__yellowstain",
+    "area_ratio__nodule",
+    "area_ratio__airhole",
+    "area_ratio__bubble",
+    "area_ratio__bump",
+    "area_ratio__fawu",
+    "area_ratio__overfire",
+    "area_ratio__NiOH",
+    "area_ratio__greenstain",
+    "area_ratio__suanwuran",
+    "area_ratio__quejiao",
+    "area_ratio__watermark",
+    "area_ratio__youpao",
+    "area_ratio__heibian",
+    "area_ratio__mijixiaokeng",
+    "area_ratio__fanxitong"
+  ],
+  "mining": {
+    "method": "sklearn.DecisionTreeClassifier",
+    "seed": 42,
+    "max_depth": 3,
+    "min_samples_leaf": 5,
+    "cv": {
+      "strategy": "StratifiedKFold(n_splits=5, shuffle=True, seed=42)",
+      "accuracy": 0.627906976744186,
+      "note": "分层 5 折交叉验证"
+    }
+  },
+  "join": {
+    "coverage": 1.0,
+    "joined": 86,
+    "enterprise_total": 86,
+    "features_source": "E:\\PythonProject\\优化\\grade_feature_analysis\\combined_all_pseudo_v2_grade\\samples.csv",
+    "weight_path": "E:\\PythonProject\\Tools\\ModelAutoLabelTool\\weights\\yolov5\\ryw.pt"
+  },
+  "disclaimer": "候选规则由小样本挖掘得到，未经企业确认，禁止当作生产标准。",
+  "rules": [
+    {
+      "name": "tree_leaf_3sharp_1",
+      "grade": "3#",
+      "conditions": [
+        {
+          "feature": "detection_count",
+          "op": "<=",
+          "threshold": 5.5
+        },
+        {
+          "feature": "area_ratio__airhole",
+          "op": "<=",
+          "threshold": 0.0034996760077774525
+        },
+        {
+          "feature": "total_bbox_union_image_ratio",
+          "op": ">",
+          "threshold": 0.00018974512931890786
+        }
+      ],
+      "support_samples": 38,
+      "support_by_class": {
+        "3#": 12,
+        "9950": 26
+      },
+      "source": "DecisionTreeClassifier",
+      "unconfirmed": true
+    },
+    {
+      "name": "tree_leaf_9950_3",
+      "grade": "9950",
+      "conditions": [
+        {
+          "feature": "detection_count",
+          "op": ">",
+          "threshold": 5.5
+        }
+      ],
+      "support_samples": 28,
+      "support_by_class": {
+        "3#": 0,
+        "9950": 28
+      },
+      "source": "DecisionTreeClassifier",
+      "unconfirmed": true
+    },
+    {
+      "name": "tree_leaf_9950_2",
+      "grade": "9950",
+      "conditions": [
+        {
+          "feature": "detection_count",
+          "op": "<=",
+          "threshold": 5.5
+        },
+        {
+          "feature": "area_ratio__airhole",
+          "op": ">",
+          "threshold": 0.0034996760077774525
+        }
+      ],
+      "support_samples": 11,
+      "support_by_class": {
+        "3#": 0,
+        "9950": 11
+      },
+      "source": "DecisionTreeClassifier",
+      "unconfirmed": true
+    },
+    {
+      "name": "tree_leaf_9950_0",
+      "grade": "9950",
+      "conditions": [
+        {
+          "feature": "detection_count",
+          "op": "<=",
+          "threshold": 5.5
+        },
+        {
+          "feature": "area_ratio__airhole",
+          "op": "<=",
+          "threshold": 0.0034996760077774525
+        },
+        {
+          "feature": "total_bbox_union_image_ratio",
+          "op": "<=",
+          "threshold": 0.00018974512931890786
+        }
+      ],
+      "support_samples": 9,
+      "support_by_class": {
+        "3#": 0,
+        "9950": 9
+      },
+      "source": "DecisionTreeClassifier",
+      "unconfirmed": true
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "created_at": "2026-07-23T02:40:45",
+  "view_root": "E:\\PythonProject\\datasets\\dianjinie_grade_classification_v1",
+  "status": "unconfirmed_pending_enterprise",
+  "manifest_rows": 1072,
+  "v2a": {
+    "manifest_total": 1072,
+    "joined": 156,
+    "missing": 916,
+    "coverage": 0.1455223880597015,
+    "grade_counts_joined": {
+      "3#": 15,
+      "9950": 106,
+      "9996": 34,
+      "bad": 1
+    },
+    "grade_counts_missing": {
+      "3#": 31,
+      "9950": 440,
+      "9996": 418,
+      "bad": 27
+    },
+    "source_counts_joined": {
+      "classify_4types_dianji": 70,
+      "enterprise_dianji_0309_classification": 86
+    },
+    "source_counts_missing": {
+      "classify_4types_dianji": 916
+    },
+    "samples_csv": "E:\\PythonProject\\优化\\grade_feature_analysis\\combined_all_pseudo_v2_grade\\samples.csv",
+    "detection_params_note": "历史口径 ryw.pt conf=0.25 iou=0.45 imgsz=1024",
+    "status": "unconfirmed_pending_enterprise"
+  },
+  "v2b": {
+    "device": "0",
+    "cuda_available": true,
+    "weights": "E:\\PythonProject\\Tools\\ModelAutoLabelTool\\weights\\yolov5\\ryw.pt",
+    "img_size": 1536,
+    "conf_thres": 0.25,
+    "iou_thres": 0.45,
+    "manifest_requested": 1072,
+    "images_with_features": 1072,
+    "coverage": 1.0,
+    "missing_count": 0,
+    "missing_path": "E:\\PythonProject\\优化\\dianji_grade_v2\\detections_1536\\missing_images.csv",
+    "boxes_csv": "E:\\PythonProject\\优化\\dianji_grade_v2\\detections_1536\\all_boxes.csv",
+    "feature_csvs": {
+      "conf_0p25": "E:\\PythonProject\\优化\\dianji_grade_v2\\features_v2b_imgsz1536_conf0p25.csv",
+      "conf_0p40": "E:\\PythonProject\\优化\\dianji_grade_v2\\features_v2b_imgsz1536_conf0p40.csv"
+    },
+    "class_names": [
+      "wuzi",
+      "waterstain",
+      "yellowstain",
+      "nodule",
+      "airhole",
+      "bubble",
+      "bump",
+      "fawu",
+      "overfire",
+      "NiOH",
+      "greenstain",
+      "suanwuran",
+      "quejiao",
+      "watermark",
+      "youpao",
+      "heibian",
+      "mijixiaokeng",
+      "fanxitong"
+    ],
+    "elapsed_sec": 364.9240574836731,
+    "status": "unconfirmed_pending_enterprise"
+  }
+}

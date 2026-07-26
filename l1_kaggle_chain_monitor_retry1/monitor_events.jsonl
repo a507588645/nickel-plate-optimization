@@ -1,0 +1,4 @@
+{"current_kernel": "lly3323w/l1-ryw18-yolo11m-anchorv1-fold01-retry1", "event": "monitor_started", "next_kernel": "lly3323w/l1-ryw18-yolo26m-anchorv1-fold01", "time_utc": "2026-07-25T17:46:32+00:00"}
+{"event": "status", "kernel": "lly3323w/l1-ryw18-yolo11m-anchorv1-fold01-retry1", "status": "RUNNING", "time_utc": "2026-07-25T17:46:33+00:00"}
+{"event": "status", "kernel": "lly3323w/l1-ryw18-yolo11m-anchorv1-fold01-retry1", "status": "RUNNING", "time_utc": "2026-07-25T17:51:35+00:00"}
+{"event": "status", "kernel": "lly3323w/l1-ryw18-yolo11m-anchorv1-fold01-retry1", "status": "RUNNING", "time_utc": "2026-07-25T17:56:37+00:00"}

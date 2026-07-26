@@ -1,0 +1,52 @@
+# ===== 环境与缓存 =====
+__pycache__/
+*.py[cod]
+.venv*/
+venv/
+.ipynb_checkpoints/
+
+# ===== 浏览器自动化工具产物 =====
+.playwright-cli/
+.playwright-mcp/
+
+# ===== 巨型数据/渲染目录（遵守 AGENTS.md §10：不提交数据集、训练缓存、临时渲染）=====
+label_review_v1/
+kaggle_dianjienie_ryw18_anchor_v1/
+runs/
+
+# ===== 模型权重与推理引擎 =====
+*.pt
+*.pth
+*.onnx
+*.engine
+*.weights
+*.ckpt
+
+# ===== 压缩包与断点续传分片 =====
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+*.part
+
+# ===== 图片与视频（渲染图、数据集视图、审查候选图；如需例外用 git add -f）=====
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.gif
+*.tif
+*.tiff
+*.webp
+*.mp4
+*.avi
+*.mov
+
+# ===== 运行日志与系统杂项 =====
+*.log
+*.heapsnapshot
+Thumbs.db
+desktop.ini
+.DS_Store

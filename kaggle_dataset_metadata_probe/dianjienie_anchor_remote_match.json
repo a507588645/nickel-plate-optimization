@@ -1,0 +1,76 @@
+{
+  "anchor_samples": 1325,
+  "unique_anchor_source_images": 1325,
+  "remote_png_count": 1350,
+  "invalid_source_paths": [],
+  "missing_remote_images": [],
+  "remote_png_not_in_anchor": [
+    "train/images/20230109170628779_0_2.png",
+    "train/images/20230109170714519_0_2.png",
+    "train/images/20230109170800508_0_2.png",
+    "train/images/20230109171551521_0_2.png",
+    "train/images/20230109173730791_0_2.png",
+    "train/images/20230109174258682_0_2.png",
+    "train/images/20230109175052169_0_2.png",
+    "train/images/20230110180126308_0_2.png",
+    "train/images/20260212-137.png",
+    "train/images/20260212-2282.png",
+    "train/images/20260212-269.png",
+    "train/images/20260212-3.png",
+    "train/images/20260212-327.png",
+    "train/images/22_113108.png",
+    "train/images/24_01_22_113108_bottom_2.png.png",
+    "train/images/7.png",
+    "valid/images/20230109170628779_0_2.png",
+    "valid/images/20230109170714519_0_2.png",
+    "valid/images/20230109170800508_0_2.png",
+    "valid/images/20230109171551521_0_2.png",
+    "valid/images/20230109173730791_0_2.png",
+    "valid/images/20230109174258682_0_2.png",
+    "valid/images/20230109175052169_0_2.png",
+    "valid/images/20230110180126308_0_2.png",
+    "valid/images/55555(1).png"
+  ],
+  "sample_mappings": [
+    {
+      "sample_id": "train__1",
+      "remote_relative": "train/images/1.png"
+    },
+    {
+      "sample_id": "train__104",
+      "remote_relative": "train/images/104.png"
+    },
+    {
+      "sample_id": "train__105",
+      "remote_relative": "train/images/105.png"
+    },
+    {
+      "sample_id": "train__111",
+      "remote_relative": "train/images/111.png"
+    },
+    {
+      "sample_id": "train__113",
+      "remote_relative": "train/images/113.png"
+    },
+    {
+      "sample_id": "train__114",
+      "remote_relative": "train/images/114.png"
+    },
+    {
+      "sample_id": "train__115",
+      "remote_relative": "train/images/115.png"
+    },
+    {
+      "sample_id": "train__116",
+      "remote_relative": "train/images/116.png"
+    },
+    {
+      "sample_id": "train__129",
+      "remote_relative": "train/images/129.png"
+    },
+    {
+      "sample_id": "train__133",
+      "remote_relative": "train/images/133.png"
+    }
+  ]
+}

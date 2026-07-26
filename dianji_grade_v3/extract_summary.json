@@ -1,0 +1,33 @@
+{
+  "created_at": "2026-07-23T04:41:45",
+  "status": "unconfirmed_pending_enterprise",
+  "n_samples": 1072,
+  "n_boxes_csv": 19260,
+  "images_with_any_box_index_hit": 1043,
+  "texture_missing": 0,
+  "texture_short_side": 1024,
+  "edge_band": 0.1,
+  "conf_min": 0.25,
+  "v2_features": "E:\\PythonProject\\优化\\dianji_grade_v2\\features_v2b_imgsz1536_conf0p25.csv",
+  "boxes_csv": "E:\\PythonProject\\优化\\dianji_grade_v2\\detections_1536\\all_boxes.csv",
+  "view_root": "E:\\PythonProject\\datasets\\dianjinie_grade_classification_v1",
+  "outputs": {
+    "features_v3_full": "E:\\PythonProject\\优化\\dianji_grade_v3\\features_v3_full.csv",
+    "features_spatial": "E:\\PythonProject\\优化\\dianji_grade_v3\\features_spatial.csv",
+    "features_texture": "E:\\PythonProject\\优化\\dianji_grade_v3\\features_texture.csv"
+  },
+  "finite_checks": [
+    {
+      "file": "spatial",
+      "rows": 1072,
+      "nonfinite_values": 0
+    },
+    {
+      "file": "full",
+      "rows": 1072,
+      "nonfinite_values": 0
+    }
+  ],
+  "elapsed_sec": 1196.607787847519,
+  "note": "空间特征来自 v2 detections_1536，未重跑检测；纹理为整板灰度统计"
+}

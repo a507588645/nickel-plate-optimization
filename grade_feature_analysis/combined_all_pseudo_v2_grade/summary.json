@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-07-16T00:44:15",
+  "combined_root": "E:\\PythonProject\\datasets\\combined_all_pseudo_v2",
+  "conf_threshold": 0.7,
+  "total_images": 3264,
+  "audit": {
+    "total_images": 3264,
+    "missing_labels": 0,
+    "unreadable_images": 0,
+    "findcent_fallbacks": 0,
+    "empty_after_filter": 486
+  },
+  "grade_distribution_detection_only": {
+    "3号板": 7,
+    "烫洗板": 3,
+    "合格整版": 2813,
+    "合格600": 433,
+    "2号板": 8
+  },
+  "grade_distribution_assume_resnet_good": {
+    "3号板": 43,
+    "烫洗板": 3,
+    "合格整版": 2813,
+    "合格600": 397,
+    "2号板": 8
+  }
+}

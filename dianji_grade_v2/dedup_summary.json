@@ -1,0 +1,45 @@
+{
+  "classify_count": 986,
+  "enterprise_count": 86,
+  "raw_total": 1072,
+  "exact_duplicate_groups": 0,
+  "exact_duplicate_images_involved": 0,
+  "exact_removed": 0,
+  "kept_after_exact_dedup": 1072,
+  "hash_method": "dHash",
+  "phash_size": 16,
+  "phash_bits": 256,
+  "phash_threshold": 10,
+  "near_dup_same_grade_only": true,
+  "near_duplicate_pairs": 22,
+  "near_duplicate_groups": 18,
+  "near_duplicate_images_in_multi_groups": 39,
+  "near_duplicate_group_size_top10": [
+    4,
+    3,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "grade_counts_kept": {
+    "3#": 46,
+    "9950": 546,
+    "9996": 452,
+    "bad": 28
+  },
+  "source_counts_kept": {
+    "classify_4types_dianji": 986,
+    "enterprise_dianji_0309_classification": 86
+  },
+  "split_counts_kept": {
+    "train": 759,
+    "valid": 227,
+    "enterprise_all": 86
+  },
+  "note": "完整重复(SHA-256)只留一份；近重复(dHash)不删，仅同一 dup_group_id 防泄漏。默认同 grade 内比较，阈值 hamming≤10/256bit。"
+}

@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-07-23T18:44:05",
+  "target_classes": {
+    "14": "youpao",
+    "15": "heibian",
+    "16": "mijixiaokeng"
+  },
+  "items": [
+    {
+      "stem": "1",
+      "split": "train",
+      "n_boxes": 12,
+      "classes": [
+        "unknown_16(mijixiaokeng)"
+      ],
+      "link": "exists",
+      "render": "4096x3554→1600w",
+      "error": null
+    },
+    {
+      "stem": "302",
+      "split": "train",
+      "n_boxes": 21,
+      "classes": [
+        "unknown_16(mijixiaokeng)"
+      ],
+      "link": "exists",
+      "render": "4096x3554→1600w",
+      "error": null
+    },
+    {
+      "stem": "881",
+      "split": "valid",
+      "n_boxes": 7,
+      "classes": [
+        "unknown_15(heibian)"
+      ],
+      "link": "exists",
+      "render": "4096x3600→1600w",
+      "error": null
+    },
+    {
+      "stem": "882",
+      "split": "valid",
+      "n_boxes": 5,
+      "classes": [
+        "unknown_15(heibian)"
+      ],
+      "link": "exists",
+      "render": "4096x3554→1600w",
+      "error": null
+    },
+    {
+      "stem": "classify_2types_train_good_302",
+      "split": "pseudo",
+      "n_boxes": 131,
+      "classes": [
+        "mijixiaokeng"
+      ],
+      "link": "exists",
+      "render": "4096x3554→1600w",
+      "error": null
+    },
+    {
+      "stem": "Dianjinie0211_images_train_20260212-782",
+      "split": "pseudo",
+      "n_boxes": 3,
+      "classes": [
+        "mijixiaokeng"
+      ],
+      "link": "exists",
+      "render": "4096x3554→1600w",
+      "error": null
+    }
+  ]
+}

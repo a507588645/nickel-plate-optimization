@@ -1,0 +1,104 @@
+{
+  "generated_at": "2026-07-23T19:58:22",
+  "weights": "E:\\PythonProject\\Tools\\ModelAutoLabelTool\\weights\\yolov5\\ryw.pt",
+  "imgsz": 1024,
+  "conf_floor": 0.05,
+  "labeled_images": 1455,
+  "main_protocol": "conf>=0.25, IoU>=0.3, 同类匹配",
+  "recall_main": {
+    "wuzi": {
+      "matched": 1784,
+      "total": 3544,
+      "recall": 0.5034
+    },
+    "waterstain": {
+      "matched": 5009,
+      "total": 9348,
+      "recall": 0.5358
+    },
+    "yellowstain": {
+      "matched": 0,
+      "total": 143,
+      "recall": 0.0
+    },
+    "nodule": {
+      "matched": 63,
+      "total": 129,
+      "recall": 0.4884
+    },
+    "airhole": {
+      "matched": 259,
+      "total": 1977,
+      "recall": 0.131
+    },
+    "bubble": {
+      "matched": 139,
+      "total": 1037,
+      "recall": 0.134
+    },
+    "bump": {
+      "matched": 175,
+      "total": 377,
+      "recall": 0.4642
+    },
+    "fawu": {
+      "matched": 0,
+      "total": 6,
+      "recall": 0.0
+    },
+    "overfire": {
+      "matched": 21,
+      "total": 547,
+      "recall": 0.0384
+    },
+    "NiOH": {
+      "matched": 0,
+      "total": 12,
+      "recall": 0.0
+    },
+    "greenstain": {
+      "matched": 46,
+      "total": 510,
+      "recall": 0.0902
+    },
+    "suanwuran": {
+      "matched": 36,
+      "total": 167,
+      "recall": 0.2156
+    },
+    "quejiao": {
+      "matched": 44,
+      "total": 82,
+      "recall": 0.5366
+    },
+    "watermark": {
+      "matched": 490,
+      "total": 2884,
+      "recall": 0.1699
+    },
+    "heibian": {
+      "matched": 0,
+      "total": 12,
+      "recall": 0.0
+    },
+    "mijixiaokeng": {
+      "matched": 0,
+      "total": 33,
+      "recall": 0.0
+    }
+  },
+  "extra_pred_ge25_per_class": {
+    "wuzi": 4579,
+    "waterstain": 7876,
+    "nodule": 76,
+    "airhole": 75,
+    "bubble": 109,
+    "bump": 750,
+    "overfire": 12,
+    "greenstain": 155,
+    "suanwuran": 52,
+    "quejiao": 11,
+    "watermark": 215
+  },
+  "note": "recall=原标签框被 ryw.pt 同类预测覆盖的比例；低 recall 类=标签可疑或教师盲区，需人工复核 worst_images.csv"
+}

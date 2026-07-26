@@ -1,0 +1,7 @@
+﻿stem,split,n_boxes,classes,link,render,error
+1,train,12,['unknown_16(mijixiaokeng)'],exists,4096x3554→1600w,
+302,train,21,['unknown_16(mijixiaokeng)'],exists,4096x3554→1600w,
+881,valid,7,['unknown_15(heibian)'],exists,4096x3600→1600w,
+882,valid,5,['unknown_15(heibian)'],exists,4096x3554→1600w,
+classify_2types_train_good_302,pseudo,131,['mijixiaokeng'],exists,4096x3554→1600w,
+Dianjinie0211_images_train_20260212-782,pseudo,3,['mijixiaokeng'],exists,4096x3554→1600w,

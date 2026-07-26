@@ -1,0 +1,67 @@
+{
+  "backend": "lightgbm",
+  "best_iteration": 46,
+  "top15": [
+    [
+      "area_ratio__wuzi",
+      534.3875372506336
+    ],
+    [
+      "total_bbox_union_image_ratio",
+      337.71314749800104
+    ],
+    [
+      "A_ratio",
+      273.4286076167591
+    ],
+    [
+      "B_ratio",
+      252.9734152182682
+    ],
+    [
+      "Airhole_ratio",
+      226.86766430464922
+    ],
+    [
+      "detection_count",
+      216.88792505064612
+    ],
+    [
+      "count__wuzi",
+      209.5419645687998
+    ],
+    [
+      "area_ratio__watermark",
+      153.9107818766588
+    ],
+    [
+      "count__watermark",
+      121.99253497961536
+    ],
+    [
+      "area_ratio__waterstain",
+      107.90371458084155
+    ],
+    [
+      "area_ratio__airhole",
+      25.480080746347085
+    ],
+    [
+      "count__waterstain",
+      13.819479973002672
+    ],
+    [
+      "area_ratio__bump",
+      3.830310106277466
+    ],
+    [
+      "count__bump",
+      1.2308489680290222
+    ],
+    [
+      "count__airhole",
+      0.009711040183901787
+    ]
+  ],
+  "status": "unconfirmed_pending_enterprise"
+}

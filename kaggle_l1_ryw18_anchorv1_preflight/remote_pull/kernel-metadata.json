@@ -1,0 +1,20 @@
+{
+  "id": "lly3323w/l1-ryw18-anchor-v1-preflight",
+  "id_no": 128545222,
+  "title": "L1 RYW18 Anchor v1 Preflight",
+  "code_file": "l1-ryw18-anchor-v1-preflight.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [
+    "lly3323w/dianjienie",
+    "lly3323w/dianjienie-ryw18-anchor-v1-config"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": []
+}

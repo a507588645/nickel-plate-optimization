@@ -1,0 +1,16 @@
+开始审计 7396 张图片...
+按文件大小分组：3264 个唯一尺寸
+快速指纹耗时: 152.6s, 指纹冲突文件数: 6484, 完整 md5 计算数: 6484
+Traceback (most recent call last):
+  File "E:\PythonProject\优化\audit_combined_uniqueness.py", line 370, in <module>
+  File "E:\PythonProject\优化\audit_combined_uniqueness.py", line 311, in main
+    
+  File "E:\PyenvLocation\.pyenv\pyenv-win\versions\3.11.9\Lib\csv.py", line 157, in writerows
+    return self.writer.writerows(map(self._dict_to_list, rowdicts))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyenvLocation\.pyenv\pyenv-win\versions\3.11.9\Lib\csv.py", line 149, in _dict_to_list
+    raise ValueError("dict contains fields not in fieldnames: "
+ValueError: dict contains fields not in fieldnames: 'stem'
+le "E:\PyenvLocation\.pyenv\pyenv-win\versions\3.11.9\Lib\csv.py", line 149, in _dict_to_list
+    raise ValueError("dict contains fields not in fieldnames: "
+ValueError: dict contains fields not in fieldnames: 'stem'

@@ -1,0 +1,14 @@
+{
+  "dataset": "E:\\PythonProject\\datasets\\combined_all_pseudo_v2",
+  "images": 3264,
+  "boxes": 74331,
+  "multi_view": true,
+  "views": [
+    "enhanced",
+    "strong",
+    "gray",
+    "tophat",
+    "raw"
+  ],
+  "review_html": "E:\\PythonProject\\优化\\pseudo_label_reviews\\combined_all_pseudo_v2\\review.html"
+}

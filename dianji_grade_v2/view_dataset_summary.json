@@ -1,0 +1,91 @@
+{
+  "created_at": "2026-07-23T02:23:41",
+  "status": "unconfirmed_pending_enterprise",
+  "output_root": "E:\\PythonProject\\datasets\\dianjinie_grade_classification_v1",
+  "source_counts_raw": {
+    "classify_4types_dianji": 986,
+    "enterprise_dianji_0309_classification": 86
+  },
+  "dedup": {
+    "raw_total": 1072,
+    "exact_duplicate_groups": 0,
+    "exact_duplicate_images_involved": 0,
+    "exact_removed": 0,
+    "kept_after_exact_dedup": 1072
+  },
+  "near": {
+    "hash_method": "dHash",
+    "phash_size": 16,
+    "phash_threshold": 5,
+    "near_duplicate_pairs": 18,
+    "near_duplicate_groups": 16,
+    "near_duplicate_images_in_multi_groups": 33,
+    "largest_near_group_sizes_top5": [
+      3,
+      2,
+      2,
+      2,
+      2
+    ],
+    "grade_conflicts_in_near_groups": 0,
+    "unique_dup_groups": 1055,
+    "same_grade_only_union": true
+  },
+  "split": {
+    "seed": 42,
+    "ratios": {
+      "train": 0.7,
+      "valid": 0.15,
+      "test": 0.15
+    },
+    "n_groups": 1055,
+    "images_by_split_grade": {
+      "train": {
+        "3#": 32,
+        "9950": 382,
+        "9996": 316,
+        "bad": 20
+      },
+      "valid": {
+        "3#": 7,
+        "9950": 82,
+        "9996": 68,
+        "bad": 4
+      },
+      "test": {
+        "3#": 7,
+        "9950": 82,
+        "9996": 68,
+        "bad": 4
+      }
+    },
+    "images_by_split": {
+      "train": 750,
+      "valid": 161,
+      "test": 161
+    },
+    "image_ratio_by_split": {
+      "train": 0.6996268656716418,
+      "valid": 0.1501865671641791,
+      "test": 0.1501865671641791
+    },
+    "cross_split_groups": 0,
+    "note": "dup_group 整组同一 split；按组大小贪心逼近 70/15/15；不沿用 4types 原划分"
+  },
+  "kept_images": 1072,
+  "grade_counts": {
+    "3#": 46,
+    "9950": 546,
+    "9996": 452,
+    "bad": 28
+  },
+  "link_mode_counts": {
+    "hardlink": 1072
+  },
+  "small_sample_warning": {
+    "3#": 46,
+    "bad": 28,
+    "message": "3# 与 bad 为小样本，指标方差大"
+  },
+  "dry_run": false
+}
