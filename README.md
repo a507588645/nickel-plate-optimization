@@ -25,7 +25,7 @@
 
 | 线 | 目标 | 当前状态 | 关键约束 |
 | --- | --- | --- | --- |
-| **L1 检测模型优化** | 当前先以 `dianjienie` 历史标签锚点 `dianjienie_ryw18_anchor_v1` 训练 18 类 YOLO11m/YOLO26m | 1325 张、18232 框已完成去重、分组分层重划；YOLO11m Fold1 retry1 已通过 ZIP/权重/清单校验并完成本机固定 val 复评；YOLO26m Fold1 仍在 Kaggle 运行；原 `dianjienie` train/valid 划分作废 | 固定 198 张测试集 + 开发集 3 折；原标签不覆盖；YOLO11m 仅一个开发 Fold，禁止提前做架构结论或访问测试集 |
+| **L1 检测模型优化** | 当前先以 `dianjienie` 历史标签锚点 `dianjienie_ryw18_anchor_v1` 训练 18 类 YOLO11m/YOLO26m | 1325 张、18232 框已完成去重、分组分层重划；两架构 Fold 1 均已通过 ZIP/权重/固定清单校验并完成同口径本机 val 复评：YOLO11m mAP50/mAP50-95=`0.27848/0.14971`，YOLO26m=`0.30540/0.15454`；YOLO11m Fold 2 已提交 Kaggle 且确认 `RUNNING`；原 `dianjienie` train/valid 划分作废 | 固定 198 张测试集 + 开发集 3 折；原标签不覆盖；仅一个完整开发 Fold/seed，禁止提前做架构结论或访问测试集 |
 | **L2 电积镍分类等级** | 缺陷种类+面积规则/LightGBM 判级（3#/9950/9996/bad） | `dianjinie_grade_classification_v1`（1072）+ `dianji_grade_v2/v3` 产物，纹理特征 LGBM test 0.776/0.663 | 全部 `unconfirmed_pending_enterprise`；待企业书面标准 + 批次元数据 + 新会话验证；批次混淆未排除 |
 | **L3 电解镍分类硬编码优化** | `DianjieGradeRule` 阈值/规则/决策层优化（检测权重 `ryw.pt` 不变） | 规则已封装（`dianjie_grade_rule.py`）；电积镍迁移已实锤不可用（acc=0.02） | 商业约束：权重不变，优化只落加载代码/阈值/规则/决策层；改动须在固定人工评测集做前后对比（AGENTS.md §8） |
 
@@ -142,10 +142,13 @@
 | `kaggle_l1_ryw18_anchorv1_preflight/l1-ryw18-anchor-v1-preflight.py` | 已完成的 Kaggle 实测挂载预检：动态发现自动展开后的图片/配置 Dataset，再以 `--dry-run` 校验锚点与 Fold |
 | `kaggle_l1_ryw18_yolo11m_anchorv1_fold01/l1-ryw18-yolo11m-anchorv1-fold01.py` | 初版 L1 YOLO11m Fold 1 私有 GPU Kernel 定义；因 9 小时请求上限在 epoch 250 后取消，仅保留失败证据，不是有效 run |
 | `kaggle_l1_ryw18_yolo11m_anchorv1_fold01_retry1/l1-ryw18-yolo11m-anchorv1-fold01-retry1.py` | L1 YOLO11m Fold 1 独立重试 Kernel；已完成 ZIP CRC、权重哈希、固定清单校验与本机固定 val 复评，归档 run 位于 `E:\PythonProject\models\runs\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_anchorv1_fold01` |
-| `kaggle_l1_ryw18_yolo26m_anchorv1_fold01/l1-ryw18-yolo26m-anchorv1-fold01.py` | 已提交并 `RUNNING` 的 L1 YOLO26m Fold 1 Kernel：与 YOLO11m Fold 1 完全同条件，仅替换为 YOLO26m |
+| `kaggle_l1_ryw18_yolo26m_anchorv1_fold01/l1-ryw18-yolo26m-anchorv1-fold01.py` | 已完成的 L1 YOLO26m Fold 1 Kernel：结果 ZIP、权重和固定清单已校验并归档；同口径本机 val 复评见 `l1_reeval_yolo26m_fold01/metrics_per_class_reeval.json` |
+| `kaggle_l1_ryw18_yolo11m_anchorv1_fold02/l1-ryw18-yolo11m-anchorv1-fold02.py` | 已提交并确认 `RUNNING` 的 L1 YOLO11m Fold 2 Kernel：与 Fold 1 保持同条件，仅切换固定 Fold 2（train/val/test=`752/375/198`） |
 | `collect_l1_kaggle_run.py` | L1 完成后的 Kaggle 归档入口：仅接受 COMPLETE 状态，下载结果 ZIP，执行 CRC/必需文件/路径安全校验后才安装至 `models/runs` |
 | `reeval_l1_yolo_run.py` | 对已归档 L1 权重在固定开发 Fold 做本机标准复评；仅创建派生硬链接视图，拒绝读取冻结测试集 |
 | `monitor_l1_kaggle_chain.py` | L1 可选串行监控入口：仅在用户明确要求自动推进时使用；当前已停用，训练完成后由用户通知再手动归档与提交下一 Kernel |
+| `rebuild_worklog_index.py` | 工作日志索引维护：扫描 `工作日志条目/` 全部条目文件，重建可点击「条目索引」表（日期/标题链接/主线），标签按标题继承、新条目人工补标；支持 `--dry-run` 只审计 |
+| `split_worklog_entries.py` | 一次性迁移（2026-07-27 已执行）：把主文件/分片正文拆分为 `工作日志条目/` 独立文件并截断主文件；保留备查 |
 | `extract_dianji_grade_features.py` | 视图上 v2a join + v2b ryw.pt@1536 特征提取 |
 | `train_dianji_grade_lgbm.py` | 四分类模型对比（majority/规则/树/LightGBM），test 仅最终评估 |
 | `build_dianji_grade_v2_dataset.py` | 历史草稿（上一任务中断遗留），**非**当前流水线入口 |

@@ -7,6 +7,7 @@ Claude 在本项目中必须首先读取并遵守根目录 `AGENTS.md`。若本�
 
 1. **必须首先读取**根目录 `AGENTS.md` 与本文件。
 2. **必须读取** `工作日志.md` 的「当前状态摘要」和最近 3～5 条条目；续作时从其中的「下一步」接着做，不得重复已完成步骤。
+   - **日志形态（2026-07-27 条目文件夹化后）**：主文件只含摘要区 + 全量「条目索引表」（日期 / 标题链接 / 主线标签）；全部条目正文在 `工作日志条目/` 的独立 `.md` 文件中。读「最近 3～5 条」时：先看摘要区 + 索引表（最新在上）→ 按标题链接打开条目文件，避免逐文件遍历。主线标签为人工归号，可能模糊，**下结论前以正文字段为准**。写入新条目 = 在 `工作日志条目/` 新建文件后运行 `python rebuild_worklog_index.py` 重建索引（标签按标题继承）。
 3. 浏览 `README.md` 文档地图，只打开与当前任务相关的规范/报告。
 4. 使用搜索工具定位实际文件，再读取配置、脚本或实验产物；禁止仅按历史文档直接生成结论。
 5. 涉及数据集时，先做只读审计并报告将要修改的文件范围。
@@ -67,6 +68,10 @@ Claude 在本项目中必须首先读取并遵守根目录 `AGENTS.md`。若本�
 - 当前唯一保留的汇总版本为 `E:\PythonProject\datasets\combined_all_pseudo_v2`：3264 张、74331 个框；与企业 label 的 191 张唯一图交叉查重后没有新增图片，因此没有新增模型推理。旧 v1 数据集及其审查、等级特征目录已删除。
 - v2 等级与特征产物位于 `grade_feature_analysis/combined_all_pseudo_v2_grade`；Windows 中文路径读取已改为 `np.fromfile + cv2.imdecode`，审计为 3264 张、缺失标签 0、不可读图片 0。
 - 伪标签主版本必须位于 `labels_with_conf/` 并保留第六列置信度；默认状态阈值为 accepted `>=0.70`、uncertain `0.40~0.70`、rejected `0.15~0.40`。五列训练标签只能由审查结果另行生成。
+
+- **RYW18 Kaggle Fold 1 状态更新（2026-07-27 13:45）**：YOLO26m Kernel `lly3323w/l1-ryw18-yolo26m-anchorv1-fold01` 已 `COMPLETE`，结果 ZIP SHA-256=`2e01f70a615e4a4a472b487e2c7e9ae06db86582b20e3206d14299703c8fab48`，CRC、30 个文件、必需文件、权重和固定 `751/376/198` 清单均已校验，归档至 `models\\runs\\dianjienie_medium_yolo26m_640_kaggle_seed0_cm0_anchorv1_fold01`。Kaggle `best.pt` 为 epoch 244（mAP50/mAP50-95=`0.30990/0.15720`）；同一 376 张开发 val 的本机复评为 P/R/mAP50/mAP50-95=`0.48451/0.29343/0.30540/0.15454`，证据位于 `优化\\l1_reeval_yolo26m_fold01\\metrics_per_class_reeval.json`。冻结 198 张 test 未访问。YOLO11m 和 YOLO26m 均只有一个开发 Fold/seed，Fold 2/3 尚未开始，暂不能选择最终架构；对比必须使用本机复评口径。
+
+- **RYW18 Kaggle Fold 2 状态更新（2026-07-27 13:55）**：YOLO11m Fold 2 Kernel `lly3323w/l1-ryw18-yolo11m-anchorv1-fold02` 已由 Kaggle CLI 成功推送并确认 `RUNNING`。本机 `train_dianjienie_ryw18_anchor.py --model yolo11m.pt --fold 2 --dry-run` 已验证固定清单 `train/val/test=752/375/198`，三集合无交集、总计 1325 图；模型、300 epochs、640、batch 8、SGD、seed 0、patience 100、`close_mosaic=0`、`resume=false` 与 Fold 1 相同。本地未启动训练、监控或下载进程；Kaggle 完成后仍须先归档校验并做对应 Fold 2 本机复评，冻结测试集不访问。
 
 ### 工具包
 
