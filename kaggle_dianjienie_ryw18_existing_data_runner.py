@@ -15,6 +15,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -44,6 +45,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     )
     parser.add_argument("--model", choices=("yolo11m.pt", "yolo26m.pt"), required=True)
     parser.add_argument("--fold", type=int, choices=(1, 2, 3), required=True)
+    parser.add_argument("--data-version", default="anchorv1", help="必须与配置包 manifest 的数据版本一致。")
+    parser.add_argument(
+        "--development-only",
+        action="store_true",
+        help="只恢复并训练开发集 train/val；配置包必须同样声明 development_only。",
+    )
     parser.add_argument("--config-root", type=Path, help="RYW18 配置 Dataset 的挂载根目录；省略时自动定位。")
     parser.add_argument("--image-dataset-root", type=Path, help="既有图片 Dataset 的挂载根目录；省略时自动定位。")
     parser.add_argument("--work-root", type=Path, default=DEFAULT_WORK_ROOT)
@@ -148,16 +155,12 @@ def make_link(source: Path, destination: Path) -> None:
         except OSError:
             pass
         raise FileExistsError(f"工作锚点中存在非预期文件，拒绝覆盖：{destination}")
-    try:
-        os.symlink(source, destination)
-    except OSError as error:
-        # Kaggle/Linux uses symbolic links.  The fallback permits the same
-        # preparation path to be dry-run locally on Windows without admin
-        # symlink privilege and still avoids copying image data.
-        if os.name == "nt" and getattr(error, "winerror", None) == 1314:
-            os.link(source, destination)
-            return
-        raise
+    # Avoid the Windows unprivileged-symlink path, which can leave a dangling
+    # destination entry before the hard-link fallback runs.
+    if os.name == "nt":
+        os.link(source, destination)
+        return
+    os.symlink(source, destination)
 
 
 def restore_anchor(config_root: Path, image_root: Path, work_root: Path, manifest: dict[str, Any]) -> None:
@@ -177,7 +180,9 @@ def restore_anchor(config_root: Path, image_root: Path, work_root: Path, manifes
         make_link(config_root / record["upload_name"], work_root / record["relative_path"])
     marker.write_text(fingerprint + "\n", encoding="utf-8")
 
-    expected = [work_root / "images", work_root / "labels", work_root / "classes.txt", work_root / "splits/test.txt"]
+    expected = [work_root / "images", work_root / "labels", work_root / "classes.txt"]
+    if not manifest.get("development_only", False):
+        expected.append(work_root / "splits/test.txt")
     expected.extend(work_root / "splits/folds" / f"fold_{fold:02d}" / "data.yaml" for fold in range(1, 4))
     missing = [path for path in expected if not path.exists()]
     if missing:
@@ -219,7 +224,7 @@ def install_and_check_dependencies(args: argparse.Namespace) -> None:
 def run_name(args: argparse.Namespace) -> str:
     return (
         f"dianjienie_medium_{args.model.removesuffix('.pt')}_{args.imgsz}_kaggle"
-        f"_seed{args.seed}_cm0_anchorv1_fold{args.fold:02d}"
+        f"_seed{args.seed}_cm0_{args.data_version}_fold{args.fold:02d}"
     )
 
 
@@ -230,6 +235,7 @@ def trainer_command(args: argparse.Namespace, config_root: Path, manifest: dict[
         str(trainer),
         "--model", args.model,
         "--fold", str(args.fold),
+        "--data-version", args.data_version,
         "--anchor-root", str(args.work_root),
         "--project", str(args.project),
         "--platform", "kaggle",
@@ -242,6 +248,8 @@ def trainer_command(args: argparse.Namespace, config_root: Path, manifest: dict[
         "--seed", str(args.seed),
         "--patience", str(args.patience),
     ]
+    if args.development_only:
+        command.append("--development-only")
     if args.dry_run:
         command.append("--dry-run")
     return command
@@ -258,9 +266,19 @@ def archive_run(args: argparse.Namespace) -> Path:
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
+    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]*", args.data_version):
+        raise ValueError("--data-version 只能包含 ASCII 字母、数字、下划线和连字符")
     config_root = locate_config_root(args.config_root)
     manifest = load_manifest(config_root)
+    manifest_version = str(manifest.get("data_version", "anchorv1"))
+    manifest_development_only = bool(manifest.get("development_only", False))
+    if args.data_version != manifest_version:
+        raise ValueError(f"数据版本与配置包不一致：请求 {args.data_version}，配置包为 {manifest_version}")
+    if args.development_only != manifest_development_only:
+        raise ValueError("--development-only 必须与配置包 manifest 的 development_only 一致")
     image_root = locate_image_dataset_root(args.image_dataset_root, manifest, config_root)
+    if args.work_root == DEFAULT_WORK_ROOT and args.data_version != "anchorv1":
+        args.work_root = DEFAULT_WORK_ROOT.with_name(f"dianjienie_ryw18_{args.data_version}")
     args.work_root = args.work_root.resolve()
     args.project = args.project.resolve()
     args.runtime_config_root = args.runtime_config_root.resolve()
@@ -274,6 +292,8 @@ def main(argv: list[str] | None = None) -> int:
                 "work_root": str(args.work_root),
                 "images": manifest["counts"]["images"],
                 "labels": manifest["counts"]["labels"],
+                "data_version": args.data_version,
+                "development_only": args.development_only,
                 "model": args.model,
                 "fold": args.fold,
             },

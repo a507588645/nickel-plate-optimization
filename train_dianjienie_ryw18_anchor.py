@@ -13,6 +13,7 @@ import csv
 import json
 import math
 import platform
+import re
 import shutil
 import sys
 from datetime import datetime
@@ -43,6 +44,16 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--model", choices=tuple(MODEL_SPECS), required=True)
     parser.add_argument("--fold", type=int, choices=(1, 2, 3), required=True)
     parser.add_argument("--anchor-root", type=Path, default=DEFAULT_ANCHOR)
+    parser.add_argument(
+        "--data-version",
+        default="anchorv1",
+        help="写入 run 名与配置的数据版本标识；默认保持历史 anchorv1 命名。",
+    )
+    parser.add_argument(
+        "--development-only",
+        action="store_true",
+        help="只读取和训练固定开发集 train/val，不读取或写出冻结 test 清单。",
+    )
     parser.add_argument("--project", type=Path, default=DEFAULT_PROJECT)
     parser.add_argument("--platform", choices=("lab", "kaggle"), default="lab")
     parser.add_argument("--runtime-config-root", type=Path, default=DEFAULT_RUNTIME_CONFIG_ROOT,
@@ -119,7 +130,9 @@ def validate_yolo_labels(paths: list[Path], anchor_root: Path) -> int:
     return box_count
 
 
-def validate_fold(anchor_root: Path, fold: int) -> tuple[Path, dict[str, list[Path]]]:
+def validate_fold(
+    anchor_root: Path, fold: int, development_only: bool = False
+) -> tuple[Path, dict[str, list[Path]]]:
     fold_root = anchor_root / "splits" / "folds" / f"fold_{fold:02d}"
     data_yaml = fold_root / "data.yaml"
     if not data_yaml.is_file():
@@ -132,19 +145,25 @@ def validate_fold(anchor_root: Path, fold: int) -> tuple[Path, dict[str, list[Pa
 
     train = resolve_split_paths(fold_root / "train.txt", anchor_root)
     val = resolve_split_paths(fold_root / "val.txt", anchor_root)
-    test = resolve_split_paths(anchor_root / "splits" / "test.txt", anchor_root)
-    train_set, val_set, test_set = set(train), set(val), set(test)
-    if train_set & val_set or train_set & test_set or val_set & test_set:
+    train_set, val_set = set(train), set(val)
+    if train_set & val_set:
         raise ValueError("Fold 划分存在 train/val/test 交集，已拒绝训练")
-    validate_yolo_labels(train + val + test, anchor_root)
-    return data_yaml, {"train": train, "val": val, "test": test}
+    split_paths = {"train": train, "val": val}
+    if not development_only:
+        test = resolve_split_paths(anchor_root / "splits" / "test.txt", anchor_root)
+        test_set = set(test)
+        if train_set & test_set or val_set & test_set:
+            raise ValueError("Fold 划分存在 train/val/test 交集，已拒绝训练")
+        split_paths["test"] = test
+    validate_yolo_labels([path for paths in split_paths.values() for path in paths], anchor_root)
+    return data_yaml, split_paths
 
 
 def make_run_name(model: str, fold: int, args: argparse.Namespace) -> str:
     spec = MODEL_SPECS[model]
     return (
         f"dianjienie_{spec['size']}_{spec['run_model']}_{args.imgsz}_{args.platform}"
-        f"_seed{args.seed}_cm0_anchorv1_fold{fold:02d}"
+        f"_seed{args.seed}_cm0_{args.data_version}_fold{fold:02d}"
     )
 
 
@@ -219,28 +238,23 @@ def create_runtime_data_yaml(
     if runtime_dir.exists():
         raise FileExistsError(f"运行时数据配置已存在，为防止覆盖已拒绝：{runtime_dir}")
     runtime_dir.mkdir(parents=True)
-    train_list, val_list, test_list = (runtime_dir / "train.txt", runtime_dir / "val.txt", runtime_dir / "test.txt")
+    train_list, val_list = runtime_dir / "train.txt", runtime_dir / "val.txt"
     write_path_list(train_list, split_paths["train"])
     write_path_list(val_list, split_paths["val"])
-    write_path_list(test_list, split_paths["test"])
+    test_list = runtime_dir / "test.txt" if "test" in split_paths else None
+    if test_list is not None:
+        write_path_list(test_list, split_paths["test"])
     names = "\n".join(f"  {index}: {name}" for index, name in enumerate(EXPECTED_CLASSES))
     runtime_yaml = runtime_dir / "data.yaml"
-    runtime_yaml.write_text(
-        "\n".join(
-            [
-                f'path: "{anchor_root.as_posix()}"',
-                f'train: "{train_list.as_posix()}"',
-                f'val: "{val_list.as_posix()}"',
-                f'test: "{test_list.as_posix()}"',
-                "",
-                "nc: 18",
-                "names:",
-                names,
-                "",
-            ]
-        ),
-        encoding="utf-8",
-    )
+    yaml_lines = [
+        f'path: "{anchor_root.as_posix()}"',
+        f'train: "{train_list.as_posix()}"',
+        f'val: "{val_list.as_posix()}"',
+    ]
+    if test_list is not None:
+        yaml_lines.append(f'test: "{test_list.as_posix()}"')
+    yaml_lines.extend(["", "nc: 18", "names:", names, ""])
+    runtime_yaml.write_text("\n".join(yaml_lines), encoding="utf-8")
     shutil.copy2(fold_data_yaml, runtime_dir / "source_fold_data.yaml")
     return runtime_yaml
 
@@ -318,6 +332,13 @@ def write_run_readme(save_dir: Path, config: dict[str, Any], environment: dict[s
     training = config["training"]
     metrics = last_metrics(save_dir / "results.csv")
     model_spec = MODEL_SPECS[config["model"]]
+    test_display = "未读取（development_only）" if config["development_only"] else config["split_counts"]["test_frozen"]
+    list_description = "train/val" if config["development_only"] else "train/val/test"
+    test_note = (
+        "此 run 明确不读取、不写出冻结 `test.txt`。"
+        if config["development_only"]
+        else "此 run 只使用开发集 Fold；`test.txt` 未参与训练、早停或模型选择。"
+    )
     content = f"""# dianjienie Medium {model_spec['run_model'].upper()} 实验说明（{save_dir.name})
 
 ## 数据集
@@ -325,9 +346,10 @@ def write_run_readme(save_dir: Path, config: dict[str, Any], environment: dict[s
 | 项 | 值 |
 | --- | --- |
 | 数据锚点 | `{config['anchor_root']}` |
+| 数据版本 | `{config['data_version']}` |
 | 类别数 | 18 |
 | Fold | {config['fold']} |
-| train / val / 冻结 test | {config['split_counts']['train']} / {config['split_counts']['val']} / {config['split_counts']['test_frozen']} |
+| train / val / 冻结 test | {config['split_counts']['train']} / {config['split_counts']['val']} / {test_display} |
 | 源 Fold YAML | `{config['source_fold_data_yaml']}` |
 | 运行时 YAML | `dataset_config/data.yaml` |
 
@@ -375,15 +397,15 @@ def write_run_readme(save_dir: Path, config: dict[str, Any], environment: dict[s
 | --- | --- |
 | `weights/best.pt` / `weights/last.pt` | 训练权重 |
 | `args.yaml` / `requested_config.json` | Ultralytics 实际参数与本入口请求参数 |
-| `dataset_config/` | 本机重建的 train/val/test 清单与 data.yaml |
+| `dataset_config/` | 本机重建的 {list_description} 清单与 data.yaml |
 | `results.csv`、曲线、混淆矩阵 | 训练和开发验证证据 |
 | `environment.json` | Python、Torch、CUDA、Ultralytics、GPU 环境 |
 
 ## 备注
 
-- 此 run 只使用开发集 Fold {config['fold']}；`test.txt` 未参与训练、早停或模型选择。
+- {test_note}
 - RYW18 保留 `youpao`、`fanxitong`，但两类当前零监督，不可评；`heibian`、`mijixiaokeng` 极稀少。
-- 该 run 属于 anchor v1 的同条件 YOLO11m/YOLO26m 组。完成三个 Fold 后才可做 OOF 与架构比较；不可与旧 5 类数据集指标直接排名。
+- 该 run 属于 `{config['data_version']}` 的同条件 YOLO11m/YOLO26m 组。不可与旧 5 类数据集指标直接排名。
 - 环境：Python `{environment['python']}`；Torch `{environment['torch']}`；CUDA `{environment['cuda']}`；Ultralytics `{environment['ultralytics']}`；GPU `{environment['gpu']}`。
 """
     (save_dir / "README.md").write_text(content, encoding="utf-8")
@@ -391,23 +413,31 @@ def write_run_readme(save_dir: Path, config: dict[str, Any], environment: dict[s
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
+    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]*", args.data_version):
+        raise ValueError("--data-version 只能包含 ASCII 字母、数字、下划线和连字符")
     anchor_root = args.anchor_root.resolve()
     args.project = args.project.resolve()
     args.runtime_config_root = args.runtime_config_root.resolve()
-    fold_data_yaml, split_paths = validate_fold(anchor_root, args.fold)
+    fold_data_yaml, split_paths = validate_fold(anchor_root, args.fold, args.development_only)
     run_name = make_run_name(args.model, args.fold, args)
     expected_run_dir = args.project / run_name
     if expected_run_dir.exists() and not args.dry_run:
         raise FileExistsError(f"训练目录已存在，为防止覆盖已拒绝：{expected_run_dir}")
     runtime_data_yaml = args.runtime_config_root / run_name / "data.yaml"
-    split_counts = {"train": len(split_paths["train"]), "val": len(split_paths["val"]), "test_frozen": len(split_paths["test"])}
+    split_counts = {
+        "train": len(split_paths["train"]),
+        "val": len(split_paths["val"]),
+        "test_frozen": None if args.development_only else len(split_paths["test"]),
+    }
     config = {
         "model": args.model,
         "run_name": run_name,
         "anchor_root": str(anchor_root),
+        "data_version": args.data_version,
+        "development_only": args.development_only,
         "fold": args.fold,
         "split_counts": split_counts,
-        "frozen_test_set": str(anchor_root / "splits" / "test.txt"),
+        "frozen_test_set": None if args.development_only else str(anchor_root / "splits" / "test.txt"),
         "source_fold_data_yaml": str(fold_data_yaml),
         "runtime_data_yaml": str(runtime_data_yaml),
         "expected_run_dir": str(expected_run_dir),

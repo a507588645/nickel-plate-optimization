@@ -1,0 +1,350 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" style="background:#0f172a;font-family:'Segoe UI',system-ui,sans-serif;">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="layer1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="layer2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="layer3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="layer4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="layer5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <linearGradient id="layer6" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,8 L10,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+
+  <!-- 标题 -->
+  <text x="800" y="40" text-anchor="middle" fill="#f8fafc" font-size="28" font-weight="bold" letter-spacing="1">镍板缺陷检测系统：完整架构与执行方案 v3.0</text>
+  <text x="800" y="68" text-anchor="middle" fill="#94a3b8" font-size="14">模型无关 | 多光源兼容 | 无PyInstaller | Tauri原生 | 单人全栈</text>
+
+  <!-- ===== Layer 1: 数据层 ===== -->
+  <rect x="20" y="90" width="1560" height="220" rx="14" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="800" y="115" text-anchor="middle" fill="#60a5fa" font-size="17" font-weight="bold">📦 Layer 1: 数据层（Data Layer）— 与模型无关</text>
+
+  <!-- 旧数据 -->
+  <rect x="35" y="128" width="280" height="170" rx="10" fill="url(#layer1)" filter="url(#shadow)"/>
+  <text x="175" y="150" text-anchor="middle" fill="white" font-size="13" font-weight="bold">旧数据集（单光源）</text>
+  <text x="45" y="170" fill="#bfdbfe" font-size="10">• YOLOv5历史数据：18类/5类缺陷标签</text>
+  <text x="45" y="185" fill="#bfdbfe" font-size="10">• 标签格式：YOLO格式（class cx cy w h）</text>
+  <text x="45" y="200" fill="#bfdbfe" font-size="10">• 电积镍分类数据：4类肉眼划分（无缺陷标签）</text>
+  <text x="45" y="215" fill="#bfdbfe" font-size="10">• 预处理：复制三通道 R=G=B=单光灰度</text>
+  <text x="45" y="235" fill="#fef08a" font-size="10" font-weight="bold">✅ 直接复用，无需修改标签</text>
+  <text x="45" y="250" fill="#e0e7ff" font-size="9">脚本: scripts/preprocess.py --mode single</text>
+  <text x="45" y="265" fill="#e0e7ff" font-size="9">输出: img_001_single.jpg (640x640x3)</text>
+
+  <!-- 新数据 -->
+  <rect x="330" y="128" width="280" height="170" rx="10" fill="url(#layer2)" filter="url(#shadow)"/>
+  <text x="470" y="150" text-anchor="middle" fill="white" font-size="13" font-weight="bold">新数据集（多光源）</text>
+  <text x="340" y="170" fill="#a7f3d0" font-size="10">• 三光源采集：left / right / fusion</text>
+  <text x="340" y="185" fill="#a7f3d0" font-size="10">• 同一块镍板：文件名必须相同</text>
+  <text x="340" y="200" fill="#a7f3d0" font-size="10">• 标签：与单光共用一套YOLO标签</text>
+  <text x="340" y="215" fill="#a7f3d0" font-size="10">• 预处理：R=左光, G=右光, B=融合光</text>
+  <text x="340" y="235" fill="#fef08a" font-size="10" font-weight="bold">✅ 不改模型结构，只改输入组织</text>
+  <text x="340" y="250" fill="#d1fae5" font-size="9">脚本: scripts/preprocess.py --mode triple</text>
+  <text x="340" y="265" fill="#d1fae5" font-size="9">输出: img_001_triple.jpg (640x640x3)</text>
+
+  <!-- 等级数据优化 -->
+  <rect x="625" y="128" width="320" height="170" rx="10" fill="url(#layer3)" filter="url(#shadow)"/>
+  <text x="785" y="150" text-anchor="middle" fill="white" font-size="13" font-weight="bold">等级数据集优化（关键变革）</text>
+  <text x="635" y="170" fill="#fde68a" font-size="10">• 旧问题：肉眼缩小看光泽 → 光照影响大</text>
+  <text x="635" y="185" fill="#fde68a" font-size="10">• 新方案：AI检测 → 提取缺陷统计特征</text>
+  <text x="635" y="200" fill="#fde68a" font-size="10">• 特征：count / area / max_size / density</text>
+  <text x="635" y="215" fill="#fde68a" font-size="10">• 输入LightGBM：数字向量 → 等级输出</text>
+  <text x="635" y="235" fill="#fef08a" font-size="10" font-weight="bold">✅ 从"黑盒肉眼"到"缺陷驱动可解释"</text>
+  <text x="635" y="250" fill="#fef3c7" font-size="9">脚本: scripts/extract_features.py</text>
+  <text x="635" y="265" fill="#fef3c7" font-size="9">输出: train_features.csv (100维特征 + grade_code)</text>
+
+  <!-- 数据增强 -->
+  <rect x="960" y="128" width="300" height="170" rx="10" fill="url(#layer6)" filter="url(#shadow)"/>
+  <text x="1110" y="150" text-anchor="middle" fill="white" font-size="13" font-weight="bold">数据增强策略</text>
+  <text x="970" y="170" fill="#a5f3fc" font-size="10">• Mosaic：4张图拼接，增加场景多样性</text>
+  <text x="970" y="185" fill="#a5f3fc" font-size="10">• MixUp：两张图混合，增强边界模糊</text>
+  <text x="970" y="200" fill="#a5f3fc" font-size="10">• Copy-Paste：复制缺陷到正常图，解决不平衡</text>
+  <text x="970" y="215" fill="#a5f3fc" font-size="10">• Focal Loss：降低简单样本权重，关注难例</text>
+  <text x="970" y="235" fill="#fef08a" font-size="10" font-weight="bold">✅ 解决小目标 + 类别不平衡</text>
+  <text x="970" y="250" fill="#cffafe" font-size="9">配置: data.yaml中 augmentation 参数</text>
+  <text x="970" y="265" fill="#cffafe" font-size="9">YOLOv8/v10/v11/v26 均原生支持</text>
+
+  <!-- 目录结构 -->
+  <rect x="1275" y="128" width="295" height="170" rx="10" fill="#0f172a" stroke="#475569" stroke-width="1.5"/>
+  <text x="1422" y="150" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="bold">📁 数据目录结构</text>
+  <text x="1285" y="170" fill="#94a3b8" font-size="9">datasets/</text>
+  <text x="1295" y="183" fill="#94a3b8" font-size="9">├── dianjienie/</text>
+  <text x="1305" y="196" fill="#94a3b8" font-size="9">│   ├── images/train/</text>
+  <text x="1315" y="209" fill="#94a3b8" font-size="9">│   │   ├── single/</text>
+  <text x="1315" y="222" fill="#94a3b8" font-size="9">│   │   ├── left/</text>
+  <text x="1315" y="235" fill="#94a3b8" font-size="9">│   │   ├── right/</text>
+  <text x="1315" y="248" fill="#94a3b8" font-size="9">│   │   └── fusion/</text>
+  <text x="1305" y="261" fill="#94a3b8" font-size="9">│   ├── labels/train/</text>
+  <text x="1305" y="274" fill="#94a3b8" font-size="9">│   └── grade_labels/</text>
+  <text x="1295" y="287" fill="#94a3b8" font-size="9">└── dianjinie/ (同上)</text>
+
+  <!-- ===== Layer 2: 模型训练层 ===== -->
+  <rect x="20" y="325" width="1560" height="240" rx="14" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="800" y="350" text-anchor="middle" fill="#34d399" font-size="17" font-weight="bold">🧠 Layer 2: 模型训练层（Training Layer）— 等老师决定</text>
+
+  <!-- 检测模型选型 -->
+  <rect x="35" y="365" width="380" height="190" rx="10" fill="url(#layer1)" filter="url(#shadow)"/>
+  <text x="225" y="385" text-anchor="middle" fill="white" font-size="13" font-weight="bold">检测模型选型（老师决定）</text>
+  <text x="45" y="405" fill="#bfdbfe" font-size="10">┌─────────────┬──────────┬──────────┬────────┐</text>
+  <text x="45" y="418" fill="#bfdbfe" font-size="10">│ 模型        │ mAP@0.5  │ 速度     │ 库     │</text>
+  <text x="45" y="431" fill="#bfdbfe" font-size="10">├─────────────┼──────────┼──────────┼────────┤</text>
+  <text x="45" y="444" fill="#bfdbfe" font-size="10">│ YOLOv8-M    │ 65.2     │ 4.5ms    │ultra   │</text>
+  <text x="45" y="457" fill="#bfdbfe" font-size="10">│ YOLOv10-M   │ 67.1     │ 4.7ms    │ultra   │</text>
+  <text x="45" y="470" fill="#bfdbfe" font-size="10">│ YOLO11-M    │ 67.9     │ 4.7ms    │ultra   │</text>
+  <text x="45" y="483" fill="#bfdbfe" font-size="10">│ YOLO26-M    │ 69.8     │ 4.7ms    │ultra   │</text>
+  <text x="45" y="496" fill="#bfdbfe" font-size="10">│ RF-DETR-S   │ 71.9     │ 3.6ms    │rfdetr  │</text>
+  <text x="45" y="509" fill="#bfdbfe" font-size="10">└─────────────┴──────────┴──────────┴────────┘</text>
+  <text x="45" y="530" fill="#fef08a" font-size="10" font-weight="bold">✅ YOLO系列统一用 ultralytics，只改权重文件名</text>
+  <text x="45" y="545" fill="#e0e7ff" font-size="9">✅ RF-DETR单独脚本，但导出ONNX后推理层统一</text>
+
+  <!-- 统一训练接口 -->
+  <rect x="430" y="365" width="380" height="190" rx="10" fill="url(#layer2)" filter="url(#shadow)"/>
+  <text x="620" y="385" text-anchor="middle" fill="white" font-size="13" font-weight="bold">统一训练接口（YOLO系列通用）</text>
+  <text x="440" y="408" fill="#a7f3d0" font-size="9"># scripts/train_detector.py</text>
+  <text x="440" y="421" fill="#a7f3d0" font-size="9">from ultralytics import YOLO</text>
+  <text x="440" y="434" fill="#a7f3d0" font-size="9"> </text>
+  <text x="440" y="447" fill="#fbbf24" font-size="9"># === 等老师决定后只改这里 ===</text>
+  <text x="440" y="460" fill="#fbbf24" font-size="9">MODEL = "yolo11m.pt"</text>
+  <text x="440" y="473" fill="#fbbf24" font-size="9"># 可选: yolov8m / yolov10m / yolo26m</text>
+  <text x="440" y="486" fill="#a7f3d0" font-size="9"># ==========================</text>
+  <text x="440" y="499" fill="#a7f3d0" font-size="9">model = YOLO(MODEL)</text>
+  <text x="440" y="512" fill="#a7f3d0" font-size="9">model.train(data='data.yaml',</text>
+  <text x="440" y="525" fill="#a7f3d0" font-size="9">  epochs=100, freeze=20)</text>
+  <text x="440" y="545" fill="#fef08a" font-size="10" font-weight="bold">✅ Phase 1: 冻结Backbone，只训练Head</text>
+
+  <!-- 迁移学习详解 -->
+  <rect x="825" y="365" width="370" height="190" rx="10" fill="url(#layer3)" filter="url(#shadow)"/>
+  <text x="1010" y="385" text-anchor="middle" fill="white" font-size="13" font-weight="bold">迁移学习两阶段详解</text>
+  <text x="835" y="408" fill="#fde68a" font-size="10">Phase 1: 冻结Backbone（前20层）</text>
+  <text x="845" y="423" fill="#fef3c7" font-size="9">• 加载COCO预训练权重（已学会边缘/纹理）</text>
+  <text x="845" y="436" fill="#fef3c7" font-size="9">• 冻结前20层 = 不更新参数</text>
+  <text x="845" y="449" fill="#fef3c7" font-size="9">• 只训练Neck+Head（学镍板缺陷）</text>
+  <text x="845" y="462" fill="#fef3c7" font-size="9">• 学习率: 1e-3，epoch: 100</text>
+  <text x="835" y="478" fill="#fde68a" font-size="10">Phase 2: 全量微调</text>
+  <text x="845" y="493" fill="#fef3c7" font-size="9">• 解冻所有层</text>
+  <text x="845" y="506" fill="#fef3c7" font-size="9">• 学习率: 1e-4（更小，保护预训练）</text>
+  <text x="845" y="519" fill="#fef3c7" font-size="9">• epoch: 50，微调底层特征</text>
+  <text x="835" y="538" fill="#fef08a" font-size="10" font-weight="bold">✅ 导出ONNX: model.export(format='onnx')</text>
+  <text x="835" y="553" fill="#fef3c7" font-size="9">输出: best.onnx（与模型无关的统一格式）</text>
+
+  <!-- RF-DETR适配 -->
+  <rect x="1210" y="365" width="360" height="190" rx="10" fill="url(#layer6)" filter="url(#shadow)"/>
+  <text x="1390" y="385" text-anchor="middle" fill="white" font-size="13" font-weight="bold">RF-DETR 适配（如果老师选）</text>
+  <text x="1220" y="408" fill="#a5f3fc" font-size="9"># scripts/train_rfdetr.py</text>
+  <text x="1220" y="421" fill="#a5f3fc" font-size="9">from rfdetr import RFDETR</text>
+  <text x="1220" y="434" fill="#a5f3fc" font-size="9"> </text>
+  <text x="1220" y="447" fill="#a5f3fc" font-size="9">model = RFDETR(backbone='resnet50',</text>
+  <text x="1220" y="460" fill="#a5f3fc" font-size="9">  num_classes=18)</text>
+  <text x="1220" y="473" fill="#a5f3fc" font-size="9">model.fit(train_data='data.yaml',</text>
+  <text x="1220" y="486" fill="#a5f3fc" font-size="9">  epochs=100, lr=1e-4)</text>
+  <text x="1220" y="499" fill="#a5f3fc" font-size="9"> </text>
+  <text x="1220" y="512" fill="#a5f3fc" font-size="9"># 手动导出ONNX</text>
+  <text x="1220" y="525" fill="#a5f3fc" font-size="9">torch.onnx.export(model, ...)</text>
+  <text x="1220" y="545" fill="#fef08a" font-size="10" font-weight="bold">⚠️ 训练方式不同，但导出ONNX后统一</text>
+  <text x="1220" y="560" fill="#cffafe" font-size="9">后端 detector.py 无需任何修改</text>
+
+  <!-- ===== Layer 3: 等级判定层 ===== -->
+  <rect x="20" y="580" width="1560" height="200" rx="14" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="800" y="605" text-anchor="middle" fill="#a78bfa" font-size="17" font-weight="bold">📊 Layer 3: 等级判定层（Grade Classification）— 与检测模型解耦</text>
+
+  <!-- 特征提取 -->
+  <rect x="35" y="620" width="300" height="150" rx="10" fill="url(#layer4)" filter="url(#shadow)"/>
+  <text x="185" y="640" text-anchor="middle" fill="white" font-size="13" font-weight="bold">特征提取（从检测结果统计）</text>
+  <text x="45" y="660" fill="#ddd6fe" font-size="10">输入：YOLO检测输出（缺陷列表）</text>
+  <text x="45" y="675" fill="#ddd6fe" font-size="10">输出：结构化特征向量（30-100维）</text>
+  <text x="45" y="695" fill="#c4b5fd" font-size="10">每类缺陷5维特征：</text>
+  <text x="55" y="710" fill="#c4b5fd" font-size="9">• count（数量）</text>
+  <text x="55" y="723" fill="#c4b5fd" font-size="9">• total_area（总面积）</text>
+  <text x="55" y="736" fill="#c4b5fd" font-size="9">• max_area（最大面积）</text>
+  <text x="55" y="749" fill="#c4b5fd" font-size="9">• max_size（最大尺寸）</text>
+  <text x="55" y="762" fill="#c4b5fd" font-size="9">• density（密度）</text>
+
+  <!-- LightGBM -->
+  <rect x="350" y="620" width="320" height="150" rx="10" fill="url(#layer5)" filter="url(#shadow)"/>
+  <text x="510" y="640" text-anchor="middle" fill="white" font-size="13" font-weight="bold">LightGBM 等级判定</text>
+  <text x="360" y="660" fill="#fbcfe8" font-size="10">输入：缺陷统计特征向量</text>
+  <text x="360" y="675" fill="#fbcfe8" font-size="10">输出：grade_code + confidence</text>
+  <text x="360" y="695" fill="#f9a8d4" font-size="10">可解释性（SHAP）：</text>
+  <text x="370" y="710" fill="#f9a8d4" font-size="9">• "被判为bad，因为划痕面积</text>
+  <text x="370" y="723" fill="#f9a8d4" font-size="9">  占8.5%，超过阈值5%"</text>
+  <text x="370" y="736" fill="#f9a8d4" font-size="9">• "Top-3关键缺陷：划痕、结瘤、气孔"</text>
+  <text x="360" y="755" fill="#fef08a" font-size="10" font-weight="bold">✅ 白盒模型，可解释可调整</text>
+  <text x="360" y="770" fill="#fce7f3" font-size="9">训练：scripts/train_lgbm.py</text>
+
+  <!-- 规则兜底 -->
+  <rect x="685" y="620" width="300" height="150" rx="10" fill="#0f172a" stroke="#475569" stroke-width="1.5"/>
+  <text x="835" y="640" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="bold">🛡️ 规则兜底（A级严重缺陷）</text>
+  <text x="695" y="660" fill="#94a3b8" font-size="10">LightGBM置信度低时，回退硬规则：</text>
+  <text x="695" y="675" fill="#94a3b8" font-size="10">• 裂纹/孔洞/断裂 → 直接判bad</text>
+  <text x="695" y="690" fill="#94a3b8" font-size="10">• 结瘤面积 > 5% → 直接降一级</text>
+  <text x="695" y="705" fill="#94a3b8" font-size="10">• 气孔数量 > 10个 → 判9996</text>
+  <text x="695" y="725" fill="#fbbf24" font-size="10" font-weight="bold">⚠️ 严重缺陷零容忍，规则最后防线</text>
+  <text x="695" y="740" fill="#94a3b8" font-size="9">配置：config/thresholds.yaml</text>
+  <text x="695" y="755" fill="#94a3b8" font-size="9">修改阈值无需改代码，重启生效</text>
+
+  <!-- 等级定义 -->
+  <rect x="1000" y="620" width="280" height="150" rx="10" fill="#0f172a" stroke="#475569" stroke-width="1.5"/>
+  <text x="1140" y="640" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="bold">📋 等级定义</text>
+  <text x="1010" y="660" fill="#94a3b8" font-size="10">电解镍（7级）：</text>
+  <text x="1010" y="675" fill="#94a3b8" font-size="9">1:3号板 2:9950 3:9996 4:bad</text>
+  <text x="1010" y="688" fill="#94a3b8" font-size="9">5:合格整版 6:烫洗板 7:2号板</text>
+  <text x="1010" y="705" fill="#94a3b8" font-size="10">电积镍（4级）：</text>
+  <text x="1010" y="720" fill="#94a3b8" font-size="9">1:bad 2:9996 3:9950 4:3号板</text>
+  <text x="1010" y="740" fill="#fbbf24" font-size="10" font-weight="bold">配置化：config/grades.yaml</text>
+  <text x="1010" y="755" fill="#94a3b8" font-size="9">支持按客户/批次动态调整</text>
+
+  <!-- 切割策略 -->
+  <rect x="1295" y="620" width="275" height="150" rx="10" fill="#0f172a" stroke="#475569" stroke-width="1.5"/>
+  <text x="1432" y="640" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="bold">✂️ 切割策略（配置化）</text>
+  <text x="1305" y="660" fill="#94a3b8" font-size="10">总缺陷比 > 60% → 全切</text>
+  <text x="1305" y="675" fill="#94a3b8" font-size="10">10% - 60% → 5切</text>
+  <text x="1305" y="690" fill="#94a3b8" font-size="10">1% - 10% → 2切</text>
+  <text x="1305" y="705" fill="#94a3b8" font-size="10">&lt; 1% → 不切割</text>
+  <text x="1305" y="725" fill="#94a3b8" font-size="10">C类缺陷比 > 50% → 全切</text>
+  <text x="1305" y="740" fill="#94a3b8" font-size="10">结瘤距边 &lt; 30px → 剪边</text>
+  <text x="1305" y="760" fill="#fbbf24" font-size="10" font-weight="bold">配置: config/cutting.yaml</text>
+
+  <!-- ===== Layer 4: 推理部署层 ===== -->
+  <rect x="20" y="795" width="1560" height="220" rx="14" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="800" y="820" text-anchor="middle" fill="#f472b6" font-size="17" font-weight="bold">🚀 Layer 4: 推理部署层（Deployment Layer）— 无PyInstaller | 不Docker | Tauri原生</text>
+
+  <!-- Tauri前端 -->
+  <rect x="35" y="835" width="280" height="165" rx="10" fill="url(#layer5)" filter="url(#shadow)"/>
+  <text x="175" y="855" text-anchor="middle" fill="white" font-size="13" font-weight="bold">🖥️ Tauri GUI（桌面端）</text>
+  <text x="45" y="875" fill="#fbcfe8" font-size="10">• React/Vue 前端界面</text>
+  <text x="45" y="890" fill="#fbcfe8" font-size="10">• 拖入图片（支持单/双/三光）</text>
+  <text x="45" y="905" fill="#fbcfe8" font-size="10">• 点击"检测"按钮</text>
+  <text x="45" y="920" fill="#fbcfe8" font-size="10">• 显示缺陷框 + 等级 + 原因</text>
+  <text x="45" y="935" fill="#fbcfe8" font-size="10">• 导出PDF检测报告</text>
+  <text x="45" y="955" fill="#fef08a" font-size="10" font-weight="bold">✅ 用户感知：就是一个软件</text>
+  <text x="45" y="970" fill="#fce7f3" font-size="9">技术：Tauri (Rust) + WebView</text>
+  <text x="45" y="985" fill="#fce7f3" font-size="9">打包：.exe / .dmg / .AppImage</text>
+
+  <!-- 启动Python环境 -->
+  <rect x="330" y="835" width="340" height="165" rx="10" fill="url(#layer6)" filter="url(#shadow)"/>
+  <text x="500" y="855" text-anchor="middle" fill="white" font-size="13" font-weight="bold">⚙️ Tauri启动Python后端（Sidecar）</text>
+  <text x="340" y="875" fill="#a5f3fc" font-size="10">Rust代码（Tauri启动时执行）：</text>
+  <text x="340" y="890" fill="#cffafe" font-size="9">1. 检查系统是否有Python 3.10+</text>
+  <text x="340" y="903" fill="#cffafe" font-size="9">2. 无Python → 自动下载Miniconda</text>
+  <text x="340" y="916" fill="#cffafe" font-size="9">3. 创建venv虚拟环境</text>
+  <text x="340" y="929" fill="#cffafe" font-size="9">4. pip install -r requirements.txt</text>
+  <text x="340" y="942" fill="#cffafe" font-size="9">5. 启动FastAPI服务（localhost:5005）</text>
+  <text x="340" y="955" fill="#cffafe" font-size="9">6. Tauri关闭时自动kill进程</text>
+  <text x="340" y="975" fill="#fef08a" font-size="10" font-weight="bold">✅ 零打包风险，不依赖PyInstaller</text>
+  <text x="340" y="990" fill="#cffafe" font-size="9">协议：Python无限制，Tauri MIT</text>
+
+  <!-- FastAPI后端 -->
+  <rect x="685" y="835" width="300" height="165" rx="10" fill="url(#layer2)" filter="url(#shadow)"/>
+  <text x="835" y="855" text-anchor="middle" fill="white" font-size="13" font-weight="bold">🔌 FastAPI 后端服务</text>
+  <text x="695" y="875" fill="#a7f3d0" font-size="10">• 接收图片（HTTP POST /detect）</text>
+  <text x="695" y="890" fill="#a7f3d0" font-size="10">• 多光源预处理（伪彩色合成）</text>
+  <text x="695" y="905" fill="#a7f3d0" font-size="10">• ONNX Runtime加载检测模型</text>
+  <text x="695" y="920" fill="#a7f3d0" font-size="10">• LightGBM加载等级模型</text>
+  <text x="695" y="935" fill="#a7f3d0" font-size="10">• 返回JSON（缺陷+等级+原因）</text>
+  <text x="695" y="955" fill="#fef08a" font-size="10" font-weight="bold">✅ 模型权重单独文件，可热更新</text>
+  <text x="695" y="970" fill="#d1fae5" font-size="9">技术：FastAPI + ONNXRuntime + LightGBM</text>
+  <text x="695" y="983" fill="#d1fae5" font-size="9">部署：随Tauri启动，localhost:5005</text>
+
+  <!-- ONNX Runtime -->
+  <rect x="1000" y="835" width="280" height="165" rx="10" fill="url(#layer3)" filter="url(#shadow)"/>
+  <text x="1140" y="855" text-anchor="middle" fill="white" font-size="13" font-weight="bold">⚡ ONNX Runtime 推理</text>
+  <text x="1010" y="875" fill="#fde68a" font-size="10">• 加载 detector.onnx（YOLO系列通用）</text>
+  <text x="1010" y="890" fill="#fde68a" font-size="10">• 输入：640x640x3 伪彩色图</text>
+  <text x="1010" y="905" fill="#fde68a" font-size="10">• 输出：缺陷框 + 类别 + 置信度</text>
+  <text x="1010" y="920" fill="#fde68a" font-size="10">• 速度：50ms/张（CPU）/ 15ms（GPU）</text>
+  <text x="1010" y="940" fill="#fef08a" font-size="10" font-weight="bold">✅ 与模型无关：YOLOv8~26/RF-DETR</text>
+  <text x="1010" y="955" fill="#fef3c7" font-size="9">导出：YOLO系列 ultralytics原生支持</text>
+  <text x="1010" y="968" fill="#fef3c7" font-size="9">RF-DETR: torch.onnx.export()</text>
+  <text x="1010" y="981" fill="#fef3c7" font-size="9">推理代码 detector.py 完全不变</text>
+
+  <!-- 备选方案 -->
+  <rect x="1295" y="835" width="275" height="165" rx="10" fill="#0f172a" stroke="#475569" stroke-width="1.5"/>
+  <text x="1432" y="855" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="bold">📦 备选部署方案</text>
+  <text x="1305" y="875" fill="#94a3b8" font-size="10">如果客户要求"不能装Python"：</text>
+  <text x="1305" y="895" fill="#34d399" font-size="10">方案A: Nuitka（Apache 2.0）</text>
+  <text x="1305" y="910" fill="#94a3b8" font-size="9">  编译为C++可执行文件，商用无风险</text>
+  <text x="1305" y="930" fill="#34d399" font-size="10">方案B: cx_Freeze（MIT）</text>
+  <text x="1305" y="945" fill="#94a3b8" font-size="9">  类似PyInstaller，MIT协议</text>
+  <text x="1305" y="965" fill="#fbbf24" font-size="10" font-weight="bold">主方案：直接Python环境（零风险）</text>
+  <text x="1305" y="980" fill="#94a3b8" font-size="9">备选：Nuitka（客户要求时启用）</text>
+
+  <!-- ===== 底部：时间线 & 交付物 ===== -->
+  <rect x="20" y="1030" width="1560" height="155" rx="14" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="800" y="1055" text-anchor="middle" fill="#f8fafc" font-size="17" font-weight="bold">📅 执行时间线与交付物</text>
+
+  <!-- 时间线 -->
+  <rect x="35" y="1065" width="250" height="110" rx="8" fill="url(#layer1)" filter="url(#shadow)"/>
+  <text x="160" y="1082" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Week 1-2: 数据准备</text>
+  <text x="45" y="1098" fill="#bfdbfe" font-size="9">• 整理旧数据集 + 新多光源</text>
+  <text x="45" y="1111" fill="#bfdbfe" font-size="9">• 运行预处理脚本（伪彩色）</text>
+  <text x="45" y="1124" fill="#bfdbfe" font-size="9">• 人工审核标签（高价值样本）</text>
+  <text x="45" y="1140" fill="#fef08a" font-size="9" font-weight="bold">交付: 高质量标注数据集</text>
+  <text x="45" y="1153" fill="#e0e7ff" font-size="9">产出: images_pseudo/ + labels/</text>
+
+  <rect x="300" y="1065" width="250" height="110" rx="8" fill="url(#layer2)" filter="url(#shadow)"/>
+  <text x="425" y="1082" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Week 3-4: 模型训练</text>
+  <text x="310" y="1098" fill="#a7f3d0" font-size="9">• 等老师决定模型 → 改一行配置</text>
+  <text x="310" y="1111" fill="#a7f3d0" font-size="9">• Phase 1: 冻结Backbone训练</text>
+  <text x="310" y="1124" fill="#a7f3d0" font-size="9">• Phase 2: 全量微调 + 导出ONNX</text>
+  <text x="310" y="1140" fill="#fef08a" font-size="9" font-weight="bold">交付: detector.onnx</text>
+  <text x="310" y="1153" fill="#d1fae5" font-size="9">产出: runs/*/weights/best.onnx</text>
+
+  <rect x="565" y="1065" width="250" height="110" rx="8" fill="url(#layer3)" filter="url(#shadow)"/>
+  <text x="690" y="1082" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Week 5: 等级模型</text>
+  <text x="575" y="1098" fill="#fde68a" font-size="9">• 用检测模型提取缺陷特征</text>
+  <text x="575" y="1111" fill="#fde68a" font-size="9">• 训练LightGBM等级判定</text>
+  <text x="575" y="1124" fill="#fde68a" font-size="9">• 验证准确率 + 可解释性</text>
+  <text x="575" y="1140" fill="#fef08a" font-size="9" font-weight="bold">交付: grade_lgbm.pkl</text>
+  <text x="575" y="1153" fill="#fef3c7" font-size="9">产出: models/grade_lgbm.pkl</text>
+
+  <rect x="830" y="1065" width="250" height="110" rx="8" fill="url(#layer6)" filter="url(#shadow)"/>
+  <text x="955" y="1082" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Week 6: 后端开发</text>
+  <text x="840" y="1098" fill="#a5f3fc" font-size="9">• FastAPI服务 + ONNX Runtime</text>
+  <text x="840" y="1111" fill="#a5f3fc" font-size="9">• 多光源预处理 + 等级判定</text>
+  <text x="840" y="1124" fill="#a5f3fc" font-size="9">• Tauri Sidecar启动集成</text>
+  <text x="840" y="1140" fill="#fef08a" font-size="9" font-weight="bold">交付: 可运行的后端</text>
+  <text x="840" y="1153" fill="#cffafe" font-size="9">产出: backend/ + src-tauri/src/main.rs</text>
+
+  <rect x="1095" y="1065" width="250" height="110" rx="8" fill="url(#layer5)" filter="url(#shadow)"/>
+  <text x="1220" y="1082" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Week 7: 前端开发</text>
+  <text x="1105" y="1098" fill="#fbcfe8" font-size="9">• Tauri + React GUI界面</text>
+  <text x="1105" y="1111" fill="#fbcfe8" font-size="9">• 图片上传 + 结果展示</text>
+  <text x="1105" y="1124" fill="#fbcfe8" font-size="9">• 导出PDF报告</text>
+  <text x="1105" y="1140" fill="#fef08a" font-size="9" font-weight="bold">交付: Tauri安装包</text>
+  <text x="1105" y="1153" fill="#fce7f3" font-size="9">产出: .exe / .dmg / .AppImage</text>
+
+  <rect x="1360" y="1065" width="210" height="110" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1.5"/>
+  <text x="1465" y="1082" text-anchor="middle" fill="#e2e8f0" font-size="12" font-weight="bold">Week 8: 测试发布</text>
+  <text x="1370" y="1098" fill="#94a3b8" font-size="9">• 产线联调测试</text>
+  <text x="1370" y="1111" fill="#94a3b8" font-size="9">• 与人工判定对比</text>
+  <text x="1370" y="1124" fill="#94a3b8" font-size="9">• 调整阈值（改YAML）</text>
+  <text x="1370" y="1140" fill="#fbbf24" font-size="9" font-weight="bold">交付: 生产系统</text>
+  <text x="1370" y="1153" fill="#94a3b8" font-size="9">产出: 完整软件 + 文档</text>
+
+</svg>

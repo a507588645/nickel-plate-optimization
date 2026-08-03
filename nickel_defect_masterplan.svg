@@ -1,0 +1,354 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1100" style="background:#0f172a;font-family:system-ui,-apple-system,sans-serif;">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="grad-red" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="grad-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="grad-pink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <linearGradient id="grad-cyan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="1100" fill="url(#bg)"/>
+
+  <text x="700" y="35" text-anchor="middle" fill="#f8fafc" font-size="26" font-weight="bold">镍板缺陷检测系统全流程重构总方案 v2.0</text>
+  <text x="700" y="58" text-anchor="middle" fill="#94a3b8" font-size="13">检测模型升级 + 多光源兼容 + 等级判定革新 + 服务架构重构</text>
+
+  <rect x="15" y="75" width="450" height="230" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="240" y="95" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">🔴 当前问题诊断</text>
+
+  <rect x="25" y="105" width="210" height="90" rx="8" fill="#0f172a" stroke="#7f1d1d" stroke-width="1.5"/>
+  <text x="130" y="122" text-anchor="middle" fill="#fca5a5" font-size="11" font-weight="bold">电解镍问题</text>
+  <text x="32" y="138" fill="#94a3b8" font-size="9">• YOLOv5老旧，精度不足</text>
+  <text x="32" y="152" fill="#94a3b8" font-size="9">• 硬编码阈值，无法自适应</text>
+  <text x="32" y="166" fill="#94a3b8" font-size="9">• 18类缺陷，小目标漏检</text>
+  <text x="32" y="180" fill="#94a3b8" font-size="9">• 固定调试文件，非并发安全</text>
+  <text x="32" y="190" fill="#94a3b8" font-size="9">• 预处理尺寸512 vs 224不一致</text>
+
+  <rect x="245" y="105" width="210" height="90" rx="8" fill="#0f172a" stroke="#7f1d1d" stroke-width="1.5"/>
+  <text x="350" y="122" text-anchor="middle" fill="#fca5a5" font-size="11" font-weight="bold">电积镍问题</text>
+  <text x="252" y="138" fill="#94a3b8" font-size="9">• /dianjiclass调用错误模型</text>
+  <text x="252" y="152" fill="#94a3b8" font-size="9">• ResNet加载重置fc层</text>
+  <text x="252" y="166" fill="#94a3b8" font-size="9">• 黑盒分类，无缺陷感知</text>
+  <text x="252" y="180" fill="#94a3b8" font-size="9">• 4类标准不透明，不可解释</text>
+  <text x="252" y="190" fill="#94a3b8" font-size="9">• 与电解镍体系完全割裂</text>
+
+  <rect x="25" y="200" width="430" height="95" rx="8" fill="#0f172a" stroke="#7f1d1d" stroke-width="1.5"/>
+  <text x="240" y="217" text-anchor="middle" fill="#fca5a5" font-size="11" font-weight="bold">架构层问题</text>
+  <text x="32" y="233" fill="#94a3b8" font-size="9">• Flask单线程，并发性能差</text>
+  <text x="32" y="247" fill="#94a3b8" font-size="9">• 阈值硬编码在源码中，业务调整需改代码</text>
+  <text x="32" y="261" fill="#94a3b8" font-size="9">• 无结构化日志，排查困难</text>
+  <text x="32" y="275" fill="#94a3b8" font-size="9">• 无请求ID追踪，并发问题难定位</text>
+  <text x="32" y="289" fill="#94a3b8" font-size="9">• 多光源数据无法兼容（左/右/融合光）</text>
+
+  <rect x="480" y="75" width="905" height="230" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="932" y="95" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">🟢 新架构总览：统一缺陷驱动等级判定</text>
+
+  <rect x="495" y="108" width="80" height="55" rx="6" fill="#0f172a" stroke="#64748b" stroke-width="2"/>
+  <text x="535" y="125" text-anchor="middle" fill="#e2e8f0" font-size="10" font-weight="bold">📷 图像</text>
+  <text x="535" y="140" text-anchor="middle" fill="#94a3b8" font-size="8">单光/双光/三光</text>
+  <text x="535" y="155" text-anchor="middle" fill="#94a3b8" font-size="8">4096×3554</text>
+
+  <line x1="575" y1="135" x2="600" y2="135" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="605" y="108" width="90" height="55" rx="6" fill="#0f172a" stroke="#f59e0b" stroke-width="2"/>
+  <text x="650" y="125" text-anchor="middle" fill="#fcd34d" font-size="10" font-weight="bold">🔧 预处理</text>
+  <text x="650" y="140" text-anchor="middle" fill="#cbd5e1" font-size="8">旋转校正</text>
+  <text x="650" y="155" text-anchor="middle" fill="#94a3b8" font-size="8">镍板定位</text>
+
+  <line x1="695" y1="135" x2="720" y2="135" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="725" y="108" width="110" height="55" rx="6" fill="url(#grad-amber)" filter="url(#shadow)"/>
+  <text x="780" y="125" text-anchor="middle" fill="white" font-size="10" font-weight="bold">💡 多光源</text>
+  <text x="780" y="140" text-anchor="middle" fill="#fef3c7" font-size="8">伪彩色合成</text>
+  <text x="780" y="155" text-anchor="middle" fill="#fef3c7" font-size="8">R/G/B通道映射</text>
+
+  <line x1="835" y1="135" x2="860" y2="135" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="865" y="108" width="130" height="55" rx="6" fill="url(#grad-blue)" filter="url(#shadow)"/>
+  <text x="930" y="125" text-anchor="middle" fill="white" font-size="10" font-weight="bold">🔍 Stage 1</text>
+  <text x="930" y="140" text-anchor="middle" fill="#bfdbfe" font-size="8">YOLO11 / RF-DETR</text>
+  <text x="930" y="155" text-anchor="middle" fill="#bfdbfe" font-size="8">18类 / 5类缺陷检测</text>
+
+  <line x1="995" y1="135" x2="1020" y2="135" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="1025" y="108" width="110" height="55" rx="6" fill="url(#grad-green)" filter="url(#shadow)"/>
+  <text x="1080" y="125" text-anchor="middle" fill="white" font-size="10" font-weight="bold">📊 Stage 2</text>
+  <text x="1080" y="140" text-anchor="middle" fill="#a7f3d0" font-size="8">缺陷统计特征</text>
+  <text x="1080" y="155" text-anchor="middle" fill="#a7f3d0" font-size="8">+ 全局图像特征</text>
+
+  <line x1="1135" y1="135" x2="1160" y2="135" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="1165" y="108" width="110" height="55" rx="6" fill="url(#grad-purple)" filter="url(#shadow)"/>
+  <text x="1220" y="125" text-anchor="middle" fill="white" font-size="10" font-weight="bold">🧠 Stage 3</text>
+  <text x="1220" y="140" text-anchor="middle" fill="#ddd6fe" font-size="8">LightGBM</text>
+  <text x="1220" y="155" text-anchor="middle" fill="#ddd6fe" font-size="8">可解释等级判定</text>
+
+  <line x1="1275" y1="135" x2="1300" y2="135" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="1305" y="108" width="70" height="55" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="2"/>
+  <text x="1340" y="125" text-anchor="middle" fill="#6ee7b7" font-size="10" font-weight="bold">📤 输出</text>
+  <text x="1340" y="140" text-anchor="middle" fill="#cbd5e1" font-size="8">等级+缺陷</text>
+  <text x="1340" y="155" text-anchor="middle" fill="#94a3b8" font-size="8">+SHAP</text>
+
+  <rect x="495" y="175" width="880" height="120" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <text x="935" y="192" text-anchor="middle" fill="#e2e8f0" font-size="12" font-weight="bold">📋 架构核心变化</text>
+  <text x="505" y="210" fill="#34d399" font-size="9">✅ 检测: YOLOv5 → YOLO11/RF-DETR (精度↑10-15%)</text>
+  <text x="505" y="224" fill="#34d399" font-size="9">✅ 分类: ResNet黑盒 → LightGBM可解释 (SHAP值 + 特征重要性)</text>
+  <text x="505" y="238" fill="#34d399" font-size="9">✅ 判级: 硬编码阈值 → 数据驱动模型 (自适应不同批次/客户)</text>
+  <text x="505" y="252" fill="#34d399" font-size="9">✅ 服务: Flask → FastAPI (异步 + 类型安全 + 更高并发)</text>
+  <text x="505" y="266" fill="#34d399" font-size="9">✅ 配置: 源码硬编码 → YAML配置化 (业务调整无需改代码)</text>
+  <text x="505" y="280" fill="#34d399" font-size="9">✅ 日志: 无日志 → 结构化JSON日志 (请求ID追踪 + 性能计时)</text>
+  <text x="505" y="294" fill="#34d399" font-size="9">✅ 光源: 单光独占 → 单/双/三光兼容 (不改模型结构，只改输入组织)</text>
+
+  <rect x="15" y="315" width="450" height="200" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="240" y="335" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">🔍 检测模型选型</text>
+
+  <rect x="25" y="345" width="210" height="75" rx="8" fill="url(#grad-blue)" filter="url(#shadow)"/>
+  <text x="130" y="362" text-anchor="middle" fill="white" font-size="11" font-weight="bold">电解镍 (18类)</text>
+  <text x="130" y="378" text-anchor="middle" fill="#bfdbfe" font-size="9">首选: RF-DETR-S</text>
+  <text x="130" y="392" text-anchor="middle" fill="#bfdbfe" font-size="9">mAP@0.5=71.9, 小目标强</text>
+  <text x="130" y="406" text-anchor="middle" fill="#fef08a" font-size="9" font-weight="bold">备选: YOLO11-M (平衡)</text>
+
+  <rect x="245" y="345" width="210" height="75" rx="8" fill="url(#grad-cyan)" filter="url(#shadow)"/>
+  <text x="350" y="362" text-anchor="middle" fill="white" font-size="11" font-weight="bold">电积镍 (5类)</text>
+  <text x="350" y="378" text-anchor="middle" fill="#a5f3fc" font-size="9">首选: YOLO11-S</text>
+  <text x="350" y="392" text-anchor="middle" fill="#a5f3fc" font-size="9">2.5ms, 部署成熟</text>
+  <text x="350" y="406" text-anchor="middle" fill="#fef08a" font-size="9" font-weight="bold">备选: RT-DETR-R18</text>
+
+  <rect x="25" y="425" width="430" height="80" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <text x="240" y="442" text-anchor="middle" fill="#e2e8f0" font-size="11" font-weight="bold">📌 选型建议</text>
+  <text x="32" y="458" fill="#94a3b8" font-size="9">• 统一技术栈: 两种镍板都用 YOLO11-M (简化维护)</text>
+  <text x="32" y="472" fill="#94a3b8" font-size="9">• 精度优先: 电解用 RF-DETR-S，电积用 YOLO11-S</text>
+  <text x="32" y="486" fill="#94a3b8" font-size="9">• 边缘部署: 考虑 YOLO26-S (NMS-free, INT8稳定)</text>
+  <text x="32" y="500" fill="#94a3b8" font-size="9">• 训练策略: 冻结Backbone，只训练Head + 多光源微调</text>
+
+  <rect x="480" y="315" width="450" height="200" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="705" y="335" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">🧠 等级判定方案</text>
+
+  <rect x="490" y="345" width="210" height="75" rx="8" fill="url(#grad-purple)" filter="url(#shadow)"/>
+  <text x="595" y="362" text-anchor="middle" fill="white" font-size="11" font-weight="bold">LightGBM ⭐首选</text>
+  <text x="595" y="378" text-anchor="middle" fill="#ddd6fe" font-size="9">结构化特征 → 树模型</text>
+  <text x="595" y="392" text-anchor="middle" fill="#ddd6fe" font-size="9">SHAP可解释 + 增量学习</text>
+  <text x="595" y="406" text-anchor="middle" fill="#fef08a" font-size="9" font-weight="bold">知道"为什么判这个等级"</text>
+
+  <rect x="710" y="345" width="210" height="75" rx="8" fill="url(#grad-pink)" filter="url(#shadow)"/>
+  <text x="815" y="362" text-anchor="middle" fill="white" font-size="11" font-weight="bold">小型MLP 🥈备选</text>
+  <text x="815" y="378" text-anchor="middle" fill="#fbcfe8" font-size="9">2-3层全连接</text>
+  <text x="815" y="392" text-anchor="middle" fill="#fbcfe8" font-size="9">GPU统一推理，非线性强</text>
+  <text x="815" y="406" text-anchor="middle" fill="#fef08a" font-size="9" font-weight="bold">追求极致推理速度</text>
+
+  <rect x="490" y="425" width="430" height="80" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <text x="705" y="442" text-anchor="middle" fill="#e2e8f0" font-size="11" font-weight="bold">📊 特征工程</text>
+  <text x="497" y="458" fill="#94a3b8" font-size="9">• 缺陷统计: count / total_area / max_area / max_size / density (每类5维)</text>
+  <text x="497" y="472" fill="#94a3b8" font-size="9">• 全局特征: brightness / contrast / total_defect_ratio / distribution_density</text>
+  <text x="497" y="486" fill="#94a3b8" font-size="9">• 特殊标志: has_nodule / has_airhole / has_corner_defect</text>
+  <text x="497" y="500" fill="#94a3b8" font-size="9">• 电解镍: ~100维 | 电积镍: ~30维 | 规则兜底A级严重缺陷</text>
+
+  <rect x="945" y="315" width="440" height="200" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="1165" y="335" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">💡 多光源兼容策略</text>
+
+  <rect x="955" y="345" width="130" height="75" rx="8" fill="url(#grad-blue)" filter="url(#shadow)"/>
+  <text x="1020" y="362" text-anchor="middle" fill="white" font-size="10" font-weight="bold">单光历史</text>
+  <text x="1020" y="378" text-anchor="middle" fill="#bfdbfe" font-size="9">R=G=B=灰度</text>
+  <text x="1020" y="392" text-anchor="middle" fill="#bfdbfe" font-size="9">完美兼容</text>
+  <text x="1020" y="406" text-anchor="middle" fill="#fef08a" font-size="9" font-weight="bold">不改模型</text>
+
+  <rect x="1095" y="345" width="130" height="75" rx="8" fill="url(#grad-green)" filter="url(#shadow)"/>
+  <text x="1160" y="362" text-anchor="middle" fill="white" font-size="10" font-weight="bold">双光新</text>
+  <text x="1160" y="378" text-anchor="middle" fill="#a7f3d0" font-size="9">R=左 G=右</text>
+  <text x="1160" y="392" text-anchor="middle" fill="#a7f3d0" font-size="9">B=(左+右)/2</text>
+  <text x="1160" y="406" text-anchor="middle" fill="#fef08a" font-size="9" font-weight="bold">结构零修改</text>
+
+  <rect x="1235" y="345" width="140" height="75" rx="8" fill="url(#grad-amber)" filter="url(#shadow)"/>
+  <text x="1305" y="362" text-anchor="middle" fill="white" font-size="10" font-weight="bold">三光新 ⭐</text>
+  <text x="1305" y="378" text-anchor="middle" fill="#fde68a" font-size="9">R=左 G=右</text>
+  <text x="1305" y="392" text-anchor="middle" fill="#fde68a" font-size="9">B=融合</text>
+  <text x="1305" y="406" text-anchor="middle" fill="#fef08a" font-size="9" font-weight="bold">TensorRT不变</text>
+
+  <rect x="955" y="425" width="420" height="80" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <text x="1165" y="442" text-anchor="middle" fill="#e2e8f0" font-size="11" font-weight="bold">🔧 核心策略</text>
+  <text x="962" y="458" fill="#34d399" font-size="9">✅ 不改YOLO11网络结构，只改输入数据组织</text>
+  <text x="962" y="472" fill="#34d399" font-size="9">✅ 保持3通道输入，ONNX/TensorRT导出流程不变</text>
+  <text x="962" y="486" fill="#34d399" font-size="9">✅ 预训练权重兼容，冻结Backbone只训练Head</text>
+  <text x="962" y="500" fill="#34d399" font-size="9">✅ 单光图复制三份填入R/G/B，完美兼容历史数据</text>
+
+  <rect x="15" y="525" width="450" height="200" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="240" y="545" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">🖥️ 服务架构升级</text>
+
+  <rect x="25" y="555" width="210" height="75" rx="8" fill="#334155" stroke="#64748b" stroke-width="1.5"/>
+  <text x="130" y="572" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="bold">旧架构 (Flask)</text>
+  <text x="130" y="588" text-anchor="middle" fill="#cbd5e1" font-size="9">❌ 单线程，并发差</text>
+  <text x="130" y="602" text-anchor="middle" fill="#cbd5e1" font-size="9">❌ 固定调试文件</text>
+  <text x="130" y="616" text-anchor="middle" fill="#cbd5e1" font-size="9">❌ 无类型检查</text>
+  <text x="130" y="625" text-anchor="middle" fill="#cbd5e1" font-size="9">❌ 阈值硬编码</text>
+
+  <rect x="245" y="555" width="210" height="75" rx="8" fill="url(#grad-green)" filter="url(#shadow)"/>
+  <text x="350" y="572" text-anchor="middle" fill="white" font-size="11" font-weight="bold">新架构 (FastAPI)</text>
+  <text x="350" y="588" text-anchor="middle" fill="#a7f3d0" font-size="9">✅ 异步处理，高并发</text>
+  <text x="350" y="602" text-anchor="middle" fill="#a7f3d0" font-size="9">✅ 结构化JSON日志</text>
+  <text x="350" y="616" text-anchor="middle" fill="#a7f3d0" font-size="9">✅ Pydantic类型验证</text>
+  <text x="350" y="625" text-anchor="middle" fill="#a7f3d0" font-size="9">✅ YAML配置化</text>
+
+  <rect x="25" y="635" width="430" height="80" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <text x="240" y="652" text-anchor="middle" fill="#e2e8f0" font-size="11" font-weight="bold">📋 升级要点</text>
+  <text x="32" y="668" fill="#94a3b8" font-size="9">• Flask → FastAPI，uvicorn + workers并发</text>
+  <text x="32" y="682" fill="#94a3b8" font-size="9">• 所有阈值/规则提取到YAML，业务调整不改代码</text>
+  <text x="32" y="696" fill="#94a3b8" font-size="9">• 结构化日志：请求ID + 性能计时 + JSON格式</text>
+  <text x="32" y="710" fill="#94a3b8" font-size="9">• 健康检查 /health，配置查询 /config，指标监控 /metrics</text>
+  <text x="32" y="724" fill="#94a3b8" font-size="9">• Docker部署 + 模型预加载 + 优雅关闭</text>
+
+  <rect x="480" y="525" width="450" height="200" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="705" y="545" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">✂️ 切割策略优化</text>
+
+  <rect x="490" y="555" width="210" height="75" rx="8" fill="#334155" stroke="#64748b" stroke-width="1.5"/>
+  <text x="595" y="572" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="bold">旧策略 (硬编码)</text>
+  <text x="595" y="588" text-anchor="middle" fill="#cbd5e1" font-size="9">❌ 固定面积阈值</text>
+  <text x="595" y="602" text-anchor="middle" fill="#cbd5e1" font-size="9">❌ 5切/2切硬编码</text>
+  <text x="595" y="616" text-anchor="middle" fill="#cbd5e1" font-size="9">❌ 无法自适应</text>
+  <text x="595" y="625" text-anchor="middle" fill="#cbd5e1" font-size="9">❌ 源码中改阈值</text>
+
+  <rect x="710" y="555" width="210" height="75" rx="8" fill="url(#grad-cyan)" filter="url(#shadow)"/>
+  <text x="815" y="572" text-anchor="middle" fill="white" font-size="11" font-weight="bold">新策略 (配置化)</text>
+  <text x="815" y="588" text-anchor="middle" fill="#a5f3fc" font-size="9">✅ 缺陷分布驱动切割</text>
+  <text x="815" y="602" text-anchor="middle" fill="#a5f3fc" font-size="9">✅ YAML配置阈值</text>
+  <text x="815" y="616" text-anchor="middle" fill="#a5f3fc" font-size="9">✅ 智能坏段判定</text>
+  <text x="815" y="625" text-anchor="middle" fill="#a5f3fc" font-size="9">✅ 结瘤剪边优化</text>
+
+  <rect x="490" y="635" width="430" height="80" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <text x="705" y="652" text-anchor="middle" fill="#e2e8f0" font-size="11" font-weight="bold">📋 切割逻辑</text>
+  <text x="497" y="668" fill="#94a3b8" font-size="9">• 总缺陷比>60% → 全切 | 10%-60% → 5切 | 1%-10% → 2切 | &lt;1% → 不切割</text>
+  <text x="497" y="682" fill="#94a3b8" font-size="9">• C类缺陷比>50% → 全切 | 坏段面积>阈值 → 标记为坏段</text>
+  <text x="497" y="696" fill="#94a3b8" font-size="9">• 结瘤距边&lt;30px → 剪边处理 | 切片尺寸120×125，标准镍板720×740</text>
+  <text x="497" y="710" fill="#94a3b8" font-size="9">• 所有阈值配置化，支持按客户/批次动态调整</text>
+
+  <rect x="945" y="525" width="440" height="200" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="1165" y="545" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">📅 实施路线图</text>
+
+  <rect x="955" y="555" width="210" height="75" rx="8" fill="url(#grad-blue)" filter="url(#shadow)"/>
+  <text x="1060" y="572" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Phase 1 (2周)</text>
+  <text x="1060" y="588" text-anchor="middle" fill="#bfdbfe" font-size="9">数据准备 + 标注</text>
+  <text x="1060" y="602" text-anchor="middle" fill="#bfdbfe" font-size="9">电解镍确认18类标注</text>
+  <text x="1060" y="616" text-anchor="middle" fill="#bfdbfe" font-size="9">电积镍补标缺陷YOLO</text>
+  <text x="1060" y="625" text-anchor="middle" fill="#bfdbfe" font-size="9">收集历史等级判定数据</text>
+
+  <rect x="1175" y="555" width="200" height="75" rx="8" fill="url(#grad-green)" filter="url(#shadow)"/>
+  <text x="1275" y="572" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Phase 2 (2-3周)</text>
+  <text x="1275" y="588" text-anchor="middle" fill="#a7f3d0" font-size="9">模型训练</text>
+  <text x="1275" y="602" text-anchor="middle" fill="#a7f3d0" font-size="9">检测模型训练</text>
+  <text x="1275" y="616" text-anchor="middle" fill="#a7f3d0" font-size="9">LightGBM等级判定</text>
+  <text x="1275" y="625" text-anchor="middle" fill="#a7f3d0" font-size="9">特征工程 + SHAP</text>
+
+  <rect x="955" y="635" width="200" height="80" rx="8" fill="url(#grad-amber)" filter="url(#shadow)"/>
+  <text x="1055" y="652" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Phase 3 (2周)</text>
+  <text x="1055" y="668" text-anchor="middle" fill="#fde68a" font-size="9">服务重构</text>
+  <text x="1055" y="682" text-anchor="middle" fill="#fde68a" font-size="9">Flask→FastAPI</text>
+  <text x="1055" y="696" text-anchor="middle" fill="#fde68a" font-size="9">配置化 + 结构化日志</text>
+  <text x="1055" y="710" text-anchor="middle" fill="#fde68a" font-size="9">TensorRT加速</text>
+
+  <rect x="1165" y="635" width="210" height="80" rx="8" fill="url(#grad-purple)" filter="url(#shadow)"/>
+  <text x="1270" y="652" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Phase 4 (1-2周)</text>
+  <text x="1270" y="668" text-anchor="middle" fill="#ddd6fe" font-size="9">部署验证</text>
+  <text x="1270" y="682" text-anchor="middle" fill="#ddd6fe" font-size="9">产线联调 + A/B测试</text>
+  <text x="1270" y="696" text-anchor="middle" fill="#ddd6fe" font-size="9">漏检率/误报率统计</text>
+  <text x="1270" y="710" text-anchor="middle" fill="#ddd6fe" font-size="9">监控告警体系</text>
+
+  <rect x="15" y="735" width="1370" height="85" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="700" y="755" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">🎯 性能目标</text>
+
+  <rect x="25" y="765" width="200" height="45" rx="6" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <text x="125" y="780" text-anchor="middle" fill="#34d399" font-size="10" font-weight="bold">检测精度</text>
+  <text x="125" y="795" text-anchor="middle" fill="#94a3b8" font-size="9">mAP@0.5 ≥ 85%</text>
+  <text x="125" y="805" text-anchor="middle" fill="#94a3b8" font-size="9">漏检率 &lt; 1.5%</text>
+
+  <rect x="235" y="765" width="200" height="45" rx="6" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <text x="335" y="780" text-anchor="middle" fill="#34d399" font-size="10" font-weight="bold">等级判定</text>
+  <text x="335" y="795" text-anchor="middle" fill="#94a3b8" font-size="9">准确率 ≥ 95%</text>
+  <text x="335" y="805" text-anchor="middle" fill="#94a3b8" font-size="9">人工一致性 ≥ 90%</text>
+
+  <rect x="445" y="765" width="200" height="45" rx="6" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <text x="545" y="780" text-anchor="middle" fill="#34d399" font-size="10" font-weight="bold">实时性</text>
+  <text x="545" y="795" text-anchor="middle" fill="#94a3b8" font-size="9">单图 ≤ 50ms (GPU)</text>
+  <text x="545" y="805" text-anchor="middle" fill="#94a3b8" font-size="9">支持 60-120m/min</text>
+
+  <rect x="655" y="765" width="200" height="45" rx="6" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <text x="755" y="780" text-anchor="middle" fill="#34d399" font-size="10" font-weight="bold">严重缺陷</text>
+  <text x="755" y="795" text-anchor="middle" fill="#94a3b8" font-size="9">A级漏检率 &lt; 0.5%</text>
+  <text x="755" y="805" text-anchor="middle" fill="#94a3b8" font-size="9">规则兜底保障</text>
+
+  <rect x="865" y="765" width="200" height="45" rx="6" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <text x="965" y="780" text-anchor="middle" fill="#34d399" font-size="10" font-weight="bold">误报率</text>
+  <text x="965" y="795" text-anchor="middle" fill="#94a3b8" font-size="9">综合误报 &lt; 3%</text>
+  <text x="965" y="805" text-anchor="middle" fill="#94a3b8" font-size="9">参考工业标杆</text>
+
+  <rect x="1075" y="765" width="200" height="45" rx="6" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <text x="1175" y="780" text-anchor="middle" fill="#34d399" font-size="10" font-weight="bold">可解释性</text>
+  <text x="1175" y="795" text-anchor="middle" fill="#94a3b8" font-size="9">Top-3关键缺陷</text>
+  <text x="1175" y="805" text-anchor="middle" fill="#94a3b8" font-size="9">SHAP值解释</text>
+
+  <rect x="15" y="830" width="1370" height="255" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="700" y="855" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="bold">📋 方案总结：六大核心变革</text>
+
+  <rect x="25" y="870" width="440" height="100" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <text x="245" y="888" text-anchor="middle" fill="#e2e8f0" font-size="12" font-weight="bold">检测层变革</text>
+  <text x="32" y="905" fill="#94a3b8" font-size="9">① YOLOv5 → YOLO11/RF-DETR，精度提升10-15%</text>
+  <text x="32" y="920" fill="#94a3b8" font-size="9">② 单光独占 → 单/双/三光兼容，不改模型结构</text>
+  <text x="32" y="935" fill="#94a3b8" font-size="9">③ 18类/5类缺陷统一检测框架，支持多尺度小目标</text>
+  <text x="32" y="950" fill="#94a3b8" font-size="9">④ TensorRT/ONNX加速，支持边缘部署</text>
+  <text x="32" y="965" fill="#94a3b8" font-size="9">⑤ 数据增强: Mosaic + MixUp + Copy-Paste + Focal Loss</text>
+
+  <rect x="480" y="870" width="440" height="100" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <text x="700" y="888" text-anchor="middle" fill="#e2e8f0" font-size="12" font-weight="bold">判定层变革</text>
+  <text x="487" y="905" fill="#94a3b8" font-size="9">① ResNet黑盒 → LightGBM可解释，SHAP值展示判定依据</text>
+  <text x="487" y="920" fill="#94a3b8" font-size="9">② 硬编码阈值 → 数据驱动模型，自适应不同批次/客户</text>
+  <text x="487" y="935" fill="#94a3b8" font-size="9">③ 结构化特征输入: 缺陷统计 + 全局图像 + 特殊标志</text>
+  <text x="487" y="950" fill="#94a3b8" font-size="9">④ 规则兜底: A级严重缺陷最后防线，确保不漏检</text>
+  <text x="487" y="965" fill="#94a3b8" font-size="9">⑤ 输出: 等级 + 缺陷列表 + 置信度 + Top-3关键缺陷</text>
+
+  <rect x="935" y="870" width="440" height="100" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <text x="1155" y="888" text-anchor="middle" fill="#e2e8f0" font-size="12" font-weight="bold">架构层变革</text>
+  <text x="942" y="905" fill="#94a3b8" font-size="9">① Flask → FastAPI，异步处理，并发性能提升5-10倍</text>
+  <text x="942" y="920" fill="#94a3b8" font-size="9">② 源码硬编码 → YAML配置化，业务调整无需改代码</text>
+  <text x="942" y="935" fill="#94a3b8" font-size="9">③ 无日志 → 结构化JSON日志，请求ID追踪 + 性能计时</text>
+  <text x="942" y="950" fill="#94a3b8" font-size="9">④ 固定调试文件 → 内存安全并发，支持多请求并行</text>
+  <text x="942" y="965" fill="#94a3b8" font-size="9">⑤ Docker部署 + 健康检查 + 监控告警 + 优雅关闭</text>
+
+  <rect x="25" y="980" width="1350" height="95" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <text x="700" y="1000" text-anchor="middle" fill="#fbbf24" font-size="13" font-weight="bold">🎯 最终目标：从"黑盒不可解释"到"缺陷驱动可解释"的工业级智能检测系统</text>
+  <text x="700" y="1020" text-anchor="middle" fill="#94a3b8" font-size="10">电解镍: 18类缺陷YOLO检测 → LightGBM等级判定(7级) → 可解释输出</text>
+  <text x="700" y="1035" text-anchor="middle" fill="#94a3b8" font-size="10">电积镍: 5类缺陷YOLO检测 → LightGBM等级判定(4级) → 可解释输出</text>
+  <text x="700" y="1050" text-anchor="middle" fill="#94a3b8" font-size="10">统一架构: 多光源兼容 + 配置化管理 + 结构化日志 + 高并发服务 + 可解释AI</text>
+  <text x="700" y="1065" text-anchor="middle" fill="#94a3b8" font-size="10">部署方式: TensorRT加速 + Docker容器 + 产线实时推理 + 监控告警体系</text>
+
+</svg>

@@ -132,3 +132,21 @@ python .\train_dianjienie_ryw18_anchor.py --model yolo26m.pt --fold 3
 ## 训练后自动路线
 
 六个 run 完成后，下一步由自动流程执行：对锚点做 OOF 推理，使每张图只由未见过它的 Fold 模型预测；再与另一架构及 `ryw.pt` 做同类、IoU 阈值一致性匹配。只把至少两模型一致的新增/改类候选写入版本化 `labels_with_conf/`，并另导出五列共识训练版本；原始历史标签和本锚点均不覆盖。单模型预测和空检图不自动当成负样本。
+
+### 2026-08-02 OOF 自动共识实际结果
+
+- 已执行 `generate_l1_oof_consensus.py --batch 4`，输出为 `E:\PythonProject\优化\l1_oof_consensus_20260802_232333_v1`。dry-run 已核验 1,127 个开发集键、三折 `376/375/376`、六个权重的类别顺序和归档 val 清单，以及 `ryw.pt` 的 18 类顺序。
+- 每张图片只由其未参与训练的 YOLO11m/YOLO26m Fold 权重预测；`ryw.pt` 被完整记录为教师证据，但不会独立创建候选。冻结 `splits/test.txt` 和 198 张测试图片未读取、未推理。
+- 两个 OOF 架构直接同类 IoU>=0.55 的一致框为 9,239 个：5,306 个与历史同类框重叠而保留历史标签，316 个与历史异类框重叠而仅记录冲突，3,617 个为不重叠新候选。
+- `labels_with_conf/` 保存全部 3,617 个新候选的六列标签；`decisions.jsonl` 保存状态、IoU、两模型框/置信度和教师匹配。仅 245 个不重叠新候选同时满足共识置信度（两 OOF 模型置信度最小值）>=0.70，写入 `labels_consensus_training_candidate_5col/`；开发集历史 15,426 框保持原始前缀，候选视图总计 15,671 框。新增框之间不存在 IoU>=0.55 的跨类别冲突。
+- 该五列目录只是候选训练视图，不是人工审查真值。`youpao`、`fanxitong` 仍无可靠自动新增实例；不得据此宣称稀有类别已经解决。下一轮如使用该视图，必须建立新版本训练定义并重新跑相同 Fold，旧三折指标只能作为历史参考；测试集仍等架构、阈值和训练视图冻结后再使用。
+
+### 2026-08-03 OOF 候选开发集复评路径
+
+- 已由唯一候选目录构建 `E:\PythonProject\优化\dianjienie_ryw18_oofconsensus_v1_dev_only_r1`：1,127 张开发集图片、1,127 个候选标签文件、15,671 框。图片是指向源数据的硬链接；候选标签保留 15,426 个历史框和 245 个 accepted 新框。该视图不含 `test.txt`，构建器也拒绝读取或链接冻结测试图。
+- 私有配置 Dataset 为 `lly3323w/dianjienie-ryw18-oof-consensus-v1-dev-config`，已确认 `ready` 并由 Kaggle 自动展开 `ryw18_config_payload_v1/`。它只含开发集候选标签、三份固定 train/val、manifest 和训练脚本；原图片继续复用 `lly3323w/dianjienie`，不重复上传。
+- 无 GPU 挂载预检 Kernel 为 `lly3323w/l1-ryw18-oof-consensus-v1-preflight`。它只执行 `--data-version oofconsensusv1 --development-only --prepare-only`，预期恢复 1,127 图/1,127 标签并验证 Fold 1/2/3 的 `751/376`、`752/375`、`751/376` train/val；不安装依赖、不请求 GPU、不读取测试集。
+- version 1 于参数解析阶段失败，因为预检生成器漏传共享 runner 强制要求的 `--model`、`--fold`；Dataset 挂载本身已经成功，未请求 GPU 或启动训练。version 2 已将固定 `yolo11m.pt/Fold 1` 仅作为该参数校验的占位值补齐，仍只执行 `--prepare-only`；其远端日志已确认恢复 1,127 图/标签和 `development_only=true` 后正常 `COMPLETE`。
+- `lly3323w/l1-ryw18-yolo11m-oof-consensus-v1-fold01` 与 `lly3323w/l1-ryw18-yolo26m-oof-consensus-v1-fold01` 已各自推送 version 1，提交后均为 `RUNNING`。两者固定 300 epochs、640、batch 8、SGD、seed 0、patience 100、`close_mosaic=0`、`resume=false`，并以 `oofconsensusv1` 单独命名输出。完成后使用 `collect_l1_kaggle_run.py --development-only` 和 `reeval_l1_yolo_run.py --development-only`，后者不读取冻结测试集。三折完成前不可拿候选版本与 anchor v1 宣称架构优势，也不可访问冻结测试集。
+- 两个 Fold 1 Kernel 均已 `COMPLETE` 并完成独立归档：YOLO11m ZIP SHA-256=`0c0db6afcb9ef8503b2d2f35cb4139ba111fda55638803c414d8a54903bec430`，YOLO26m=`ed19f6d24769f0c41452bf32f0d53ef28fd2604444e7d665f6b9fb8dea47f14b`；两者均含 29 个文件且通过 CRC、权重、`requested_config.json`、`train.txt`、`val.txt` 校验。376 图开发集复评 P/R/mAP50/mAP50-95 分别为 YOLO11m=`0.49024/0.30787/0.31292/0.16513`、YOLO26m=`0.50327/0.32701/0.30722/0.15927`，复评 JSON 均显式冻结测试字段为 `null`。
+- Fold 2 两个 Kernel 已由 `prepare_l1_oofconsensus_kaggle_kernel.py` 生成，并分别通过 `train_dianjienie_ryw18_anchor.py --development-only --fold 2 --dry-run` 的 `train/val/test=752/375/null` 核验及 Python 编译/元数据检查。2026-08-03 尝试并行 push 时，Kaggle 对两者均返回 `Maximum weekly GPU quota of 30.00 hours reached`；因此尚未提交、无新训练输出。配额恢复后直接重试现有 Fold 2 Kernel，完成后先归档和在其 375 图 val 上复评，继续不访问冻结测试集。

@@ -5,15 +5,15 @@
 | 项目 | 内容 |
 | --- | --- |
 | 实验编号 | `dianjienie_ryw18_anchor_v1_yolo11m_fold02_kaggle_seed0` |
-| 日期 | 2026-07-27 |
+| 日期 | 2026-07-27 提交，2026-07-28 归档与复评 |
 | 执行人 | Codex（/root） |
 | 运行环境 | Kaggle 私有 Script Kernel |
 | Kernel | `lly3323w/l1-ryw18-yolo11m-anchorv1-fold02` |
-| GPU | 待远端环境记录回传 |
-| Python | 目标 3.12.13 |
-| Torch | 目标 2.6.0+cu124，CUDA 12.4 |
-| Ultralytics | 目标 8.4.66 |
-| 当前状态 | Kaggle version 1 已于 2026-07-27 13:55 成功提交并确认 `RUNNING` |
+| GPU | Tesla P100-PCIE-16GB |
+| Python | 3.12.13 |
+| Torch | 2.6.0+cu124，CUDA 12.4 |
+| Ultralytics | 8.4.66 |
+| 当前状态 | Kaggle version 1 已完成，结果已通过校验归档，并完成本机固定开发集复评 |
 
 ## 2. 数据信息
 
@@ -25,10 +25,10 @@
 | Kaggle 配置源 | `lly3323w/dianjienie-ryw18-anchor-v1-config` |
 | train 图片数 | 752 |
 | val 图片数 | 375 |
-| test 图片数 | 198，冻结且不参与训练、早停或调参 |
+| test 图片数 | 198，冻结且未参与训练、早停、调参或本机复评 |
 | 类别数与顺序 | 18 类 RYW18，见锚点 `classes.txt` |
 | 是否清理重复图 | 是；固定锚点已完成精确重复排除与近重复分组 |
-| 是否通过标签审计 | 本机 Fold 2 dry-run 通过；远端恢复后仍须由运行器复核 |
+| 是否通过标签审计 | 是；本机 dry-run 与 Kaggle 运行器复核均通过 |
 
 ## 3. 训练配置
 
@@ -50,14 +50,24 @@
 | resume | false |
 | Kaggle 请求时长 | `43200` 秒；服务端 12 小时上限优先 |
 
-除固定分组开发 Fold 从 1 切换为 2 外，该配置与已归档的 YOLO11m/YOLO26m Fold 1 基线一致。任务只用于三折开发验证，完成后仍不可访问冻结测试集或作出最终架构选择。
+除固定分组开发 Fold 从 1 切换为 2 外，该配置与已归档的 YOLO11m/YOLO26m Fold 1 基线一致。该任务只用于三折开发验证；完成三个 Fold 前不得据此选择最终模型，冻结测试集不得访问。
 
 ## 4. 结果
 
-本地 `--dry-run` 已验证固定清单 `train/val/test=752/375/198`，三集合两两无交集、总计 1325 图。Kaggle CLI 已返回 version 1 推送成功，随后状态查询为 `RUNNING`。提交、远端完成、ZIP CRC/权重/固定清单校验和同口径本机复评后再填写最终指标。结果必须归档到 `E:\PythonProject\models\runs\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_anchorv1_fold02`；不得覆盖 Fold 1 run。
+Kaggle Kernel version 1 已完成。结果 ZIP 位于 `E:\PythonProject\models\kaggle_outputs\lly3323w__l1-ryw18-yolo11m-anchorv1-fold02\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_anchorv1_fold02_results.zip`，SHA-256=`a0a8ea9793ebc06b1a2cd95789e397fb393d60117dfba6192cb889d5c11eccfb`。CRC、路径安全、30 个归档文件、必需文件、权重和归档内 train/val/test 清单均已校验；清单与锚点固定 Fold 2/冻结 test 逐项一致，为 `752/375/198`。
+
+| 口径 | checkpoint / epoch | Precision | Recall | mAP50 | mAP50-95 |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Kaggle 训练期 | `best.pt` 对应的最高 fitness 记录 / 146 | 0.36560 | 0.36931 | 0.29995 | 0.18877 |
+| Kaggle 训练期 | `last.pt` / 最后记录 epoch 246 | 0.31911 | 0.26493 | 0.21850 | 0.11915 |
+| 本机统一复评 | `best.pt` / Fold 2 val | 0.28965 | 0.37252 | 0.30358 | 0.19036 |
+
+权重已归档至 `E:\PythonProject\models\runs\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_anchorv1_fold02`；`best.pt` SHA-256=`9FB90C95E7016AAB020CBB6B1268E28CD29CDFA9606B4F087E999B52DF826CF0`，`last.pt` SHA-256=`CC6DF4DD988F1F64C186B5A44C1E64D587D8F0FE0F0F31D9D0418FC08DA00E23`。本机复评固定为 Ultralytics 8.4.66、Torch 2.6.0+cu124、640、batch 4、FP32、NMS IoU=0.7、max_det=300，只读取 375 张开发 val；逐类指标和派生硬链接视图见 `E:\PythonProject\优化\l1_reeval_yolo11m_fold02\metrics_per_class_reeval.json`。派生视图的图像、标签与锚点 Fold 2 val 清单均为 375，文件名逐项一致；198 张冻结 test 未读取。
+
+用户已确认 Kaggle GPU 配额耗尽。因此本次未提交 YOLO26m Fold 2 或任何 Fold 3 任务。当前只有 YOLO11m 的两个开发 Fold 和 YOLO26m 的一个开发 Fold，不能选择最终架构，也不得把不同 Fold 的结果直接排名。
 
 ## 5. Kaggle 入口
 
 - Kernel：`https://www.kaggle.com/code/lly3323w/l1-ryw18-yolo11m-anchorv1-fold02`
 - 本地预检：`python .\train_dianjienie_ryw18_anchor.py --model yolo11m.pt --fold 2 --dry-run`
-- 完成后归档：`collect_l1_kaggle_run.py --kernel lly3323w/l1-ryw18-yolo11m-anchorv1-fold02 --run-name dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_anchorv1_fold02 --install`
+- 已使用归档入口：`collect_l1_kaggle_run.py --kernel lly3323w/l1-ryw18-yolo11m-anchorv1-fold02 --run-name dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_anchorv1_fold02 --install`

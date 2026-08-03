@@ -14,8 +14,8 @@ import csv
 import hashlib
 import json
 import os
+import re
 import shutil
-import subprocess
 import zipfile
 from datetime import datetime
 from pathlib import Path, PureWindowsPath
@@ -48,6 +48,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     )
     parser.add_argument("--anchor-root", type=Path, default=DEFAULT_ANCHOR_ROOT)
     parser.add_argument("--source-root", type=Path, default=DEFAULT_SOURCE_ROOT)
+    parser.add_argument("--data-version", default="anchorv1", help="写入配置 manifest 的数据版本标识。")
+    parser.add_argument(
+        "--development-only",
+        action="store_true",
+        help="配置包只包含开发集 train/val；不打包或链接冻结 test 清单。",
+    )
     parser.add_argument("--output-root", type=Path, default=DEFAULT_OUTPUT_ROOT)
     parser.add_argument(
         "--flat-output-root",
@@ -75,8 +81,10 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     return parser.parse_args(argv)
 
 
-def expected_metadata_paths() -> list[Path]:
-    paths = [Path("classes.txt"), Path("data.yaml"), Path("README.md"), Path("splits/test.txt")]
+def expected_metadata_paths(development_only: bool = False) -> list[Path]:
+    paths = [Path("classes.txt"), Path("data.yaml"), Path("README.md")]
+    if not development_only:
+        paths.append(Path("splits/test.txt"))
     for fold in range(1, 4):
         fold_root = Path("splits/folds") / f"fold_{fold:02d}"
         paths.extend(fold_root / name for name in ("train.txt", "val.txt", "data.yaml"))
@@ -110,7 +118,9 @@ def source_relative_path(source_image: str, source_root: Path) -> str:
         raise ValueError(f"锚点源图片不在预期 source_root 内：{source_image}") from error
 
 
-def collect_anchor_records(anchor_root: Path, source_root: Path) -> tuple[list[dict[str, Any]], list[Path]]:
+def collect_anchor_records(
+    anchor_root: Path, source_root: Path, development_only: bool = False
+) -> tuple[list[dict[str, Any]], list[Path]]:
     manifest_path = anchor_root / "manifests" / "source_manifest.csv"
     require_file(manifest_path)
     rows = list(csv.DictReader(manifest_path.open(encoding="utf-8-sig", newline="")))
@@ -155,7 +165,7 @@ def collect_anchor_records(anchor_root: Path, source_root: Path) -> tuple[list[d
     expected_labels = sorted(Path(image).with_suffix(".txt").name for image in anchor_images)
     if anchor_labels != expected_labels:
         raise ValueError("锚点 labels/ 与 images/ 不能一一对应")
-    return sorted(records, key=lambda item: item["anchor_image"]), expected_metadata_paths()
+    return sorted(records, key=lambda item: item["anchor_image"]), expected_metadata_paths(development_only)
 
 
 def make_manifest(
@@ -164,6 +174,8 @@ def make_manifest(
     image_dataset_ref: str,
     image_records: list[dict[str, Any]],
     metadata_paths: list[Path],
+    data_version: str,
+    development_only: bool,
 ) -> dict[str, Any]:
     labels = [
         {
@@ -185,6 +197,8 @@ def make_manifest(
         "anchor_name": anchor_root.name,
         "anchor_root": str(anchor_root),
         "source_root": str(source_root),
+        "data_version": data_version,
+        "development_only": development_only,
         "image_dataset_ref": image_dataset_ref,
         "generated_at": datetime.now().isoformat(timespec="seconds"),
         "classes": load_classes(anchor_root),
@@ -242,7 +256,13 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
-def validate_existing_view(output_root: Path, anchor_root: Path, image_dataset_ref: str) -> dict[str, Any]:
+def validate_existing_view(
+    output_root: Path,
+    anchor_root: Path,
+    image_dataset_ref: str,
+    data_version: str,
+    development_only: bool,
+) -> dict[str, Any]:
     manifest_path = output_root / "config_manifest.json"
     if not manifest_path.is_file():
         raise FileExistsError(f"输出目录已存在但不是完整配置包，拒绝覆盖：{output_root}")
@@ -254,6 +274,8 @@ def validate_existing_view(output_root: Path, anchor_root: Path, image_dataset_r
         raise ValueError(f"配置包 schema 不兼容：{output_root}")
     if manifest.get("anchor_root") != str(anchor_root) or manifest.get("image_dataset_ref") != image_dataset_ref:
         raise ValueError(f"配置包来源与本次请求不同，拒绝混用：{output_root}")
+    if manifest.get("data_version", "anchorv1") != data_version or bool(manifest.get("development_only", False)) != development_only:
+        raise ValueError(f"配置包数据版本或 development_only 状态不匹配，拒绝混用：{output_root}")
     for record in manifest.get("labels", []) + manifest.get("metadata", []):
         if not (output_root / record["upload_name"]).is_file():
             raise FileNotFoundError(f"配置包缺少文件：{record['upload_name']}")
@@ -277,17 +299,29 @@ def create_view(
     owner_slug: str | None,
     slug: str,
     title: str,
+    data_version: str,
+    development_only: bool,
 ) -> dict[str, Any]:
     if output_root.exists():
-        manifest = validate_existing_view(output_root, anchor_root, image_dataset_ref)
+        manifest = validate_existing_view(
+            output_root, anchor_root, image_dataset_ref, data_version, development_only
+        )
         copy_runtime_scripts(output_root, manifest)
         write_dataset_metadata(output_root, owner_slug, slug, title)
         return manifest
 
     if not TRAINER_SOURCE.is_file() or not RUNNER_SOURCE.is_file():
         raise FileNotFoundError("缺少配置包需要的训练器或既有图片集运行器")
-    image_records, metadata_paths = collect_anchor_records(anchor_root, source_root)
-    manifest = make_manifest(anchor_root, source_root, image_dataset_ref, image_records, metadata_paths)
+    image_records, metadata_paths = collect_anchor_records(anchor_root, source_root, development_only)
+    manifest = make_manifest(
+        anchor_root,
+        source_root,
+        image_dataset_ref,
+        image_records,
+        metadata_paths,
+        data_version,
+        development_only,
+    )
     output_root.parent.mkdir(parents=True, exist_ok=True)
     staging_root = output_root.parent / f"{output_root.name}.building_{os.getpid()}"
     if staging_root.exists():
@@ -307,7 +341,8 @@ def create_view(
             "# RYW18 Kaggle 配置包\n\n"
             "此包不包含图片。训练时同时附加私有图片集 `lly3323w/dianjienie`，"
             "由运行器根据 `config_manifest.json` 将固定锚点图片、标签和 Fold 恢复到工作目录。"
-            "标签是锚点独立副本，不得在此目录直接编辑。\n",
+            "标签是锚点独立副本，不得在此目录直接编辑。"
+            + ("此包是 development_only，不包含冻结 test。\n" if development_only else "\n"),
         )
         staging_root.replace(output_root)
         return manifest
@@ -451,28 +486,27 @@ def verify_source_dataset(manifest: dict[str, Any]) -> dict[str, int]:
 
 
 def publish_view(output_root: Path) -> None:
-    command = [
-        "kaggle",
-        "datasets",
-        "create",
-        "--path",
-        str(output_root),
-        "--dir-mode",
-        "skip",
-        "--keep-tabular",
-    ]
-    print("[publish]", " ".join(command), flush=True)
-    subprocess.run(command, check=True)
+    # Use the same authenticated API client as source-dataset verification.
+    # The PowerShell-only kaggle.bat shim can otherwise select a different
+    # Python runtime and hang before reaching the already-working API path.
+    from kaggle.api.kaggle_api_extended import KaggleApi
+
+    api = KaggleApi()
+    api.authenticate()
+    print(f"[publish] KaggleApi.dataset_create_new({output_root})", flush=True)
+    api.dataset_create_new(str(output_root), public=False, quiet=False, convert_to_csv=True, dir_mode="skip")
     print("[publish] completed.", flush=True)
 
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
+    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]*", args.data_version):
+        raise ValueError("--data-version 只能包含 ASCII 字母、数字、下划线和连字符")
     anchor_root = args.anchor_root.resolve()
     source_root = args.source_root.resolve()
     output_root = args.output_root.resolve()
     flat_output_root = args.flat_output_root.resolve()
-    image_records, metadata_paths = collect_anchor_records(anchor_root, source_root)
+    image_records, metadata_paths = collect_anchor_records(anchor_root, source_root, args.development_only)
     load_classes(anchor_root)
     plan = {
         "anchor_root": str(anchor_root),
@@ -480,6 +514,8 @@ def main(argv: list[str] | None = None) -> int:
         "output_root": str(output_root),
         "flat_output_root": str(flat_output_root),
         "image_dataset_ref": args.image_dataset_ref,
+        "data_version": args.data_version,
+        "development_only": args.development_only,
         "image_count": len(image_records),
         "label_count": len(image_records),
         "metadata_count": len(metadata_paths),
@@ -503,6 +539,8 @@ def main(argv: list[str] | None = None) -> int:
         owner_slug,
         args.dataset_slug,
         args.dataset_title,
+        args.data_version,
+        args.development_only,
     )
     if args.package_format == "archive":
         upload_root = output_root

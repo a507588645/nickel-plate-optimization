@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "datasets": {
+    "l1_anchor_ryw18_v1": {
+      "purpose": "L1 18-class anchor dataset with a frozen test set and three development folds.",
+      "required_paths": [
+        "classes.txt",
+        "data.yaml",
+        "manifests/source_manifest.csv",
+        "manifests/group_assignments.csv",
+        "splits/folds/fold_01/train.txt",
+        "splits/folds/fold_01/val.txt",
+        "splits/folds/fold_02/train.txt",
+        "splits/folds/fold_02/val.txt",
+        "splits/folds/fold_03/train.txt",
+        "splits/folds/fold_03/val.txt"
+      ],
+      "expected_counts": {
+        "images": 1325,
+        "labels": 1325
+      },
+      "notes": "A local folder may have any name. It is the same logical dataset only when this validation passes and the recorded manifests agree."
+    }
+  }
+}

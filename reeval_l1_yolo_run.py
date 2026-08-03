@@ -26,13 +26,24 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--batch", type=int, default=4)
     parser.add_argument("--imgsz", type=int, default=640)
     parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument(
+        "--development-only",
+        action="store_true",
+        help="运行和数据视图只包含 train/val；不读取或检查冻结 test.txt。",
+    )
     parser.add_argument("--dry-run", action="store_true", help="只检查固定 Fold 输入，不创建硬链接或运行验证。")
     return parser.parse_args()
 
 
 def read_validation_images(val_list: Path, anchor_root: Path) -> list[Path]:
     image_root = (anchor_root / "images").resolve()
-    images = [Path(line.strip()).resolve() for line in val_list.read_text(encoding="utf-8").splitlines() if line.strip()]
+    images = []
+    for line in val_list.read_text(encoding="utf-8").splitlines():
+        value = line.strip()
+        if not value:
+            continue
+        candidate = Path(value)
+        images.append((candidate if candidate.is_absolute() else anchor_root / candidate).resolve())
     if not images:
         raise ValueError(f"验证清单为空：{val_list}")
     for image in images:
@@ -61,12 +72,24 @@ def main() -> int:
     output_root = args.output_root.resolve()
     weights = run_dir / "weights" / "best.pt"
     source_data = run_dir / "dataset_config" / "data.yaml"
+    requested_config_path = run_dir / "requested_config.json"
     fold_root = anchor_root / "splits" / "folds" / f"fold_{args.fold:02d}"
     val_list = fold_root / "val.txt"
-    test_list = anchor_root / "splits" / "test.txt"
+    test_list = None if args.development_only else anchor_root / "splits" / "test.txt"
 
-    if not weights.is_file() or not source_data.is_file() or not val_list.is_file() or not test_list.is_file():
+    required_paths = (weights, source_data, requested_config_path, val_list)
+    if test_list is not None:
+        required_paths = (*required_paths, test_list)
+    if not all(path.is_file() for path in required_paths):
         raise FileNotFoundError("缺少归档权重、配置或固定 Fold 清单")
+    try:
+        requested_config = json.loads(requested_config_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as error:
+        raise ValueError(f"无法解析归档训练配置：{requested_config_path}") from error
+    if requested_config.get("fold") != args.fold:
+        raise ValueError("归档训练配置的 Fold 与请求不一致")
+    if bool(requested_config.get("development_only", False)) != args.development_only:
+        raise ValueError("归档训练配置的 development_only 与请求不一致")
     images = read_validation_images(val_list, anchor_root)
     labels_root = (anchor_root / "labels").resolve()
     labels = [labels_root / f"{image.stem}.txt" for image in images]
@@ -80,10 +103,11 @@ def main() -> int:
         "weights": str(weights),
         "anchor_root": str(anchor_root),
         "fold": args.fold,
+        "development_only": args.development_only,
         "val_list": str(val_list),
         "val_images": len(images),
-        "frozen_test_list_not_evaluated": str(test_list),
-        "frozen_test_images_not_evaluated": len(
+        "frozen_test_list_not_evaluated": None if test_list is None else str(test_list),
+        "frozen_test_images_not_evaluated": None if test_list is None else len(
             [line for line in test_list.read_text(encoding="utf-8").splitlines() if line.strip()]
         ),
         "imgsz": args.imgsz,

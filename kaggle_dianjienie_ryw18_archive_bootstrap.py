@@ -137,6 +137,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     )
     parser.add_argument("--model", choices=("yolo11m.pt", "yolo26m.pt"), required=True)
     parser.add_argument("--fold", type=int, choices=(1, 2, 3), required=True)
+    parser.add_argument("--data-version", default="anchorv1")
+    parser.add_argument("--development-only", action="store_true")
     parser.add_argument("--runtime-config-root", type=Path, default=DEFAULT_RUNTIME_ROOT)
     parser.add_argument("--image-dataset-root", type=Path)
     parser.add_argument("--work-root", type=Path)
@@ -171,12 +173,12 @@ def main(argv: list[str] | None = None) -> int:
     for name in (
         "image_dataset_root", "work_root", "project", "epochs", "imgsz", "batch", "workers",
         "device", "seed", "patience", "torch_version", "torchvision_version",
-        "torch_index_url", "ultralytics_version",
+        "torch_index_url", "ultralytics_version", "data_version",
     ):
         value = getattr(args, name)
         if value is not None:
             command.extend([f"--{name.replace('_', '-')}", str(value)])
-    for name in ("skip_dependency_install", "prepare_only", "dry_run"):
+    for name in ("skip_dependency_install", "prepare_only", "dry_run", "development_only"):
         if getattr(args, name):
             command.append(f"--{name.replace('_', '-')}")
     return subprocess.run(command, check=False).returncode

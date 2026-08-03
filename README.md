@@ -25,7 +25,7 @@
 
 | 线 | 目标 | 当前状态 | 关键约束 |
 | --- | --- | --- | --- |
-| **L1 检测模型优化** | 当前先以 `dianjienie` 历史标签锚点 `dianjienie_ryw18_anchor_v1` 训练 18 类 YOLO11m/YOLO26m | 1325 张、18232 框已完成去重、分组分层重划；两架构 Fold 1 均已通过 ZIP/权重/固定清单校验并完成同口径本机 val 复评：YOLO11m mAP50/mAP50-95=`0.27848/0.14971`，YOLO26m=`0.30540/0.15454`；YOLO11m Fold 2 已提交 Kaggle 且确认 `RUNNING`；原 `dianjienie` train/valid 划分作废 | 固定 198 张测试集 + 开发集 3 折；原标签不覆盖；仅一个完整开发 Fold/seed，禁止提前做架构结论或访问测试集 |
+| **L1 检测模型优化** | 当前先以 `dianjienie` 历史标签锚点 `dianjienie_ryw18_anchor_v1` 训练 18 类 YOLO11m/YOLO26m | 1325 张、18232 框已完成去重、分组分层重划；六个 anchor run 均已归档、复评。三折本机 mAP50-95 均值±样本标准差：YOLO11m=`0.18165±0.02860`，YOLO26m=`0.15778±0.04607`；YOLO11m 仅作 OOF 暂定候选，未做多随机种子复验。OOF 双模型共识形成 1,127 张开发集候选视图与 245 个 accepted 新框，历史标签未覆盖、冻结测试集未读。候选版 Fold 1 两模型已归档和复评：YOLO11m=`0.16513`、YOLO26m=`0.15927`（mAP50-95）；Fold 2 定义已验证但受 Kaggle 周 GPU 配额阻塞。锚点框尺寸诊断已更正为默认 dev-only：1,127 开发图/15,426 框，`val_letterbox@640` 下 `greenstain/wuzi/waterstain` 中位最小边约 `5.5/8.6/12.3px`，小目标瓶颈方向成立；后续 medium 训练/完整复评按 `L1_Kaggle高分辨率验证计划.md` 走 Kaggle-only，优先验证 `imgsz=1280` | 固定 198 张测试集 + 开发集 3 折；候选五列视图不是人工真值；跨标签版本指标不可直接排名，三折完成后才可判断候选标签路线；本机不跑 medium 训练 |
 | **L2 电积镍分类等级** | 缺陷种类+面积规则/LightGBM 判级（3#/9950/9996/bad） | `dianjinie_grade_classification_v1`（1072）+ `dianji_grade_v2/v3` 产物，纹理特征 LGBM test 0.776/0.663 | 全部 `unconfirmed_pending_enterprise`；待企业书面标准 + 批次元数据 + 新会话验证；批次混淆未排除 |
 | **L3 电解镍分类硬编码优化** | `DianjieGradeRule` 阈值/规则/决策层优化（检测权重 `ryw.pt` 不变） | 规则已封装（`dianjie_grade_rule.py`）；电积镍迁移已实锤不可用（acc=0.02） | 商业约束：权重不变，优化只落加载代码/阈值/规则/决策层；改动须在固定人工评测集做前后对比（AGENTS.md §8） |
 
@@ -42,6 +42,7 @@
 | `CLAUDE.md` | Claude 入口：开始/结束任务、关键事实摘要 | 不替代 `AGENTS.md` |
 | `工作日志.md` | 跨会话进度与交接 | **只追加**；最新在上 |
 | `工作日志条目模板.md` | 日志单条复制模板 | 空白格式 |
+| `跨电脑工作区与数据集同步规范.md` | 多电脑协作、逻辑数据集 ID 和本机路径映射 | 新电脑初始化与数据差异处理按此执行 |
 | `镍板缺陷模型优化操作手册.md` | 检测优化主执行规范（审计→训练→验证→部署） | 现行操作主文档 |
 | `模型优化实验记录模板.md` | 单次训练/对比实验记录 | 正式实验必填 |
 
@@ -53,6 +54,8 @@
 | `无人工伪标签闭环方案.md` | 无人工标注时的伪标签/自训练流程 |
 | `YOLO冻结与迁移学习指南.md` | 冻结 backbone、续训、权重兼容（勿跨架构硬 load） |
 | `旧数据与新三光数据混合训练指南.md` | 同镍种旧单光 + 新三光混合，防遗忘 |
+| `L1_Kaggle高分辨率验证计划.md` | L1-hr Kaggle-only 执行计划：本机不跑 medium 训练，优先验证 `imgsz=1280` 是否改善小目标 mAP |
+| `config/workspace.example.json` / `config/dataset_catalog.json` | 本机路径映射模板与逻辑数据集校验规则 | 真实 `workspace.local.json` 不提交；用 `validate_workspace.py` 验证 |
 
 ### C. 已完成实验记录（专项，非通用规范）
 
@@ -66,6 +69,7 @@
 | `企业0309电积镍等级规则总结.md` | ⚠️ 未验证：基于权重特征的个人总结（用户 2026-07-22 声明不得作真值）；电积镍判级方向已改为「缺陷种类+面积规则」 |
 | `类别映射_dianjienie17_to_ryw18.md` | dianjienie 17 类 ↔ ryw.pt 18 类按序映射（用户 2026-07-23 确认：oilstain=yellowstain、unknown_14/15/16=youpao/heibian/mijixiaokeng、无 fanxitong；15/16 已经目测实物确认） |
 | `dianjienie_ryw18_anchor_v1_训练交接.md` | `dianjienie` 18 类历史标签锚点的固定三折训练入口、统一参数和后续自动共识路线 |
+| `experiments/dianjienie_ryw18_anchor_v1_cv3_summary.md` | RYW18 anchor v1 的 YOLO11m/YOLO26m 三折开发集统一复评汇总与 OOF 候选边界 |
 | `类别体系清单_v1.md` | 全部数据集类别体系总览（ryw.pt 18 类 / dianjienie 17 类 / Dianjinie0211 与 slf.pt 5 类 / 等级分类 / 0309 缺陷目录）+ 缺口与处置候选 |
 | `ryw_pt模型身份与电积镍检测结果说明.md` | 明确 `ryw.pt` 是 YOLOv5 检测模型、`ryw.pth` 是 ResNet 分类模型，并汇总两个电积镍分类集的检测与硬编码结果 |
 | `原项目YOLOv5训练配置与mAP口径说明.md` | `ryw.pt`/项目 `train.py` 真实训练配置；与 YOLO11 默认差异；**项目 `val.py` 将 mAP50/mAP50-95 误标为 mAP@0.1 与 mAP@0.1:0.55** |
@@ -74,7 +78,10 @@
 
 | 文件 | 说明 |
 | --- | --- |
+| `旧方案与现行优化桥接索引.md` | **旧方案的唯一现行入口**：先按此处的依据优先级、冲突裁决和触发点使用旧方案，不改变 L1/L2/L3 |
 | `Instruction.md` | 早期对话约束与选型摘要；部分目标/类别数已过时 |
+| `nickel_defect_masterplan.md` | 已归档的原始总方案正文；通过桥接索引使用，不直接作为现行结论 |
+| `nickel_defect_masterplan.svg` / `architecture_complete.svg` | 已归档的两张原始架构图；只读背景，不据图中状态判断完成度 |
 | `nickel_defect_system_execution_doc.md` | 早期系统执行方案 |
 | `nickel_defect_fullstack_guide.pdf` | 早期 AI 生成全栈方案；**示例数字不可当现状** |
 
@@ -143,9 +150,17 @@
 | `kaggle_l1_ryw18_yolo11m_anchorv1_fold01/l1-ryw18-yolo11m-anchorv1-fold01.py` | 初版 L1 YOLO11m Fold 1 私有 GPU Kernel 定义；因 9 小时请求上限在 epoch 250 后取消，仅保留失败证据，不是有效 run |
 | `kaggle_l1_ryw18_yolo11m_anchorv1_fold01_retry1/l1-ryw18-yolo11m-anchorv1-fold01-retry1.py` | L1 YOLO11m Fold 1 独立重试 Kernel；已完成 ZIP CRC、权重哈希、固定清单校验与本机固定 val 复评，归档 run 位于 `E:\PythonProject\models\runs\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_anchorv1_fold01` |
 | `kaggle_l1_ryw18_yolo26m_anchorv1_fold01/l1-ryw18-yolo26m-anchorv1-fold01.py` | 已完成的 L1 YOLO26m Fold 1 Kernel：结果 ZIP、权重和固定清单已校验并归档；同口径本机 val 复评见 `l1_reeval_yolo26m_fold01/metrics_per_class_reeval.json` |
-| `kaggle_l1_ryw18_yolo11m_anchorv1_fold02/l1-ryw18-yolo11m-anchorv1-fold02.py` | 已提交并确认 `RUNNING` 的 L1 YOLO11m Fold 2 Kernel：与 Fold 1 保持同条件，仅切换固定 Fold 2（train/val/test=`752/375/198`） |
-| `collect_l1_kaggle_run.py` | L1 完成后的 Kaggle 归档入口：仅接受 COMPLETE 状态，下载结果 ZIP，执行 CRC/必需文件/路径安全校验后才安装至 `models/runs` |
-| `reeval_l1_yolo_run.py` | 对已归档 L1 权重在固定开发 Fold 做本机标准复评；仅创建派生硬链接视图，拒绝读取冻结测试集 |
+| `kaggle_l1_ryw18_yolo11m_anchorv1_fold02/l1-ryw18-yolo11m-anchorv1-fold02.py` | 已完成并归档的 L1 YOLO11m Fold 2 Kernel：ZIP、权重和固定清单已校验；同口径本机 val 复评见 `l1_reeval_yolo11m_fold02/metrics_per_class_reeval.json` |
+| `kaggle_l1_ryw18_yolo26m_anchorv1_fold02/l1-ryw18-yolo26m-anchorv1-fold02.py` | 已归档并完成本机固定 val 复评的 L1 YOLO26m Fold 2 Kernel：Kaggle best mAP50/mAP50-95=`0.25637/0.16023`，本机统一复评=`0.20602/0.11342`；固定 `train/val/test=752/375/198` |
+| `kaggle_l1_ryw18_yolo11m_anchorv1_fold03/l1-ryw18-yolo11m-anchorv1-fold03.py` | 已归档并完成本机固定 val 复评的 L1 YOLO11m Fold 3 Kernel：Kaggle best mAP50/mAP50-95=`0.32951/0.20305`，本机统一复评=`0.33382/0.20488`；固定 `train/val/test=751/376/198` |
+| `kaggle_l1_ryw18_yolo26m_anchorv1_fold03/l1-ryw18-yolo26m-anchorv1-fold03.py` | 已归档并完成本机固定 val 复评的 L1 YOLO26m Fold 3 Kernel：Kaggle best mAP50/mAP50-95=`0.32647/0.20398`，本机统一复评=`0.32710/0.20539`；固定 `train/val/test=751/376/198` |
+| `collect_l1_kaggle_run.py` | L1 完成后的 Kaggle 归档入口：仅接受 COMPLETE 状态，下载结果 ZIP，执行 CRC/必需文件/路径安全校验后才安装至 `models/runs`；候选视图必须传 `--development-only` |
+| `reeval_l1_yolo_run.py` | 对已归档 L1 权重在固定开发 Fold 做本机标准复评；候选视图传 `--development-only` 时不读取冻结测试集，并兼容相对 Fold 路径 |
+| `generate_l1_oof_consensus.py` | L1 三折开发集 OOF 自动共识：每图只用未见 Fold 的 YOLO11m/YOLO26m 预测，`ryw.pt` 仅作教师证据；输出可追溯六列候选与历史标签加 accepted 框的五列候选视图，不读冻结测试集 |
+| `build_l1_oof_consensus_dev_view.py` | 从 OOF 五列候选生成仅含 1,127 张开发图的硬链接训练视图；显式拒绝读取、链接或写出冻结测试集 |
+| `l1_box_size_diag.py` | L1 锚点标签框尺寸诊断；默认从三折 `val.txt` 并集取 1,127 张开发图，不读取冻结 test，输出 `val_letterbox` 主口径与训练方形 resize 参考报告 |
+| `prepare_l1_oofconsensus_kaggle_kernel.py` | 生成私有 Kaggle 无 GPU 预检或单 Fold GPU Kernel；固定挂载旧图片集和 OOF 候选配置集，训练时强制 `--development-only` |
+| `kaggle_l1_ryw18_oofconsensusv1_preflight/l1-ryw18-oofconsensusv1-preflight.py` | 已提交的 OOF 候选无 GPU 挂载预检：只恢复、校验 1,127 图/标签和三份 train/val，不读取冻结测试集 |
 | `monitor_l1_kaggle_chain.py` | L1 可选串行监控入口：仅在用户明确要求自动推进时使用；当前已停用，训练完成后由用户通知再手动归档与提交下一 Kernel |
 | `rebuild_worklog_index.py` | 工作日志索引维护：扫描 `工作日志条目/` 全部条目文件，重建可点击「条目索引」表（日期/标题链接/主线），标签按标题继承、新条目人工补标；支持 `--dry-run` 只审计 |
 | `split_worklog_entries.py` | 一次性迁移（2026-07-27 已执行）：把主文件/分片正文拆分为 `工作日志条目/` 独立文件并截断主文件；保留备查 |

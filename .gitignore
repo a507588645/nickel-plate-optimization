@@ -50,3 +50,6 @@ runs/
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# ===== 本机路径映射（跨电脑共享代码，不共享绝对路径） =====
+config/workspace.local.json
