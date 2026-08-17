@@ -25,7 +25,7 @@ from kagglesdk.kernels.services.kernels_api_service import (
 
 DEFAULT_RAW_OUTPUT_ROOT = Path(r"E:\PythonProject\models\kaggle_outputs")
 DEFAULT_RUNS_ROOT = Path(r"E:\PythonProject\models\runs")
-BASE_REQUIRED_RUN_FILES = (
+STANDARD_REQUIRED_RUN_FILES = (
     "weights/best.pt",
     "weights/last.pt",
     "args.yaml",
@@ -36,6 +36,11 @@ BASE_REQUIRED_RUN_FILES = (
     "dataset_config/data.yaml",
     "dataset_config/train.txt",
     "dataset_config/val.txt",
+)
+FINAL_RELEASE_REQUIRED_RUN_FILES = (
+    "weights/final_fixed_epoch.pt",
+    "release_weight.json",
+    "dataset_config/epoch_selection_summary.json",
 )
 FROZEN_TEST_REQUIRED_FILE = "dataset_config/test.txt"
 CHUNK_SIZE = 1024 * 1024
@@ -59,6 +64,11 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="归档仅含开发集 train/val 的版本；拒绝要求或读取 dataset_config/test.txt。",
     )
+    parser.add_argument(
+        "--final-release",
+        action="store_true",
+        help="要求最终全开发集发布权重、固定 epoch 选择和发布元数据；普通 Fold 实验不得传此参数。",
+    )
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--check-only", action="store_true", help="只查询 Kaggle 状态和输出清单，不写文件。")
     mode.add_argument("--download", action="store_true", help="下载并校验 ZIP，但不归档到 models/runs。")
@@ -66,10 +76,13 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def required_run_files(development_only: bool) -> tuple[str, ...]:
+def required_run_files(development_only: bool, final_release: bool = False) -> tuple[str, ...]:
+    required = STANDARD_REQUIRED_RUN_FILES
+    if final_release:
+        required = (*required, *FINAL_RELEASE_REQUIRED_RUN_FILES)
     if development_only:
-        return BASE_REQUIRED_RUN_FILES
-    return (*BASE_REQUIRED_RUN_FILES, FROZEN_TEST_REQUIRED_FILE)
+        return required
+    return (*required, FROZEN_TEST_REQUIRED_FILE)
 
 
 def split_kernel(kernel: str) -> tuple[str, str]:
@@ -311,7 +324,12 @@ def normalized_zip_path(name: str) -> PurePosixPath:
     return path
 
 
-def validate_archive(archive_path: Path, run_name: str, development_only: bool = False) -> list[str]:
+def validate_archive(
+    archive_path: Path,
+    run_name: str,
+    development_only: bool = False,
+    final_release: bool = False,
+) -> list[str]:
     with zipfile.ZipFile(archive_path) as archive:
         corrupt_entry = archive.testzip()
         if corrupt_entry is not None:
@@ -334,7 +352,7 @@ def validate_archive(archive_path: Path, run_name: str, development_only: bool =
     if not files or any(not item.startswith(expected_prefix) for item in files):
         roots = sorted({PurePosixPath(item).parts[0] for item in files})
         raise ValueError(f"ZIP 根目录不符合预期：期望 {run_name}，实际 {roots}")
-    required_files = required_run_files(development_only)
+    required_files = required_run_files(development_only, final_release)
     missing = [item for item in required_files if f"{run_name}/{item}" not in files]
     if missing:
         raise FileNotFoundError(f"ZIP 缺少必需训练证据：{missing}")
@@ -352,7 +370,11 @@ def validate_archive(archive_path: Path, run_name: str, development_only: bool =
 
 
 def extract_verified_archive(
-    archive_path: Path, destination: Path, run_name: str, development_only: bool = False
+    archive_path: Path,
+    destination: Path,
+    run_name: str,
+    development_only: bool = False,
+    final_release: bool = False,
 ) -> None:
     destination_parent = destination.parent.resolve()
     if destination.exists():
@@ -383,7 +405,11 @@ def extract_verified_archive(
         staging = destination_parent / f".{run_name}.collecting-{uuid.uuid4().hex}"
         try:
             shutil.copytree(extracted_run, staging)
-            missing = [relative for relative in required_run_files(development_only) if not (staging / relative).is_file()]
+            missing = [
+                relative
+                for relative in required_run_files(development_only, final_release)
+                if not (staging / relative).is_file()
+            ]
             if missing:
                 raise FileNotFoundError(f"临时归档目录缺少必需训练证据：{missing}")
             if destination.exists():
@@ -395,7 +421,12 @@ def extract_verified_archive(
 
 
 def write_collection_manifest(
-    destination: Path, kernel: str, archive_path: Path, files: list[str], development_only: bool = False
+    destination: Path,
+    kernel: str,
+    archive_path: Path,
+    files: list[str],
+    development_only: bool = False,
+    final_release: bool = False,
 ) -> None:
     manifest = {
         "kernel": kernel,
@@ -403,7 +434,8 @@ def write_collection_manifest(
         "archive_sha256": sha256_file(archive_path),
         "archive_file_count": len(files),
         "development_only": development_only,
-        "required_files": list(required_run_files(development_only)),
+        "final_release": final_release,
+        "required_files": list(required_run_files(development_only, final_release)),
     }
     (destination / "kaggle_collection.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
@@ -428,7 +460,12 @@ def main() -> int:
     username, key = kaggle_credentials(api)
     archive_url = direct_archive_download_url(args.kernel, archive_name)
     download_resumable(archive_url, archive_path, args.retries, username, key)
-    files = validate_archive(archive_path, args.run_name, args.development_only)
+    files = validate_archive(
+        archive_path,
+        args.run_name,
+        args.development_only,
+        args.final_release,
+    )
 
     print(
         json.dumps(
@@ -444,8 +481,21 @@ def main() -> int:
     )
     if args.install:
         destination = (args.runs_root / args.run_name).resolve()
-        extract_verified_archive(archive_path, destination, args.run_name, args.development_only)
-        write_collection_manifest(destination, args.kernel, archive_path, files, args.development_only)
+        extract_verified_archive(
+            archive_path,
+            destination,
+            args.run_name,
+            args.development_only,
+            args.final_release,
+        )
+        write_collection_manifest(
+            destination,
+            args.kernel,
+            archive_path,
+            files,
+            args.development_only,
+            args.final_release,
+        )
         print(f"[installed] {destination}", flush=True)
     return 0
 

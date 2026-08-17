@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "record_id": "009d3dbf5c0a4d65a12830f505a37180",
+      "state": "complete",
+      "started_at": "2026-08-15T21:58:26+08:00",
+      "anchor_root": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1",
+      "test_list": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\splits\\test.txt",
+      "test_list_sha256": "53824522fda32cec7f32007fc9c5dbac2688224f332105034e14b8425ebd47c7",
+      "run_dir": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_finaldev_ep083",
+      "output_root": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158",
+      "finished_at": "2026-08-15T21:59:26+08:00",
+      "detail": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\metrics_per_class_release.json"
+    }
+  ]
+}

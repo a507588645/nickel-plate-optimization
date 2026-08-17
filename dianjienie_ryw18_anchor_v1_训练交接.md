@@ -150,3 +150,10 @@ python .\train_dianjienie_ryw18_anchor.py --model yolo26m.pt --fold 3
 - `lly3323w/l1-ryw18-yolo11m-oof-consensus-v1-fold01` 与 `lly3323w/l1-ryw18-yolo26m-oof-consensus-v1-fold01` 已各自推送 version 1，提交后均为 `RUNNING`。两者固定 300 epochs、640、batch 8、SGD、seed 0、patience 100、`close_mosaic=0`、`resume=false`，并以 `oofconsensusv1` 单独命名输出。完成后使用 `collect_l1_kaggle_run.py --development-only` 和 `reeval_l1_yolo_run.py --development-only`，后者不读取冻结测试集。三折完成前不可拿候选版本与 anchor v1 宣称架构优势，也不可访问冻结测试集。
 - 两个 Fold 1 Kernel 均已 `COMPLETE` 并完成独立归档：YOLO11m ZIP SHA-256=`0c0db6afcb9ef8503b2d2f35cb4139ba111fda55638803c414d8a54903bec430`，YOLO26m=`ed19f6d24769f0c41452bf32f0d53ef28fd2604444e7d665f6b9fb8dea47f14b`；两者均含 29 个文件且通过 CRC、权重、`requested_config.json`、`train.txt`、`val.txt` 校验。376 图开发集复评 P/R/mAP50/mAP50-95 分别为 YOLO11m=`0.49024/0.30787/0.31292/0.16513`、YOLO26m=`0.50327/0.32701/0.30722/0.15927`，复评 JSON 均显式冻结测试字段为 `null`。
 - Fold 2 两个 Kernel 已由 `prepare_l1_oofconsensus_kaggle_kernel.py` 生成，并分别通过 `train_dianjienie_ryw18_anchor.py --development-only --fold 2 --dry-run` 的 `train/val/test=752/375/null` 核验及 Python 编译/元数据检查。2026-08-03 尝试并行 push 时，Kaggle 对两者均返回 `Maximum weekly GPU quota of 30.00 hours reached`；因此尚未提交、无新训练输出。配额恢复后直接重试现有 Fold 2 Kernel，完成后先归档和在其 375 图 val 上复评，继续不访问冻结测试集。
+
+### 2026-08-15 L1 无人工最终候选交付
+
+- Kaggle 最终训练均已归档：YOLO11m 固定 epoch 83，`final_fixed_epoch.pt` SHA-256=`bb501e224b48e610aac5c05293d0b3c63ef9eccad792712466a25803bd4de521`；YOLO26m 固定 epoch 174，SHA-256=`d0cea7c8ff52534734ddae5ebb54473f3f6d70d4c1a369296e05fe8a709dd227`。二者均使用 OOF 候选开发集 1,127 图/15,671 框；训练期全开发日志不作为发布性能或架构排名。
+- 自动闸门已预选 YOLO11m，因而仅对它执行唯一一次历史 `release-validation`：198 图、2,806 个历史框，P/R/mAP50/mAP50-95=`0.42582/0.38473/0.35959/0.23147`。访问登记文件 `l1_release_validation_access_registry.json` 锁定该清单；不得再次运行，也不得对 YOLO26m 使用它。
+- YOLO11m ONNX 位于 `E:\PythonProject\models\runs\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_finaldev_ep083\exports\onnx\final_fixed_epoch.onnx`。8 张确定性开发图的同类 IoU>=0.90 全局匹配率为 `0.96617`，单图检测数最大差为 `1`；ONNX 检查不读取冻结图。
+- 这是一份 `auto_only` 技术交付，不等同于人工真值、稀有类解决或多随机种子架构优胜。后续 L1 如要继续，只能另立 G4 高分辨率研究记录，不能重用本次冻结确认集。

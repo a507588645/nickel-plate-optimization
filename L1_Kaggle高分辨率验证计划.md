@@ -1,10 +1,12 @@
 # L1 Kaggle 高分辨率验证计划
 
-更新时间：2026-08-03 15:33
+更新时间：2026-08-16 23:24
+
+> 本文是 L1-hr 的技术实验子计划。它负责定义高分辨率实验的配置和判定门槛，不决定 L1 是否按期交付；当前资源分配和交付顺序以 `当前工作计划.md` 为准。
 
 ## 结论
 
-继续 L1 检测线，但下一步优先验证高分辨率路线，不再建议本机跑 medium 模型。
+继续 L1 检测线的 640 OOF 自动候选路线。OOF 无人工数据质量闭环、YOLO11m/YOLO26m 候选训练和 YOLO11m 的一次历史确认均已完成；G4 高分辨率 Fold 1 已完成但未通过扩展闸门，1280 不再跑 Fold 2/3。G4b 的独立切片 Fold 1 在远端中断，最佳检查点已回收，下一步为独立原图级评测；本机仍不跑 medium 模型训练。
 
 当前 L1 的主要不确定性不是“换哪个 medium 架构”，而是 `imgsz=640` 是否把小目标压得过小。更正版框尺寸报告显示，在 `val_letterbox@640` 下：
 
@@ -12,15 +14,15 @@
 - `wuzi` 中位最小边约 8.6px，`<32px` 占 90.93%。
 - `waterstain` 中位最小边约 12.3px，`<32px` 占 84.98%。
 
-因此 L1-hr 是当前最值得花 Kaggle 配额验证的单变量方向。
+因此 L1-hr 曾是最值得花 Kaggle 配额验证的方向；其实际训练结果见下文，当前不再扩展。
 
 ## 硬约束
 
 - 本机不跑 YOLO11m/YOLO26m medium 训练。
 - 需要加载 medium 权重做完整验证时，优先走 Kaggle validation-only Kernel；本机只做脚本生成、清单校验、ZIP/哈希/日志解析和报告整理。
 - 冻结 198 张 test 不参与调参、早停、模型选择、阈值选择或 L1-hr 试验。
-- 不把 OOF 候选五列视图当人工真值；跨标签版本指标不直接排名。
-- Kaggle GPU 配额有限时，优先把配额用于回答最大不确定性：`640 -> 1280` 是否显著提升开发集 mAP。
+- 不把 OOF 候选五列视图当人工真值；跨标签版本指标不直接排名。无人工路线以双 OOF 共识和历史锚点自动非回退报告作为安全证据，不能宣称逐框真值。
+- Kaggle GPU 配额有限时，当前数据质量优先：先完成 YOLO11m OOF 候选全开发集训练及其自动发布验证；完成前不把配额用于 `640 -> 1280` 研究。
 
 ## 阶段 1：L1-hr 单 Fold 试验
 
@@ -28,18 +30,18 @@
 
 推荐首跑配置：
 
-- 数据版本：`E:\PythonProject\datasets\dianjienie_ryw18_anchor_v1`。
+- 数据版本：`E:\PythonProject\优化\dianjienie_ryw18_oofconsensus_v1_dev_only_r1`。
 - Fold：先用 Fold 1。
 - 模型：优先 `yolo11m.pt`，因为 anchor v1 三折均值暂优。
 - 平台：Kaggle GPU。
 - `imgsz=1280`。
-- `epochs=300`、`optimizer=SGD`、`patience=100`、`seed=0`、`close_mosaic=0` 保持 640 基线一致。
-- `batch`：先尝试 4；若 Kaggle OOM，降到 2，并把该 run 标记为资源约束实验，不与 batch=8 的 640 基线做严格单变量宣称。
+- `epochs=300`、`optimizer=SGD`、`patience=100`、`seed=0`、`close_mosaic=0` 保持 640 基线一致；用户已明确选择完整 300 epoch Kaggle 训练。
+- `batch`：先尝试 4；若 Kaggle OOM，降到 2，并把该 run 标记为资源约束实验。640 基线的物理 batch 为 8，因此本实验的主要变量是输入尺寸，但不是严格的唯一变量消融。
 
 对比口径：
 
 - 只比较同一 Fold、同一数据版本、同一验证清单、同一 Ultralytics/Kaggle 环境下的结果。
-- 主比较对象是 anchor v1 YOLO11m Fold 1 的 640 Kaggle 结果和 L1-hr 1280 Kaggle 结果。
+- 主比较对象是 OOF 候选标签版本 YOLO11m Fold 1 的 640 结果（本机统一复评 `mAP50/mAP50-95=0.31292/0.16513`）和本 L1-hr 1280 结果。
 - 重点看 `mAP50-95`、`mAP50`、Recall，以及 `wuzi/waterstain/greenstain/airhole/bubble/watermark` 的逐类 AP。
 
 决策门槛：
@@ -48,13 +50,22 @@
 - 若提升在 0.01 以内，或只表现为单类偶然波动，则暂不铺开 1280 三折，转向切片或标签复核。
 - 若 1280 OOM 或耗时不可接受，改测 `imgsz=960` 或切片方案，不强行消耗整周配额。
 
-## 阶段 2：OOF 候选线排队
+### Fold 1 实际结果（2026-08-16）
 
-OOF 候选线不取消，但不应抢占 L1-hr 首次验证配额。
+- Kaggle Kernel `lly3323w/l1-ryw18-yolo11m-oof-v1-hr1280-b4-e300-fold01` version 1 为 `COMPLETE`；归档 ZIP SHA-256=`711054844c577edead03b44c6c031564ffd486c5e0e5f9f17a5dc5d0c7b304e1`，29 个文件通过 CRC、路径和必需训练证据校验。
+- 配置上限为 300 epoch、`patience=100`，实际记录 183 个 epoch，最佳 epoch=83；这是与早停条件一致的正常结束，不是 Kaggle 中断。
+- 与同一 Kaggle 环境、相同 Fold 1 清单的 640 基线比较：1280 的 P/R/mAP50/mAP50-95=`0.58596/0.30003/0.30224/0.16264`，640 为 `0.51399/0.29538/0.30617/0.16382`。1280 的 mAP50-95 为 `-0.00118`，未达到 `+0.02` 门槛。
+- 两次 `train.txt`/`val.txt` 哈希完全一致（751/376、无交集、无 test）；但 batch 因显存从 8 降为 4，故不是严格单变量消融。尽管如此，整体主指标无改善已经足以停止扩展，无需为逐类 AP 再消耗 GPU。
+- 决策：不提交 1280 Fold 2/3，不再对历史 release-validation 做任何访问；本结果不改变 640 自动候选和 OOF 标签质量路线。
 
-- Kaggle 配额恢复后，若只能跑一个 medium 任务，优先提交 L1-hr YOLO11m Fold 1。
-- 若配额足够，再继续重试两个已准备好的 OOF 候选 Fold 2 Kernel。
-- OOF 候选至少完成三折后，才能判断候选标签路线是否优于 anchor v1。
+## 阶段 2：OOF 候选线闭环（已完成）
+
+OOF 候选线不是普通的可选优化，而是当前标签质量路线的核心。它不改变原始人工标签；在用户明确不做人审的约束下，已由双架构未见图共识和历史锚点自动非回退复评决定是否进入候选训练视图。
+
+- OOF 候选 YOLO11m/YOLO26m 的六个 Fold 已完成归档、校验和开发集复评。
+- 两个候选权重已按未改动 `anchor_v1` 标签在相同 Fold 重新评估；自动闸门报告为 `l1_auto_gate_oofconsensusv1_20260809/report.md`。
+- 两个架构均通过；YOLO11m 在候选标签自评和历史锚点复评的平均 mAP50-95 均略高，被选为无人工候选主模型。差异很小，不表述为稳定优势。
+- `l1_oof_evaluation_contract_v1` 保留为可选审查素材，不再要求用户填写或阻塞训练。
 
 ## 阶段 3：若高分辨率有效
 
@@ -67,9 +78,17 @@ OOF 候选线不取消，但不应抢占 L1-hr 首次验证配额。
 优先转向以下路线，而不是继续盲目换 medium 模型：
 
 - 生成切片训练/推理视图，专门解决 `greenstain/wuzi/waterstain` 的极小框。
-- 做人工复核优先级清单，先查高频小目标类漏标、错标和框尺寸偏差。
-- 做逐类阈值/NMS 标定，但必须在同一批人工审查过的固定开发评测集上对比。
+- 基于 OOF 置信度和双模型分歧生成下一轮自动候选，不转为大规模人工复核。
+- 做逐类阈值/NMS 标定时只作为研究候选；没有外部真值不得将其称为已验证部署改进。
+
+### G4b 切片 Fold 1（2026-08-17，训练中断、等待独立评测）
+
+- Kaggle CPU 预检 `lly3323w/l1-ryw18-oof-v1-tile1024-o25-preflight-fold01` 已完成，验证恢复的 OOF 候选 Fold 1 为 train/val=751/376，清单哈希与本机一致，且不存在 `test.txt`。
+- GPU Kernel `lly3323w/l1-ryw18-y11m-oof-v1-tile1024-o25-b8-e300-f01` 的 version 1 在训练前因 `output_root` 初始化冲突失败；version 2 完成切片生成后在训练前因缺少 `ultralytics` 失败。固定 CUDA PyTorch 与 `ultralytics` 前置后的 version 3 实际训练完成 109 轮验证，随后在第 110 轮中断；当前状态 `CANCEL_ACKNOWLEDGED`。回收的 `best.pt` 对应第 75 轮，最高训练期 P/R/mAP50/mAP50-95=`0.57318/0.26795/0.29081/0.15178`，`last.pt` 对应第 109 轮。两者都不是完成实验的最终结论。
+- 训练输入为 751 张整图 + 4,935 张焦点切片 + 1,233 张抽样负切片；验证图不改标签，按 9,400 张切片推理、回映射到原图坐标、类别全局 NMS 后评分。
+- 该实验的主比较是固定 Fold 1 640 基线与切片模型在同一原图级自定义评测器的比较。它不能直接与历史 Ultralytics 训练期 mAP 或已交付 640 候选排名。
+- `l1_tile_pipeline.py` 已新增只评测的 `evaluate` 模式：不生成训练视图、不训练、不写标签，只将回收 `best.pt` 与固定 Fold 1 640 基线在 376 张开发验证图上分别以整图/切片推理，并输出四份原图级报告。当前 Kaggle API 返回 30 小时 GPU 周额度耗尽，待恢复后先提交该评测。仍不访问历史 `release-validation`，所有标签仍为 `auto_only`。
 
 ## 当前下一步
 
-等待 Kaggle GPU 配额可用后，先生成并提交 `yolo11m.pt + anchor_v1 + Fold 1 + imgsz=1280` 的 Kaggle Kernel。提交前只在本机做不加载 medium 权重的脚本语法、配置和清单校验。
+G4 已结束且不通过，不再提交 1280 Fold 2/3 或为了探索重跑 960。G4b 训练已中断且产物已回收；待 GPU 额度恢复后，先提交独立评测而不是续训。只有同一原图级评测器显示切片收益，才考虑用回收的 `last.pt` 分段续训。无论结果如何，都保持 OOF 开发集、`auto_only` 候选和不访问历史 `release-validation` 的边界。
