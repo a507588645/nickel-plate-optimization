@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "purpose": "E1 dual-model OOF original-image WBF; auto_only research evaluation",
+  "development_only": true,
+  "frozen_test_set": null,
+  "release_validation_access": "not read; not mounted; not evaluated",
+  "phase0_root": "E:\\PythonProject\\优化\\l1_phase0_diagnostics_20260822_1455",
+  "expected_pooled_images": 1127,
+  "pooled_images": 3,
+  "partial_smoke": true,
+  "max_images_per_fold": 1,
+  "inference": {
+    "device": "cpu",
+    "batch": 1,
+    "imgsz": 640,
+    "conf_floor": 0.001,
+    "nms_iou": 0.7,
+    "max_det": 300,
+    "seed": 0
+  },
+  "wbf": {
+    "ious": [
+      0.25,
+      0.35,
+      0.45,
+      0.55
+    ],
+    "implementation": "inlined_confidence_weighted_coordinates_max_source_confidence",
+    "ensemble_boxes_available": false,
+    "ensemble_boxes_installation": "not attempted; shared venv remains unchanged"
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "images": 1,
+      "full_fold_images": 376,
+      "yolo11_phase0_raw_file": "E:\\PythonProject\\优化\\l1_phase0_diagnostics_20260822_1455\\raw_predictions\\fold01.jsonl",
+      "yolo11_phase0_raw_file_sha256": "99c6675247322841fa4cd7ec8f8ebfa589199f1b7d5a4784a3679ab335a89529",
+      "yolo11_raw_prediction_count": 51,
+      "yolo26_metrics_path": "E:\\PythonProject\\优化\\l1_reeval_yolo26m_oofconsensusv1_fold01\\metrics_per_class_reeval.json",
+      "yolo26_weights": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo26m_640_kaggle_seed0_cm0_oofconsensusv1_fold01\\weights\\best.pt",
+      "yolo26_weights_sha256": "4824308e1080237e23115e5cb8cd0b2953a6177360e8e6bbadec90b812ffb5fe",
+      "same_validation_membership": true,
+      "same_targets_checked": true,
+      "yolo26_raw_prediction_count": 70,
+      "yolo26_raw_prediction_file": "E:\\PythonProject\\优化\\l1_oof_dualmodel_wbf_smoke_r2_20260822_1827\\raw_predictions_yolo26\\fold01.jsonl",
+      "yolo26_raw_prediction_file_sha256": "d5f8b177c0139b2ba1842e42547108681defab22c81b4d634f0d2b79f87aea73"
+    },
+    {
+      "fold": 2,
+      "images": 1,
+      "full_fold_images": 375,
+      "yolo11_phase0_raw_file": "E:\\PythonProject\\优化\\l1_phase0_diagnostics_20260822_1455\\raw_predictions\\fold02.jsonl",
+      "yolo11_phase0_raw_file_sha256": "9d42f01d6b74018eb195b66962cf88700162ce5fb0bfdfcf4e9d82057f8963d9",
+      "yolo11_raw_prediction_count": 176,
+      "yolo26_metrics_path": "E:\\PythonProject\\优化\\l1_reeval_yolo26m_oofconsensusv1_fold02\\metrics_per_class_reeval.json",
+      "yolo26_weights": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo26m_640_kaggle_seed0_cm0_oofconsensusv1_fold02\\weights\\best.pt",
+      "yolo26_weights_sha256": "eab8c360e5e4995c78018196a8751462cd1ed187115821da995ca28b8f245a8f",
+      "same_validation_membership": true,
+      "same_targets_checked": true,
+      "yolo26_raw_prediction_count": 56,
+      "yolo26_raw_prediction_file": "E:\\PythonProject\\优化\\l1_oof_dualmodel_wbf_smoke_r2_20260822_1827\\raw_predictions_yolo26\\fold02.jsonl",
+      "yolo26_raw_prediction_file_sha256": "62d6f6ac83707e97d95008d41391f142504a3d9e2826d45b8b5406e79baf9c0f"
+    },
+    {
+      "fold": 3,
+      "images": 1,
+      "full_fold_images": 376,
+      "yolo11_phase0_raw_file": "E:\\PythonProject\\优化\\l1_phase0_diagnostics_20260822_1455\\raw_predictions\\fold03.jsonl",
+      "yolo11_phase0_raw_file_sha256": "bb729b1e53dafdc9e33d2054538a79d85318fc2086ec38e7e6e460dab7da335a",
+      "yolo11_raw_prediction_count": 220,
+      "yolo26_metrics_path": "E:\\PythonProject\\优化\\l1_reeval_yolo26m_oofconsensusv1_fold03\\metrics_per_class_reeval.json",
+      "yolo26_weights": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo26m_640_kaggle_seed0_cm0_oofconsensusv1_fold03\\weights\\best.pt",
+      "yolo26_weights_sha256": "033a2e7d8746a601858eceb780f9fff865e79db9b483518e9e5aace51a2008ea",
+      "same_validation_membership": true,
+      "same_targets_checked": true,
+      "yolo26_raw_prediction_count": 159,
+      "yolo26_raw_prediction_file": "E:\\PythonProject\\优化\\l1_oof_dualmodel_wbf_smoke_r2_20260822_1827\\raw_predictions_yolo26\\fold03.jsonl",
+      "yolo26_raw_prediction_file_sha256": "174b46596430bd52f10e9e9144361dd8f764b7da0c2751c84275af36e5c522e0"
+    }
+  ],
+  "output": {
+    "yolo26_fold_audit": {
+      "1": {
+        "fold": 1,
+        "images": 1,
+        "weights": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo26m_640_kaggle_seed0_cm0_oofconsensusv1_fold01\\weights\\best.pt",
+        "weights_sha256": "4824308e1080237e23115e5cb8cd0b2953a6177360e8e6bbadec90b812ffb5fe",
+        "raw_prediction_file": "E:\\PythonProject\\优化\\l1_oof_dualmodel_wbf_smoke_r2_20260822_1827\\raw_predictions_yolo26\\fold01.jsonl",
+        "raw_prediction_file_sha256": "d5f8b177c0139b2ba1842e42547108681defab22c81b4d634f0d2b79f87aea73",
+        "raw_prediction_count_after_model_nms": 70
+      },
+      "2": {
+        "fold": 2,
+        "images": 1,
+        "weights": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo26m_640_kaggle_seed0_cm0_oofconsensusv1_fold02\\weights\\best.pt",
+        "weights_sha256": "eab8c360e5e4995c78018196a8751462cd1ed187115821da995ca28b8f245a8f",
+        "raw_prediction_file": "E:\\PythonProject\\优化\\l1_oof_dualmodel_wbf_smoke_r2_20260822_1827\\raw_predictions_yolo26\\fold02.jsonl",
+        "raw_prediction_file_sha256": "62d6f6ac83707e97d95008d41391f142504a3d9e2826d45b8b5406e79baf9c0f",
+        "raw_prediction_count_after_model_nms": 56
+      },
+      "3": {
+        "fold": 3,
+        "images": 1,
+        "weights": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo26m_640_kaggle_seed0_cm0_oofconsensusv1_fold03\\weights\\best.pt",
+        "weights_sha256": "033a2e7d8746a601858eceb780f9fff865e79db9b483518e9e5aace51a2008ea",
+        "raw_prediction_file": "E:\\PythonProject\\优化\\l1_oof_dualmodel_wbf_smoke_r2_20260822_1827\\raw_predictions_yolo26\\fold03.jsonl",
+        "raw_prediction_file_sha256": "174b46596430bd52f10e9e9144361dd8f764b7da0c2751c84275af36e5c522e0",
+        "raw_prediction_count_after_model_nms": 159
+      }
+    },
+    "total_yolo11_raw_prediction_count": 447,
+    "total_yolo26_raw_prediction_count": 285,
+    "random_pair_audit_file": "random_pair_audit.json"
+  }
+}

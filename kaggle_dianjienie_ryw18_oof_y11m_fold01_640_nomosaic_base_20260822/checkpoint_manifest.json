@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "purpose": "E2 Mosaic=0 full-image fine-tune base checkpoint; staging only, not uploaded",
+  "data_version": "oofconsensusv1",
+  "development_only": true,
+  "frozen_test_set": null,
+  "fold": 1,
+  "weights": {
+    "baseline_fold01_640_best.pt": {
+      "source": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_fold01\\weights\\best.pt",
+      "sha256": "b00aad9cc8041424f0b1e7263a6c9a2be5675827fd7017fcdec395b40ccac0ce",
+      "role": "archived OOF Fold 1 YOLO11m best.pt initialization weight"
+    }
+  },
+  "training_contract": {
+    "resume": false,
+    "epochs": 30,
+    "imgsz": 640,
+    "batch": 8,
+    "optimizer": "SGD",
+    "seed": 0,
+    "mosaic": 0.0,
+    "only_intended_model_training_variable": "mosaic",
+    "operational_artifact_change": "save_period=1 to preserve recoverable checkpoints",
+    "save_period": 1
+  }
+}

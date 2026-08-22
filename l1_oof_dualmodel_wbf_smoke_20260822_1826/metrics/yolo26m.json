@@ -1,0 +1,174 @@
+{
+  "metric_protocol": {
+    "scope": "original-image evaluation after mapping tiled predictions back to source coordinates",
+    "iou_thresholds": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "prediction_confidence_floor": 0.001,
+    "precision_recall_confidence": 0.25,
+    "global_class_aware_nms_iou": 0.7,
+    "ap_interpolation": "101-point precision envelope"
+  },
+  "images": 3,
+  "precision_conf025_iou50_micro": 0.5416666666666666,
+  "recall_conf025_iou50_micro": 0.13829787234042554,
+  "mAP50": 0.14009470798387266,
+  "mAP50_95": 0.052359224285512936,
+  "per_class": {
+    "wuzi": {
+      "support": 1,
+      "ap50": 0.0,
+      "ap50_95": 0.0,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0,
+      "f1_conf025_iou50": 0.0
+    },
+    "waterstain": {
+      "support": 30,
+      "ap50": 0.5684538291034965,
+      "ap50_95": 0.2021588617837482,
+      "precision_conf025_iou50": 0.8666666666666667,
+      "recall_conf025_iou50": 0.43333333333333335,
+      "f1_conf025_iou50": 0.5777777777777778
+    },
+    "yellowstain": {
+      "support": 1,
+      "ap50": 0.25,
+      "ap50_95": 0.1,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0,
+      "f1_conf025_iou50": 0.0
+    },
+    "nodule": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0,
+      "f1_conf025_iou50": 0.0
+    },
+    "airhole": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0,
+      "f1_conf025_iou50": 0.0
+    },
+    "bubble": {
+      "support": 43,
+      "ap50": 0.01069019945472808,
+      "ap50_95": 0.00399953038782139,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0,
+      "f1_conf025_iou50": 0.0
+    },
+    "bump": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0,
+      "f1_conf025_iou50": 0.0
+    },
+    "fawu": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0,
+      "f1_conf025_iou50": 0.0
+    },
+    "overfire": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0,
+      "f1_conf025_iou50": 0.0
+    },
+    "NiOH": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0,
+      "f1_conf025_iou50": 0.0
+    },
+    "greenstain": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0,
+      "f1_conf025_iou50": 0.0
+    },
+    "suanwuran": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0,
+      "f1_conf025_iou50": 0.0
+    },
+    "quejiao": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0,
+      "f1_conf025_iou50": 0.0
+    },
+    "watermark": {
+      "support": 7,
+      "ap50": 0.011424219345011425,
+      "ap50_95": 0.007996953541507998,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0,
+      "f1_conf025_iou50": 0.0
+    },
+    "youpao": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0,
+      "f1_conf025_iou50": 0.0
+    },
+    "heibian": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0,
+      "f1_conf025_iou50": 0.0
+    },
+    "mijixiaokeng": {
+      "support": 12,
+      "ap50": 0.0,
+      "ap50_95": 0.0,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0,
+      "f1_conf025_iou50": 0.0
+    },
+    "fanxitong": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0,
+      "f1_conf025_iou50": 0.0
+    }
+  },
+  "f1_conf025_iou50_micro": 0.22033898305084748,
+  "post_nms_prediction_count": 285
+}

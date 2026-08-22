@@ -1,0 +1,100 @@
+{
+  "threshold": 0.01,
+  "comparison_baseline": "best of the two pooled single-model OOF scores, per metric",
+  "best_single_mAP50_95": 0.148939031666318,
+  "best_single_focus_f1": {
+    "wuzi": 0.3741123960235342,
+    "waterstain": 0.5368744199328908,
+    "airhole": 0.24729241877256322,
+    "bubble": 0.18861209964412812,
+    "greenstain": 0.19164619164619168,
+    "watermark": 0.4378661732963306
+  },
+  "candidates": [
+    {
+      "wbf_iou": 0.25,
+      "mAP50_95": 0.1578760226458568,
+      "mAP50_95_delta_vs_best_single": 0.00893699097953879,
+      "focus_f1_delta_vs_best_single": {
+        "wuzi": 0.02892520353193906,
+        "waterstain": 0.006876355790083055,
+        "airhole": 0.03743247541750991,
+        "bubble": 0.012401413869385397,
+        "greenstain": 0.005663225394167082,
+        "watermark": 0.04114095635774917
+      },
+      "qualifying_focus_classes": [
+        "wuzi",
+        "airhole",
+        "bubble",
+        "watermark"
+      ],
+      "passes_keep_threshold": true
+    },
+    {
+      "wbf_iou": 0.35,
+      "mAP50_95": 0.1627728526358442,
+      "mAP50_95_delta_vs_best_single": 0.013833820969526206,
+      "focus_f1_delta_vs_best_single": {
+        "wuzi": 0.03204596174772684,
+        "waterstain": 0.007559053283599071,
+        "airhole": 0.038746173735949824,
+        "bubble": 0.016856003089923216,
+        "greenstain": 0.009246665496665474,
+        "watermark": 0.04783325468078842
+      },
+      "qualifying_focus_classes": [
+        "wuzi",
+        "airhole",
+        "bubble",
+        "watermark"
+      ],
+      "passes_keep_threshold": true
+    },
+    {
+      "wbf_iou": 0.45,
+      "mAP50_95": 0.1664664160661771,
+      "mAP50_95_delta_vs_best_single": 0.017527384399859097,
+      "focus_f1_delta_vs_best_single": {
+        "wuzi": 0.027839528791213652,
+        "waterstain": 0.005297204500944397,
+        "airhole": 0.038316164283300674,
+        "bubble": 0.020367492192606557,
+        "greenstain": 0.011444316080077649,
+        "watermark": 0.04135890954843108
+      },
+      "qualifying_focus_classes": [
+        "wuzi",
+        "airhole",
+        "bubble",
+        "greenstain",
+        "watermark"
+      ],
+      "passes_keep_threshold": true
+    },
+    {
+      "wbf_iou": 0.55,
+      "mAP50_95": 0.16751980771806158,
+      "mAP50_95_delta_vs_best_single": 0.018580776051743575,
+      "focus_f1_delta_vs_best_single": {
+        "wuzi": 0.023053237280274474,
+        "waterstain": 0.000422746451221645,
+        "airhole": 0.03398017703365516,
+        "bubble": 0.017341239052573426,
+        "greenstain": 0.02139728661467788,
+        "watermark": 0.036422393852945545
+      },
+      "qualifying_focus_classes": [
+        "wuzi",
+        "airhole",
+        "bubble",
+        "greenstain",
+        "watermark"
+      ],
+      "passes_keep_threshold": true
+    }
+  ],
+  "selected_wbf_iou": 0.55,
+  "status": "pass_keep",
+  "reason": "At least one WBF IoU reaches +0.01 mAP50-95 versus the best single model or +0.01 F1 for a focus class."
+}

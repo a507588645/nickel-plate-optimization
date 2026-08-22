@@ -1,0 +1,49 @@
+{
+  "experiment": "E2 Mosaic=0 full-image fine-tune",
+  "status": "prepared_not_submitted_pending_user_gpu_confirmation",
+  "reason_not_reusing_prepare_l1_tile_kaggle_kernel": "E2 is an un-tiled full-image fine-tune. The tile generator changes training-view composition and cross-tile evaluation behavior, so reuse would violate the single-variable Mosaic comparison.",
+  "data_version": "oofconsensusv1",
+  "development_only": true,
+  "frozen_test_set": null,
+  "fold": 1,
+  "split_counts": {
+    "train": 751,
+    "val": 376,
+    "test_frozen": null
+  },
+  "base_checkpoint": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_fold01\\weights\\best.pt",
+  "base_checkpoint_sha256": "b00aad9cc8041424f0b1e7263a6c9a2be5675827fd7017fcdec395b40ccac0ce",
+  "runtime_pins": {
+    "torch": "2.6.0",
+    "torchvision": "0.21.0",
+    "numpy": "1.26.4",
+    "ultralytics": "8.4.66"
+  },
+  "training": {
+    "model": "archived Fold 1 best.pt",
+    "resume": false,
+    "epochs": 30,
+    "imgsz": 640,
+    "batch": 8,
+    "optimizer": "SGD",
+    "seed": 0,
+    "deterministic": true,
+    "mosaic": 0.0,
+    "close_mosaic": 0,
+    "save_period": 1,
+    "patience": 100
+  },
+  "evaluation": {
+    "entry": "l1_tile_pipeline.py --mode evaluate",
+    "baseline_full_mAP50_95_reference": 0.168001,
+    "reports": [
+      "baseline_full",
+      "baseline_tiled",
+      "tile_model_full",
+      "tile_model_tiled"
+    ],
+    "tile_size": 4096,
+    "overlap": 0.0,
+    "semantic": "one full-image crop per 4096x3554/3600 source image; no tile generation or cross-tile WBF"
+  }
+}

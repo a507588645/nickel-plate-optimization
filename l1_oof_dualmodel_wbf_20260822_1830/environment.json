@@ -1,0 +1,11 @@
+{
+  "python": "3.10.11 (main, May  7 2023, 18:05:05) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.22621-SP0",
+  "torch": "2.6.0+cu124",
+  "cuda_available_but_unused": true,
+  "ultralytics": "8.4.66",
+  "image_dimension_probe": "PIL header only during preflight; OpenCV is not used",
+  "cpu_threads": 8,
+  "device": "cpu",
+  "ensemble_boxes_available": false
+}

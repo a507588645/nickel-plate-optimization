@@ -1,0 +1,86 @@
+{
+  "threshold": 0.01,
+  "comparison_baseline": "best of the two pooled single-model OOF scores, per metric",
+  "best_single_mAP50_95": 0.06103249491615829,
+  "best_single_focus_f1": {
+    "wuzi": 0.0,
+    "waterstain": 0.5777777777777778,
+    "airhole": 0.0,
+    "bubble": 0.0,
+    "greenstain": 0.0,
+    "watermark": 0.22222222222222224
+  },
+  "candidates": [
+    {
+      "wbf_iou": 0.25,
+      "mAP50_95": 0.07081235865722656,
+      "mAP50_95_delta_vs_best_single": 0.009779863741068269,
+      "focus_f1_delta_vs_best_single": {
+        "wuzi": 0.0,
+        "waterstain": 0.030917874396135137,
+        "airhole": 0.0,
+        "bubble": 0.0,
+        "greenstain": 0.0,
+        "watermark": -0.040404040404040414
+      },
+      "qualifying_focus_classes": [
+        "waterstain"
+      ],
+      "passes_keep_threshold": true
+    },
+    {
+      "wbf_iou": 0.35,
+      "mAP50_95": 0.06701854260885225,
+      "mAP50_95_delta_vs_best_single": 0.005986047692693959,
+      "focus_f1_delta_vs_best_single": {
+        "wuzi": 0.0,
+        "waterstain": 0.030917874396135137,
+        "airhole": 0.0,
+        "bubble": 0.0,
+        "greenstain": 0.0,
+        "watermark": -0.040404040404040414
+      },
+      "qualifying_focus_classes": [
+        "waterstain"
+      ],
+      "passes_keep_threshold": true
+    },
+    {
+      "wbf_iou": 0.45,
+      "mAP50_95": 0.06691888085240442,
+      "mAP50_95_delta_vs_best_single": 0.005886385936246137,
+      "focus_f1_delta_vs_best_single": {
+        "wuzi": 0.0,
+        "waterstain": 0.030917874396135137,
+        "airhole": 0.0,
+        "bubble": 0.0,
+        "greenstain": 0.0,
+        "watermark": -0.040404040404040414
+      },
+      "qualifying_focus_classes": [
+        "waterstain"
+      ],
+      "passes_keep_threshold": true
+    },
+    {
+      "wbf_iou": 0.55,
+      "mAP50_95": 0.06717091969567217,
+      "mAP50_95_delta_vs_best_single": 0.0061384247795138805,
+      "focus_f1_delta_vs_best_single": {
+        "wuzi": 0.0,
+        "waterstain": 0.030917874396135137,
+        "airhole": 0.0,
+        "bubble": 0.0,
+        "greenstain": 0.0,
+        "watermark": -0.040404040404040414
+      },
+      "qualifying_focus_classes": [
+        "waterstain"
+      ],
+      "passes_keep_threshold": true
+    }
+  ],
+  "selected_wbf_iou": 0.25,
+  "status": "partial_smoke_no_gate",
+  "reason": "A --max-images-per-fold limit was used; no experiment-selection gate is valid."
+}

@@ -1,0 +1,19 @@
+{
+  "id": "lly3323w/l1-ryw18-y11m-oof-v1-mosaic0-ft30-f01",
+  "title": "L1 RYW18 YOLO11m OOF v1 Mosaic 0 Candidate 30 Epoch Fold01",
+  "code_file": "l1-ryw18-y11m-oof-v1-mosaic0-ft30-f01.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "lly3323w/dianjienie",
+    "lly3323w/dianjienie-ryw18-oof-consensus-v1-dev-config",
+    "lly3323w/dianjienie-ryw18-oof-y11m-fold01-640-e2-mosaicpair-base"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

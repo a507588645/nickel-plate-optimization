@@ -1,0 +1,4 @@
+image_id,fold,yolo11m_input_boxes,yolo26m_input_boxes,combined_input_boxes,wbf_output_boxes,fused_both_sources,fused_yolo11m_only,fused_yolo26m_only
+fold01/dianjienie__train__104.png,1,51,70,121,62,17,20,25
+fold02/dianjienie__train__115.png,2,176,56,232,82,24,42,16
+fold03/dianjienie__train__1.png,3,220,159,379,186,46,77,63

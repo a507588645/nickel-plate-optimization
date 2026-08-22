@@ -1,0 +1,168 @@
+{
+  "seed": 0,
+  "sample_image_ids": [
+    "fold03/dianjienie__train__20221031175929425_0_2.png",
+    "fold03/dianjienie__train__20230106165744638_0_2.png",
+    "fold01/dianjienie__train__20221201175142516_0_2.png",
+    "fold02/dianjienie__train__2024_03_18_152602_0.png",
+    "fold03/dianjienie__valid__20221109170718085_0_2.png"
+  ],
+  "images": {
+    "fold03/dianjienie__train__20221031175929425_0_2.png": {
+      "fold": 3,
+      "yolo11m_source_fold": 3,
+      "yolo26m_source_fold": 3,
+      "yolo11m_input_boxes": 141,
+      "yolo26m_input_boxes": 54,
+      "wbf_iou_0.25_output_boxes": 86,
+      "wbf_iou_0.25_source_composition": {
+        "both": 24,
+        "yolo11m_only": 48,
+        "yolo26m_only": 14
+      },
+      "wbf_iou_0.35_output_boxes": 99,
+      "wbf_iou_0.35_source_composition": {
+        "both": 21,
+        "yolo11m_only": 60,
+        "yolo26m_only": 18
+      },
+      "wbf_iou_0.45_output_boxes": 113,
+      "wbf_iou_0.45_source_composition": {
+        "both": 23,
+        "yolo11m_only": 71,
+        "yolo26m_only": 19
+      },
+      "wbf_iou_0.55_output_boxes": 133,
+      "wbf_iou_0.55_source_composition": {
+        "both": 25,
+        "yolo11m_only": 85,
+        "yolo26m_only": 23
+      }
+    },
+    "fold03/dianjienie__train__20230106165744638_0_2.png": {
+      "fold": 3,
+      "yolo11m_source_fold": 3,
+      "yolo26m_source_fold": 3,
+      "yolo11m_input_boxes": 300,
+      "yolo26m_input_boxes": 258,
+      "wbf_iou_0.25_output_boxes": 258,
+      "wbf_iou_0.25_source_composition": {
+        "yolo26m_only": 85,
+        "both": 108,
+        "yolo11m_only": 65
+      },
+      "wbf_iou_0.35_output_boxes": 290,
+      "wbf_iou_0.35_source_composition": {
+        "yolo26m_only": 94,
+        "both": 108,
+        "yolo11m_only": 88
+      },
+      "wbf_iou_0.45_output_boxes": 331,
+      "wbf_iou_0.45_source_composition": {
+        "yolo26m_only": 111,
+        "both": 107,
+        "yolo11m_only": 113
+      },
+      "wbf_iou_0.55_output_boxes": 377,
+      "wbf_iou_0.55_source_composition": {
+        "yolo26m_only": 136,
+        "both": 100,
+        "yolo11m_only": 141
+      }
+    },
+    "fold01/dianjienie__train__20221201175142516_0_2.png": {
+      "fold": 1,
+      "yolo11m_source_fold": 1,
+      "yolo26m_source_fold": 1,
+      "yolo11m_input_boxes": 300,
+      "yolo26m_input_boxes": 273,
+      "wbf_iou_0.25_output_boxes": 289,
+      "wbf_iou_0.25_source_composition": {
+        "both": 207,
+        "yolo26m_only": 44,
+        "yolo11m_only": 38
+      },
+      "wbf_iou_0.35_output_boxes": 301,
+      "wbf_iou_0.35_source_composition": {
+        "both": 204,
+        "yolo26m_only": 51,
+        "yolo11m_only": 46
+      },
+      "wbf_iou_0.45_output_boxes": 312,
+      "wbf_iou_0.45_source_composition": {
+        "both": 202,
+        "yolo26m_only": 58,
+        "yolo11m_only": 52
+      },
+      "wbf_iou_0.55_output_boxes": 341,
+      "wbf_iou_0.55_source_composition": {
+        "both": 188,
+        "yolo26m_only": 76,
+        "yolo11m_only": 77
+      }
+    },
+    "fold02/dianjienie__train__2024_03_18_152602_0.png": {
+      "fold": 2,
+      "yolo11m_source_fold": 2,
+      "yolo26m_source_fold": 2,
+      "yolo11m_input_boxes": 195,
+      "yolo26m_input_boxes": 25,
+      "wbf_iou_0.25_output_boxes": 94,
+      "wbf_iou_0.25_source_composition": {
+        "yolo11m_only": 75,
+        "both": 16,
+        "yolo26m_only": 3
+      },
+      "wbf_iou_0.35_output_boxes": 109,
+      "wbf_iou_0.35_source_composition": {
+        "yolo11m_only": 88,
+        "both": 17,
+        "yolo26m_only": 4
+      },
+      "wbf_iou_0.45_output_boxes": 128,
+      "wbf_iou_0.45_source_composition": {
+        "yolo11m_only": 107,
+        "both": 17,
+        "yolo26m_only": 4
+      },
+      "wbf_iou_0.55_output_boxes": 148,
+      "wbf_iou_0.55_source_composition": {
+        "yolo11m_only": 126,
+        "both": 16,
+        "yolo26m_only": 6
+      }
+    },
+    "fold03/dianjienie__valid__20221109170718085_0_2.png": {
+      "fold": 3,
+      "yolo11m_source_fold": 3,
+      "yolo26m_source_fold": 3,
+      "yolo11m_input_boxes": 112,
+      "yolo26m_input_boxes": 86,
+      "wbf_iou_0.25_output_boxes": 92,
+      "wbf_iou_0.25_source_composition": {
+        "both": 29,
+        "yolo26m_only": 29,
+        "yolo11m_only": 34
+      },
+      "wbf_iou_0.35_output_boxes": 98,
+      "wbf_iou_0.35_source_composition": {
+        "both": 32,
+        "yolo26m_only": 29,
+        "yolo11m_only": 37
+      },
+      "wbf_iou_0.45_output_boxes": 114,
+      "wbf_iou_0.45_source_composition": {
+        "both": 34,
+        "yolo26m_only": 36,
+        "yolo11m_only": 44
+      },
+      "wbf_iou_0.55_output_boxes": 135,
+      "wbf_iou_0.55_source_composition": {
+        "both": 32,
+        "yolo11m_only": 59,
+        "yolo26m_only": 44
+      }
+    }
+  },
+  "assertion": "Each sampled image contains only YOLO11m and YOLO26m predictions from its own OOF Fold."
+}

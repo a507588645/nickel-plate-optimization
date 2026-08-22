@@ -176,6 +176,8 @@
 | `prepare_l1_tile_interrupted_checkpoints.py` | 打包已回收的 L1 切片中断检查点为私有 Kaggle Dataset，只供独立开发集评测或同配置分段续训 |
 | `prepare_l1_tile_kaggle_kernel.py` | 生成 L1 切片 CPU 预检、GPU 训练或中断检查点独立评测 Kernel；可嵌入 Phase 0 阈值 JSON 并转发 WBF/边缘过滤/逐框审计参数，兼容 Kaggle 自动展开的扁平配置包 |
 | `run_l1_phase0_diagnostics.py` | CPU-only L1 小目标 Phase 0：三折 OOF 原始预测持久化、逐类阈值扫描、PR 图与 G4b 逐框归因缺口审计；不读冻结集 |
+| `run_l1_oof_dualmodel_wbf.py` | CPU-only L1 E1：严格按图配对同 Fold 的 YOLO11m/YOLO26m 原始 OOF 预测，补推理 YOLO26m、扫描固定四个 WBF IoU，并输出指标、哈希与无泄漏审计；不读冻结集 |
+| `prepare_l1_nomosaic_kaggle_kernel.py` | 仅本地生成 L1 E2 整图 Mosaic=0 微调的私有 Kaggle Kernel 和固定 Fold 1 检查点 Dataset staging；哈希校验、`resume=false`，不上传、不提交 |
 | `derive_l1_phase0_holdout_thresholds.py` | 从非目标 Fold 的 Phase 0 原始预测生成留出 Fold 专用阈值 JSON，避免在本 Fold 评测数据上挑阈值 |
 | `verify_l1_phase1_tile_evaluation.py` | 只读校验并安全解压 Phase 1 评测 ZIP：验证 SHA-256、CRC、开发集边界、权重、profile 和逐框明细，生成停止/继续闸门报告 |
 | `summarize_l1_oof_auto_gate.py` | 汇总 OOF 候选的三折自评与历史锚点自动非回退复评；只读归档 JSON，不访问 release-validation |
