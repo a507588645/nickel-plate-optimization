@@ -53,3 +53,7 @@ desktop.ini
 
 # ===== 本机路径映射（跨电脑共享代码，不共享绝对路径） =====
 config/workspace.local.json
+
+# ===== 原始预测转储（可从 Kaggle 复现，本地保留、不进仓库） =====
+*_raw_tile_predictions.jsonl.gz
+l1_phase*_diagnostics_*/raw_predictions/
