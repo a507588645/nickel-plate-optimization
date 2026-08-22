@@ -54,6 +54,12 @@ desktop.ini
 # ===== 本机路径映射（跨电脑共享代码，不共享绝对路径） =====
 config/workspace.local.json
 
-# ===== 原始预测转储（可从 Kaggle 复现，本地保留、不进仓库） =====
-*_raw_tile_predictions.jsonl.gz
-l1_phase*_diagnostics_*/raw_predictions/
+# ===== 原始预测转储与中间产物（可从 Kaggle/脚本复现，本地保留、不进仓库；AGENTS.md §10） =====
+# 压缩的预测/推理转储
+*.jsonl.gz
+# 原始预测 jsonl（raw_predictions 目录、*_raw_* 命名）
+raw_predictions/
+*_raw_*.jsonl
+*_raw_*.jsonl.gz
+# 注意：kaggle_*/remote_output_v*/ 下的清单/标签/指标 JSON 是实验归档的一部分，保持入库；
+# 其中的 *.zip、*.jsonl.gz、raw_predictions/ 由上面规则自动排除。
