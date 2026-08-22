@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "data_version": "oofconsensusv1",
+  "development_only": true,
+  "fold": 1,
+  "source_config_manifest_sha256": "349c3629f0ade7b8397b42a1cc3926a904daa2e5d117219381f6afbc03cd0e14",
+  "source_split_hashes": {
+    "train": "dde70976f1864ebf6022f2595f33ec32c9b039d2ddbbd6946ab0ae24c30aa535",
+    "val": "dc2fc3162b0368a5bc193333c2e5457f666ad5a4f3144eb05e970ef590c744a1"
+  },
+  "tile": {
+    "tile_size": 1024,
+    "overlap": 0.25,
+    "negative_ratio": 0.25,
+    "min_visible_fraction": 0.5,
+    "focus_classes": [
+      "wuzi",
+      "waterstain",
+      "airhole",
+      "bubble",
+      "greenstain",
+      "watermark"
+    ],
+    "selection": "one best-covered tile per focus box; labels retain boxes with visible area >= min_visible_fraction"
+  },
+  "split_counts": {
+    "full_train_images": 751,
+    "full_val_images": 376,
+    "all_train_grid_tiles": 18775,
+    "selected_focus_tiles": 4935,
+    "sampled_negative_tiles": 1233,
+    "mixed_training_images": 6919,
+    "val_inference_tiles": 9400,
+    "test_frozen": null
+  },
+  "focus_source_box_counts": {
+    "wuzi": 1771,
+    "waterstain": 5286,
+    "airhole": 893,
+    "bubble": 574,
+    "greenstain": 235,
+    "watermark": 1097
+  },
+  "focus_boxes_kept_full_image_only": {
+    "wuzi": 6,
+    "waterstain": 69,
+    "airhole": 38,
+    "bubble": 47,
+    "greenstain": 0,
+    "watermark": 177
+  },
+  "source_box_counts": {
+    "wuzi": 2632,
+    "waterstain": 7478,
+    "yellowstain": 78,
+    "nodule": 90,
+    "airhole": 1537,
+    "bubble": 763,
+    "bump": 281,
+    "fawu": 5,
+    "overfire": 304,
+    "NiOH": 7,
+    "greenstain": 334,
+    "suanwuran": 66,
+    "quejiao": 50,
+    "watermark": 2001,
+    "youpao": 0,
+    "heibian": 12,
+    "mijixiaokeng": 33,
+    "fanxitong": 0
+  }
+}

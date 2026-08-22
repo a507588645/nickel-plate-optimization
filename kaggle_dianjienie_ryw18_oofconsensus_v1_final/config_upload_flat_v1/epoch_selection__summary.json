@@ -1,0 +1,150 @@
+{
+  "purpose": "fixed epoch selection for no-manual L1 final development training",
+  "model": "yolo11m.pt",
+  "data_version": "oofconsensusv1",
+  "development_only": true,
+  "metric": "metrics/mAP50-95(B)",
+  "sources": {
+    "1": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_fold01\\results.csv",
+    "2": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_fold02\\results.csv",
+    "3": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_fold03\\results.csv"
+  },
+  "common_epoch_count": 183,
+  "last_common_epoch": 183,
+  "selected": {
+    "epoch": 83,
+    "mean_map50_95": 0.17239000000000002,
+    "sample_std": 0.03435098251869951,
+    "fold_01": 0.13789,
+    "fold_02": 0.17269,
+    "fold_03": 0.20659
+  },
+  "top_epochs": [
+    {
+      "epoch": 83,
+      "mean_map50_95": 0.17239000000000002,
+      "sample_std": 0.03435098251869951,
+      "fold_01": 0.13789,
+      "fold_02": 0.17269,
+      "fold_03": 0.20659
+    },
+    {
+      "epoch": 132,
+      "mean_map50_95": 0.1681,
+      "sample_std": 0.041465778661445636,
+      "fold_01": 0.14436,
+      "fold_02": 0.14396,
+      "fold_03": 0.21598
+    },
+    {
+      "epoch": 129,
+      "mean_map50_95": 0.1676966666666667,
+      "sample_std": 0.03854223959934519,
+      "fold_01": 0.14266,
+      "fold_02": 0.14835,
+      "fold_03": 0.21208
+    },
+    {
+      "epoch": 119,
+      "mean_map50_95": 0.16490000000000002,
+      "sample_std": 0.03837587262851492,
+      "fold_01": 0.14464,
+      "fold_02": 0.1409,
+      "fold_03": 0.20916
+    },
+    {
+      "epoch": 93,
+      "mean_map50_95": 0.16444333333333333,
+      "sample_std": 0.03509298552892492,
+      "fold_01": 0.15145,
+      "fold_02": 0.1377,
+      "fold_03": 0.20418
+    },
+    {
+      "epoch": 155,
+      "mean_map50_95": 0.16428666666666666,
+      "sample_std": 0.038841542622987224,
+      "fold_01": 0.14663,
+      "fold_02": 0.13741,
+      "fold_03": 0.20882
+    },
+    {
+      "epoch": 136,
+      "mean_map50_95": 0.16373000000000001,
+      "sample_std": 0.04751723792477842,
+      "fold_01": 0.14848,
+      "fold_02": 0.12571,
+      "fold_03": 0.217
+    },
+    {
+      "epoch": 157,
+      "mean_map50_95": 0.16296,
+      "sample_std": 0.04562469506747415,
+      "fold_01": 0.14744,
+      "fold_02": 0.12712,
+      "fold_03": 0.21432
+    },
+    {
+      "epoch": 158,
+      "mean_map50_95": 0.16279666666666667,
+      "sample_std": 0.04147464325745713,
+      "fold_01": 0.14791,
+      "fold_02": 0.13082,
+      "fold_03": 0.20966
+    },
+    {
+      "epoch": 135,
+      "mean_map50_95": 0.16257000000000002,
+      "sample_std": 0.04514373378443569,
+      "fold_01": 0.14974,
+      "fold_02": 0.12523,
+      "fold_03": 0.21274
+    },
+    {
+      "epoch": 77,
+      "mean_map50_95": 0.16246000000000002,
+      "sample_std": 0.04071896486896493,
+      "fold_01": 0.13601,
+      "fold_02": 0.14202,
+      "fold_03": 0.20935
+    },
+    {
+      "epoch": 127,
+      "mean_map50_95": 0.16240333333333334,
+      "sample_std": 0.027570684310211337,
+      "fold_01": 0.14436,
+      "fold_02": 0.14871,
+      "fold_03": 0.19414
+    },
+    {
+      "epoch": 153,
+      "mean_map50_95": 0.16208333333333333,
+      "sample_std": 0.0475290967022658,
+      "fold_01": 0.14478,
+      "fold_02": 0.12563,
+      "fold_03": 0.21584
+    },
+    {
+      "epoch": 84,
+      "mean_map50_95": 0.16197666666666666,
+      "sample_std": 0.026907557178854666,
+      "fold_01": 0.14318,
+      "fold_02": 0.14995,
+      "fold_03": 0.1928
+    },
+    {
+      "epoch": 133,
+      "mean_map50_95": 0.16081666666666666,
+      "sample_std": 0.04541279592068003,
+      "fold_01": 0.15372,
+      "fold_02": 0.11937,
+      "fold_03": 0.20936
+    }
+  ],
+  "final_training_policy": {
+    "epochs": 83,
+    "validation": false,
+    "patience": 0,
+    "weight_for_release_validation": "weights/final_fixed_epoch.pt copied from weights/last.pt"
+  }
+}

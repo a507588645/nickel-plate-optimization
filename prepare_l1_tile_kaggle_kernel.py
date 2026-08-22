@@ -314,7 +314,7 @@ def defaults(args: argparse.Namespace) -> tuple[str, str, str, Path]:
     if args.mode == "train":
         default_title = f"L1 RYW18 Y11m OOF v1 Tile{args.tile_size} O{overlap_code:02d} B{args.batch} E{args.epochs} F01"
     elif args.mode == "evaluate":
-        default_title = f"L1 RYW18 Y11m OOF v1 Tile{args.tile_size} O{overlap_code:02d} Interrupted Checkpoint Eval F01"
+        default_title = f"L1 RYW18 Y11m OOF v1 Tile{args.tile_size} O{overlap_code:02d} Eval F01"
     else:
         default_title = f"L1 RYW18 OOF v1 Tile{args.tile_size} O{overlap_code:02d} Preflight Fold01"
     title = args.title or default_title

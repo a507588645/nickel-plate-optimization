@@ -1,0 +1,43 @@
+{
+  "mode": "evaluate",
+  "run_name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_tile1024o25_focus6_mix_fold01",
+  "data_version": "oofconsensusv1",
+  "development_only": true,
+  "fold": 1,
+  "frozen_test_set": null,
+  "baseline_weights": "/kaggle/input/datasets/lly3323w/dianjienie-ryw18-oof-yolo11m-fold01-640-weight/baseline_fold01_640_best.pt",
+  "baseline_weights_sha256": "b00aad9cc8041424f0b1e7263a6c9a2be5675827fd7017fcdec395b40ccac0ce",
+  "candidate_weights": "/kaggle/input/datasets/lly3323w/dianjienie-ryw18-oof-y11m-tile-f01-v3-ckpt/tile_fold01_v3_best.pt",
+  "candidate_weights_sha256": "c4a903e8e8438798d44fc0548d666923a8728509f012d124101a8b980d7d875e",
+  "tile_view": {
+    "tile_size": 1024,
+    "overlap": 0.25,
+    "negative_ratio": 0.25,
+    "min_visible_fraction": 0.5,
+    "focus_classes": [
+      "wuzi",
+      "waterstain",
+      "airhole",
+      "bubble",
+      "greenstain",
+      "watermark"
+    ],
+    "selection": "one best-covered tile per focus box; labels retain boxes with visible area >= min_visible_fraction"
+  },
+  "split_counts": {
+    "full_train_images": 751,
+    "full_val_images": 376,
+    "all_train_grid_tiles": 18775,
+    "selected_focus_tiles": 4935,
+    "sampled_negative_tiles": 1233,
+    "mixed_training_images": 6919,
+    "val_inference_tiles": 9400,
+    "test_frozen": null
+  },
+  "inference": {
+    "imgsz": 640,
+    "predict_batch": 8,
+    "device": "0",
+    "nms_iou": 0.7
+  }
+}

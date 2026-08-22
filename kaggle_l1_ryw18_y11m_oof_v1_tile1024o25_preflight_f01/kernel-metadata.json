@@ -1,0 +1,18 @@
+{
+  "id": "lly3323w/l1-ryw18-y11m-oof-v1-tile1024o25-preflight-f01",
+  "title": "L1 RYW18 OOF v1 Tile1024 Preflight Fold01",
+  "code_file": "l1-ryw18-y11m-oof-v1-tile1024o25-preflight-f01.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "lly3323w/dianjienie",
+    "lly3323w/dianjienie-ryw18-oof-consensus-v1-dev-config"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

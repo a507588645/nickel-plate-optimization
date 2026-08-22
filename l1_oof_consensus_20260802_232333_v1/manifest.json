@@ -1,0 +1,20 @@
+{
+  "output_root": "E:\\PythonProject\\优化\\l1_oof_consensus_20260802_232333_v1",
+  "files": {
+    "classes": "classes.txt",
+    "predictions": [
+      "predictions/yolo11m_oof.jsonl",
+      "predictions/yolo26m_oof.jsonl",
+      "predictions/ryw_teacher.jsonl"
+    ],
+    "decisions": "decisions.jsonl",
+    "labels_with_conf": "labels_with_conf/",
+    "training_candidate_labels": "labels_consensus_training_candidate_5col/",
+    "summary": "summary.json"
+  },
+  "hashes": {
+    "ryw_teacher.jsonl": "db8c8bc11072b66b2573f7123cff778b6a324b361f3a5fe6c389d2eff44c9abe",
+    "yolo11m_oof.jsonl": "762fad63f8ee56200eceb91ba030f888b993341c1b8f9a9c20719ced439fe39a",
+    "yolo26m_oof.jsonl": "9fc3e9ccf329dae4ce17068f26a4e1643f840316a17937645423af5b82d8e9c4"
+  }
+}

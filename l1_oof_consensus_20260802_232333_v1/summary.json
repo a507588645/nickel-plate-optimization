@@ -1,0 +1,205 @@
+{
+  "generated_at": "2026-08-02T23:45:42",
+  "purpose": "L1 OOF two-architecture consensus candidate generation",
+  "frozen_test_access": "not read; not inferred; not included",
+  "images": 1127,
+  "class_names": [
+    "wuzi",
+    "waterstain",
+    "yellowstain",
+    "nodule",
+    "airhole",
+    "bubble",
+    "bump",
+    "fawu",
+    "overfire",
+    "NiOH",
+    "greenstain",
+    "suanwuran",
+    "quejiao",
+    "watermark",
+    "youpao",
+    "heibian",
+    "mijixiaokeng",
+    "fanxitong"
+  ],
+  "config": {
+    "imgsz": 640,
+    "batch": 4,
+    "model_confidence_min": 0.15,
+    "model_nms_iou": 0.7,
+    "oof_consensus_iou": 0.55,
+    "historical_label_overlap_iou": 0.55,
+    "accepted_confidence": 0.7,
+    "uncertain_confidence": 0.4,
+    "consensus_confidence": "min of direct YOLO11m/YOLO26m OOF pair"
+  },
+  "safety": {
+    "historical_labels": "copied unchanged into five-column candidate view; never deleted or reclassified",
+    "automatic_addition_rule": "direct same-class YOLO11m/YOLO26m OOF IoU match only",
+    "ryw_role": "teacher-only evidence; never sufficient for an automatic addition",
+    "labels_with_conf": "new candidates only, six columns including confidence; decisions.jsonl retains status and provenance",
+    "training_candidate_view": "historical labels plus accepted new candidates; not reviewed ground truth"
+  },
+  "counts": {
+    "action:add_to_training_candidate_view": 245,
+    "action:candidate_only_not_added_to_training_view": 3372,
+    "action:preserve_historical_label": 5306,
+    "action:record_conflict_no_auto_reclass": 316,
+    "oof_consensus_total": 9239,
+    "relation:existing_class_conflict": 316,
+    "relation:existing_supported": 5306,
+    "relation:new_candidate": 3617,
+    "status:accepted": 2042,
+    "status:rejected": 4230,
+    "status:uncertain": 2967
+  },
+  "by_class": {
+    "airhole": {
+      "relation:existing_class_conflict": 18,
+      "relation:existing_supported": 209,
+      "relation:new_candidate": 216,
+      "status:accepted": 86,
+      "status:rejected": 216,
+      "status:uncertain": 141
+    },
+    "bubble": {
+      "relation:existing_class_conflict": 9,
+      "relation:existing_supported": 58,
+      "relation:new_candidate": 60,
+      "status:accepted": 14,
+      "status:rejected": 61,
+      "status:uncertain": 52
+    },
+    "bump": {
+      "relation:existing_class_conflict": 15,
+      "relation:existing_supported": 47,
+      "relation:new_candidate": 66,
+      "status:accepted": 11,
+      "status:rejected": 71,
+      "status:uncertain": 46
+    },
+    "greenstain": {
+      "relation:existing_supported": 32,
+      "relation:new_candidate": 25,
+      "status:accepted": 1,
+      "status:rejected": 36,
+      "status:uncertain": 20
+    },
+    "mijixiaokeng": {
+      "relation:new_candidate": 1,
+      "status:rejected": 1
+    },
+    "nodule": {
+      "relation:existing_supported": 49,
+      "relation:new_candidate": 21,
+      "status:accepted": 19,
+      "status:rejected": 29,
+      "status:uncertain": 22
+    },
+    "overfire": {
+      "relation:existing_class_conflict": 12,
+      "relation:existing_supported": 64,
+      "relation:new_candidate": 21,
+      "status:accepted": 28,
+      "status:rejected": 35,
+      "status:uncertain": 34
+    },
+    "quejiao": {
+      "relation:existing_supported": 21,
+      "relation:new_candidate": 7,
+      "status:accepted": 11,
+      "status:rejected": 10,
+      "status:uncertain": 7
+    },
+    "suanwuran": {
+      "relation:existing_class_conflict": 1,
+      "relation:existing_supported": 27,
+      "relation:new_candidate": 2,
+      "status:accepted": 22,
+      "status:rejected": 5,
+      "status:uncertain": 3
+    },
+    "watermark": {
+      "relation:existing_class_conflict": 99,
+      "relation:existing_supported": 619,
+      "relation:new_candidate": 202,
+      "status:accepted": 274,
+      "status:rejected": 327,
+      "status:uncertain": 319
+    },
+    "waterstain": {
+      "relation:existing_class_conflict": 104,
+      "relation:existing_supported": 3399,
+      "relation:new_candidate": 2264,
+      "status:accepted": 1480,
+      "status:rejected": 2500,
+      "status:uncertain": 1787
+    },
+    "wuzi": {
+      "relation:existing_class_conflict": 57,
+      "relation:existing_supported": 780,
+      "relation:new_candidate": 731,
+      "status:accepted": 96,
+      "status:rejected": 936,
+      "status:uncertain": 536
+    },
+    "yellowstain": {
+      "relation:existing_class_conflict": 1,
+      "relation:existing_supported": 1,
+      "relation:new_candidate": 1,
+      "status:rejected": 3
+    }
+  },
+  "preflight": {
+    "anchor_root": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1",
+    "development_images": 1127,
+    "fold_sizes": {
+      "fold_01": 376,
+      "fold_02": 375,
+      "fold_03": 376
+    },
+    "ultralytics_runs": {
+      "yolo11m": {
+        "fold_01": {
+          "weight": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_anchorv1_fold01\\weights\\best.pt",
+          "sha256": "66a2cfaf90716d7770f3f3a80c2150a91f725120e9f26da7ab13248526eb6d5e",
+          "validated_val_images": 376
+        },
+        "fold_02": {
+          "weight": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_anchorv1_fold02\\weights\\best.pt",
+          "sha256": "9fb90c95e7016aab020cbb6b1268e28cd29cdfa9606b4f087e999b52df826cf0",
+          "validated_val_images": 375
+        },
+        "fold_03": {
+          "weight": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_anchorv1_fold03\\weights\\best.pt",
+          "sha256": "d2bff2119d0886440e2c7589a34e576081921c3e0ed6555e42810c022223e187",
+          "validated_val_images": 376
+        }
+      },
+      "yolo26m": {
+        "fold_01": {
+          "weight": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo26m_640_kaggle_seed0_cm0_anchorv1_fold01\\weights\\best.pt",
+          "sha256": "c64cc0774cd3ba4e2ebee832ba54c00203e918a665cea1aa89b0ae7fec1d36dc",
+          "validated_val_images": 376
+        },
+        "fold_02": {
+          "weight": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo26m_640_kaggle_seed0_cm0_anchorv1_fold02\\weights\\best.pt",
+          "sha256": "a08151dc9fdc68005e46e4fc8c2189a7316e1f2a4da1d0bf036954e377593f51",
+          "validated_val_images": 375
+        },
+        "fold_03": {
+          "weight": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo26m_640_kaggle_seed0_cm0_anchorv1_fold03\\weights\\best.pt",
+          "sha256": "06f9b2eb6083dfdb44376634de44c02fb7410ae94fca0bb10a5b7e90e4b121a6",
+          "validated_val_images": 376
+        }
+      }
+    },
+    "ryw_teacher": {
+      "weight": "E:\\PythonProject\\Tools\\ModelAutoLabelTool\\weights\\yolov5\\ryw.pt",
+      "sha256": "f404ceda25e083964f84fbe35fad2be9b48ebe42f0bf4b3d11813068542178eb",
+      "class_order_verified": true
+    },
+    "frozen_test_access": "intentionally not read"
+  }
+}

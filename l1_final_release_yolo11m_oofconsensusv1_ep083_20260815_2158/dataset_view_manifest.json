@@ -1,0 +1,1617 @@
+{
+  "scope": "preselected_l1_final_release_validation_once",
+  "test_list": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\splits\\test.txt",
+  "test_list_sha256": "53824522fda32cec7f32007fc9c5dbac2688224f332105034e14b8425ebd47c7",
+  "files": [
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__113.png",
+      "source_image_size": 30943108,
+      "source_image_mtime_ns": 1781334509312680400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__113.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__113.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__113.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221027171453627_0_2.png",
+      "source_image_size": 21384200,
+      "source_image_mtime_ns": 1781329094789796900,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221027171453627_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221027171453627_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221027171453627_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221027171719930_0_2.png",
+      "source_image_size": 20884152,
+      "source_image_mtime_ns": 1781333084590333200,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221027171719930_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221027171719930_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221027171719930_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221027171808998_0_2.png",
+      "source_image_size": 21018350,
+      "source_image_mtime_ns": 1781333696854475200,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221027171808998_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221027171808998_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221027171808998_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221027172910980_0_2.png",
+      "source_image_size": 19997994,
+      "source_image_mtime_ns": 1781330747866177400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221027172910980_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221027172910980_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221027172910980_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221027173803659_0_2.png",
+      "source_image_size": 19212376,
+      "source_image_mtime_ns": 1781329186505433200,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221027173803659_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221027173803659_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221027173803659_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221028153739685_0_2.png",
+      "source_image_size": 20371256,
+      "source_image_mtime_ns": 1781333341209041800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221028153739685_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221028153739685_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221028153739685_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221029154313557_0_2.png",
+      "source_image_size": 21432854,
+      "source_image_mtime_ns": 1781328930276510600,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221029154313557_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221029154313557_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221029154313557_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221029161445933_0_2.png",
+      "source_image_size": 20562817,
+      "source_image_mtime_ns": 1781332084490491800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221029161445933_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221029161445933_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221029161445933_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221029170457846_0_2.png",
+      "source_image_size": 20527263,
+      "source_image_mtime_ns": 1781333663154932000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221029170457846_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221029170457846_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221029170457846_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221029171018905_0_2.png",
+      "source_image_size": 20422975,
+      "source_image_mtime_ns": 1781334333166939900,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221029171018905_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221029171018905_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221029171018905_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221029171112915_0_2.png",
+      "source_image_size": 20669058,
+      "source_image_mtime_ns": 1781332943796260200,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221029171112915_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221029171112915_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221029171112915_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221029174807359_0_2.png",
+      "source_image_size": 20090148,
+      "source_image_mtime_ns": 1781333757630276200,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221029174807359_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221029174807359_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221029174807359_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221029180502344_0_2.png",
+      "source_image_size": 19892359,
+      "source_image_mtime_ns": 1781334288382024100,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221029180502344_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221029180502344_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221029180502344_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221029180739240_0_2.png",
+      "source_image_size": 19720055,
+      "source_image_mtime_ns": 1781330825635318900,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221029180739240_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221029180739240_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221029180739240_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221029181352998_0_2.png",
+      "source_image_size": 19250549,
+      "source_image_mtime_ns": 1781330453217235900,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221029181352998_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221029181352998_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221029181352998_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221029181825968_0_2.png",
+      "source_image_size": 20615309,
+      "source_image_mtime_ns": 1781334242141803200,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221029181825968_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221029181825968_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221029181825968_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221031165842780_0_2.png",
+      "source_image_size": 20821692,
+      "source_image_mtime_ns": 1781332840998749600,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221031165842780_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221031165842780_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221031165842780_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221031175103459_0_2.png",
+      "source_image_size": 19457167,
+      "source_image_mtime_ns": 1781330684467426700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221031175103459_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221031175103459_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221031175103459_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221031175655859_0_2.png",
+      "source_image_size": 19349161,
+      "source_image_mtime_ns": 1781333365696286400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221031175655859_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221031175655859_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221031175655859_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221102182920104_0_2.png",
+      "source_image_size": 20156651,
+      "source_image_mtime_ns": 1781332472220104700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221102182920104_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221102182920104_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221102182920104_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221103154722239_0_2.png",
+      "source_image_size": 19615600,
+      "source_image_mtime_ns": 1781334304611561600,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221103154722239_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221103154722239_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221103154722239_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221103154812586_0_2.png",
+      "source_image_size": 19545707,
+      "source_image_mtime_ns": 1781331291452640500,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221103154812586_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221103154812586_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221103154812586_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221103160732214_0_2.png",
+      "source_image_size": 19266736,
+      "source_image_mtime_ns": 1781334226428129400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221103160732214_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221103160732214_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221103160732214_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221103164741433_0_2.png",
+      "source_image_size": 16706828,
+      "source_image_mtime_ns": 1781330788381290300,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221103164741433_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221103164741433_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221103164741433_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221106162156599_0_2.png",
+      "source_image_size": 21124167,
+      "source_image_mtime_ns": 1781329403925989400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221106162156599_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221106162156599_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221106162156599_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221106171039703_0_2.png",
+      "source_image_size": 20823225,
+      "source_image_mtime_ns": 1781332279786589600,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221106171039703_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221106171039703_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221106171039703_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221106172015072_0_2.png",
+      "source_image_size": 19512481,
+      "source_image_mtime_ns": 1781334204897178000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221106172015072_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221106172015072_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221106172015072_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221109162154126_0_2.png",
+      "source_image_size": 23191059,
+      "source_image_mtime_ns": 1781332207799592200,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221109162154126_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221109162154126_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221109162154126_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221109164036405_0_2.png",
+      "source_image_size": 21848523,
+      "source_image_mtime_ns": 1781330232070715000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221109164036405_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221109164036405_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221109164036405_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221109164458192_0_2.png",
+      "source_image_size": 21888630,
+      "source_image_mtime_ns": 1781333718751999000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221109164458192_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221109164458192_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221109164458192_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221115170415719_0_2.png",
+      "source_image_size": 20538830,
+      "source_image_mtime_ns": 1781333333680772900,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221115170415719_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221115170415719_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221115170415719_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221201164758237_0_2.png",
+      "source_image_size": 18919452,
+      "source_image_mtime_ns": 1781330240507088900,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221201164758237_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221201164758237_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221201164758237_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221201165241073_0_2.png",
+      "source_image_size": 19021625,
+      "source_image_mtime_ns": 1781330467904179000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221201165241073_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221201165241073_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221201165241073_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221201173339500_0_2.png",
+      "source_image_size": 16648749,
+      "source_image_mtime_ns": 1781332740973692000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221201173339500_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221201173339500_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221201173339500_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221201175723958_0_2.png",
+      "source_image_size": 18818722,
+      "source_image_mtime_ns": 1781331114392260500,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221201175723958_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221201175723958_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221201175723958_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221203162415816_0_2.png",
+      "source_image_size": 19838759,
+      "source_image_mtime_ns": 1781333120835224400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221203162415816_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221203162415816_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221203162415816_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221203163652588_0_2.png",
+      "source_image_size": 20381037,
+      "source_image_mtime_ns": 1781331260427465400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221203163652588_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221203163652588_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221203163652588_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221203173711262_0_2.png",
+      "source_image_size": 19228173,
+      "source_image_mtime_ns": 1781330998159182700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221203173711262_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221203173711262_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221203173711262_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221204153736468_0_2.png",
+      "source_image_size": 19470126,
+      "source_image_mtime_ns": 1781329663895985900,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221204153736468_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221204153736468_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221204153736468_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221204154327293_0_2.png",
+      "source_image_size": 19881124,
+      "source_image_mtime_ns": 1781330199038904600,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221204154327293_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221204154327293_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221204154327293_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221204165912983_0_2.png",
+      "source_image_size": 23258338,
+      "source_image_mtime_ns": 1781331992577310100,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221204165912983_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221204165912983_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221204165912983_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221204170211118_0_2.png",
+      "source_image_size": 19559249,
+      "source_image_mtime_ns": 1781331283282976000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221204170211118_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221204170211118_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221204170211118_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221204170256071_0_2.png",
+      "source_image_size": 21277672,
+      "source_image_mtime_ns": 1781334151548710700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221204170256071_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221204170256071_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221204170256071_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221206153836547_0_2.png",
+      "source_image_size": 19825506,
+      "source_image_mtime_ns": 1781330099086966500,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221206153836547_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221206153836547_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221206153836547_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221206154906929_0_2.png",
+      "source_image_size": 20957300,
+      "source_image_mtime_ns": 1781330533271242500,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221206154906929_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221206154906929_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221206154906929_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221206162334796_0_2.png",
+      "source_image_size": 20589970,
+      "source_image_mtime_ns": 1781334430648215800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221206162334796_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221206162334796_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221206162334796_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221206163431840_0_2.png",
+      "source_image_size": 20775074,
+      "source_image_mtime_ns": 1781329839094902900,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221206163431840_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221206163431840_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221206163431840_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221206165915115_0_2.png",
+      "source_image_size": 19210886,
+      "source_image_mtime_ns": 1781330420948713800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221206165915115_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221206165915115_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221206165915115_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221206170423214_0_2.png",
+      "source_image_size": 19743794,
+      "source_image_mtime_ns": 1781330015258015300,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221206170423214_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221206170423214_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221206170423214_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221206170507954_0_2.png",
+      "source_image_size": 19473729,
+      "source_image_mtime_ns": 1781333484716447100,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221206170507954_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221206170507954_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221206170507954_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221206171707246_0_2.png",
+      "source_image_size": 19690045,
+      "source_image_mtime_ns": 1781334281961352100,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221206171707246_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221206171707246_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221206171707246_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221206172912047_0_2.png",
+      "source_image_size": 19895814,
+      "source_image_mtime_ns": 1781333462701246900,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221206172912047_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221206172912047_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221206172912047_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221208155412624_0_2.png",
+      "source_image_size": 19958574,
+      "source_image_mtime_ns": 1781332439107539700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221208155412624_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221208155412624_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221208155412624_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221208163249723_0_2.png",
+      "source_image_size": 17871932,
+      "source_image_mtime_ns": 1781328927772580600,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221208163249723_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221208163249723_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221208163249723_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221208170646676_0_2.png",
+      "source_image_size": 19387664,
+      "source_image_mtime_ns": 1781331718183141800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221208170646676_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221208170646676_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221208170646676_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221209152723124_0_2.png",
+      "source_image_size": 19859041,
+      "source_image_mtime_ns": 1781329711801865400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221209152723124_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221209152723124_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221209152723124_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221209154344909_0_2.png",
+      "source_image_size": 22682399,
+      "source_image_mtime_ns": 1781329307733048700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221209154344909_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221209154344909_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221209154344909_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221209161810478_0_2.png",
+      "source_image_size": 18235370,
+      "source_image_mtime_ns": 1781332275244853900,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221209161810478_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221209161810478_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221209161810478_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221209162958895_0_2.png",
+      "source_image_size": 20249284,
+      "source_image_mtime_ns": 1781330693769895000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221209162958895_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221209162958895_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221209162958895_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221209163128075_0_2.png",
+      "source_image_size": 18680448,
+      "source_image_mtime_ns": 1781332919587406000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221209163128075_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221209163128075_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221209163128075_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221210163923748_0_2.png",
+      "source_image_size": 20351153,
+      "source_image_mtime_ns": 1781333333969054900,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221210163923748_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221210163923748_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221210163923748_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221210172023348_0_2.png",
+      "source_image_size": 19449143,
+      "source_image_mtime_ns": 1781329606125927400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221210172023348_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221210172023348_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221210172023348_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221212165922642_0_2.png",
+      "source_image_size": 19892624,
+      "source_image_mtime_ns": 1781329882160036000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221212165922642_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221212165922642_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221212165922642_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20221212171817094_0_2.png",
+      "source_image_size": 19474305,
+      "source_image_mtime_ns": 1781332378775101500,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20221212171817094_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20221212171817094_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20221212171817094_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20230105172454356_0_2.png",
+      "source_image_size": 19173987,
+      "source_image_mtime_ns": 1781331222756994100,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20230105172454356_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20230105172454356_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20230105172454356_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20230105180831927_0_2.png",
+      "source_image_size": 19141320,
+      "source_image_mtime_ns": 1781332409820055800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20230105180831927_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20230105180831927_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20230105180831927_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20230106152303517_0_2.png",
+      "source_image_size": 18695731,
+      "source_image_mtime_ns": 1781334481913549800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20230106152303517_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20230106152303517_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20230106152303517_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20230108152455750_0_2.png",
+      "source_image_size": 19595511,
+      "source_image_mtime_ns": 1781332838005115700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20230108152455750_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20230108152455750_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20230108152455750_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20230109163001392_0_2.png",
+      "source_image_size": 19568643,
+      "source_image_mtime_ns": 1781330649534757000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20230109163001392_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20230109163001392_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20230109163001392_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20230109163438686_0_2.png",
+      "source_image_size": 19682580,
+      "source_image_mtime_ns": 1781334165569295600,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20230109163438686_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20230109163438686_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20230109163438686_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20230109165837235_0_2.png",
+      "source_image_size": 18833276,
+      "source_image_mtime_ns": 1781330811830083700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20230109165837235_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20230109165837235_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20230109165837235_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20230109170025194_0_2.png",
+      "source_image_size": 18960905,
+      "source_image_mtime_ns": 1781333454574711800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20230109170025194_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20230109170025194_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20230109170025194_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20230109170326213_0_2.png",
+      "source_image_size": 21370083,
+      "source_image_mtime_ns": 1781333575128783900,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20230109170326213_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20230109170326213_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20230109170326213_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20230109170933376_0_2.png",
+      "source_image_size": 18781618,
+      "source_image_mtime_ns": 1781329298692350300,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20230109170933376_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20230109170933376_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20230109170933376_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20230109174211255_0_2.png",
+      "source_image_size": 19481737,
+      "source_image_mtime_ns": 1781330860481809300,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20230109174211255_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20230109174211255_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20230109174211255_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20230110175127732_0_2.png",
+      "source_image_size": 27349220,
+      "source_image_mtime_ns": 1781332610063983000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20230110175127732_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20230110175127732_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20230110175127732_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20230110180039054_0_2.png",
+      "source_image_size": 27253376,
+      "source_image_mtime_ns": 1781333268617616400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20230110180039054_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20230110180039054_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20230110180039054_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_01_22100334_0.png",
+      "source_image_size": 10142548,
+      "source_image_mtime_ns": 1781328990643826000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_01_22100334_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_01_22100334_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_01_22100334_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_01_22100646_0.png",
+      "source_image_size": 9500607,
+      "source_image_mtime_ns": 1781329270423835300,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_01_22100646_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_01_22100646_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_01_22100646_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_01_22103240_0.png",
+      "source_image_size": 10634686,
+      "source_image_mtime_ns": 1781329117362586500,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_01_22103240_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_01_22103240_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_01_22103240_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_02_02103940_0.png",
+      "source_image_size": 11250560,
+      "source_image_mtime_ns": 1781333236755688500,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_02_02103940_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_02_02103940_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_02_02103940_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_02_02104722_0.png",
+      "source_image_size": 11142322,
+      "source_image_mtime_ns": 1781332937263470100,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_02_02104722_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_02_02104722_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_02_02104722_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_02_02105011_0.png",
+      "source_image_size": 9896221,
+      "source_image_mtime_ns": 1781332438159663200,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_02_02105011_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_02_02105011_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_02_02105011_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_02_02105320_1.png",
+      "source_image_size": 10702722,
+      "source_image_mtime_ns": 1781332871195142200,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_02_02105320_1.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_02_02105320_1.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_02_02105320_1.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_02_02105523_0.png",
+      "source_image_size": 11968341,
+      "source_image_mtime_ns": 1781329374861423500,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_02_02105523_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_02_02105523_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_02_02105523_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_02_02105634_0.png",
+      "source_image_size": 12303541,
+      "source_image_mtime_ns": 1781334097291541100,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_02_02105634_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_02_02105634_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_02_02105634_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_03_14_150012_0.png",
+      "source_image_size": 10064045,
+      "source_image_mtime_ns": 1781329061368558800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_03_14_150012_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_03_14_150012_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_03_14_150012_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_03_14_150747_0.png",
+      "source_image_size": 11804605,
+      "source_image_mtime_ns": 1781332319393004100,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_03_14_150747_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_03_14_150747_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_03_14_150747_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_03_14_152726_0.png",
+      "source_image_size": 12447339,
+      "source_image_mtime_ns": 1781332155982060600,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_03_14_152726_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_03_14_152726_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_03_14_152726_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_03_14_172019_0.png",
+      "source_image_size": 10616710,
+      "source_image_mtime_ns": 1781333437274151800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_03_14_172019_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_03_14_172019_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_03_14_172019_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_03_14_173711_0.png",
+      "source_image_size": 10363514,
+      "source_image_mtime_ns": 1781331312562813100,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_03_14_173711_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_03_14_173711_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_03_14_173711_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_03_23_084254_0.png",
+      "source_image_size": 10807927,
+      "source_image_mtime_ns": 1781332497339136800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_03_23_084254_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_03_23_084254_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_03_23_084254_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_03_23_105811_0.png",
+      "source_image_size": 10316544,
+      "source_image_mtime_ns": 1781329524419139800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_03_23_105811_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_03_23_105811_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_03_23_105811_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_03_23_150700_0.png",
+      "source_image_size": 10472037,
+      "source_image_mtime_ns": 1781329210798429900,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_03_23_150700_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_03_23_150700_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_03_23_150700_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_03_24_091817_0.png",
+      "source_image_size": 8866207,
+      "source_image_mtime_ns": 1781329050469736500,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_03_24_091817_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_03_24_091817_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_03_24_091817_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_03_24_101556_0.png",
+      "source_image_size": 10607391,
+      "source_image_mtime_ns": 1781330384787604500,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_03_24_101556_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_03_24_101556_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_03_24_101556_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_03_24_110001_0.png",
+      "source_image_size": 10527635,
+      "source_image_mtime_ns": 1781332984029452100,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_03_24_110001_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_03_24_110001_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_03_24_110001_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_04_26_144929_1.png",
+      "source_image_size": 9145158,
+      "source_image_mtime_ns": 1781332535206786000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_04_26_144929_1.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_04_26_144929_1.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_04_26_144929_1.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_05_06_093758_0.png",
+      "source_image_size": 14419322,
+      "source_image_mtime_ns": 1781330684317694000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_05_06_093758_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_05_06_093758_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_05_06_093758_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_05_06_150442_0.png",
+      "source_image_size": 12145672,
+      "source_image_mtime_ns": 1781331105326156500,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_05_06_150442_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_05_06_150442_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_05_06_150442_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_05_06_162637_0.png",
+      "source_image_size": 12475214,
+      "source_image_mtime_ns": 1781329321423354300,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_05_06_162637_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_05_06_162637_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_05_06_162637_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_05_06_163630_0.png",
+      "source_image_size": 15477956,
+      "source_image_mtime_ns": 1781332109177695500,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_05_06_163630_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_05_06_163630_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_05_06_163630_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_05_06_163800_1.png",
+      "source_image_size": 8844453,
+      "source_image_mtime_ns": 1781332226207471700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_05_06_163800_1.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_05_06_163800_1.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_05_06_163800_1.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_05_09094404_0.png",
+      "source_image_size": 9966462,
+      "source_image_mtime_ns": 1781331200368459000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_05_09094404_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_05_09094404_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_05_09094404_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_05_20_085803_1.png",
+      "source_image_size": 10052125,
+      "source_image_mtime_ns": 1781330312320413600,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_05_20_085803_1.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_05_20_085803_1.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_05_20_085803_1.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_05_20_094814_0.png",
+      "source_image_size": 10832158,
+      "source_image_mtime_ns": 1781330491132479100,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_05_20_094814_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_05_20_094814_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_05_20_094814_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_05_20_094814_1.png",
+      "source_image_size": 9181899,
+      "source_image_mtime_ns": 1781331495474920300,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_05_20_094814_1.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_05_20_094814_1.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_05_20_094814_1.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_05_20_153704_1.png",
+      "source_image_size": 10677802,
+      "source_image_mtime_ns": 1781331282349219200,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_05_20_153704_1.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_05_20_153704_1.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_05_20_153704_1.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_05_20_165749_0.png",
+      "source_image_size": 10141835,
+      "source_image_mtime_ns": 1781332907997277900,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_05_20_165749_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_05_20_165749_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_05_20_165749_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_05_21_095353_0.png",
+      "source_image_size": 12385658,
+      "source_image_mtime_ns": 1781331369633603600,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_05_21_095353_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_05_21_095353_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_05_21_095353_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_05_22_165959_1.png",
+      "source_image_size": 10427223,
+      "source_image_mtime_ns": 1781334099647261400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_05_22_165959_1.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_05_22_165959_1.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_05_22_165959_1.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_05_23_160911_1.png",
+      "source_image_size": 9550822,
+      "source_image_mtime_ns": 1781330443493287700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_05_23_160911_1.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_05_23_160911_1.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_05_23_160911_1.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_05_24_145942_1.png",
+      "source_image_size": 10427388,
+      "source_image_mtime_ns": 1781332658489271400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_05_24_145942_1.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_05_24_145942_1.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_05_24_145942_1.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_05_24_151646_0.png",
+      "source_image_size": 16634646,
+      "source_image_mtime_ns": 1781332908244378900,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_05_24_151646_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_05_24_151646_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_05_24_151646_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_05_24_160042_1.png",
+      "source_image_size": 9813442,
+      "source_image_mtime_ns": 1781330954886743000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_05_24_160042_1.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_05_24_160042_1.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_05_24_160042_1.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_05_24_162905_1.png",
+      "source_image_size": 9227094,
+      "source_image_mtime_ns": 1781334130094981200,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_05_24_162905_1.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_05_24_162905_1.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_05_24_162905_1.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__2024_05_24_163755_0.png",
+      "source_image_size": 11646050,
+      "source_image_mtime_ns": 1781329466860677300,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__2024_05_24_163755_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__2024_05_24_163755_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__2024_05_24_163755_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20260212-1.png",
+      "source_image_size": 10745489,
+      "source_image_mtime_ns": 1781331137676833700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20260212-1.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20260212-1.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20260212-1.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20260212-1473.png",
+      "source_image_size": 10467086,
+      "source_image_mtime_ns": 1781331811846485300,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20260212-1473.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20260212-1473.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20260212-1473.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20260212-156.png",
+      "source_image_size": 11785574,
+      "source_image_mtime_ns": 1781328965140109400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20260212-156.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20260212-156.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20260212-156.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20260212-2600.png",
+      "source_image_size": 10436982,
+      "source_image_mtime_ns": 1781330818416043000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20260212-2600.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20260212-2600.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20260212-2600.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20260212-2621.png",
+      "source_image_size": 12370473,
+      "source_image_mtime_ns": 1781330044509569000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20260212-2621.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20260212-2621.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20260212-2621.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20260212-2889.png",
+      "source_image_size": 11263462,
+      "source_image_mtime_ns": 1781334303263509900,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20260212-2889.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20260212-2889.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20260212-2889.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20260212-2916.png",
+      "source_image_size": 12615374,
+      "source_image_mtime_ns": 1781333434664236000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20260212-2916.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20260212-2916.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20260212-2916.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__20260212-60.png",
+      "source_image_size": 11052452,
+      "source_image_mtime_ns": 1781331213980249900,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__20260212-60.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__20260212-60.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__20260212-60.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__21_171324.png",
+      "source_image_size": 12272822,
+      "source_image_mtime_ns": 1781331397561108700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__21_171324.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__21_171324.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__21_171324.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__21_181223.png",
+      "source_image_size": 10787400,
+      "source_image_mtime_ns": 1781332977832090700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__21_181223.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__21_181223.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__21_181223.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__22_113422.png",
+      "source_image_size": 25610159,
+      "source_image_mtime_ns": 1781332050906172300,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__22_113422.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__22_113422.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__22_113422.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__24_01_22_103102_bottom_1.png.png",
+      "source_image_size": 24979637,
+      "source_image_mtime_ns": 1781334326561841000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__24_01_22_103102_bottom_1.png.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__24_01_22_103102_bottom_1.png.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__24_01_22_103102_bottom_1.png.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__24_01_22_112949_bottom_2.png.png",
+      "source_image_size": 9812826,
+      "source_image_mtime_ns": 1781331083370481400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__24_01_22_112949_bottom_2.png.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__24_01_22_112949_bottom_2.png.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__24_01_22_112949_bottom_2.png.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__24_01_22_162521_top_2.png.png",
+      "source_image_size": 25289231,
+      "source_image_mtime_ns": 1781334162423974900,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__24_01_22_162521_top_2.png.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__24_01_22_162521_top_2.png.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__24_01_22_162521_top_2.png.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__24_01_22_165235_top_2.png.png",
+      "source_image_size": 24244526,
+      "source_image_mtime_ns": 1781330125495063300,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__24_01_22_165235_top_2.png.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__24_01_22_165235_top_2.png.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__24_01_22_165235_top_2.png.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__30.png",
+      "source_image_size": 24754075,
+      "source_image_mtime_ns": 1781332243262611500,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__30.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__30.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__30.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__371.png",
+      "source_image_size": 28691372,
+      "source_image_mtime_ns": 1781333156387256800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__371.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__371.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__371.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__487.png",
+      "source_image_size": 28109690,
+      "source_image_mtime_ns": 1781330859774565300,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__487.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__487.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__487.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__556.png",
+      "source_image_size": 23051122,
+      "source_image_mtime_ns": 1781333988518456700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__556.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__556.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__556.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__6.png",
+      "source_image_size": 23755087,
+      "source_image_mtime_ns": 1781329405597187000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__6.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__6.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__6.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__74.png",
+      "source_image_size": 24447005,
+      "source_image_mtime_ns": 1781333722903534300,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__74.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__74.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__74.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__80.png",
+      "source_image_size": 24599493,
+      "source_image_mtime_ns": 1781332492295752400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__80.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__80.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__80.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__train__bottom_0.png",
+      "source_image_size": 10104940,
+      "source_image_mtime_ns": 1781331489435462200,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__train__bottom_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__train__bottom_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__train__bottom_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221027172636452_0_2.png",
+      "source_image_size": 20147750,
+      "source_image_mtime_ns": 1781335572577994300,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221027172636452_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221027172636452_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221027172636452_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221028153646009_0_2.png",
+      "source_image_size": 20256755,
+      "source_image_mtime_ns": 1781334560486804800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221028153646009_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221028153646009_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221028153646009_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221028154021729_0_2.png",
+      "source_image_size": 20075724,
+      "source_image_mtime_ns": 1781335510610742100,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221028154021729_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221028154021729_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221028154021729_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221029155230358_0_2.png",
+      "source_image_size": 21921802,
+      "source_image_mtime_ns": 1781335621708234300,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221029155230358_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221029155230358_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221029155230358_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221029155648851_0_2.png",
+      "source_image_size": 22144665,
+      "source_image_mtime_ns": 1781334957742181800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221029155648851_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221029155648851_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221029155648851_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221029160115250_0_2.png",
+      "source_image_size": 20665390,
+      "source_image_mtime_ns": 1781335572612608500,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221029160115250_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221029160115250_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221029160115250_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221029164121760_0_2.png",
+      "source_image_size": 20160528,
+      "source_image_mtime_ns": 1781335514611460500,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221029164121760_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221029164121760_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221029164121760_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221029164302855_0_2.png",
+      "source_image_size": 20139894,
+      "source_image_mtime_ns": 1781335180787401400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221029164302855_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221029164302855_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221029164302855_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221029174716720_0_2.png",
+      "source_image_size": 19992087,
+      "source_image_mtime_ns": 1781335675596185300,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221029174716720_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221029174716720_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221029174716720_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221029180656987_0_2.png",
+      "source_image_size": 19898783,
+      "source_image_mtime_ns": 1781335583397810700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221029180656987_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221029180656987_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221029180656987_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221031170026832_0_2.png",
+      "source_image_size": 20753101,
+      "source_image_mtime_ns": 1781334929767219000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221031170026832_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221031170026832_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221031170026832_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221031174032452_0_2.png",
+      "source_image_size": 21258932,
+      "source_image_mtime_ns": 1781334604286201300,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221031174032452_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221031174032452_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221031174032452_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221102182827317_0_2.png",
+      "source_image_size": 19972015,
+      "source_image_mtime_ns": 1781334753736256400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221102182827317_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221102182827317_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221102182827317_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221106161909015_0_2.png",
+      "source_image_size": 22142933,
+      "source_image_mtime_ns": 1781335682752593700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221106161909015_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221106161909015_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221106161909015_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221115165230471_0_2.png",
+      "source_image_size": 18387064,
+      "source_image_mtime_ns": 1781334930170814700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221115165230471_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221115165230471_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221115165230471_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221115165508969_0_2.png",
+      "source_image_size": 19037323,
+      "source_image_mtime_ns": 1781334654048082400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221115165508969_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221115165508969_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221115165508969_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221115170226609_0_2.png",
+      "source_image_size": 18504878,
+      "source_image_mtime_ns": 1781335216926341600,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221115170226609_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221115170226609_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221115170226609_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221203163255941_0_2.png",
+      "source_image_size": 20630378,
+      "source_image_mtime_ns": 1781335649881592300,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221203163255941_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221203163255941_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221203163255941_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221203174236128_0_2.png",
+      "source_image_size": 18877897,
+      "source_image_mtime_ns": 1781335351327506800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221203174236128_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221203174236128_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221203174236128_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221203174808473_0_2.png",
+      "source_image_size": 17589054,
+      "source_image_mtime_ns": 1781334948991928400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221203174808473_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221203174808473_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221203174808473_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221204160601586_0_2.png",
+      "source_image_size": 20040956,
+      "source_image_mtime_ns": 1781335555857584100,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221204160601586_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221204160601586_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221204160601586_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221206161725243_0_2.png",
+      "source_image_size": 20709639,
+      "source_image_mtime_ns": 1781335691994196900,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221206161725243_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221206161725243_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221206161725243_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221206170722259_0_2.png",
+      "source_image_size": 18869241,
+      "source_image_mtime_ns": 1781334526727064100,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221206170722259_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221206170722259_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221206170722259_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221208155808258_0_2.png",
+      "source_image_size": 19875640,
+      "source_image_mtime_ns": 1781334646954697100,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221208155808258_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221208155808258_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221208155808258_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221209155453280_0_2.png",
+      "source_image_size": 20059093,
+      "source_image_mtime_ns": 1781335164876568100,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221209155453280_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221209155453280_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221209155453280_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221209162410081_0_2.png",
+      "source_image_size": 19783153,
+      "source_image_mtime_ns": 1781335275486114000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221209162410081_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221209162410081_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221209162410081_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221210171541679_0_2.png",
+      "source_image_size": 19653373,
+      "source_image_mtime_ns": 1781334897000471500,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221210171541679_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221210171541679_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221210171541679_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20221211172016255_0_2.png",
+      "source_image_size": 19263898,
+      "source_image_mtime_ns": 1781335468014610700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20221211172016255_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20221211172016255_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20221211172016255_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20230104153645044_0_2.png",
+      "source_image_size": 19533396,
+      "source_image_mtime_ns": 1781335084083303800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20230104153645044_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20230104153645044_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20230104153645044_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20230104154119603_0_2.png",
+      "source_image_size": 19462961,
+      "source_image_mtime_ns": 1781335328601263000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20230104154119603_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20230104154119603_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20230104154119603_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20230104154928784_0_2.png",
+      "source_image_size": 19791766,
+      "source_image_mtime_ns": 1781335017602629800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20230104154928784_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20230104154928784_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20230104154928784_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20230109163525596_0_2.png",
+      "source_image_size": 21554788,
+      "source_image_mtime_ns": 1781335594904567400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20230109163525596_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20230109163525596_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20230109163525596_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20230109163922243_0_2.png",
+      "source_image_size": 19505289,
+      "source_image_mtime_ns": 1781335683214687600,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20230109163922243_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20230109163922243_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20230109163922243_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20230109170457082_0_2.png",
+      "source_image_size": 18621881,
+      "source_image_mtime_ns": 1781334629613100800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20230109170457082_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20230109170457082_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20230109170457082_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20230109171503610_0_2.png",
+      "source_image_size": 18612737,
+      "source_image_mtime_ns": 1781335651797839100,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20230109171503610_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20230109171503610_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20230109171503610_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__20230110175514693_0_2.png",
+      "source_image_size": 27258303,
+      "source_image_mtime_ns": 1781334713838069900,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__20230110175514693_0_2.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__20230110175514693_0_2.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__20230110175514693_0_2.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__2024_01_22104048_0.png",
+      "source_image_size": 9784200,
+      "source_image_mtime_ns": 1781335640980117600,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__2024_01_22104048_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__2024_01_22104048_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__2024_01_22104048_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__2024_01_22104353_0.png",
+      "source_image_size": 10574397,
+      "source_image_mtime_ns": 1781335133111951700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__2024_01_22104353_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__2024_01_22104353_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__2024_01_22104353_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__2024_01_22105747_0.png",
+      "source_image_size": 10137420,
+      "source_image_mtime_ns": 1781334492210718500,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__2024_01_22105747_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__2024_01_22105747_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__2024_01_22105747_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__2024_02_02103904_1.png",
+      "source_image_size": 10618214,
+      "source_image_mtime_ns": 1781335381373865700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__2024_02_02103904_1.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__2024_02_02103904_1.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__2024_02_02103904_1.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__2024_02_02105709_1.png",
+      "source_image_size": 10276768,
+      "source_image_mtime_ns": 1781335604704926700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__2024_02_02105709_1.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__2024_02_02105709_1.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__2024_02_02105709_1.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__2024_02_02164807_1.png",
+      "source_image_size": 10521025,
+      "source_image_mtime_ns": 1781335138768727800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__2024_02_02164807_1.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__2024_02_02164807_1.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__2024_02_02164807_1.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__2024_03_14_174404_0.png",
+      "source_image_size": 10452263,
+      "source_image_mtime_ns": 1781335633791276600,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__2024_03_14_174404_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__2024_03_14_174404_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__2024_03_14_174404_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__2024_03_23_091542_0.png",
+      "source_image_size": 9517253,
+      "source_image_mtime_ns": 1781334529846858400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__2024_03_23_091542_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__2024_03_23_091542_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__2024_03_23_091542_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__2024_03_23_104942_0.png",
+      "source_image_size": 9404997,
+      "source_image_mtime_ns": 1781334944208889000,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__2024_03_23_104942_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__2024_03_23_104942_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__2024_03_23_104942_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__2024_03_24_091414_0.png",
+      "source_image_size": 9190199,
+      "source_image_mtime_ns": 1781335271618534600,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__2024_03_24_091414_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__2024_03_24_091414_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__2024_03_24_091414_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__2024_03_24_104424_0.png",
+      "source_image_size": 10427186,
+      "source_image_mtime_ns": 1781335530399430400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__2024_03_24_104424_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__2024_03_24_104424_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__2024_03_24_104424_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__2024_04_26_113735_0.png",
+      "source_image_size": 14846743,
+      "source_image_mtime_ns": 1781335214862518500,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__2024_04_26_113735_0.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__2024_04_26_113735_0.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__2024_04_26_113735_0.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__2024_05_22_095324_1.png",
+      "source_image_size": 10571214,
+      "source_image_mtime_ns": 1781335347151013800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__2024_05_22_095324_1.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__2024_05_22_095324_1.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__2024_05_22_095324_1.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__2024_05_24_155220_1.png",
+      "source_image_size": 11806970,
+      "source_image_mtime_ns": 1781335562196990300,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__2024_05_24_155220_1.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__2024_05_24_155220_1.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__2024_05_24_155220_1.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__21_150501.png",
+      "source_image_size": 27677527,
+      "source_image_mtime_ns": 1781335291869449200,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__21_150501.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__21_150501.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__21_150501.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__21_175802.png",
+      "source_image_size": 9709418,
+      "source_image_mtime_ns": 1781335185505731600,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__21_175802.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__21_175802.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__21_175802.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__800.png",
+      "source_image_size": 24977416,
+      "source_image_mtime_ns": 1781335511037662800,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__800.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__800.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__800.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__869.png",
+      "source_image_size": 28338407,
+      "source_image_mtime_ns": 1781335300237252700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__869.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__869.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__869.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__974.png",
+      "source_image_size": 25365436,
+      "source_image_mtime_ns": 1781334768888588700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__974.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__974.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__974.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__992.png",
+      "source_image_size": 23887244,
+      "source_image_mtime_ns": 1781335573992467400,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__992.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__992.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__992.txt"
+    },
+    {
+      "source_image": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\images\\dianjienie__valid__999.png",
+      "source_image_size": 28828230,
+      "source_image_mtime_ns": 1781335649853401700,
+      "source_label": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1\\labels\\dianjienie__valid__999.txt",
+      "linked_image": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\images\\dianjienie__valid__999.png",
+      "linked_label": "E:\\PythonProject\\优化\\l1_final_release_yolo11m_oofconsensusv1_ep083_20260815_2158\\dataset_view\\labels\\dianjienie__valid__999.txt"
+    }
+  ],
+  "label_audit": {
+    "label_files": 198,
+    "empty_label_files": 0,
+    "boxes": 2806,
+    "per_class_instances": [
+      488,
+      1557,
+      26,
+      14,
+      150,
+      116,
+      41,
+      1,
+      56,
+      0,
+      47,
+      15,
+      8,
+      287,
+      0,
+      0,
+      0,
+      0
+    ],
+    "labels_content_sha256": "8850cce95332d1e1516a8cc2d07d6f29fb489bcb59f70eba8ea264d4f4651d2a"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "kernel": "lly3323w/l1-ryw18-y11m-oof-v1-tile1024-o25-b8-e300-f01",
+  "status_at_recovery": "KernelWorkerStatus.CANCEL_ACKNOWLEDGED",
+  "recovered_files": {
+    "args.yaml": {
+      "bytes": 2088,
+      "sha256": "867a5fea6fab17d11d41e8031bc8cce2c6a3a5e8ae2828edd920b0b3761ed539"
+    },
+    "results.csv": {
+      "bytes": 12894,
+      "sha256": "1f22c5482b125009454002c43ba48d0b94b1a4353b4b9df962855dfb8f4c7ec8"
+    },
+    "best.pt": {
+      "bytes": 80818688,
+      "sha256": "c4a903e8e8438798d44fc0548d666923a8728509f012d124101a8b980d7d875e"
+    },
+    "last.pt": {
+      "bytes": 80823104,
+      "sha256": "882e952b3d96243b03564706856f5ffa9821d79357714c1945b2893b0dde76dd"
+    }
+  },
+  "results_rows": 109,
+  "last_completed_epoch": 109,
+  "best_training_epoch": 75,
+  "best_training_metrics": {
+    "precision": 0.57318,
+    "recall": 0.26795,
+    "mAP50": 0.29081,
+    "mAP50_95": 0.15178
+  },
+  "conclusion": "Interrupted training evidence only; custom original-image tile evaluation did not run and this is not a completed experiment."
+}

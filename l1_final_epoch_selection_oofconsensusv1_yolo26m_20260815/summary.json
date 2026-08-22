@@ -1,0 +1,150 @@
+{
+  "purpose": "fixed epoch selection for no-manual L1 final development training",
+  "model": "yolo26m.pt",
+  "data_version": "oofconsensusv1",
+  "development_only": true,
+  "metric": "metrics/mAP50-95(B)",
+  "sources": {
+    "1": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo26m_640_kaggle_seed0_cm0_oofconsensusv1_fold01\\results.csv",
+    "2": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo26m_640_kaggle_seed0_cm0_oofconsensusv1_fold02\\results.csv",
+    "3": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo26m_640_kaggle_seed0_cm0_oofconsensusv1_fold03\\results.csv"
+  },
+  "common_epoch_count": 209,
+  "last_common_epoch": 209,
+  "selected": {
+    "epoch": 174,
+    "mean_map50_95": 0.16823333333333332,
+    "sample_std": 0.03181091688922741,
+    "fold_01": 0.15571,
+    "fold_02": 0.14459,
+    "fold_03": 0.2044
+  },
+  "top_epochs": [
+    {
+      "epoch": 174,
+      "mean_map50_95": 0.16823333333333332,
+      "sample_std": 0.03181091688922741,
+      "fold_01": 0.15571,
+      "fold_02": 0.14459,
+      "fold_03": 0.2044
+    },
+    {
+      "epoch": 74,
+      "mean_map50_95": 0.1670033333333333,
+      "sample_std": 0.013985350668944034,
+      "fold_01": 0.15109,
+      "fold_02": 0.17258,
+      "fold_03": 0.17734
+    },
+    {
+      "epoch": 163,
+      "mean_map50_95": 0.16555333333333333,
+      "sample_std": 0.023176432713714442,
+      "fold_01": 0.15118,
+      "fold_02": 0.19229,
+      "fold_03": 0.15319
+    },
+    {
+      "epoch": 79,
+      "mean_map50_95": 0.1648,
+      "sample_std": 0.03810186740830428,
+      "fold_01": 0.14659,
+      "fold_02": 0.13922,
+      "fold_03": 0.20859
+    },
+    {
+      "epoch": 139,
+      "mean_map50_95": 0.16449333333333335,
+      "sample_std": 0.03612597726475138,
+      "fold_01": 0.15199,
+      "fold_02": 0.13628,
+      "fold_03": 0.20521
+    },
+    {
+      "epoch": 153,
+      "mean_map50_95": 0.16250666666666666,
+      "sample_std": 0.04996566054134913,
+      "fold_01": 0.14482,
+      "fold_02": 0.12379,
+      "fold_03": 0.21891
+    },
+    {
+      "epoch": 72,
+      "mean_map50_95": 0.16174666666666668,
+      "sample_std": 0.01723329432619699,
+      "fold_01": 0.15093,
+      "fold_02": 0.18162,
+      "fold_03": 0.15269
+    },
+    {
+      "epoch": 140,
+      "mean_map50_95": 0.16114333333333333,
+      "sample_std": 0.0422655904174227,
+      "fold_01": 0.14957,
+      "fold_02": 0.12587,
+      "fold_03": 0.20799
+    },
+    {
+      "epoch": 151,
+      "mean_map50_95": 0.16086999999999999,
+      "sample_std": 0.051262153680858936,
+      "fold_01": 0.14797,
+      "fold_02": 0.11729,
+      "fold_03": 0.21735
+    },
+    {
+      "epoch": 86,
+      "mean_map50_95": 0.15816333333333335,
+      "sample_std": 0.025211930376972988,
+      "fold_01": 0.14504,
+      "fold_02": 0.18723,
+      "fold_03": 0.14222
+    },
+    {
+      "epoch": 94,
+      "mean_map50_95": 0.15804666666666667,
+      "sample_std": 0.014973464306343191,
+      "fold_01": 0.15341,
+      "fold_02": 0.17479,
+      "fold_03": 0.14594
+    },
+    {
+      "epoch": 103,
+      "mean_map50_95": 0.15775666666666666,
+      "sample_std": 0.022072748658319218,
+      "fold_01": 0.14462,
+      "fold_02": 0.18324,
+      "fold_03": 0.14541
+    },
+    {
+      "epoch": 93,
+      "mean_map50_95": 0.15741,
+      "sample_std": 0.019973064361784854,
+      "fold_01": 0.145,
+      "fold_02": 0.18045,
+      "fold_03": 0.14678
+    },
+    {
+      "epoch": 208,
+      "mean_map50_95": 0.15704333333333334,
+      "sample_std": 0.002904089071177631,
+      "fold_01": 0.15369,
+      "fold_02": 0.15871,
+      "fold_03": 0.15873
+    },
+    {
+      "epoch": 154,
+      "mean_map50_95": 0.15693666666666667,
+      "sample_std": 0.043854537203501916,
+      "fold_01": 0.13892,
+      "fold_02": 0.12496,
+      "fold_03": 0.20693
+    }
+  ],
+  "final_training_policy": {
+    "epochs": 174,
+    "validation": false,
+    "patience": 0,
+    "weight_for_release_validation": "weights/final_fixed_epoch.pt copied from weights/last.pt"
+  }
+}

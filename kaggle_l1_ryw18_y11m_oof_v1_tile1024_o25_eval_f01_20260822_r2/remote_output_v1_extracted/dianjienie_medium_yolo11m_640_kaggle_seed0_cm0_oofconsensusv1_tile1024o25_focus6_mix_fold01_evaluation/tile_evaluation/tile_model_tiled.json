@@ -1,0 +1,158 @@
+{
+  "metric_protocol": {
+    "scope": "original-image evaluation after mapping tiled predictions back to source coordinates",
+    "iou_thresholds": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "prediction_confidence_floor": 0.001,
+    "precision_recall_confidence": 0.25,
+    "global_class_aware_nms_iou": 0.7,
+    "ap_interpolation": "101-point precision envelope"
+  },
+  "images": 376,
+  "precision_conf025_iou50_micro": 0.2949058105598302,
+  "recall_conf025_iou50_micro": 0.45977249224405375,
+  "mAP50": 0.1456301155164429,
+  "mAP50_95": 0.06342712134036373,
+  "per_class": {
+    "wuzi": {
+      "support": 855,
+      "ap50": 0.33830308612805254,
+      "ap50_95": 0.15676263364780924,
+      "precision_conf025_iou50": 0.34595959595959597,
+      "recall_conf025_iou50": 0.4807017543859649
+    },
+    "waterstain": {
+      "support": 2123,
+      "ap50": 0.4803463344836087,
+      "ap50_95": 0.2877921760838603,
+      "precision_conf025_iou50": 0.3238688827331487,
+      "recall_conf025_iou50": 0.6608572774375883
+    },
+    "yellowstain": {
+      "support": 21,
+      "ap50": 0.0019047409735424156,
+      "ap50_95": 0.0006575019322131991,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "nodule": {
+      "support": 25,
+      "ap50": 0.29582273546194715,
+      "ap50_95": 0.09697599751246981,
+      "precision_conf025_iou50": 0.23076923076923078,
+      "recall_conf025_iou50": 0.36
+    },
+    "airhole": {
+      "support": 606,
+      "ap50": 0.12058387574077102,
+      "ap50_95": 0.03969368898902721,
+      "precision_conf025_iou50": 0.23255813953488372,
+      "recall_conf025_iou50": 0.16501650165016502
+    },
+    "bubble": {
+      "support": 142,
+      "ap50": 0.01860055086807105,
+      "ap50_95": 0.005684915840273619,
+      "precision_conf025_iou50": 0.03857566765578635,
+      "recall_conf025_iou50": 0.09154929577464789
+    },
+    "bump": {
+      "support": 82,
+      "ap50": 0.1450571474154029,
+      "ap50_95": 0.06544879258503605,
+      "precision_conf025_iou50": 0.25925925925925924,
+      "recall_conf025_iou50": 0.17073170731707318
+    },
+    "fawu": {
+      "support": 3,
+      "ap50": 0.0,
+      "ap50_95": 0.0,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "overfire": {
+      "support": 109,
+      "ap50": 0.1019313868474756,
+      "ap50_95": 0.035307066405311636,
+      "precision_conf025_iou50": 0.4166666666666667,
+      "recall_conf025_iou50": 0.13761467889908258
+    },
+    "NiOH": {
+      "support": 2,
+      "ap50": 0.0,
+      "ap50_95": 0.0,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "greenstain": {
+      "support": 99,
+      "ap50": 0.42389137540981503,
+      "ap50_95": 0.18063289097568141,
+      "precision_conf025_iou50": 0.3963963963963964,
+      "recall_conf025_iou50": 0.4444444444444444
+    },
+    "suanwuran": {
+      "support": 22,
+      "ap50": 0.0035499445390133905,
+      "ap50_95": 0.001414940463289101,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "quejiao": {
+      "support": 14,
+      "ap50": 0.09540350214980442,
+      "ap50_95": 0.014791651555034816,
+      "precision_conf025_iou50": 0.125,
+      "recall_conf025_iou50": 0.21428571428571427
+    },
+    "watermark": {
+      "support": 727,
+      "ap50": 0.1590570527291391,
+      "ap50_95": 0.0662445641154495,
+      "precision_conf025_iou50": 0.21486761710794297,
+      "recall_conf025_iou50": 0.2902338376891334
+    },
+    "youpao": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "heibian": {
+      "support": 5,
+      "ap50": 0.0,
+      "ap50_95": 0.0,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "mijixiaokeng": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "fanxitong": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    }
+  },
+  "model_path": "/kaggle/input/datasets/lly3323w/dianjienie-ryw18-oof-y11m-tile-f01-v3-ckpt/tile_fold01_v3_best.pt",
+  "model_sha256": "c4a903e8e8438798d44fc0548d666923a8728509f012d124101a8b980d7d875e",
+  "inference_mode": "tiled",
+  "post_nms_prediction_count": 375469
+}

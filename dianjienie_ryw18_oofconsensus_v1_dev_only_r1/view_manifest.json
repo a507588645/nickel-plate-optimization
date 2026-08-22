@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "view_name": "dianjienie_ryw18_oofconsensus_v1_dev_only_r1",
+  "mode": "development_only",
+  "frozen_test_access": "not read; not linked; not included",
+  "generated_at": "2026-08-03T00:02:20",
+  "source_anchor_root": "E:\\PythonProject\\datasets\\dianjienie_ryw18_anchor_v1",
+  "source_oof_root": "E:\\PythonProject\\优化\\l1_oof_consensus_20260802_232333_v1",
+  "source_oof_summary_sha256": "7ca70e8fb7bb9850a0622cd7e7a4b080ce396fd873a382165930a12f87877716",
+  "source_oof_decisions_sha256": "68fab242054460097bc81d626e0e96497cd291fb8ef6049e8578f4aa14527e2c",
+  "source_candidate_labels_digest": "f2a443e46292d26eb685ea3ce50f66abc0709eb057c12254fea8232acb6bb423",
+  "classes": [
+    "wuzi",
+    "waterstain",
+    "yellowstain",
+    "nodule",
+    "airhole",
+    "bubble",
+    "bump",
+    "fawu",
+    "overfire",
+    "NiOH",
+    "greenstain",
+    "suanwuran",
+    "quejiao",
+    "watermark",
+    "youpao",
+    "heibian",
+    "mijixiaokeng",
+    "fanxitong"
+  ],
+  "counts": {
+    "images": 1127,
+    "labels": 1127,
+    "historical_boxes": 15426,
+    "boxes": 15671,
+    "accepted_additions": 245
+  },
+  "fold_sizes": {
+    "fold_01": {
+      "train": 751,
+      "val": 376
+    },
+    "fold_02": {
+      "train": 752,
+      "val": 375
+    },
+    "fold_03": {
+      "train": 751,
+      "val": 376
+    }
+  },
+  "image_storage": "NTFS hard links to anchor development images"
+}

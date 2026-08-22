@@ -1,0 +1,296 @@
+{
+  "purpose": "L1 no-manual OOF candidate safety gate",
+  "scope": "development folds only; release-validation intentionally not read or evaluated",
+  "policy": {
+    "mean_map50_95_tolerance": 0.01,
+    "min_non_regressing_folds": 2,
+    "interpretation": "Safety gate only; not proof that candidate boxes are human ground truth."
+  },
+  "architectures": {
+    "yolo11m": {
+      "anchor_baseline": {
+        "folds": {
+          "1": {
+            "source": "E:\\PythonProject\\优化\\l1_reeval_yolo11m_fold01_retry2\\metrics_per_class_reeval.json",
+            "precision": 0.5797741037902929,
+            "recall": 0.291904674179891,
+            "map50": 0.27848060017295795,
+            "map50_95": 0.1497058403022326
+          },
+          "2": {
+            "source": "E:\\PythonProject\\优化\\l1_reeval_yolo11m_fold02\\metrics_per_class_reeval.json",
+            "precision": 0.2896540280434874,
+            "recall": 0.3725201557467297,
+            "map50": 0.3035820216343884,
+            "map50_95": 0.19035765563612686
+          },
+          "3": {
+            "source": "E:\\PythonProject\\优化\\l1_reeval_yolo11m_fold03\\metrics_per_class_reeval.json",
+            "precision": 0.5699692914059546,
+            "recall": 0.3396460743024297,
+            "map50": 0.33381518434875973,
+            "map50_95": 0.20488060630523036
+          }
+        },
+        "summary": {
+          "precision": {
+            "mean": 0.4797991410799116,
+            "sample_std": 0.16474345691164471
+          },
+          "recall": {
+            "mean": 0.3346903014096834,
+            "sample_std": 0.04053558598055153
+          },
+          "map50": {
+            "mean": 0.3052926020520354,
+            "sample_std": 0.027706923602254206
+          },
+          "map50_95": {
+            "mean": 0.1816480340811966,
+            "sample_std": 0.028599944608232522
+          }
+        }
+      },
+      "candidate_self": {
+        "folds": {
+          "1": {
+            "source": "E:\\PythonProject\\优化\\l1_reeval_yolo11m_oofconsensusv1_fold01\\metrics_per_class_reeval.json",
+            "precision": 0.49023895205342066,
+            "recall": 0.30786951486005737,
+            "map50": 0.3129241151764892,
+            "map50_95": 0.1651337914475181
+          },
+          "2": {
+            "source": "E:\\PythonProject\\优化\\l1_reeval_yolo11m_oofconsensusv1_fold02\\metrics_per_class_reeval.json",
+            "precision": 0.4234234889186511,
+            "recall": 0.23207625274902932,
+            "map50": 0.26961647454540616,
+            "map50_95": 0.1719388590641809
+          },
+          "3": {
+            "source": "E:\\PythonProject\\优化\\l1_reeval_yolo11m_oofconsensusv1_fold03\\metrics_per_class_reeval.json",
+            "precision": 0.4941334036065777,
+            "recall": 0.39202106444163304,
+            "map50": 0.34759715493022725,
+            "map50_95": 0.21910152076769662
+          }
+        },
+        "summary": {
+          "precision": {
+            "mean": 0.46926528152621644,
+            "sample_std": 0.03974788233769503
+          },
+          "recall": {
+            "mean": 0.3106556106835732,
+            "sample_std": 0.08000879604330373
+          },
+          "map50": {
+            "mean": 0.3100459148840409,
+            "sample_std": 0.03906993288978741
+          },
+          "map50_95": {
+            "mean": 0.1853913904264652,
+            "sample_std": 0.029391442666768606
+          }
+        }
+      },
+      "candidate_on_anchor": {
+        "folds": {
+          "1": {
+            "source": "E:\\PythonProject\\优化\\l1_auto_anchor_nonregression_yolo11m_oofconsensusv1_fold01\\metrics_per_class_reeval.json",
+            "precision": 0.47743598591202374,
+            "recall": 0.30536050087047995,
+            "map50": 0.30348914083622164,
+            "map50_95": 0.15925984224046885
+          },
+          "2": {
+            "source": "E:\\PythonProject\\优化\\l1_auto_anchor_nonregression_yolo11m_oofconsensusv1_fold02\\metrics_per_class_reeval.json",
+            "precision": 0.41996192302096286,
+            "recall": 0.2324781574163128,
+            "map50": 0.2664035214490154,
+            "map50_95": 0.17029963246614835
+          },
+          "3": {
+            "source": "E:\\PythonProject\\优化\\l1_auto_anchor_nonregression_yolo11m_oofconsensusv1_fold03\\metrics_per_class_reeval.json",
+            "precision": 0.48793891728415023,
+            "recall": 0.38930470894657787,
+            "map50": 0.3409307181929165,
+            "map50_95": 0.21449139396720152
+          }
+        },
+        "summary": {
+          "precision": {
+            "mean": 0.46177894207237896,
+            "sample_std": 0.03659337649919411
+          },
+          "recall": {
+            "mean": 0.30904778907779024,
+            "sample_std": 0.07847827015780577
+          },
+          "map50": {
+            "mean": 0.3036077934927179,
+            "sample_std": 0.03726374004935233
+          },
+          "map50_95": {
+            "mean": 0.18135028955793955,
+            "sample_std": 0.029227022481873744
+          }
+        }
+      },
+      "anchor_non_regression": {
+        "per_fold_map50_95_delta": {
+          "1": 0.009554001938236245,
+          "2": -0.02005802316997851,
+          "3": 0.009610787661971154
+        },
+        "mean_map50_95_delta": -0.0002977445232570375,
+        "non_regressing_fold_count": 2,
+        "passed": true
+      }
+    },
+    "yolo26m": {
+      "anchor_baseline": {
+        "folds": {
+          "1": {
+            "source": "E:\\PythonProject\\优化\\l1_reeval_yolo26m_fold01\\metrics_per_class_reeval.json",
+            "precision": 0.4845068796326226,
+            "recall": 0.293425676903528,
+            "map50": 0.30539724561598,
+            "map50_95": 0.1545359186350285
+          },
+          "2": {
+            "source": "E:\\PythonProject\\优化\\l1_reeval_yolo26m_fold02\\metrics_per_class_reeval.json",
+            "precision": 0.5625359232038605,
+            "recall": 0.21362752396048956,
+            "map50": 0.20602034338559172,
+            "map50_95": 0.11342108347426341
+          },
+          "3": {
+            "source": "E:\\PythonProject\\优化\\l1_reeval_yolo26m_fold03\\metrics_per_class_reeval.json",
+            "precision": 0.3134373169157821,
+            "recall": 0.31743676815666233,
+            "map50": 0.3271012079182133,
+            "map50_95": 0.20539448207880492
+          }
+        },
+        "summary": {
+          "precision": {
+            "mean": 0.45349337325075506,
+            "sample_std": 0.1274123506463929
+          },
+          "recall": {
+            "mean": 0.27482998967356,
+            "sample_std": 0.05434555623794143
+          },
+          "map50": {
+            "mean": 0.2795062656399283,
+            "sample_std": 0.0645592833919491
+          },
+          "map50_95": {
+            "mean": 0.15778382806269894,
+            "sample_std": 0.04607264046541323
+          }
+        }
+      },
+      "candidate_self": {
+        "folds": {
+          "1": {
+            "source": "E:\\PythonProject\\优化\\l1_reeval_yolo26m_oofconsensusv1_fold01\\metrics_per_class_reeval.json",
+            "precision": 0.5032660357029656,
+            "recall": 0.3270066558428441,
+            "map50": 0.3072174078503695,
+            "map50_95": 0.1592697775260393
+          },
+          "2": {
+            "source": "E:\\PythonProject\\优化\\l1_reeval_yolo26m_oofconsensusv1_fold02\\metrics_per_class_reeval.json",
+            "precision": 0.45339538718483774,
+            "recall": 0.32599528983708415,
+            "map50": 0.2735587878075364,
+            "map50_95": 0.16022644948471024
+          },
+          "3": {
+            "source": "E:\\PythonProject\\优化\\l1_reeval_yolo26m_oofconsensusv1_fold03\\metrics_per_class_reeval.json",
+            "precision": 0.5479463737767678,
+            "recall": 0.2780113542569698,
+            "map50": 0.3558150672355834,
+            "map50_95": 0.22547971087931007
+          }
+        },
+        "summary": {
+          "precision": {
+            "mean": 0.5015359322215237,
+            "sample_std": 0.04729923054257022
+          },
+          "recall": {
+            "mean": 0.3103377666456327,
+            "sample_std": 0.028000061048876732
+          },
+          "map50": {
+            "mean": 0.3121970876311631,
+            "sample_std": 0.04135361875792337
+          },
+          "map50_95": {
+            "mean": 0.1816586459633532,
+            "sample_std": 0.037953169868740956
+          }
+        }
+      },
+      "candidate_on_anchor": {
+        "folds": {
+          "1": {
+            "source": "E:\\PythonProject\\优化\\l1_auto_anchor_nonregression_yolo26m_oofconsensusv1_fold01\\metrics_per_class_reeval.json",
+            "precision": 0.4953643787909703,
+            "recall": 0.32283028121645485,
+            "map50": 0.29930462347971815,
+            "map50_95": 0.15410723738602453
+          },
+          "2": {
+            "source": "E:\\PythonProject\\优化\\l1_auto_anchor_nonregression_yolo26m_oofconsensusv1_fold02\\metrics_per_class_reeval.json",
+            "precision": 0.44841081529069143,
+            "recall": 0.3231795786459792,
+            "map50": 0.26837323363725224,
+            "map50_95": 0.15724992671148386
+          },
+          "3": {
+            "source": "E:\\PythonProject\\优化\\l1_auto_anchor_nonregression_yolo26m_oofconsensusv1_fold03\\metrics_per_class_reeval.json",
+            "precision": 0.5391325059347548,
+            "recall": 0.27537119484080663,
+            "map50": 0.34850151749063396,
+            "map50_95": 0.22067086959483362
+          }
+        },
+        "summary": {
+          "precision": {
+            "mean": 0.49430256667213884,
+            "sample_std": 0.0453701649992708
+          },
+          "recall": {
+            "mean": 0.3071270182344135,
+            "sample_std": 0.02750190432911933
+          },
+          "map50": {
+            "mean": 0.30539312486920145,
+            "sample_std": 0.040409625774057024
+          },
+          "map50_95": {
+            "mean": 0.17734267789744732,
+            "sample_std": 0.037556201496865727
+          }
+        }
+      },
+      "anchor_non_regression": {
+        "per_fold_map50_95_delta": {
+          "1": -0.0004286812490039704,
+          "2": 0.043828843237220444,
+          "3": 0.015276387516028694
+        },
+        "mean_map50_95_delta": 0.01955884983474837,
+        "non_regressing_fold_count": 2,
+        "passed": true
+      }
+    }
+  },
+  "status": "auto_continue_oof_candidate",
+  "selected_model": "yolo11m",
+  "next_step": "Train the selected candidate model on all development images with a fixed CV-derived schedule, then run one automatic historical release-validation and ONNX consistency check."
+}

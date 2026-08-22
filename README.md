@@ -241,6 +241,7 @@
 | WebAPI 仓库 | `E:\PythonProject\ImetricCodes\JinchuanPythonWebapi` |
 | WebAPI **主分支** | `308`（`origin/308`） |
 | WebAPI **优化分支** | `优化分支`（本地开发，默认未 push） |
+| **重构 UI（Tauri 桌面端）** | `E:\PythonProject\UI`（原 C# WinForms 应用的 Tauri 2 + Rust / Vue 3 + TS + Vite 重写，pnpm 工作区；该目录自带 `AGENTS.md`/`CLAUDE.md`/`README.md`，UI 侧规则以其为准） |
 | 模型训练运行档案 | `E:\PythonProject\models\runs`：每个模型训练 run 的权重、配置、日志、曲线、标准重评和 run README；顶层 `AGENTS.md` / `CLAUDE.md` / `README.md` / `RUN_IDENTITY_CATALOG.md` 是 Agent 索引 |
 | 模型结果与工作总结 | `E:\PythonProject\models\results`：经核验后的比较报告、指标汇总、图表和工作总结；不存放权重、训练配置或原始训练日志 |
 

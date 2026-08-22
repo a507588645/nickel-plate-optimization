@@ -57,7 +57,18 @@
 - `prepare_l1_tile_kaggle_kernel.py` 已复用已完成 L1 最终任务的固定运行时：在任何切片生成前安装并验证 `torch==2.6.0`、`torchvision==0.21.0`、`numpy==1.26.4`、`ultralytics==8.4.66` 和 GPU 可用性。
 - version 3 实际训练完成第 109 轮验证后，在第 110 轮中被取消；当前 Kaggle 状态为 `KernelWorkerStatus.CANCEL_ACKNOWLEDGED`。日志末尾没有训练异常栈；结合约 11 小时 58 分的训练时长，推断为会话上限相关取消，但取消来源未能从日志单独证明。
 - 已逐文件回收并校验 `args.yaml`、`results.csv`、`best.pt`、`last.pt`。`best.pt` SHA-256=`c4a903e8e8438798d44fc0548d666923a8728509f012d124101a8b980d7d875e`，checkpoint epoch=74，对应第 75 轮最高训练期 P/R/mAP50/mAP50-95=`0.57318/0.26795/0.29081/0.15178`；`last.pt` SHA-256=`882e952b3d96243b03564706856f5ffa9821d79357714c1945b2893b0dde76dd`，checkpoint epoch=108。训练曲线共 109 行，未产生 `requested_config.json`、`tile_evaluation/` 或最终 ZIP。
-- 新增 `evaluate` 模式和检查点打包器，独立运行固定基线与回收 `best.pt` 的四组同口径报告，不重建训练视图、不训练、不读取历史冻结集。当前 Kaggle API 返回周 GPU 30 小时额度耗尽，评测尚不能提交。
+- 新增 `evaluate` 模式和检查点打包器，独立运行固定基线与回收 `best.pt` 的四组同口径报告，不重建训练视图、不训练、不读取历史冻结集。2026-08-22 已创建私有检查点 Dataset `lly3323w/dianjienie-ryw18-oof-y11m-tile-f01-v3-ckpt`，并成功提交独立 GPU Kernel `lly3323w/l1-ryw18-y11m-oof-v1-tile1024-o25-eval-f01` version 1；提交后状态为 `KernelWorkerStatus.RUNNING`。该任务尚未产生评测 ZIP 或指标，不能据此判定切片收益。
+- 独立评测 Kernel 后续正常 `COMPLETE`。归档 ZIP SHA-256=`0004ac38f0dcea4e40ace226eb3376bb1436305ff184aa116397a2176ac1787e`，其中 `requested_config.json` 记录 `development_only=true`、`frozen_test_set=null`、Fold 1 的 376 张验证图；固定基线与回收候选权重哈希均与预期一致。
+
+| 原图级同口径报告 | Precision@0.25 | Recall@0.25 | mAP50 | mAP50-95 | 后 NMS 框数 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| `baseline_full` | 0.464914 | 0.409721 | 0.310152 | 0.168001 | 36,642 |
+| `baseline_tiled` | 0.061417 | 0.409928 | 0.045565 | 0.023219 | 1,084,406 |
+| `tile_model_full` | 0.519354 | 0.385729 | 0.296186 | 0.156492 | 95,121 |
+| `tile_model_tiled` | 0.294906 | 0.459772 | 0.145630 | 0.063427 | 375,469 |
+
+- 主比较 `tile_model_tiled - baseline_full=-0.104574` mAP50-95，不满足继续研究的收益门槛；即使将切片训练权重用于整图推理，仍较基线低 `0.011510`。因此不使用 `last.pt` 分段续训，不扩展 Fold 2/3，既有 640 `auto_only` 候选不变。
+- `wuzi` 与 `greenstain` 的 AP50-95 有局部提升，但 `bubble`、`watermark` 等下降显著，且切片推理产生数量级过多的后 NMS 框。它不足以支持整体模型更优的结论；未来若重启切片研究，应先单独重做推理后处理/阈值/NMS 的预检，不能沿用本次路径。
 
 ## 5. 文件位置与归档入口
 
@@ -71,15 +82,19 @@
 | version 2 本地部分输出 | `E:/PythonProject/优化/kaggle_l1_ryw18_y11m_oof_v1_tile1024_o25_b8_e300_f01_r2/remote_output_error_v2/` |
 | version 3 中断证据 | `E:/PythonProject/优化/kaggle_l1_ryw18_y11m_oof_v1_tile1024_o25_b8_e300_f01_r3/recovered_interrupted_v3/` |
 | 检查点 Kaggle 打包器 | `E:/PythonProject/优化/prepare_l1_tile_interrupted_checkpoints.py` |
+| 恢复检查点私有 Dataset | `https://www.kaggle.com/datasets/lly3323w/dianjienie-ryw18-oof-y11m-tile-f01-v3-ckpt` |
 | 本机预检 | `E:/PythonProject/优化/l1_tile_preflight_flatpayload_smoke_20260816/preflight_report.json` |
 | Kaggle CPU 预检输出 | `E:/PythonProject/优化/kaggle_l1_ryw18_oof_v1_tile1024_o25_preflight_fold01/remote_output_v1/` |
 | GPU 任务 | `https://www.kaggle.com/code/lly3323w/l1-ryw18-y11m-oof-v1-tile1024-o25-b8-e300-f01` |
-| 中断恢复步骤 | GPU 额度恢复后先上传回收检查点私有 Dataset，再运行 `python prepare_l1_tile_kaggle_kernel.py --mode evaluate` 生成独立评测 Kernel；正常完成后再下载评测 ZIP |
+| 独立评测 GPU 任务 | `https://www.kaggle.com/code/lly3323w/l1-ryw18-y11m-oof-v1-tile1024-o25-eval-f01`（version 1，2026-08-22 正常 `COMPLETE`） |
+| 独立评测归档 | `E:/PythonProject/优化/kaggle_l1_ryw18_y11m_oof_v1_tile1024_o25_eval_f01_20260822_r2/remote_output_v1_probe/dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_tile1024o25_focus6_mix_fold01_evaluation_results.zip` |
+| 独立评测解压目录 | `E:/PythonProject/优化/kaggle_l1_ryw18_y11m_oof_v1_tile1024_o25_eval_f01_20260822_r2/remote_output_v1_extracted/` |
+| 中断恢复步骤 | 回收检查点私有 Dataset 已上传，独立评测 Kernel 已正常完成，评测 ZIP 已下载并核验 |
 
 ## 6. 下一步与风险
 
-1. 等 Kaggle GPU 周额度恢复后，上传回收的 `best.pt`/`last.pt` 私有检查点包并提交独立 `evaluate` Kernel；不重新训练。
-2. 下载四份原图级评测报告和逐类结果；只有同口径收益明确，才评估用 `last.pt` 分段续训是否值得。
+1. 当前 1024/25% 切片训练与推理路线已停止；不重新训练，不续训 `last.pt`，不扩展 Fold 2/3。
+2. 若未来有新数据版本或明确的小目标业务需求，先单独制定后处理预检，再决定是否开展新的、与本次隔离的切片研究。
 3. 不再访问历史 `release-validation`，不因本实验改变既有 640 自动候选交付或 ONNX 产物。
 
 风险：切片评测是自定义的原图映射口径，必须始终将基线和候选放在同一评测器内比较；无人工 OOF 标签仍可能包含系统性标签误差。
