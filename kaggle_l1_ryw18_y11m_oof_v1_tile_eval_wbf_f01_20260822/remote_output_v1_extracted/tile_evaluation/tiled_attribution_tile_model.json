@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "model_label": "tile_model",
+  "model_path": "/kaggle/input/datasets/lly3323w/dianjienie-ryw18-oof-y11m-tile-f01-v3-ckpt/tile_fold01_v3_best.pt",
+  "model_sha256": "c4a903e8e8438798d44fc0548d666923a8728509f012d124101a8b980d7d875e",
+  "images": 376,
+  "raw_premerge_count": 470692,
+  "raw_confidence_below_025_count": 459709,
+  "raw_touches_internal_edge_count": 326895,
+  "cross_tile_duplicate_probe": {
+    "probe_confidence_floor": 0.25,
+    "probe_iou": 0.25,
+    "probe_candidate_count": 10983,
+    "cross_tile_cluster_count": 3020,
+    "cross_tile_member_count": 7767,
+    "cross_tile_duplicate_excess_count": 4747,
+    "cross_tile_member_fraction_of_probe": 0.7071838295547664,
+    "cross_tile_duplicate_excess_fraction_of_probe": 0.4322134207411454
+  },
+  "profile_counts": {
+    "legacy": {
+      "raw_input_count": 470692,
+      "after_confidence_filter_count": 470692,
+      "after_edge_filter_count": 470692,
+      "output_count": 375469
+    },
+    "perclass_nms": {
+      "raw_input_count": 470692,
+      "after_confidence_filter_count": 10054,
+      "after_edge_filter_count": 10054,
+      "output_count": 6926
+    },
+    "wbf": {
+      "raw_input_count": 470692,
+      "after_confidence_filter_count": 10054,
+      "after_edge_filter_count": 10054,
+      "output_count": 5601
+    },
+    "wbf_edge": {
+      "raw_input_count": 470692,
+      "after_confidence_filter_count": 10054,
+      "after_edge_filter_count": 5367,
+      "output_count": 3458
+    }
+  },
+  "postprocess_config": {
+    "requested_profiles": [
+      "legacy",
+      "perclass_nms",
+      "wbf",
+      "wbf_edge"
+    ],
+    "primary_profile": "wbf_edge",
+    "legacy_global_class_aware_nms_iou": 0.7,
+    "wbf_iou": 0.25,
+    "edge_margin_pixels": 16,
+    "per_class_confidence": {
+      "source": "/kaggle/working/per_class_confidence_profile.json",
+      "default_confidence": 0.25,
+      "class_thresholds": {
+        "wuzi": 0.3,
+        "waterstain": 0.3,
+        "airhole": 0.2,
+        "bubble": 0.2,
+        "bump": 0.3,
+        "greenstain": 0.1,
+        "watermark": 0.3
+      },
+      "metadata": {
+        "schema_version": 1,
+        "purpose": "Phase 1 development-only tiled evaluation post-processing",
+        "held_out_evaluation_fold": 1,
+        "calibration_folds": [
+          2,
+          3
+        ],
+        "selection_objective": "max_f1_at_iou50_then_higher_threshold",
+        "minimum_support": 100,
+        "class_names": [
+          "wuzi",
+          "waterstain",
+          "yellowstain",
+          "nodule",
+          "airhole",
+          "bubble",
+          "bump",
+          "fawu",
+          "overfire",
+          "NiOH",
+          "greenstain",
+          "suanwuran",
+          "quejiao",
+          "watermark",
+          "youpao",
+          "heibian",
+          "mijixiaokeng",
+          "fanxitong"
+        ],
+        "development_only": true,
+        "frozen_test_set": null,
+        "source_raw_predictions": [
+          {
+            "path": "E:\\PythonProject\\浼樺寲\\l1_phase0_diagnostics_20260822_1455\\raw_predictions\\fold02.jsonl",
+            "sha256": "9d42f01d6b74018eb195b66962cf88700162ce5fb0bfdfcf4e9d82057f8963d9",
+            "images": 375,
+            "predictions_after_model_nms": 67592,
+            "fold": 2
+          },
+          {
+            "path": "E:\\PythonProject\\浼樺寲\\l1_phase0_diagnostics_20260822_1455\\raw_predictions\\fold03.jsonl",
+            "sha256": "bb729b1e53dafdc9e33d2054538a79d85318fc2086ec38e7e6e460dab7da335a",
+            "images": 376,
+            "predictions_after_model_nms": 45394,
+            "fold": 3
+          }
+        ],
+        "limitations": [
+          "Cross-fold calibration uses distinct model weights and is intended only to avoid selecting thresholds on Fold 1.",
+          "This profile does not establish a final deployment threshold or manual-label performance."
+        ]
+      }
+    }
+  },
+  "per_box_detail_file": "tile_model_raw_tile_predictions.jsonl.gz",
+  "per_box_detail_schema": {
+    "raw_predictions": "One row per crop-level, model-NMS prediction with tile provenance and internal-edge flags.",
+    "postprocess": "NMS outputs retain raw ids; WBF outputs retain every fused raw member id and fused coordinates."
+  },
+  "raw_confidence_below_025_fraction": 0.9766662700874457,
+  "raw_touches_internal_edge_fraction": 0.6944987380282648
+}

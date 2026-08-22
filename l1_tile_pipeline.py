@@ -9,6 +9,7 @@ tiled validation predictions back to each original image before scoring.
 from __future__ import annotations
 
 import argparse
+import gzip
 import hashlib
 import json
 import math
@@ -49,6 +50,7 @@ CLASS_NAMES = (
 )
 DEFAULT_FOCUS_NAMES = ("wuzi", "waterstain", "airhole", "bubble", "greenstain", "watermark")
 IOU_THRESHOLDS = tuple(round(0.5 + index * 0.05, 2) for index in range(10))
+TILED_EVAL_PROFILES = ("legacy", "perclass_nms", "wbf", "wbf_edge")
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -80,6 +82,33 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--patience", type=int, default=100)
     parser.add_argument("--nms-iou", type=float, default=0.70)
+    parser.add_argument(
+        "--tiled-eval-profiles",
+        default="legacy",
+        help="Comma-separated tiled post-processing profiles: legacy, perclass_nms, wbf, wbf_edge.",
+    )
+    parser.add_argument(
+        "--primary-tiled-profile",
+        default="legacy",
+        help="One requested tiled profile to expose as baseline_tiled/tile_model_tiled in the comparison summary.",
+    )
+    parser.add_argument(
+        "--per-class-conf-json",
+        type=Path,
+        help="Optional JSON profile with default_confidence and class_thresholds keyed by CLASS_NAMES.",
+    )
+    parser.add_argument("--wbf-iou", type=float, default=0.25)
+    parser.add_argument(
+        "--edge-margin",
+        type=int,
+        default=16,
+        help="Pixels from an internal crop edge considered truncated by the wbf_edge profile.",
+    )
+    parser.add_argument(
+        "--save-tile-details",
+        action="store_true",
+        help="Write gzip-compressed raw per-tile predictions and post-processing memberships for attribution review.",
+    )
     parser.add_argument("--dry-run", action="store_true")
     return parser.parse_args(argv)
 
@@ -99,6 +128,20 @@ def validate_args(args: argparse.Namespace) -> None:
         raise ValueError("--patience must be non-negative")
     if not 0 < args.nms_iou <= 1:
         raise ValueError("--nms-iou must be in (0, 1]")
+    if not 0 < args.wbf_iou <= 1:
+        raise ValueError("--wbf-iou must be in (0, 1]")
+    if args.edge_margin < 0:
+        raise ValueError("--edge-margin must be non-negative")
+    profiles = tuple(profile.strip() for profile in args.tiled_eval_profiles.split(",") if profile.strip())
+    if not profiles or len(set(profiles)) != len(profiles):
+        raise ValueError("--tiled-eval-profiles must contain one or more unique profile names")
+    unknown_profiles = sorted(set(profiles) - set(TILED_EVAL_PROFILES))
+    if unknown_profiles:
+        raise ValueError(f"Unsupported tiled evaluation profile(s): {unknown_profiles}")
+    if args.primary_tiled_profile not in profiles:
+        raise ValueError("--primary-tiled-profile must be included in --tiled-eval-profiles")
+    args.tiled_eval_profiles = profiles
+    args.per_class_confidence = load_per_class_confidence(args.per_class_conf_json)
     if args.mode in {"train", "evaluate"} and args.baseline_weights is None:
         raise ValueError("--baseline-weights is required for the fixed Fold baseline comparison")
     if args.mode == "evaluate" and args.candidate_weights is None:
@@ -116,6 +159,48 @@ def sha256_file(path: Path) -> str:
 def write_json(path: Path, payload: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def load_per_class_confidence(path: Path | None) -> dict[str, Any]:
+    """Load the optional research profile while keeping legacy inference unchanged."""
+    if path is None:
+        return {
+            "source": None,
+            "default_confidence": 0.25,
+            "class_thresholds": {},
+            "metadata": {},
+        }
+    if not path.is_file():
+        raise FileNotFoundError(f"Per-class confidence profile not found: {path}")
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(payload, dict):
+        raise ValueError("Per-class confidence profile must be a JSON object")
+    default_confidence = payload.get("default_confidence", 0.25)
+    class_thresholds = payload.get("class_thresholds")
+    if class_thresholds is None:
+        class_thresholds = {key: value for key, value in payload.items() if key in CLASS_NAMES}
+    if not isinstance(default_confidence, (int, float)) or not 0 < float(default_confidence) <= 1:
+        raise ValueError("Per-class confidence default_confidence must be in (0, 1]")
+    if not isinstance(class_thresholds, dict):
+        raise ValueError("Per-class confidence class_thresholds must be a JSON object")
+    unknown_names = sorted(set(class_thresholds) - set(CLASS_NAMES))
+    if unknown_names:
+        raise ValueError(f"Per-class confidence profile has unknown classes: {unknown_names}")
+    normalized: dict[str, float] = {}
+    for class_name, value in class_thresholds.items():
+        if not isinstance(value, (int, float)) or not 0 < float(value) <= 1:
+            raise ValueError(f"Invalid confidence threshold for {class_name!r}: {value!r}")
+        normalized[class_name] = float(value)
+    return {
+        "source": str(path.resolve()),
+        "default_confidence": float(default_confidence),
+        "class_thresholds": normalized,
+        "metadata": {
+            key: value
+            for key, value in payload.items()
+            if key not in {"default_confidence", "class_thresholds"}
+        },
+    }
 
 
 def read_text_lines(path: Path) -> list[str]:
@@ -585,6 +670,255 @@ def class_aware_nms(rows: list[list[float]], iou_threshold: float) -> np.ndarray
     return np.asarray(kept, dtype=np.float64)
 
 
+def rows_to_array(rows: list[list[float]]) -> np.ndarray:
+    return np.asarray(rows, dtype=np.float64) if rows else np.empty((0, 6), dtype=np.float64)
+
+
+def tile_internal_edge_sides(
+    row: list[float], tile: dict[str, int], image_width: int, image_height: int, edge_margin: int
+) -> list[str]:
+    """Identify crop boundaries that have a neighbouring crop and touch a prediction."""
+    x1, y1, x2, y2 = (float(value) for value in row[:4])
+    sides: list[str] = []
+    if tile["x"] > 0 and x1 - tile["x"] <= edge_margin:
+        sides.append("left")
+    if tile["x"] + tile["width"] < image_width and tile["x"] + tile["width"] - x2 <= edge_margin:
+        sides.append("right")
+    if tile["y"] > 0 and y1 - tile["y"] <= edge_margin:
+        sides.append("top")
+    if tile["y"] + tile["height"] < image_height and tile["y"] + tile["height"] - y2 <= edge_margin:
+        sides.append("bottom")
+    return sides
+
+
+def predict_tiled_raw(
+    model: Any, image: np.ndarray, grid: list[dict[str, int]], args: argparse.Namespace
+) -> tuple[np.ndarray, list[dict[str, Any]]]:
+    """Predict every crop once and retain provenance before cross-tile merging."""
+    rows: list[list[float]] = []
+    raw_details: list[dict[str, Any]] = []
+    image_height, image_width = image.shape[:2]
+    for start in range(0, len(grid), args.predict_batch):
+        batch_tiles = grid[start : start + args.predict_batch]
+        crops = [
+            image[tile["y"] : tile["y"] + tile["height"], tile["x"] : tile["x"] + tile["width"]]
+            for tile in batch_tiles
+        ]
+        results = model.predict(
+            source=crops,
+            imgsz=args.imgsz,
+            conf=0.001,
+            iou=args.nms_iou,
+            max_det=300,
+            device=args.device,
+            verbose=False,
+        )
+        if len(results) != len(batch_tiles):
+            raise RuntimeError("Tiled prediction result count mismatch")
+        for offset, (result, tile) in enumerate(zip(results, batch_tiles, strict=True)):
+            tile_index = start + offset
+            for row in prediction_to_rows(result, tile["x"], tile["y"]):
+                raw_id = len(rows)
+                class_id = int(row[5])
+                rows.append(row)
+                raw_details.append(
+                    {
+                        "raw_id": raw_id,
+                        "tile_index": tile_index,
+                        "xyxy": [float(value) for value in row[:4]],
+                        "confidence": float(row[4]),
+                        "class_id": class_id,
+                        "class_name": CLASS_NAMES[class_id],
+                        "touches_internal_edges": tile_internal_edge_sides(
+                            row, tile, image_width, image_height, args.edge_margin
+                        ),
+                    }
+                )
+    return rows_to_array(rows), raw_details
+
+
+def per_class_confidence_threshold(class_id: int, args: argparse.Namespace) -> float:
+    class_name = CLASS_NAMES[class_id]
+    return float(args.per_class_confidence["class_thresholds"].get(class_name, args.per_class_confidence["default_confidence"]))
+
+
+def confidence_filtered_indices(predictions: np.ndarray, args: argparse.Namespace) -> np.ndarray:
+    indices = [
+        index
+        for index, row in enumerate(predictions)
+        if float(row[4]) >= per_class_confidence_threshold(int(row[5]), args)
+    ]
+    return np.asarray(indices, dtype=np.int64)
+
+
+def class_aware_nms_indices(
+    predictions: np.ndarray, candidate_indices: np.ndarray, iou_threshold: float
+) -> tuple[np.ndarray, np.ndarray]:
+    """Return the same class-wise NMS result as legacy mode plus raw row provenance."""
+    if len(candidate_indices) == 0:
+        return np.empty((0, 6), dtype=np.float64), np.empty((0,), dtype=np.int64)
+    kept_indices: list[int] = []
+    for class_id in sorted({int(predictions[index, 5]) for index in candidate_indices}):
+        remaining = candidate_indices[predictions[candidate_indices, 5] == class_id]
+        remaining = remaining[np.argsort(-predictions[remaining, 4])]
+        while len(remaining):
+            current_index = int(remaining[0])
+            kept_indices.append(current_index)
+            if len(remaining) == 1:
+                break
+            overlaps = box_iou_one_to_many(predictions[current_index, :4], predictions[remaining[1:], :4])
+            remaining = remaining[1:][overlaps <= iou_threshold]
+    kept = np.asarray(kept_indices, dtype=np.int64)
+    return predictions[kept], kept
+
+
+def weighted_box_fusion(
+    predictions: np.ndarray, candidate_indices: np.ndarray, iou_threshold: float
+) -> tuple[np.ndarray, list[dict[str, Any]]]:
+    """Fuse same-class cross-crop candidates and retain every raw member id.
+
+    Coordinates are confidence-weighted; the maximum member confidence is kept
+    so cross-crop duplication does not lower the calibrated detection score.
+    """
+    if len(candidate_indices) == 0:
+        return np.empty((0, 6), dtype=np.float64), []
+    completed: list[dict[str, Any]] = []
+    for class_id in sorted({int(predictions[index, 5]) for index in candidate_indices}):
+        class_indices = candidate_indices[predictions[candidate_indices, 5] == class_id]
+        class_indices = class_indices[np.argsort(-predictions[class_indices, 4])]
+        clusters: list[dict[str, Any]] = []
+        for raw_index in class_indices:
+            raw_index = int(raw_index)
+            row = predictions[raw_index]
+            if clusters:
+                cluster_boxes = np.asarray([cluster["xyxy"] for cluster in clusters], dtype=np.float64)
+                overlaps = box_iou_one_to_many(row[:4], cluster_boxes)
+                best_cluster = int(np.argmax(overlaps))
+                if overlaps[best_cluster] >= iou_threshold:
+                    cluster = clusters[best_cluster]
+                    weight = float(row[4])
+                    cluster["weighted_sum"] += row[:4] * weight
+                    cluster["weight_sum"] += weight
+                    cluster["xyxy"] = cluster["weighted_sum"] / cluster["weight_sum"]
+                    cluster["confidence"] = max(float(cluster["confidence"]), weight)
+                    cluster["raw_member_ids"].append(raw_index)
+                    continue
+            weight = float(row[4])
+            clusters.append(
+                {
+                    "class_id": class_id,
+                    "xyxy": row[:4].copy(),
+                    "weighted_sum": row[:4] * weight,
+                    "weight_sum": weight,
+                    "confidence": weight,
+                    "raw_member_ids": [raw_index],
+                }
+            )
+        completed.extend(clusters)
+    fused_rows = [
+        [*map(float, cluster["xyxy"]), float(cluster["confidence"]), float(cluster["class_id"])]
+        for cluster in completed
+    ]
+    return rows_to_array(fused_rows), completed
+
+
+def wbf_detail_rows(clusters: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return [
+        {
+            "class_id": int(cluster["class_id"]),
+            "class_name": CLASS_NAMES[int(cluster["class_id"])],
+            "xyxy": [float(value) for value in cluster["xyxy"]],
+            "confidence": float(cluster["confidence"]),
+            "raw_member_ids": [int(value) for value in cluster["raw_member_ids"]],
+        }
+        for cluster in clusters
+    ]
+
+
+def cross_tile_duplicate_diagnostic(
+    predictions: np.ndarray, raw_details: list[dict[str, Any]], args: argparse.Namespace
+) -> dict[str, Any]:
+    """Measure high-confidence cross-tile duplicate pressure without scanning low-confidence noise."""
+    probe_indices = np.flatnonzero(predictions[:, 4] >= 0.25).astype(np.int64)
+    _, clusters = weighted_box_fusion(predictions, probe_indices, args.wbf_iou)
+    cross_tile_clusters = [
+        cluster
+        for cluster in clusters
+        if len({int(raw_details[index]["tile_index"]) for index in cluster["raw_member_ids"]}) > 1
+    ]
+    member_count = sum(len(cluster["raw_member_ids"]) for cluster in cross_tile_clusters)
+    excess_count = sum(len(cluster["raw_member_ids"]) - 1 for cluster in cross_tile_clusters)
+    return {
+        "probe_confidence_floor": 0.25,
+        "probe_iou": args.wbf_iou,
+        "probe_candidate_count": int(len(probe_indices)),
+        "cross_tile_cluster_count": len(cross_tile_clusters),
+        "cross_tile_member_count": member_count,
+        "cross_tile_duplicate_excess_count": excess_count,
+    }
+
+
+def postprocess_tiled_predictions(
+    predictions: np.ndarray, raw_details: list[dict[str, Any]], args: argparse.Namespace
+) -> tuple[dict[str, dict[str, Any]], dict[str, Any]]:
+    """Apply requested profiles to one raw tiled prediction stream."""
+    raw_indices = np.arange(len(predictions), dtype=np.int64)
+    threshold_indices = confidence_filtered_indices(predictions, args)
+    edge_safe_indices = np.asarray(
+        [index for index in threshold_indices if not raw_details[int(index)]["touches_internal_edges"]], dtype=np.int64
+    )
+    results: dict[str, dict[str, Any]] = {}
+    for profile in args.tiled_eval_profiles:
+        if profile == "legacy":
+            candidate_indices = raw_indices
+            output, kept_indices = class_aware_nms_indices(predictions, candidate_indices, args.nms_iou)
+            detail = {
+                "merger": "class_aware_nms",
+                "iou": args.nms_iou,
+                "raw_input_count": int(len(raw_indices)),
+                "after_confidence_filter_count": int(len(raw_indices)),
+                "after_edge_filter_count": int(len(raw_indices)),
+                "output_count": int(len(output)),
+                "output_raw_ids": [int(index) for index in kept_indices],
+            }
+        elif profile == "perclass_nms":
+            candidate_indices = threshold_indices
+            output, kept_indices = class_aware_nms_indices(predictions, candidate_indices, args.nms_iou)
+            detail = {
+                "merger": "class_aware_nms",
+                "iou": args.nms_iou,
+                "raw_input_count": int(len(raw_indices)),
+                "after_confidence_filter_count": int(len(threshold_indices)),
+                "after_edge_filter_count": int(len(threshold_indices)),
+                "output_count": int(len(output)),
+                "output_raw_ids": [int(index) for index in kept_indices],
+            }
+        elif profile in {"wbf", "wbf_edge"}:
+            candidate_indices = threshold_indices if profile == "wbf" else edge_safe_indices
+            output, clusters = weighted_box_fusion(predictions, candidate_indices, args.wbf_iou)
+            detail = {
+                "merger": "confidence_weighted_box_fusion_max_confidence",
+                "iou": args.wbf_iou,
+                "raw_input_count": int(len(raw_indices)),
+                "after_confidence_filter_count": int(len(threshold_indices)),
+                "after_edge_filter_count": int(len(candidate_indices)),
+                "output_count": int(len(output)),
+                "fused_outputs": wbf_detail_rows(clusters),
+            }
+        else:  # validate_args rejects this before inference; retain a local guard for direct callers.
+            raise ValueError(f"Unsupported tiled profile: {profile}")
+        results[profile] = {"predictions": output, "detail": detail}
+    low_confidence_count = int(np.count_nonzero(predictions[:, 4] < 0.25))
+    edge_touch_count = sum(bool(detail["touches_internal_edges"]) for detail in raw_details)
+    diagnostic = {
+        "raw_premerge_count": int(len(predictions)),
+        "raw_confidence_below_025_count": low_confidence_count,
+        "raw_touches_internal_edge_count": edge_touch_count,
+        "cross_tile_duplicate_probe": cross_tile_duplicate_diagnostic(predictions, raw_details, args),
+    }
+    return results, diagnostic
+
+
 def predict_tiled(model: Any, image: np.ndarray, grid: list[dict[str, int]], args: argparse.Namespace) -> np.ndarray:
     rows: list[list[float]] = []
     for start in range(0, len(grid), args.predict_batch):
@@ -764,6 +1098,155 @@ def evaluate_model(model_path: Path, val_records: list[dict[str, Any]], val_grid
     return scores
 
 
+def tiled_postprocess_config(args: argparse.Namespace) -> dict[str, Any]:
+    return {
+        "requested_profiles": list(args.tiled_eval_profiles),
+        "primary_profile": args.primary_tiled_profile,
+        "legacy_global_class_aware_nms_iou": args.nms_iou,
+        "wbf_iou": args.wbf_iou,
+        "edge_margin_pixels": args.edge_margin,
+        "per_class_confidence": args.per_class_confidence,
+    }
+
+
+def ratio(numerator: int, denominator: int) -> float:
+    return numerator / denominator if denominator else 0.0
+
+
+def evaluate_tiled_profiles(
+    model_path: Path,
+    model_label: str,
+    val_records: list[dict[str, Any]],
+    val_grids: list[list[dict[str, int]]],
+    args: argparse.Namespace,
+    evaluation_dir: Path,
+) -> tuple[dict[str, dict[str, Any]], dict[str, Any]]:
+    """Run crop inference once per image, then score all requested post-processing profiles."""
+    from ultralytics import YOLO
+    import cv2
+
+    model = YOLO(str(model_path))
+    predictions_by_profile: dict[str, dict[str, np.ndarray]] = {
+        profile: {} for profile in args.tiled_eval_profiles
+    }
+    ground_truth_by_image: dict[str, np.ndarray] = {}
+    profile_counts: dict[str, dict[str, int]] = {
+        profile: {
+            "raw_input_count": 0,
+            "after_confidence_filter_count": 0,
+            "after_edge_filter_count": 0,
+            "output_count": 0,
+        }
+        for profile in args.tiled_eval_profiles
+    }
+    attribution = {
+        "schema_version": 1,
+        "model_label": model_label,
+        "model_path": str(model_path),
+        "model_sha256": sha256_file(model_path),
+        "images": 0,
+        "raw_premerge_count": 0,
+        "raw_confidence_below_025_count": 0,
+        "raw_touches_internal_edge_count": 0,
+        "cross_tile_duplicate_probe": {
+            "probe_confidence_floor": 0.25,
+            "probe_iou": args.wbf_iou,
+            "probe_candidate_count": 0,
+            "cross_tile_cluster_count": 0,
+            "cross_tile_member_count": 0,
+            "cross_tile_duplicate_excess_count": 0,
+        },
+        "profile_counts": profile_counts,
+        "postprocess_config": tiled_postprocess_config(args),
+        "per_box_detail_file": None,
+        "per_box_detail_schema": {
+            "raw_predictions": "One row per crop-level, model-NMS prediction with tile provenance and internal-edge flags.",
+            "postprocess": "NMS outputs retain raw ids; WBF outputs retain every fused raw member id and fused coordinates.",
+        },
+    }
+    detail_path = evaluation_dir / f"{model_label}_raw_tile_predictions.jsonl.gz"
+    detail_handle: Any = None
+    if args.save_tile_details:
+        detail_handle = gzip.open(detail_path, "wt", encoding="utf-8")
+        attribution["per_box_detail_file"] = detail_path.name
+    try:
+        for record, grid in zip(val_records, val_grids, strict=True):
+            image = cv2.imread(str(record["source_image"]), cv2.IMREAD_COLOR)
+            if image is None:
+                raise RuntimeError(f"OpenCV failed to read validation image: {record['source_image']}")
+            raw_predictions, raw_details = predict_tiled_raw(model, image, grid, args)
+            profile_results, image_diagnostic = postprocess_tiled_predictions(raw_predictions, raw_details, args)
+            ground_truth_by_image[record["anchor_name"]] = ground_truth_for_record(record)
+            attribution["images"] += 1
+            attribution["raw_premerge_count"] += int(image_diagnostic["raw_premerge_count"])
+            attribution["raw_confidence_below_025_count"] += int(image_diagnostic["raw_confidence_below_025_count"])
+            attribution["raw_touches_internal_edge_count"] += int(image_diagnostic["raw_touches_internal_edge_count"])
+            duplicate_probe = image_diagnostic["cross_tile_duplicate_probe"]
+            for key in (
+                "probe_candidate_count",
+                "cross_tile_cluster_count",
+                "cross_tile_member_count",
+                "cross_tile_duplicate_excess_count",
+            ):
+                attribution["cross_tile_duplicate_probe"][key] += int(duplicate_probe[key])
+            for profile, result in profile_results.items():
+                predictions_by_profile[profile][record["anchor_name"]] = result["predictions"]
+                for key in profile_counts[profile]:
+                    profile_counts[profile][key] += int(result["detail"][key])
+            if detail_handle is not None:
+                detail_handle.write(
+                    json.dumps(
+                        {
+                            "image_id": record["anchor_name"],
+                            "source_relative": record["source_relative"],
+                            "image_width": int(record["width"]),
+                            "image_height": int(record["height"]),
+                            "tiles": [{"tile_index": index, **tile} for index, tile in enumerate(grid)],
+                            "raw_predictions": raw_details,
+                            "diagnostic": image_diagnostic,
+                            "postprocess": {profile: result["detail"] for profile, result in profile_results.items()},
+                        },
+                        ensure_ascii=False,
+                    )
+                    + "\n"
+                )
+    finally:
+        if detail_handle is not None:
+            detail_handle.close()
+    raw_count = int(attribution["raw_premerge_count"])
+    duplicate_probe = attribution["cross_tile_duplicate_probe"]
+    duplicate_probe["cross_tile_member_fraction_of_probe"] = ratio(
+        int(duplicate_probe["cross_tile_member_count"]), int(duplicate_probe["probe_candidate_count"])
+    )
+    duplicate_probe["cross_tile_duplicate_excess_fraction_of_probe"] = ratio(
+        int(duplicate_probe["cross_tile_duplicate_excess_count"]), int(duplicate_probe["probe_candidate_count"])
+    )
+    attribution["raw_confidence_below_025_fraction"] = ratio(
+        int(attribution["raw_confidence_below_025_count"]), raw_count
+    )
+    attribution["raw_touches_internal_edge_fraction"] = ratio(
+        int(attribution["raw_touches_internal_edge_count"]), raw_count
+    )
+    reports: dict[str, dict[str, Any]] = {}
+    for profile, predictions_by_image in predictions_by_profile.items():
+        scores = score_predictions(predictions_by_image, ground_truth_by_image, args)
+        scores["metric_protocol"]["tiled_postprocessing"] = {
+            **tiled_postprocess_config(args),
+            "active_profile": profile,
+        }
+        scores.update(
+            {
+                "model_path": str(model_path),
+                "model_sha256": sha256_file(model_path),
+                "inference_mode": "tiled",
+                "tiled_profile": profile,
+                "post_nms_prediction_count": profile_counts[profile]["output_count"],
+            }
+        )
+        reports[profile] = scores
+    return reports, attribution
+
+
 def environment_payload() -> dict[str, Any]:
     payload: dict[str, Any] = {
         "python": sys.version,
@@ -813,6 +1296,7 @@ def write_run_metadata(run_dir: Path, runtime: dict[str, Path | int], summary: d
             "close_mosaic": 0,
             "resume": False,
         },
+        "tiled_evaluation_postprocessing": tiled_postprocess_config(args),
     }
     write_json(run_dir / "requested_config.json", requested_config)
     write_json(run_dir / "environment.json", environment_payload())
@@ -850,23 +1334,76 @@ def write_comparison_reports(
     if not candidate_weights.is_file():
         raise FileNotFoundError(f"Candidate tile weights not found: {candidate_weights}")
     evaluation_dir.mkdir(parents=True, exist_ok=True)
+    # Preserve the archived G4b protocol byte-for-byte in the default legacy mode.
+    if args.tiled_eval_profiles == ("legacy",) and not args.save_tile_details:
+        reports = {
+            "baseline_full": evaluate_model(baseline_weights, val_records, plan["val_grids"], args, "full"),
+            "baseline_tiled": evaluate_model(baseline_weights, val_records, plan["val_grids"], args, "tiled"),
+            "tile_model_full": evaluate_model(candidate_weights, val_records, plan["val_grids"], args, "full"),
+            "tile_model_tiled": evaluate_model(candidate_weights, val_records, plan["val_grids"], args, "tiled"),
+        }
+        for name, report in reports.items():
+            write_json(evaluation_dir / f"{name}.json", report)
+        write_json(
+            evaluation_dir / "comparison_summary.json",
+            {
+                "baseline_full_mAP50_95": reports["baseline_full"]["mAP50_95"],
+                "baseline_tiled_mAP50_95": reports["baseline_tiled"]["mAP50_95"],
+                "tile_model_full_mAP50_95": reports["tile_model_full"]["mAP50_95"],
+                "tile_model_tiled_mAP50_95": reports["tile_model_tiled"]["mAP50_95"],
+                "primary_comparison": "tile_model_tiled minus baseline_full under the same custom original-image evaluator",
+            },
+        )
+        return
+    baseline_tiled_profiles, baseline_attribution = evaluate_tiled_profiles(
+        baseline_weights, "baseline", val_records, plan["val_grids"], args, evaluation_dir
+    )
+    candidate_tiled_profiles, candidate_attribution = evaluate_tiled_profiles(
+        candidate_weights, "tile_model", val_records, plan["val_grids"], args, evaluation_dir
+    )
+    primary_profile = args.primary_tiled_profile
     reports = {
         "baseline_full": evaluate_model(baseline_weights, val_records, plan["val_grids"], args, "full"),
-        "baseline_tiled": evaluate_model(baseline_weights, val_records, plan["val_grids"], args, "tiled"),
         "tile_model_full": evaluate_model(candidate_weights, val_records, plan["val_grids"], args, "full"),
-        "tile_model_tiled": evaluate_model(candidate_weights, val_records, plan["val_grids"], args, "tiled"),
+        "baseline_tiled": baseline_tiled_profiles[primary_profile],
+        "tile_model_tiled": candidate_tiled_profiles[primary_profile],
     }
     for name, report in reports.items():
         write_json(evaluation_dir / f"{name}.json", report)
+    for profile in args.tiled_eval_profiles:
+        write_json(evaluation_dir / f"baseline_tiled_{profile}.json", baseline_tiled_profiles[profile])
+        write_json(evaluation_dir / f"tile_model_tiled_{profile}.json", candidate_tiled_profiles[profile])
+    write_json(evaluation_dir / "tiled_attribution_baseline.json", baseline_attribution)
+    write_json(evaluation_dir / "tiled_attribution_tile_model.json", candidate_attribution)
+    summary: dict[str, Any] = {
+        "baseline_full_mAP50_95": reports["baseline_full"]["mAP50_95"],
+        "baseline_tiled_mAP50_95": reports["baseline_tiled"]["mAP50_95"],
+        "tile_model_full_mAP50_95": reports["tile_model_full"]["mAP50_95"],
+        "tile_model_tiled_mAP50_95": reports["tile_model_tiled"]["mAP50_95"],
+        "primary_comparison": "tile_model_tiled minus baseline_full under the same custom original-image evaluator",
+    }
+    summary.update(
+        {
+            "primary_tiled_profile": primary_profile,
+            "tiled_profiles": {
+                profile: {
+                    "baseline_tiled_mAP50_95": baseline_tiled_profiles[profile]["mAP50_95"],
+                    "tile_model_tiled_mAP50_95": candidate_tiled_profiles[profile]["mAP50_95"],
+                    "tile_model_tiled_minus_baseline_full_mAP50_95": (
+                        candidate_tiled_profiles[profile]["mAP50_95"] - reports["baseline_full"]["mAP50_95"]
+                    ),
+                }
+                for profile in args.tiled_eval_profiles
+            },
+            "attribution_files": {
+                "baseline": "tiled_attribution_baseline.json",
+                "tile_model": "tiled_attribution_tile_model.json",
+            },
+        }
+    )
     write_json(
         evaluation_dir / "comparison_summary.json",
-        {
-            "baseline_full_mAP50_95": reports["baseline_full"]["mAP50_95"],
-            "baseline_tiled_mAP50_95": reports["baseline_tiled"]["mAP50_95"],
-            "tile_model_full_mAP50_95": reports["tile_model_full"]["mAP50_95"],
-            "tile_model_tiled_mAP50_95": reports["tile_model_tiled"]["mAP50_95"],
-            "primary_comparison": "tile_model_tiled minus baseline_full under the same custom original-image evaluator",
-        },
+        summary,
     )
 
 
@@ -979,6 +1516,7 @@ def run_evaluation(
                 "predict_batch": args.predict_batch,
                 "device": args.device,
                 "nms_iou": args.nms_iou,
+                "tiled_postprocessing": tiled_postprocess_config(args),
             },
         },
     )

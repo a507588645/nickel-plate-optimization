@@ -1,0 +1,238 @@
+{
+  "metric_protocol": {
+    "scope": "original-image evaluation after mapping tiled predictions back to source coordinates",
+    "iou_thresholds": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "prediction_confidence_floor": 0.001,
+    "precision_recall_confidence": 0.25,
+    "global_class_aware_nms_iou": 0.7,
+    "ap_interpolation": "101-point precision envelope",
+    "tiled_postprocessing": {
+      "requested_profiles": [
+        "legacy",
+        "perclass_nms",
+        "wbf",
+        "wbf_edge"
+      ],
+      "primary_profile": "wbf_edge",
+      "legacy_global_class_aware_nms_iou": 0.7,
+      "wbf_iou": 0.25,
+      "edge_margin_pixels": 16,
+      "per_class_confidence": {
+        "source": "/kaggle/working/per_class_confidence_profile.json",
+        "default_confidence": 0.25,
+        "class_thresholds": {
+          "wuzi": 0.3,
+          "waterstain": 0.3,
+          "airhole": 0.2,
+          "bubble": 0.2,
+          "bump": 0.3,
+          "greenstain": 0.1,
+          "watermark": 0.3
+        },
+        "metadata": {
+          "schema_version": 1,
+          "purpose": "Phase 1 development-only tiled evaluation post-processing",
+          "held_out_evaluation_fold": 1,
+          "calibration_folds": [
+            2,
+            3
+          ],
+          "selection_objective": "max_f1_at_iou50_then_higher_threshold",
+          "minimum_support": 100,
+          "class_names": [
+            "wuzi",
+            "waterstain",
+            "yellowstain",
+            "nodule",
+            "airhole",
+            "bubble",
+            "bump",
+            "fawu",
+            "overfire",
+            "NiOH",
+            "greenstain",
+            "suanwuran",
+            "quejiao",
+            "watermark",
+            "youpao",
+            "heibian",
+            "mijixiaokeng",
+            "fanxitong"
+          ],
+          "development_only": true,
+          "frozen_test_set": null,
+          "source_raw_predictions": [
+            {
+              "path": "E:\\PythonProject\\浼樺寲\\l1_phase0_diagnostics_20260822_1455\\raw_predictions\\fold02.jsonl",
+              "sha256": "9d42f01d6b74018eb195b66962cf88700162ce5fb0bfdfcf4e9d82057f8963d9",
+              "images": 375,
+              "predictions_after_model_nms": 67592,
+              "fold": 2
+            },
+            {
+              "path": "E:\\PythonProject\\浼樺寲\\l1_phase0_diagnostics_20260822_1455\\raw_predictions\\fold03.jsonl",
+              "sha256": "bb729b1e53dafdc9e33d2054538a79d85318fc2086ec38e7e6e460dab7da335a",
+              "images": 376,
+              "predictions_after_model_nms": 45394,
+              "fold": 3
+            }
+          ],
+          "limitations": [
+            "Cross-fold calibration uses distinct model weights and is intended only to avoid selecting thresholds on Fold 1.",
+            "This profile does not establish a final deployment threshold or manual-label performance."
+          ]
+        }
+      },
+      "active_profile": "wbf"
+    }
+  },
+  "images": 376,
+  "precision_conf025_iou50_micro": 0.3762654668166479,
+  "recall_conf025_iou50_micro": 0.41509824198552225,
+  "mAP50": 0.11814128075709948,
+  "mAP50_95": 0.050062610517828746,
+  "per_class": {
+    "wuzi": {
+      "support": 855,
+      "ap50": 0.2575504488692518,
+      "ap50_95": 0.11553594498799291,
+      "precision_conf025_iou50": 0.42636579572446553,
+      "recall_conf025_iou50": 0.4198830409356725
+    },
+    "waterstain": {
+      "support": 2123,
+      "ap50": 0.4386569570554054,
+      "ap50_95": 0.2372656944178689,
+      "precision_conf025_iou50": 0.41284109149277687,
+      "recall_conf025_iou50": 0.6057465850211964
+    },
+    "yellowstain": {
+      "support": 21,
+      "ap50": 0.0,
+      "ap50_95": 0.0,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "nodule": {
+      "support": 25,
+      "ap50": 0.24218210056299744,
+      "ap50_95": 0.08680333915744516,
+      "precision_conf025_iou50": 0.2962962962962963,
+      "recall_conf025_iou50": 0.32
+    },
+    "airhole": {
+      "support": 606,
+      "ap50": 0.09335223927714612,
+      "ap50_95": 0.028201383290588262,
+      "precision_conf025_iou50": 0.32038834951456313,
+      "recall_conf025_iou50": 0.16336633663366337
+    },
+    "bubble": {
+      "support": 142,
+      "ap50": 0.015352209611043314,
+      "ap50_95": 0.005864983357970989,
+      "precision_conf025_iou50": 0.046762589928057555,
+      "recall_conf025_iou50": 0.09154929577464789
+    },
+    "bump": {
+      "support": 82,
+      "ap50": 0.061276334400357325,
+      "ap50_95": 0.019707995235613784,
+      "precision_conf025_iou50": 0.3793103448275862,
+      "recall_conf025_iou50": 0.13414634146341464
+    },
+    "fawu": {
+      "support": 3,
+      "ap50": 0.0,
+      "ap50_95": 0.0,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "overfire": {
+      "support": 109,
+      "ap50": 0.06188118811881188,
+      "ap50_95": 0.023324394939493946,
+      "precision_conf025_iou50": 0.4375,
+      "recall_conf025_iou50": 0.12844036697247707
+    },
+    "NiOH": {
+      "support": 2,
+      "ap50": 0.0,
+      "ap50_95": 0.0,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "greenstain": {
+      "support": 99,
+      "ap50": 0.378670897303947,
+      "ap50_95": 0.17224228788229626,
+      "precision_conf025_iou50": 0.4772727272727273,
+      "recall_conf025_iou50": 0.42424242424242425
+    },
+    "suanwuran": {
+      "support": 22,
+      "ap50": 0.0,
+      "ap50_95": 0.0,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "quejiao": {
+      "support": 14,
+      "ap50": 0.09900990099009901,
+      "ap50_95": 0.01254125412541254,
+      "precision_conf025_iou50": 0.2,
+      "recall_conf025_iou50": 0.14285714285714285
+    },
+    "watermark": {
+      "support": 727,
+      "ap50": 0.12418693516743297,
+      "ap50_95": 0.04945188037274847,
+      "precision_conf025_iou50": 0.2888146911519199,
+      "recall_conf025_iou50": 0.23796423658872076
+    },
+    "youpao": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "heibian": {
+      "support": 5,
+      "ap50": 0.0,
+      "ap50_95": 0.0,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "mijixiaokeng": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "fanxitong": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    }
+  },
+  "model_path": "/kaggle/input/datasets/lly3323w/dianjienie-ryw18-oof-y11m-tile-f01-v3-ckpt/tile_fold01_v3_best.pt",
+  "model_sha256": "c4a903e8e8438798d44fc0548d666923a8728509f012d124101a8b980d7d875e",
+  "inference_mode": "tiled",
+  "tiled_profile": "wbf",
+  "post_nms_prediction_count": 5601
+}

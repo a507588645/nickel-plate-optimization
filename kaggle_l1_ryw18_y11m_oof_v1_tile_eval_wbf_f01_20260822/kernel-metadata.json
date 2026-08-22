@@ -1,0 +1,20 @@
+{
+  "id": "lly3323w/l1-ryw18-y11m-oof-v1-tile-eval-wbf-f01",
+  "title": "L1 RYW18 Y11m OOF v1 Tile Eval WBF F01",
+  "code_file": "l1-ryw18-y11m-oof-v1-tile-eval-wbf-f01.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "lly3323w/dianjienie",
+    "lly3323w/dianjienie-ryw18-oof-consensus-v1-dev-config",
+    "lly3323w/dianjienie-ryw18-oof-yolo11m-fold01-640-weight",
+    "lly3323w/dianjienie-ryw18-oof-y11m-tile-f01-v3-ckpt"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

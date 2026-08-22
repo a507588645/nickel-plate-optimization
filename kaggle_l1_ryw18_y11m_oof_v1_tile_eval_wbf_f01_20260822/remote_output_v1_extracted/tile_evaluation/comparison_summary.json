@@ -1,0 +1,34 @@
+{
+  "baseline_full_mAP50_95": 0.16800147577890728,
+  "baseline_tiled_mAP50_95": 0.022954514709689358,
+  "tile_model_full_mAP50_95": 0.15649186588784664,
+  "tile_model_tiled_mAP50_95": 0.05222095894221763,
+  "primary_comparison": "tile_model_tiled minus baseline_full under the same custom original-image evaluator",
+  "primary_tiled_profile": "wbf_edge",
+  "tiled_profiles": {
+    "legacy": {
+      "baseline_tiled_mAP50_95": 0.023218699897628873,
+      "tile_model_tiled_mAP50_95": 0.06342712134036373,
+      "tile_model_tiled_minus_baseline_full_mAP50_95": -0.10457435443854356
+    },
+    "perclass_nms": {
+      "baseline_tiled_mAP50_95": 0.021882803849073238,
+      "tile_model_tiled_mAP50_95": 0.050408386791763,
+      "tile_model_tiled_minus_baseline_full_mAP50_95": -0.11759308898714428
+    },
+    "wbf": {
+      "baseline_tiled_mAP50_95": 0.019617039899426023,
+      "tile_model_tiled_mAP50_95": 0.050062610517828746,
+      "tile_model_tiled_minus_baseline_full_mAP50_95": -0.11793886526107854
+    },
+    "wbf_edge": {
+      "baseline_tiled_mAP50_95": 0.022954514709689358,
+      "tile_model_tiled_mAP50_95": 0.05222095894221763,
+      "tile_model_tiled_minus_baseline_full_mAP50_95": -0.11578051683668966
+    }
+  },
+  "attribution_files": {
+    "baseline": "tiled_attribution_baseline.json",
+    "tile_model": "tiled_attribution_tile_model.json"
+  }
+}

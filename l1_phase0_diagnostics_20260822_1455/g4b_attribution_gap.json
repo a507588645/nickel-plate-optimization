@@ -1,0 +1,36 @@
+{
+  "status": "inconclusive_no_per_box_details",
+  "archive_root": "E:\\PythonProject\\优化\\kaggle_l1_ryw18_y11m_oof_v1_tile1024_o25_eval_f01_20260822_r2\\remote_output_v1_extracted",
+  "archive_files": [
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_tile1024o25_focus6_mix_fold01_evaluation/README.md",
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_tile1024o25_focus6_mix_fold01_evaluation/environment.json",
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_tile1024o25_focus6_mix_fold01_evaluation/plan_summary.json",
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_tile1024o25_focus6_mix_fold01_evaluation/requested_config.json",
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_tile1024o25_focus6_mix_fold01_evaluation/tile_evaluation/baseline_full.json",
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_tile1024o25_focus6_mix_fold01_evaluation/tile_evaluation/baseline_tiled.json",
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_tile1024o25_focus6_mix_fold01_evaluation/tile_evaluation/comparison_summary.json",
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_tile1024o25_focus6_mix_fold01_evaluation/tile_evaluation/tile_model_full.json",
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_tile1024o25_focus6_mix_fold01_evaluation/tile_evaluation/tile_model_tiled.json"
+  ],
+  "detail_files": [],
+  "unavailable_statistics": [
+    "overlap_region_duplicate_ratio",
+    "confidence_below_025_ratio",
+    "edge_truncated_box_ratio"
+  ],
+  "aggregate_tiled_reports": {
+    "baseline_tiled": {
+      "post_nms_prediction_count": 1084406,
+      "precision_conf025_iou50_micro": 0.061417371633974774,
+      "recall_conf025_iou50_micro": 0.4099276111685626,
+      "mAP50_95": 0.023218699897628873
+    },
+    "tile_model_tiled": {
+      "post_nms_prediction_count": 375469,
+      "precision_conf025_iou50_micro": 0.2949058105598302,
+      "recall_conf025_iou50_micro": 0.45977249224405375,
+      "mAP50_95": 0.06342712134036373
+    }
+  },
+  "phase1_requirement": "Persist per-tile raw boxes before and after cross-tile merging so the Phase 0 attribution gate can be measured."
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "purpose": "Phase 1 development-only tiled evaluation post-processing",
+  "held_out_evaluation_fold": 1,
+  "calibration_folds": [
+    2,
+    3
+  ],
+  "selection_objective": "max_f1_at_iou50_then_higher_threshold",
+  "default_confidence": 0.25,
+  "minimum_support": 100,
+  "class_thresholds": {
+    "wuzi": 0.3,
+    "waterstain": 0.3,
+    "airhole": 0.2,
+    "bubble": 0.2,
+    "bump": 0.3,
+    "greenstain": 0.1,
+    "watermark": 0.3
+  },
+  "class_names": [
+    "wuzi",
+    "waterstain",
+    "yellowstain",
+    "nodule",
+    "airhole",
+    "bubble",
+    "bump",
+    "fawu",
+    "overfire",
+    "NiOH",
+    "greenstain",
+    "suanwuran",
+    "quejiao",
+    "watermark",
+    "youpao",
+    "heibian",
+    "mijixiaokeng",
+    "fanxitong"
+  ],
+  "development_only": true,
+  "frozen_test_set": null,
+  "source_raw_predictions": [
+    {
+      "path": "E:\\PythonProject\\优化\\l1_phase0_diagnostics_20260822_1455\\raw_predictions\\fold02.jsonl",
+      "sha256": "9d42f01d6b74018eb195b66962cf88700162ce5fb0bfdfcf4e9d82057f8963d9",
+      "images": 375,
+      "predictions_after_model_nms": 67592,
+      "fold": 2
+    },
+    {
+      "path": "E:\\PythonProject\\优化\\l1_phase0_diagnostics_20260822_1455\\raw_predictions\\fold03.jsonl",
+      "sha256": "bb729b1e53dafdc9e33d2054538a79d85318fc2086ec38e7e6e460dab7da335a",
+      "images": 376,
+      "predictions_after_model_nms": 45394,
+      "fold": 3
+    }
+  ],
+  "limitations": [
+    "Cross-fold calibration uses distinct model weights and is intended only to avoid selecting thresholds on Fold 1.",
+    "This profile does not establish a final deployment threshold or manual-label performance."
+  ]
+}

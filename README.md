@@ -58,6 +58,7 @@
 | `YOLO冻结与迁移学习指南.md` | 冻结 backbone、续训、权重兼容（勿跨架构硬 load） |
 | `旧数据与新三光数据混合训练指南.md` | 同镍种旧单光 + 新三光混合，防遗忘 |
 | `L1_Kaggle高分辨率验证计划.md` | L1-hr Kaggle-only 执行计划：本机不跑 medium 训练，优先验证 `imgsz=1280` 是否改善小目标 mAP |
+| `L1_小目标优化分阶段计划.md` | L1 小目标方向重启计划：Phase 0 本机诊断 → Phase 1 切片后处理修复评测 → Phase 2 切片 512 重训，各设闸门与硬约束，供其他 Agent 接手执行 |
 | `config/workspace.example.json` / `config/dataset_catalog.json` | 本机路径映射模板与逻辑数据集校验规则 | 真实 `workspace.local.json` 不提交；用 `validate_workspace.py` 验证 |
 
 ### C. 已完成实验记录（专项，非通用规范）
@@ -77,6 +78,7 @@
 | `experiments/dianjienie_ryw18_oofconsensus_v1_cv3_summary.md` | RYW18 OOF 共识候选 v1 的六个 run 归档、三折统一复评汇总与无人工候选训练决策 |
 | `experiments/dianjienie_ryw18_oofconsensus_v1_yolo11m_hr1280_fold01_kaggle.md` | L1-hr 1280 Fold 1 的 Kaggle 归档、同 Fold 640 对比与“不扩展三折”结论 |
 | `experiments/dianjienie_ryw18_oofconsensus_v1_yolo11m_tile1024o25_focus6_mix_fold01_kaggle.md` | L1 小目标切片 Fold 1 的中断训练证据、数据边界、独立原图映射评测口径与恢复入口 |
+| `experiments/dianjienie_ryw18_oofconsensus_v1_yolo11m_tile1024o25_phase1_wbfedge_fold01_kaggle.md` | L1 小目标 Phase 1 后处理评测的完整归档校验、逐框归因与停止切片路线结论 |
 | `l1_auto_gate_oofconsensusv1_20260809/report.md` | OOF 候选权重按未改动历史标签复评的自动非回退闸门、模型选择和边界 |
 | `类别体系清单_v1.md` | 全部数据集类别体系总览（ryw.pt 18 类 / dianjienie 17 类 / Dianjinie0211 与 slf.pt 5 类 / 等级分类 / 0309 缺陷目录）+ 缺口与处置候选 |
 | `ryw_pt模型身份与电积镍检测结果说明.md` | 明确 `ryw.pt` 是 YOLOv5 检测模型、`ryw.pth` 是 ResNet 分类模型，并汇总两个电积镍分类集的检测与硬编码结果 |
@@ -169,10 +171,13 @@
 | `l1_box_size_diag.py` | L1 锚点标签框尺寸诊断；默认从三折 `val.txt` 并集取 1,127 张开发图，不读取冻结 test，输出 `val_letterbox` 主口径与训练方形 resize 参考报告 |
 | `prepare_l1_oofconsensus_kaggle_kernel.py` | 生成私有 Kaggle 无 GPU 预检或单 Fold GPU Kernel；固定挂载旧图片集和 OOF 候选配置集，训练时强制 `--development-only` |
 | `prepare_l1_hr_kaggle_kernel.py` | 生成 L1-hr 的独立 Kaggle 预检或 GPU Kernel：YOLO11m、OOF 候选开发集、Fold 1，首选 `imgsz=1280`；不读取冻结历史测试集 |
-| `l1_tile_pipeline.py` | L1 小目标切片研究流水线：创建派生混合整图/切片视图、训练后或中断检查点评测的原图坐标回映射、全局 NMS 和同口径评测；不修改源图或源标签 |
+| `l1_tile_pipeline.py` | L1 小目标切片研究流水线：创建派生混合整图/切片视图、训练后或中断检查点评测的原图坐标回映射；默认保留 legacy 全局 NMS，并可研究性比较逐类阈值 NMS、WBF、边缘过滤及逐框归因；不修改源图或源标签 |
 | `prepare_l1_tile_baseline_weights.py` | 打包固定 Fold 1 640 OOF 基线权重为私有 Kaggle Dataset，供切片评测统一对照 |
 | `prepare_l1_tile_interrupted_checkpoints.py` | 打包已回收的 L1 切片中断检查点为私有 Kaggle Dataset，只供独立开发集评测或同配置分段续训 |
-| `prepare_l1_tile_kaggle_kernel.py` | 生成 L1 切片 CPU 预检、GPU 训练或中断检查点独立评测 Kernel，兼容 Kaggle 自动展开的扁平配置包，并在 working 目录重建临时配置视图 |
+| `prepare_l1_tile_kaggle_kernel.py` | 生成 L1 切片 CPU 预检、GPU 训练或中断检查点独立评测 Kernel；可嵌入 Phase 0 阈值 JSON 并转发 WBF/边缘过滤/逐框审计参数，兼容 Kaggle 自动展开的扁平配置包 |
+| `run_l1_phase0_diagnostics.py` | CPU-only L1 小目标 Phase 0：三折 OOF 原始预测持久化、逐类阈值扫描、PR 图与 G4b 逐框归因缺口审计；不读冻结集 |
+| `derive_l1_phase0_holdout_thresholds.py` | 从非目标 Fold 的 Phase 0 原始预测生成留出 Fold 专用阈值 JSON，避免在本 Fold 评测数据上挑阈值 |
+| `verify_l1_phase1_tile_evaluation.py` | 只读校验并安全解压 Phase 1 评测 ZIP：验证 SHA-256、CRC、开发集边界、权重、profile 和逐框明细，生成停止/继续闸门报告 |
 | `summarize_l1_oof_auto_gate.py` | 汇总 OOF 候选的三折自评与历史锚点自动非回退复评；只读归档 JSON，不访问 release-validation |
 | `select_l1_oof_final_epoch.py` | 从已归档的 YOLO11m OOF 三折曲线选择固定最终训练时长；本次结果固定为 83 epoch |
 | `train_l1_oof_final.py` | 在 OOF 候选的 1,127 张开发图上训练固定时长的 YOLO11m；发布权重固定为 `last.pt` 副本，不以最终开发集日志选择权重 |

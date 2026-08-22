@@ -19,6 +19,7 @@ BASELINE_DATASET_REF = "lly3323w/dianjienie-ryw18-oof-yolo11m-fold01-640-weight"
 BASELINE_WEIGHT_NAME = "baseline_fold01_640_best.pt"
 DEFAULT_CANDIDATE_DATASET_REF = "lly3323w/dianjienie-ryw18-oof-y11m-tile-f01-v3-ckpt"
 DEFAULT_CANDIDATE_WEIGHT_NAME = "tile_fold01_v3_best.pt"
+TILED_EVAL_PROFILES = ("legacy", "perclass_nms", "wbf", "wbf_edge")
 
 
 SCRIPT_TEMPLATE = Template(
@@ -40,6 +41,12 @@ MODE = "$mode"
 RUN_NAME = "$run_name"
 PIPELINE_SOURCE = $pipeline_source
 CANDIDATE_WEIGHT_NAME = "$candidate_weight_name"
+TILED_EVAL_PROFILES = "$tiled_eval_profiles"
+PRIMARY_TILED_PROFILE = "$primary_tiled_profile"
+WBF_IOU = $wbf_iou
+EDGE_MARGIN = $edge_margin
+SAVE_TILE_DETAILS = $save_tile_details
+PER_CLASS_CONF_CONFIG_TEXT = $per_class_conf_config_text
 
 
 def sha256_file(path: Path) -> str:
@@ -224,6 +231,13 @@ def main() -> None:
         install_dependencies()
     pipeline = Path("/kaggle/working/l1_tile_pipeline.py")
     pipeline.write_text(PIPELINE_SOURCE, encoding="utf-8")
+    per_class_conf_path = None
+    if PER_CLASS_CONF_CONFIG_TEXT is not None:
+        per_class_conf_path = Path("/kaggle/working/per_class_confidence_profile.json")
+        if per_class_conf_path.exists():
+            raise FileExistsError(f"Refusing to overwrite embedded confidence profile: {per_class_conf_path}")
+        # Persist the exact local Phase 0 profile used by this generated kernel.
+        per_class_conf_path.write_text(PER_CLASS_CONF_CONFIG_TEXT + "\n", encoding="utf-8")
     output_root = Path("/kaggle/working") / f"{RUN_NAME}_workspace"
     command = [
         sys.executable,
@@ -248,7 +262,15 @@ def main() -> None:
         "--workers", "8",
         "--seed", "0",
         "--patience", "100",
+        "--tiled-eval-profiles", TILED_EVAL_PROFILES,
+        "--primary-tiled-profile", PRIMARY_TILED_PROFILE,
+        "--wbf-iou", str(WBF_IOU),
+        "--edge-margin", str(EDGE_MARGIN),
     ]
+    if per_class_conf_path is not None:
+        command.extend(["--per-class-conf-json", str(per_class_conf_path)])
+    if SAVE_TILE_DETAILS:
+        command.append("--save-tile-details")
     if baseline_weights is not None:
         command.extend(["--baseline-weights", str(baseline_weights)])
     if candidate_weights is not None:
@@ -291,6 +313,20 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--owner", default="lly3323w")
     parser.add_argument("--candidate-dataset-ref", default=DEFAULT_CANDIDATE_DATASET_REF)
     parser.add_argument("--candidate-weight-name", default=DEFAULT_CANDIDATE_WEIGHT_NAME)
+    parser.add_argument(
+        "--tiled-eval-profiles",
+        default="legacy",
+        help="Comma-separated profiles forwarded to l1_tile_pipeline.py in evaluate/train modes.",
+    )
+    parser.add_argument("--primary-tiled-profile", default="legacy")
+    parser.add_argument(
+        "--per-class-conf-json",
+        type=Path,
+        help="Optional local JSON profile embedded into the generated Kaggle script.",
+    )
+    parser.add_argument("--wbf-iou", type=float, default=0.25)
+    parser.add_argument("--edge-margin", type=int, default=16)
+    parser.add_argument("--save-tile-details", action="store_true")
     parser.add_argument("--slug")
     parser.add_argument("--title")
     parser.add_argument("--output-root", type=Path)
@@ -303,6 +339,19 @@ def defaults(args: argparse.Namespace) -> tuple[str, str, str, Path]:
         raise ValueError("Invalid tile configuration")
     if not 0 < args.min_visible_fraction <= 1 or args.epochs <= 0 or args.imgsz <= 0 or args.batch <= 0:
         raise ValueError("Invalid training configuration")
+    profiles = tuple(profile.strip() for profile in args.tiled_eval_profiles.split(",") if profile.strip())
+    if not profiles or len(set(profiles)) != len(profiles):
+        raise ValueError("--tiled-eval-profiles must contain one or more unique profile names")
+    unknown_profiles = sorted(set(profiles) - set(TILED_EVAL_PROFILES))
+    if unknown_profiles:
+        raise ValueError(f"Unsupported tiled evaluation profile(s): {unknown_profiles}")
+    if args.primary_tiled_profile not in profiles:
+        raise ValueError("--primary-tiled-profile must be included in --tiled-eval-profiles")
+    if not 0 < args.wbf_iou <= 1 or args.edge_margin < 0:
+        raise ValueError("Invalid WBF or edge-filter configuration")
+    if args.per_class_conf_json is not None and not args.per_class_conf_json.is_file():
+        raise FileNotFoundError(f"Per-class confidence profile not found: {args.per_class_conf_json}")
+    args.tiled_eval_profiles = profiles
     overlap_code = int(args.overlap * 100)
     if args.mode == "train":
         default_slug = f"l1-ryw18-y11m-oof-v1-tile{args.tile_size}-o{overlap_code:02d}-b{args.batch}-e{args.epochs}-f01"
@@ -317,7 +366,7 @@ def defaults(args: argparse.Namespace) -> tuple[str, str, str, Path]:
         default_title = f"L1 RYW18 Y11m OOF v1 Tile{args.tile_size} O{overlap_code:02d} Eval F01"
     else:
         default_title = f"L1 RYW18 OOF v1 Tile{args.tile_size} O{overlap_code:02d} Preflight Fold01"
-    title = args.title or default_title
+    title = args.title or (slug.replace("-", " ") if args.slug else default_title)
     if not re.fullmatch(r"[a-z0-9][a-z0-9-]{2,62}", slug):
         raise ValueError("Kernel slug must be 3-63 lowercase letters, digits, or hyphens")
     run_name = f"dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_tile{args.tile_size}o{overlap_code:02d}_focus6_mix_fold01"
@@ -371,6 +420,15 @@ def main(argv: list[str] | None = None) -> int:
         args.mode in {"train", "evaluate"},
         args.candidate_dataset_ref if args.mode == "evaluate" else None,
     )
+    per_class_conf_config_text = "None"
+    if args.per_class_conf_json is not None:
+        try:
+            profile_payload = json.loads(args.per_class_conf_json.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            raise ValueError(f"Invalid per-class confidence JSON: {args.per_class_conf_json}") from exc
+        if not isinstance(profile_payload, dict):
+            raise ValueError("Per-class confidence profile must be a JSON object")
+        per_class_conf_config_text = repr(json.dumps(profile_payload, ensure_ascii=False, indent=2))
     script = textwrap.dedent(
         SCRIPT_TEMPLATE.substitute(
             mode=args.mode,
@@ -387,6 +445,12 @@ def main(argv: list[str] | None = None) -> int:
             imgsz=args.imgsz,
             batch=args.batch,
             predict_batch=args.predict_batch,
+            tiled_eval_profiles=",".join(args.tiled_eval_profiles),
+            primary_tiled_profile=args.primary_tiled_profile,
+            wbf_iou=args.wbf_iou,
+            edge_margin=args.edge_margin,
+            save_tile_details=repr(args.save_tile_details),
+            per_class_conf_config_text=per_class_conf_config_text,
         )
     )
     if output_root.exists():

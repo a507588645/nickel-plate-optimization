@@ -1,0 +1,132 @@
+{
+  "phase": "L1_small_object_phase0",
+  "device": "cpu",
+  "development_only": true,
+  "frozen_test_set": null,
+  "folds": [
+    {
+      "fold": 1,
+      "metrics_path": "E:\\PythonProject\\优化\\l1_reeval_yolo11m_oofconsensusv1_fold01\\metrics_per_class_reeval.json",
+      "weights": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_fold01\\weights\\best.pt",
+      "weights_sha256": "b00aad9cc8041424f0b1e7263a6c9a2be5675827fd7017fcdec395b40ccac0ce",
+      "view_root": "E:\\PythonProject\\优化\\l1_reeval_yolo11m_oofconsensusv1_fold01\\dataset_view",
+      "val_list": "E:\\PythonProject\\优化\\l1_reeval_yolo11m_oofconsensusv1_fold01\\dataset_view\\val.txt",
+      "val_images": 376
+    },
+    {
+      "fold": 2,
+      "metrics_path": "E:\\PythonProject\\优化\\l1_reeval_yolo11m_oofconsensusv1_fold02\\metrics_per_class_reeval.json",
+      "weights": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_fold02\\weights\\best.pt",
+      "weights_sha256": "7b8c766b54efd3b25a4a3c8c03f51cf85bfde7d999769d77332eca3ae2579a8d",
+      "view_root": "E:\\PythonProject\\优化\\l1_reeval_yolo11m_oofconsensusv1_fold02\\dataset_view",
+      "val_list": "E:\\PythonProject\\优化\\l1_reeval_yolo11m_oofconsensusv1_fold02\\dataset_view\\val.txt",
+      "val_images": 375
+    },
+    {
+      "fold": 3,
+      "metrics_path": "E:\\PythonProject\\优化\\l1_reeval_yolo11m_oofconsensusv1_fold03\\metrics_per_class_reeval.json",
+      "weights": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_fold03\\weights\\best.pt",
+      "weights_sha256": "6d0e39d87fc85d239ab3b2ec84fe027d072836e3715f8d6618999227544e044b",
+      "view_root": "E:\\PythonProject\\优化\\l1_reeval_yolo11m_oofconsensusv1_fold03\\dataset_view",
+      "val_list": "E:\\PythonProject\\优化\\l1_reeval_yolo11m_oofconsensusv1_fold03\\dataset_view\\val.txt",
+      "val_images": 376
+    }
+  ],
+  "g4b_attribution": {
+    "status": "inconclusive_no_per_box_details",
+    "archive_root": "E:\\PythonProject\\优化\\kaggle_l1_ryw18_y11m_oof_v1_tile1024_o25_eval_f01_20260822_r2\\remote_output_v1_extracted",
+    "archive_files": [
+      "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_tile1024o25_focus6_mix_fold01_evaluation/README.md",
+      "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_tile1024o25_focus6_mix_fold01_evaluation/environment.json",
+      "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_tile1024o25_focus6_mix_fold01_evaluation/plan_summary.json",
+      "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_tile1024o25_focus6_mix_fold01_evaluation/requested_config.json",
+      "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_tile1024o25_focus6_mix_fold01_evaluation/tile_evaluation/baseline_full.json",
+      "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_tile1024o25_focus6_mix_fold01_evaluation/tile_evaluation/baseline_tiled.json",
+      "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_tile1024o25_focus6_mix_fold01_evaluation/tile_evaluation/comparison_summary.json",
+      "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_tile1024o25_focus6_mix_fold01_evaluation/tile_evaluation/tile_model_full.json",
+      "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_tile1024o25_focus6_mix_fold01_evaluation/tile_evaluation/tile_model_tiled.json"
+    ],
+    "detail_files": [],
+    "unavailable_statistics": [
+      "overlap_region_duplicate_ratio",
+      "confidence_below_025_ratio",
+      "edge_truncated_box_ratio"
+    ],
+    "aggregate_tiled_reports": {
+      "baseline_tiled": {
+        "post_nms_prediction_count": 1084406,
+        "precision_conf025_iou50_micro": 0.061417371633974774,
+        "recall_conf025_iou50_micro": 0.4099276111685626,
+        "mAP50_95": 0.023218699897628873
+      },
+      "tile_model_tiled": {
+        "post_nms_prediction_count": 375469,
+        "precision_conf025_iou50_micro": 0.2949058105598302,
+        "recall_conf025_iou50_micro": 0.45977249224405375,
+        "mAP50_95": 0.06342712134036373
+      }
+    },
+    "phase1_requirement": "Persist per-tile raw boxes before and after cross-tile merging so the Phase 0 attribution gate can be measured."
+  },
+  "thresholds": [
+    0.001,
+    0.01,
+    0.025,
+    0.05,
+    0.075,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "inference": {
+    "imgsz": 640,
+    "batch": 4,
+    "conf_floor": 0.001,
+    "nms_iou": 0.7,
+    "max_det": 300
+  },
+  "output_root": "E:\\PythonProject\\优化\\l1_phase0_diagnostics_20260822_1455",
+  "fold_prediction_audit": [
+    {
+      "fold": 1,
+      "weights": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_fold01\\weights\\best.pt",
+      "weights_sha256": "b00aad9cc8041424f0b1e7263a6c9a2be5675827fd7017fcdec395b40ccac0ce",
+      "images": 376,
+      "raw_prediction_count_after_model_nms": 36840,
+      "raw_prediction_file": "E:\\PythonProject\\优化\\l1_phase0_diagnostics_20260822_1455\\raw_predictions\\fold01.jsonl"
+    },
+    {
+      "fold": 2,
+      "weights": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_fold02\\weights\\best.pt",
+      "weights_sha256": "7b8c766b54efd3b25a4a3c8c03f51cf85bfde7d999769d77332eca3ae2579a8d",
+      "images": 375,
+      "raw_prediction_count_after_model_nms": 67592,
+      "raw_prediction_file": "E:\\PythonProject\\优化\\l1_phase0_diagnostics_20260822_1455\\raw_predictions\\fold02.jsonl"
+    },
+    {
+      "fold": 3,
+      "weights": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_fold03\\weights\\best.pt",
+      "weights_sha256": "6d0e39d87fc85d239ab3b2ec84fe027d072836e3715f8d6618999227544e044b",
+      "images": 376,
+      "raw_prediction_count_after_model_nms": 45394,
+      "raw_prediction_file": "E:\\PythonProject\\优化\\l1_phase0_diagnostics_20260822_1455\\raw_predictions\\fold03.jsonl"
+    }
+  ],
+  "pooled_images": 1127,
+  "pooled_raw_predictions_after_model_nms": 149826,
+  "phase1_gate": {
+    "status": "inconclusive",
+    "reason": "G4b result ZIP does not retain per-box detail needed to measure duplicate, low-confidence, or edge-truncation shares.",
+    "next_requirement": "Phase 1 must persist those records before applying post-processing variants."
+  }
+}

@@ -52,3 +52,7 @@
 3. 结论是否足够进入下一闸道、交付或部署。
 
 历史实验不删除；若结论被更正，追加更正记录并保留原实验卡。
+
+## 6. 当前专项状态
+
+- `dianjienie_ryw18_oofconsensus_v1_yolo11m_tile1024o25_phase1_wbfedge_fold01_kaggle.md`：已完成且证据完整的单 Fold `auto_only` 停止闸门。后处理虽清除了大量低置信/边缘切片框，但所有切片 profile 仍显著低于固定整图基线；Phase 2/3 不启动。
