@@ -1,0 +1,18 @@
+{
+  "pair_root": "E:\\PythonProject\\优化\\l1_e2_mosaic_pair_20260822_r4",
+  "variants": {
+    "control": {
+      "kernel": "lly3323w/l1-ryw18-y11m-oof-v1-mosaic1-ft30-f01",
+      "run_name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01",
+      "mosaic": 1.0,
+      "script_sha256": "a7057073b35245b260190519777c02979c26e8cf0cddb028ff65fafd40b8aa65"
+    },
+    "candidate": {
+      "kernel": "lly3323w/l1-ryw18-y11m-oof-v1-mosaic0-ft30-f01",
+      "run_name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic0_ft30_fold01",
+      "mosaic": 0.0,
+      "script_sha256": "6213e015ebba27964d82d3f0bdcc42c22dc6123b165b38c200a9336acbbd5d25"
+    }
+  },
+  "common_contract_sha256": "81aa8ec127eacf528824a2bffd5778fe6ba8e959bd3f566988a552b371ffea84"
+}

@@ -1,0 +1,93 @@
+{
+  "pair_id": "l1_e2_mosaicpair_f01_ft30_v1",
+  "common_contract_sha256": "81aa8ec127eacf528824a2bffd5778fe6ba8e959bd3f566988a552b371ffea84",
+  "common_contract": {
+    "schema_version": 1,
+    "experiment": "L1 E2 paired Mosaic ablation",
+    "data_version": "oofconsensusv1",
+    "development_only": true,
+    "frozen_test_set": null,
+    "fold": 1,
+    "split_counts": {
+      "train": 751,
+      "val": 376,
+      "test_frozen": null
+    },
+    "base_checkpoint": {
+      "source": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_fold01\\weights\\best.pt",
+      "file_name": "baseline_fold01_640_best.pt",
+      "sha256": "b00aad9cc8041424f0b1e7263a6c9a2be5675827fd7017fcdec395b40ccac0ce"
+    },
+    "runtime_pins": {
+      "torch": "2.6.0+cu124",
+      "torchvision": "0.21.0",
+      "numpy": "1.26.4",
+      "ultralytics": "8.4.66"
+    },
+    "training": {
+      "epochs": 30,
+      "imgsz": 640,
+      "batch": 8,
+      "optimizer": "SGD",
+      "seed": 0,
+      "deterministic": true,
+      "resume": false,
+      "close_mosaic": 0,
+      "patience": 100,
+      "save_period": 1,
+      "lr0": 0.01,
+      "lrf": 0.01,
+      "momentum": 0.937,
+      "weight_decay": 0.0005,
+      "warmup_epochs": 3.0,
+      "augmentations_except_mosaic": {
+        "hsv_h": 0.015,
+        "hsv_s": 0.7,
+        "hsv_v": 0.4,
+        "translate": 0.1,
+        "scale": 0.5,
+        "fliplr": 0.5,
+        "mixup": 0.0,
+        "cutmix": 0.0,
+        "copy_paste": 0.0,
+        "auto_augment": "randaugment",
+        "erasing": 0.4
+      }
+    },
+    "evaluation": {
+      "entry": "l1_tile_pipeline.py --mode evaluate",
+      "pipeline_sha256": "7128b72c1e4fbd30d2cc25ce1daf051692f9da68a2933115540b2a5df863a1b8",
+      "model_weight": "best.pt",
+      "tile_size": 4096,
+      "overlap": 0.0,
+      "semantic": "one full-image crop per source image; no actual tiling or cross-tile WBF",
+      "fixed_baseline_full_mAP50_95": 0.16800147577890728,
+      "baseline_tolerance": 1e-06,
+      "focus_classes": [
+        "wuzi",
+        "waterstain",
+        "airhole",
+        "bubble",
+        "greenstain",
+        "watermark"
+      ]
+    },
+    "gate": {
+      "causal_mosaic_delta_mAP50_95_min": 0.01,
+      "utility_delta_vs_fixed_baseline_mAP50_95_min": 0.01,
+      "focus_recall_requirement": "candidate Mosaic=0 recall@0.25 must not decline versus Mosaic=1 control for every focus class"
+    }
+  },
+  "variant": {
+    "role": "control",
+    "mosaic": 1.0,
+    "kernel": "lly3323w/l1-ryw18-y11m-oof-v1-mosaic1-ft30-f01",
+    "run_name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01"
+  },
+  "expected_sibling": {
+    "role": "candidate",
+    "mosaic": 0.0,
+    "kernel": "lly3323w/l1-ryw18-y11m-oof-v1-mosaic0-ft30-f01",
+    "run_name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic0_ft30_fold01"
+  }
+}

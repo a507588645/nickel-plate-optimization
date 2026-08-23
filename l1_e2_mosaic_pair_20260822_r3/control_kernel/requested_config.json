@@ -1,0 +1,17 @@
+{
+  "experiment": "L1 E2 paired Mosaic ablation",
+  "status": "prepared_not_submitted_pending_user_gpu_confirmation",
+  "pair_id": "l1_e2_mosaicpair_f01_ft30_v1",
+  "role": "control",
+  "mosaic": 1.0,
+  "expected_sibling": {
+    "role": "candidate",
+    "mosaic": 0.0,
+    "kernel": "lly3323w/l1-ryw18-y11m-oof-v1-mosaic0-ft30-f01",
+    "run_name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic0_ft30_fold01"
+  },
+  "common_contract_sha256": "81aa8ec127eacf528824a2bffd5778fe6ba8e959bd3f566988a552b371ffea84",
+  "development_only": true,
+  "frozen_test_set": null,
+  "submission": "not performed; this generator contains no Kaggle API or push command"
+}

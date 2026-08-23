@@ -1,0 +1,58 @@
+{
+  "mode": "evaluate",
+  "run_name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic0_ft30_fold01",
+  "data_version": "oofconsensusv1",
+  "development_only": true,
+  "fold": 1,
+  "frozen_test_set": null,
+  "baseline_weights": "/kaggle/input/datasets/lly3323w/dianjienie-ryw18-oof-yolo11m-fold01-640-weight/baseline_fold01_640_best.pt",
+  "baseline_weights_sha256": "b00aad9cc8041424f0b1e7263a6c9a2be5675827fd7017fcdec395b40ccac0ce",
+  "candidate_weights": "/kaggle/working/runs/dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic0_ft30_fold01/weights/best.pt",
+  "candidate_weights_sha256": "f29c52c84daefe5ea6947dacc5835482b9a092ef40bae3ba715fb7cdc563ac08",
+  "tile_view": {
+    "tile_size": 4096,
+    "overlap": 0.0,
+    "negative_ratio": 0.0,
+    "min_visible_fraction": 1.0,
+    "focus_classes": [
+      "wuzi",
+      "waterstain",
+      "airhole",
+      "bubble",
+      "greenstain",
+      "watermark"
+    ],
+    "selection": "one best-covered tile per focus box; labels retain boxes with visible area >= min_visible_fraction"
+  },
+  "split_counts": {
+    "full_train_images": 751,
+    "full_val_images": 376,
+    "all_train_grid_tiles": 751,
+    "selected_focus_tiles": 718,
+    "sampled_negative_tiles": 0,
+    "mixed_training_images": 1469,
+    "val_inference_tiles": 376,
+    "test_frozen": null
+  },
+  "inference": {
+    "imgsz": 640,
+    "predict_batch": 8,
+    "device": "0",
+    "nms_iou": 0.7,
+    "tiled_postprocessing": {
+      "requested_profiles": [
+        "legacy"
+      ],
+      "primary_profile": "legacy",
+      "legacy_global_class_aware_nms_iou": 0.7,
+      "wbf_iou": 0.25,
+      "edge_margin_pixels": 16,
+      "per_class_confidence": {
+        "source": null,
+        "default_confidence": 0.25,
+        "class_thresholds": {},
+        "metadata": {}
+      }
+    }
+  }
+}

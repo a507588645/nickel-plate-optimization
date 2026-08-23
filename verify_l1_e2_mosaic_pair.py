@@ -24,6 +24,7 @@ ROOT = Path(__file__).resolve().parent
 DEFAULT_OUTPUT_ROOT = ROOT / "l1_e2_mosaic_pair_verification_20260822"
 EXPECTED_BASE_CHECKPOINT_SHA256 = "b00aad9cc8041424f0b1e7263a6c9a2be5675827fd7017fcdec395b40ccac0ce"
 EXPECTED_BASELINE_MAP50_95 = 0.16800147577890728
+EXPECTED_PIPELINE_SHA256 = "7128b72c1e4fbd30d2cc25ce1daf051692f9da68a2933115540b2a5df863a1b8"
 BASELINE_TOLERANCE = 1e-6
 CHUNK_SIZE = 1024 * 1024
 ROLES = ("control", "candidate")
@@ -33,6 +34,7 @@ EXPECTED_RUN_NAMES = {
     "candidate": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic0_ft30_fold01",
 }
 FOCUS_CLASSES = ("wuzi", "waterstain", "airhole", "bubble", "greenstain", "watermark")
+PAIR_VARIANT_ARGS_KEYS = {"mosaic", "name", "save_dir"}
 REQUIRED_FILES = (
     "weights/best.pt",
     "weights/last.pt",
@@ -181,6 +183,14 @@ def validate_archive(archive_path: Path, role: str, expected_base_hash: str) -> 
     mosaic = as_float(variant.get("mosaic"), f"{role}.contract.mosaic")
     if mosaic != EXPECTED_MOSAIC[role] or as_float(requested.get("mosaic"), f"{role}.requested.mosaic") != mosaic:
         raise ValueError(f"{role} Mosaic value is not the expected paired value")
+    sibling_role = "candidate" if role == "control" else "control"
+    sibling = contract.get("expected_sibling")
+    if not isinstance(sibling, dict) or sibling.get("role") != sibling_role:
+        raise ValueError(f"{role} expected sibling metadata is invalid")
+    if as_float(sibling.get("mosaic"), f"{role}.sibling.mosaic") != EXPECTED_MOSAIC[sibling_role]:
+        raise ValueError(f"{role} expected sibling Mosaic is invalid")
+    if sibling.get("run_name") != EXPECTED_RUN_NAMES[sibling_role]:
+        raise ValueError(f"{role} expected sibling run name is invalid")
     if requested.get("development_only") is not True or requested.get("frozen_test_set") is not None:
         raise ValueError(f"{role} violates the development-only boundary")
     if common.get("development_only") is not True or common.get("frozen_test_set") is not None:
@@ -190,6 +200,24 @@ def validate_archive(archive_path: Path, role: str, expected_base_hash: str) -> 
     base = common.get("base_checkpoint")
     if not isinstance(base, dict) or base.get("sha256") != expected_base_hash:
         raise ValueError(f"{role} base checkpoint hash does not match the frozen E2 base")
+    evaluation_contract = common.get("evaluation")
+    if not isinstance(evaluation_contract, dict):
+        raise ValueError(f"{role} evaluation contract is missing")
+    expected_evaluation = {
+        "entry": "l1_tile_pipeline.py --mode evaluate",
+        "pipeline_sha256": EXPECTED_PIPELINE_SHA256,
+        "model_weight": "best.pt",
+        "tile_size": 4096,
+        "overlap": 0.0,
+        "fixed_baseline_full_mAP50_95": EXPECTED_BASELINE_MAP50_95,
+    }
+    for key, expected in expected_evaluation.items():
+        actual = evaluation_contract.get(key)
+        if isinstance(expected, float):
+            if abs(as_float(actual, f"{role}.evaluation.{key}") - expected) > 1e-12:
+                raise ValueError(f"{role} evaluation contract field {key!r} differs")
+        elif actual != expected:
+            raise ValueError(f"{role} evaluation contract field {key!r} differs")
     training = common.get("training")
     if not isinstance(training, dict):
         raise ValueError(f"{role} common training contract is missing")
@@ -197,13 +225,47 @@ def validate_archive(archive_path: Path, role: str, expected_base_hash: str) -> 
     for key, expected in expected_training.items():
         if training.get(key) != expected:
             raise ValueError(f"{role} common training field {key!r} differs: {training.get(key)!r}")
-    for key, expected in {"epochs": 30, "imgsz": 640, "batch": 8, "optimizer": "SGD", "seed": 0, "deterministic": True, "resume": False, "close_mosaic": 0}.items():
+    expected_args = {
+        "epochs": 30,
+        "imgsz": 640,
+        "batch": 8,
+        "optimizer": "SGD",
+        "seed": 0,
+        "deterministic": True,
+        "resume": False,
+        "close_mosaic": 0,
+        "patience": 100,
+        "save_period": 1,
+        "lr0": 0.01,
+        "lrf": 0.01,
+        "momentum": 0.937,
+        "weight_decay": 0.0005,
+        "warmup_epochs": 3.0,
+        "hsv_h": 0.015,
+        "hsv_s": 0.7,
+        "hsv_v": 0.4,
+        "translate": 0.1,
+        "scale": 0.5,
+        "fliplr": 0.5,
+        "mixup": 0.0,
+        "cutmix": 0.0,
+        "copy_paste": 0.0,
+        "auto_augment": "randaugment",
+        "erasing": 0.4,
+    }
+    for key, expected in expected_args.items():
         if requested.get("training", {}).get(key) != expected:
+            # The concise requested_config records only the core run settings;
+            # the immutable pair contract and args.yaml carry the rest.
+            if key in {"lr0", "lrf", "momentum", "weight_decay", "warmup_epochs", "hsv_h", "hsv_s", "hsv_v", "translate", "scale", "fliplr", "mixup", "cutmix", "copy_paste", "auto_augment", "erasing"}:
+                continue
             raise ValueError(f"{role} requested training field {key!r} differs")
         if args_yaml.get(key) != expected:
             raise ValueError(f"{role} args.yaml field {key!r} differs: {args_yaml.get(key)!r}")
     if as_float(args_yaml.get("mosaic"), f"{role}.args.yaml.mosaic") != mosaic:
         raise ValueError(f"{role} args.yaml Mosaic differs from the pair contract")
+    if args_yaml.get("name") != expected_run_name:
+        raise ValueError(f"{role} args.yaml run name differs from the expected archive root")
     if requested.get("base_checkpoint_sha256") != expected_base_hash:
         raise ValueError(f"{role} requested base checkpoint hash differs")
     if len(train_lines) != 751 or len(val_lines) != 376 or set(train_lines) & set(val_lines):
@@ -225,6 +287,10 @@ def validate_archive(archive_path: Path, role: str, expected_base_hash: str) -> 
     baseline_map = as_float(baseline.get("mAP50_95"), f"{role}.baseline.mAP50_95")
     if abs(baseline_map - EXPECTED_BASELINE_MAP50_95) > BASELINE_TOLERANCE:
         raise ValueError(f"{role} full-image baseline did not reproduce: {baseline_map}")
+    if baseline.get("model_sha256") != expected_base_hash:
+        raise ValueError(f"{role} baseline full report used an unexpected weight")
+    if evaluation_summary.get("baseline_model_sha256") != expected_base_hash:
+        raise ValueError(f"{role} evaluation summary used an unexpected baseline weight")
     candidate_map = as_float(candidate.get("mAP50_95"), f"{role}.candidate.mAP50_95")
     if abs(as_float(evaluation_summary.get("candidate_best_mAP50_95"), f"{role}.summary.candidate_mAP") - candidate_map) > 1e-12:
         raise ValueError(f"{role} evaluation summary mAP disagrees with the candidate report")
@@ -251,6 +317,7 @@ def validate_archive(archive_path: Path, role: str, expected_base_hash: str) -> 
         "best_pt_sha256": best_hash,
         "runtime": {name: environment.get(name) for name in ("torch", "torchvision", "numpy", "ultralytics")},
         "split_counts_checked": {"train": len(train_lines), "val": len(val_lines)},
+        "nonvariant_args": {key: value for key, value in args_yaml.items() if key not in PAIR_VARIANT_ARGS_KEYS},
         "baseline_full_mAP50_95": baseline_map,
         "candidate_best_mAP50_95": candidate_map,
         "focus_recall_conf025_iou50": recalls,
@@ -292,6 +359,17 @@ def gate_decision(control: dict[str, Any], candidate: dict[str, Any]) -> dict[st
         raise ValueError("Control and candidate pair IDs differ")
     if control["common_contract_sha256"] != candidate["common_contract_sha256"]:
         raise ValueError("Control and candidate common contracts differ")
+    if control["nonvariant_args"] != candidate["nonvariant_args"]:
+        control_keys = set(control["nonvariant_args"])
+        candidate_keys = set(candidate["nonvariant_args"])
+        differing = sorted(
+            (control_keys | candidate_keys)
+            - {key for key in control_keys & candidate_keys if control["nonvariant_args"][key] == candidate["nonvariant_args"][key]}
+        )
+        raise ValueError(f"Control and candidate args.yaml differ outside Mosaic/run output fields: {differing}")
+    nonvariant_args_sha256 = hashlib.sha256(
+        canonical_json(control["nonvariant_args"]).encode("utf-8")
+    ).hexdigest()
     pair_delta = candidate["candidate_best_mAP50_95"] - control["candidate_best_mAP50_95"]
     utility_delta = candidate["candidate_best_mAP50_95"] - candidate["baseline_full_mAP50_95"]
     recall_deltas = {
@@ -311,6 +389,7 @@ def gate_decision(control: dict[str, Any], candidate: dict[str, Any]) -> dict[st
         "candidate_minus_control_mAP50_95": pair_delta,
         "candidate_minus_fixed_baseline_mAP50_95": utility_delta,
         "focus_recall_deltas_candidate_minus_control": recall_deltas,
+        "shared_nonvariant_args_sha256": nonvariant_args_sha256,
         "gate": {
             "causal_mosaic_delta_mAP50_95_min": 0.01,
             "focus_recall_non_degradation": True,

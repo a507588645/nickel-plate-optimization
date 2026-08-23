@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "purpose": "Local audit mirror of the immutable checkpoint reused by the paired E2 Mosaic ablation.",
+  "checkpoint": {
+    "file_name": "baseline_fold01_640_best.pt",
+    "sha256": "b00aad9cc8041424f0b1e7263a6c9a2be5675827fd7017fcdec395b40ccac0ce",
+    "source": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_fold01\\weights\\best.pt"
+  },
+  "common_contract_sha256": "81aa8ec127eacf528824a2bffd5778fe6ba8e959bd3f566988a552b371ffea84",
+  "development_only": true,
+  "frozen_test_set": null
+}

@@ -58,7 +58,7 @@
 | `YOLO冻结与迁移学习指南.md` | 冻结 backbone、续训、权重兼容（勿跨架构硬 load） |
 | `旧数据与新三光数据混合训练指南.md` | 同镍种旧单光 + 新三光混合，防遗忘 |
 | `L1_Kaggle高分辨率验证计划.md` | L1-hr Kaggle-only 执行计划：本机不跑 medium 训练，优先验证 `imgsz=1280` 是否改善小目标 mAP |
-| `L1_小目标优化分阶段计划.md` | L1 小目标方向重启计划：Phase 0 本机诊断 → Phase 1 切片后处理修复评测 → Phase 2 切片 512 重训，各设闸门与硬约束，供其他 Agent 接手执行 |
+| `L1_小目标优化分阶段计划.md` | L1 小目标研究计划：切片路线与 E2 Mosaic=0 均已停止；E1 双模型 OOF WBF 已保留，后续 E3/E4 均受独立闸门约束 |
 | `config/workspace.example.json` / `config/dataset_catalog.json` | 本机路径映射模板与逻辑数据集校验规则 | 真实 `workspace.local.json` 不提交；用 `validate_workspace.py` 验证 |
 
 ### C. 已完成实验记录（专项，非通用规范）
@@ -79,6 +79,7 @@
 | `experiments/dianjienie_ryw18_oofconsensus_v1_yolo11m_hr1280_fold01_kaggle.md` | L1-hr 1280 Fold 1 的 Kaggle 归档、同 Fold 640 对比与“不扩展三折”结论 |
 | `experiments/dianjienie_ryw18_oofconsensus_v1_yolo11m_tile1024o25_focus6_mix_fold01_kaggle.md` | L1 小目标切片 Fold 1 的中断训练证据、数据边界、独立原图映射评测口径与恢复入口 |
 | `experiments/dianjienie_ryw18_oofconsensus_v1_yolo11m_tile1024o25_phase1_wbfedge_fold01_kaggle.md` | L1 小目标 Phase 1 后处理评测的完整归档校验、逐框归因与停止切片路线结论 |
+| `experiments/dianjienie_ryw18_oofconsensus_v1_yolo11m_e2_mosaicpair_fold01_kaggle.md` | L1 E2 Mosaic 成对消融实验卡：完整成对验收后为 `not_passed_do_not_expand`，不扩展 Fold 2/3 |
 | `l1_auto_gate_oofconsensusv1_20260809/report.md` | OOF 候选权重按未改动历史标签复评的自动非回退闸门、模型选择和边界 |
 | `类别体系清单_v1.md` | 全部数据集类别体系总览（ryw.pt 18 类 / dianjienie 17 类 / Dianjinie0211 与 slf.pt 5 类 / 等级分类 / 0309 缺陷目录）+ 缺口与处置候选 |
 | `ryw_pt模型身份与电积镍检测结果说明.md` | 明确 `ryw.pt` 是 YOLOv5 检测模型、`ryw.pth` 是 ResNet 分类模型，并汇总两个电积镍分类集的检测与硬编码结果 |
@@ -177,7 +178,11 @@
 | `prepare_l1_tile_kaggle_kernel.py` | 生成 L1 切片 CPU 预检、GPU 训练或中断检查点独立评测 Kernel；可嵌入 Phase 0 阈值 JSON 并转发 WBF/边缘过滤/逐框审计参数，兼容 Kaggle 自动展开的扁平配置包 |
 | `run_l1_phase0_diagnostics.py` | CPU-only L1 小目标 Phase 0：三折 OOF 原始预测持久化、逐类阈值扫描、PR 图与 G4b 逐框归因缺口审计；不读冻结集 |
 | `run_l1_oof_dualmodel_wbf.py` | CPU-only L1 E1：严格按图配对同 Fold 的 YOLO11m/YOLO26m 原始 OOF 预测，补推理 YOLO26m、扫描固定四个 WBF IoU，并输出指标、哈希与无泄漏审计；不读冻结集 |
-| `prepare_l1_nomosaic_kaggle_kernel.py` | 仅本地生成 L1 E2 整图 Mosaic=0 微调的私有 Kaggle Kernel 和固定 Fold 1 检查点 Dataset staging；哈希校验、`resume=false`，不上传、不提交 |
+| `prepare_l1_nomosaic_kaggle_kernel.py` | E2 的历史单侧 Mosaic=0 staging，仅用于追溯；因缺少匹配对照，不得提交或用于结论 |
+| `prepare_l1_e2_mosaic_pair_kaggle_kernels.py` | **现行 E2 入口**：本地生成共享检查点审计镜像、Mosaic=1 对照和 Mosaic=0 候选的两个私有 Kaggle Kernel；固定共享契约，生成器本身不上传、不提交 |
+| `verify_l1_e2_mosaic_pair.py` | E2 完成后成对校验两个结果 ZIP：CRC、路径、共享契约、运行时、清单、权重、评测锚与逐类 Recall 后才输出自动闸门 |
+| `test_verify_l1_e2_mosaic_pair.py` | E2 成对归档校验器的合成端到端单元测试，不读取真实数据或权重 |
+| `collect_l1_e2_minimal_evidence.py` | 从包含无关大型工作区的 Kaggle E2 完整结果 ZIP 按中央目录范围读取必需成员，逐成员 CRC 校验后生成最小可验收证据 ZIP；不读取源数据集或改写 Kaggle 输出 |
 | `derive_l1_phase0_holdout_thresholds.py` | 从非目标 Fold 的 Phase 0 原始预测生成留出 Fold 专用阈值 JSON，避免在本 Fold 评测数据上挑阈值 |
 | `verify_l1_phase1_tile_evaluation.py` | 只读校验并安全解压 Phase 1 评测 ZIP：验证 SHA-256、CRC、开发集边界、权重、profile 和逐框明细，生成停止/继续闸门报告 |
 | `summarize_l1_oof_auto_gate.py` | 汇总 OOF 候选的三折自评与历史锚点自动非回退复评；只读归档 JSON，不访问 release-validation |

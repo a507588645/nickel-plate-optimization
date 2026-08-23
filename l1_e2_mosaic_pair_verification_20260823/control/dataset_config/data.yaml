@@ -1,0 +1,23 @@
+path: "/kaggle/working/dianjienie_ryw18_oofconsensusv1_e2_mosaicpair"
+train: "/kaggle/working/dianjienie_ryw18_oofconsensusv1_e2_mosaicpair/train.txt"
+val: "/kaggle/working/dianjienie_ryw18_oofconsensusv1_e2_mosaicpair/val.txt"
+nc: 18
+names:
+  0: wuzi
+  1: waterstain
+  2: yellowstain
+  3: nodule
+  4: airhole
+  5: bubble
+  6: bump
+  7: fawu
+  8: overfire
+  9: NiOH
+  10: greenstain
+  11: suanwuran
+  12: quejiao
+  13: watermark
+  14: youpao
+  15: heibian
+  16: mijixiaokeng
+  17: fanxitong

@@ -1,0 +1,52 @@
+{
+  "experiment": "L1 E2 paired Mosaic ablation",
+  "run_name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic0_ft30_fold01",
+  "pair_id": "l1_e2_mosaicpair_f01_ft30_v1",
+  "role": "candidate",
+  "mosaic": 0.0,
+  "data_version": "oofconsensusv1",
+  "development_only": true,
+  "frozen_test_set": null,
+  "fold": 1,
+  "split_counts": {
+    "train": 751,
+    "val": 376,
+    "test_frozen": null
+  },
+  "base_checkpoint": "/kaggle/input/datasets/lly3323w/dianjienie-ryw18-oof-yolo11m-fold01-640-weight/baseline_fold01_640_best.pt",
+  "base_checkpoint_sha256": "b00aad9cc8041424f0b1e7263a6c9a2be5675827fd7017fcdec395b40ccac0ce",
+  "training": {
+    "epochs": 30,
+    "imgsz": 640,
+    "batch": 8,
+    "optimizer": "SGD",
+    "seed": 0,
+    "deterministic": true,
+    "resume": false,
+    "mosaic": 0.0,
+    "close_mosaic": 0,
+    "save_period": 1,
+    "patience": 100
+  },
+  "evaluation": {
+    "pair_id": "l1_e2_mosaicpair_f01_ft30_v1",
+    "role": "candidate",
+    "mosaic": 0.0,
+    "evaluation_mode": "full_image",
+    "baseline_full_mAP50_95": 0.16800147577890728,
+    "candidate_best_mAP50_95": 0.1559475438321365,
+    "candidate_minus_fixed_baseline_mAP50_95": -0.01205393194677079,
+    "candidate_focus_recall_conf025_iou50": {
+      "wuzi": 0.30994152046783624,
+      "waterstain": 0.557230334432407,
+      "airhole": 0.17326732673267325,
+      "bubble": 0.21830985915492956,
+      "greenstain": 0.09090909090909091,
+      "watermark": 0.3947730398899587
+    },
+    "baseline_model_sha256": "b00aad9cc8041424f0b1e7263a6c9a2be5675827fd7017fcdec395b40ccac0ce",
+    "candidate_best_model_sha256": "f29c52c84daefe5ea6947dacc5835482b9a092ef40bae3ba715fb7cdc563ac08",
+    "tile_size": 4096,
+    "overlap": 0.0
+  }
+}

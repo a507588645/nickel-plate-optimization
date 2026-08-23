@@ -1,0 +1,158 @@
+{
+  "metric_protocol": {
+    "scope": "original-image evaluation after mapping tiled predictions back to source coordinates",
+    "iou_thresholds": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "prediction_confidence_floor": 0.001,
+    "precision_recall_confidence": 0.25,
+    "global_class_aware_nms_iou": 0.7,
+    "ap_interpolation": "101-point precision envelope"
+  },
+  "images": 376,
+  "precision_conf025_iou50_micro": 0.47079856972586415,
+  "recall_conf025_iou50_micro": 0.40847983453981385,
+  "mAP50": 0.3077213264159949,
+  "mAP50_95": 0.1559475438321365,
+  "per_class": {
+    "wuzi": {
+      "support": 855,
+      "ap50": 0.26614065623049443,
+      "ap50_95": 0.11270189246463931,
+      "precision_conf025_iou50": 0.43230016313213704,
+      "recall_conf025_iou50": 0.30994152046783624
+    },
+    "waterstain": {
+      "support": 2123,
+      "ap50": 0.5081284973092036,
+      "ap50_95": 0.3042888764794118,
+      "precision_conf025_iou50": 0.5023354564755839,
+      "recall_conf025_iou50": 0.557230334432407
+    },
+    "yellowstain": {
+      "support": 21,
+      "ap50": 0.0066006600660066,
+      "ap50_95": 0.00066006600660066,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "nodule": {
+      "support": 25,
+      "ap50": 0.7636373367066437,
+      "ap50_95": 0.3575686821909126,
+      "precision_conf025_iou50": 0.59375,
+      "recall_conf025_iou50": 0.76
+    },
+    "airhole": {
+      "support": 606,
+      "ap50": 0.13061718445250714,
+      "ap50_95": 0.05116739071208577,
+      "precision_conf025_iou50": 0.3409090909090909,
+      "recall_conf025_iou50": 0.17326732673267325
+    },
+    "bubble": {
+      "support": 142,
+      "ap50": 0.15887553801529267,
+      "ap50_95": 0.06570472262681669,
+      "precision_conf025_iou50": 0.28703703703703703,
+      "recall_conf025_iou50": 0.21830985915492956
+    },
+    "bump": {
+      "support": 82,
+      "ap50": 0.21097830424663974,
+      "ap50_95": 0.10714512031701329,
+      "precision_conf025_iou50": 0.3384615384615385,
+      "recall_conf025_iou50": 0.2682926829268293
+    },
+    "fawu": {
+      "support": 3,
+      "ap50": 0.0,
+      "ap50_95": 0.0,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "overfire": {
+      "support": 109,
+      "ap50": 0.25479077110963394,
+      "ap50_95": 0.1411090897012991,
+      "precision_conf025_iou50": 0.5166666666666667,
+      "recall_conf025_iou50": 0.28440366972477066
+    },
+    "NiOH": {
+      "support": 2,
+      "ap50": 0.0,
+      "ap50_95": 0.0,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "greenstain": {
+      "support": 99,
+      "ap50": 0.11368499266677694,
+      "ap50_95": 0.03243713748316735,
+      "precision_conf025_iou50": 0.3103448275862069,
+      "recall_conf025_iou50": 0.09090909090909091
+    },
+    "suanwuran": {
+      "support": 22,
+      "ap50": 0.6263567884387925,
+      "ap50_95": 0.5267328032546515,
+      "precision_conf025_iou50": 0.8,
+      "recall_conf025_iou50": 0.5454545454545454
+    },
+    "quejiao": {
+      "support": 14,
+      "ap50": 0.7404163493272404,
+      "ap50_95": 0.3148015570787848,
+      "precision_conf025_iou50": 0.7692307692307693,
+      "recall_conf025_iou50": 0.7142857142857143
+    },
+    "watermark": {
+      "support": 727,
+      "ap50": 0.3576450228912145,
+      "ap50_95": 0.187333641896306,
+      "precision_conf025_iou50": 0.5061728395061729,
+      "recall_conf025_iou50": 0.3947730398899587
+    },
+    "youpao": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "heibian": {
+      "support": 5,
+      "ap50": 0.4779477947794779,
+      "ap50_95": 0.1375621772703586,
+      "precision_conf025_iou50": 0.3333333333333333,
+      "recall_conf025_iou50": 0.2
+    },
+    "mijixiaokeng": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "fanxitong": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    }
+  },
+  "model_path": "/kaggle/working/runs/dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic0_ft30_fold01/weights/best.pt",
+  "model_sha256": "f29c52c84daefe5ea6947dacc5835482b9a092ef40bae3ba715fb7cdc563ac08",
+  "inference_mode": "full",
+  "post_nms_prediction_count": 29084
+}

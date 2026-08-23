@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "purpose": "minimal evidence archive for L1 E2 paired Mosaic verification",
+  "source": {
+    "kernel": "lly3323w/l1-ryw18-y11m-oof-v1-mosaic1-ft30-f01",
+    "archive_name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01_results.zip",
+    "download_endpoint": "https://www.kaggle.com/api/v1/kernels/output/download/lly3323w/l1-ryw18-y11m-oof-v1-mosaic1-ft30-f01/dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01_results.zip",
+    "total_bytes": 2319574613,
+    "full_archive_sha256": null,
+    "full_archive_sha256_note": "Not available because only required ZIP members were range-read."
+  },
+  "run_name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01",
+  "required_members": [
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/weights/best.pt",
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/weights/last.pt",
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/args.yaml",
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/requested_config.json",
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/e2_pair_contract.json",
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/environment.json",
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/results.csv",
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/README.md",
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/dataset_config/data.yaml",
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/dataset_config/train.txt",
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/dataset_config/val.txt",
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/evaluation/evaluation_summary.json",
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/evaluation/tile_evaluation/baseline_full.json",
+    "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/evaluation/tile_evaluation/tile_model_full.json"
+  ],
+  "selected_members": [
+    {
+      "name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/weights/best.pt",
+      "source_compression": 8,
+      "source_crc32": "983c131b",
+      "source_compressed_size": 37363670,
+      "source_uncompressed_size": 40532901,
+      "source_local_header_offset": 2058373805,
+      "sha256": "253f0431cfc179ddc77f95d420266896132c0f1239a4076e227ebab7ad165eeb"
+    },
+    {
+      "name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/weights/last.pt",
+      "source_compression": 8,
+      "source_crc32": "2f4e4791",
+      "source_compressed_size": 37361872,
+      "source_uncompressed_size": 40532901,
+      "source_local_header_offset": 1200218264,
+      "sha256": "d022cb44b15ad9a9dcfdd19178f8f6bd20d0df762a954dee235965c44d2c2d56"
+    },
+    {
+      "name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/args.yaml",
+      "source_compression": 8,
+      "source_crc32": "3538f7e8",
+      "source_compressed_size": 866,
+      "source_uncompressed_size": 1889,
+      "source_local_header_offset": 4552016,
+      "sha256": "4988bef03ba9d4f04703d655c839f507610bba9b9f105de0564c3712a023c87b"
+    },
+    {
+      "name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/requested_config.json",
+      "source_compression": 8,
+      "source_crc32": "e076b446",
+      "source_compressed_size": 810,
+      "source_uncompressed_size": 1735,
+      "source_local_header_offset": 5393245,
+      "sha256": "3668d3013a8e8aa929563bd020e67673e1c1c8b7e57fc3b628d859b2e6d68bc9"
+    },
+    {
+      "name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/e2_pair_contract.json",
+      "source_compression": 8,
+      "source_crc32": "fafa6747",
+      "source_compressed_size": 1242,
+      "source_uncompressed_size": 2905,
+      "source_local_header_offset": 5850364,
+      "sha256": "54f14fabeb92698ff1f953900ec6296837104877c16e889dde1dbd54a11d67d4"
+    },
+    {
+      "name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/environment.json",
+      "source_compression": 8,
+      "source_crc32": "9c98a1fe",
+      "source_compressed_size": 166,
+      "source_uncompressed_size": 227,
+      "source_local_header_offset": 4236213,
+      "sha256": "3ce9baf8099541e288c7825a69d71e71b44a2ea9edba72c85e9af1bc48c6bd3a"
+    },
+    {
+      "name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/results.csv",
+      "source_compression": 8,
+      "source_crc32": "a4ccfec5",
+      "source_compressed_size": 1495,
+      "source_uncompressed_size": 3608,
+      "source_local_header_offset": 4236507,
+      "sha256": "c2a5c188f0b8534b151773d68132445a2a26f5e60d2b93beb96f11fd47296207"
+    },
+    {
+      "name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/README.md",
+      "source_compression": 8,
+      "source_crc32": "b0d0054e",
+      "source_compressed_size": 240,
+      "source_uncompressed_size": 353,
+      "source_local_header_offset": 4989282,
+      "sha256": "a9d62d777a0126b19614f55ed0e4eebe815866d8055b1d333d6272b5abeead94"
+    },
+    {
+      "name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/dataset_config/data.yaml",
+      "source_compression": 8,
+      "source_crc32": "f82cedfe",
+      "source_compressed_size": 244,
+      "source_uncompressed_size": 491,
+      "source_local_header_offset": 6201038,
+      "sha256": "67e88aff2d0bc9b3c8d305bf960c87723092ee3b3424ba59f0ccbd7a6f5f77b5"
+    },
+    {
+      "name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/dataset_config/train.txt",
+      "source_compression": 8,
+      "source_crc32": "f9c2902a",
+      "source_compressed_size": 4505,
+      "source_uncompressed_size": 38115,
+      "source_local_header_offset": 6203967,
+      "sha256": "dde70976f1864ebf6022f2595f33ec32c9b039d2ddbbd6946ab0ae24c30aa535"
+    },
+    {
+      "name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/dataset_config/val.txt",
+      "source_compression": 8,
+      "source_crc32": "3288d2fb",
+      "source_compressed_size": 2415,
+      "source_uncompressed_size": 19004,
+      "source_local_header_offset": 6201418,
+      "sha256": "dc2fc3162b0368a5bc193333c2e5457f666ad5a4f3144eb05e970ef590c744a1"
+    },
+    {
+      "name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/evaluation/evaluation_summary.json",
+      "source_compression": 8,
+      "source_crc32": "aac204d7",
+      "source_compressed_size": 427,
+      "source_uncompressed_size": 787,
+      "source_local_header_offset": 6209972,
+      "sha256": "f3fafd9083c0e19e8a5deefad67c6feaf2e5c84444c1474f93eff2d92ee41478"
+    },
+    {
+      "name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/evaluation/tile_evaluation/baseline_full.json",
+      "source_compression": 8,
+      "source_crc32": "d2539ed6",
+      "source_compressed_size": 1283,
+      "source_uncompressed_size": 4499,
+      "source_local_header_offset": 6213588,
+      "sha256": "b284c6876ae763a28626a80de00bdefd917e1263aeb1c7299a4421b45d0fd0a2"
+    },
+    {
+      "name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01/evaluation/tile_evaluation/tile_model_full.json",
+      "source_compression": 8,
+      "source_crc32": "7b8c4dc5",
+      "source_compressed_size": 1296,
+      "source_uncompressed_size": 4529,
+      "source_local_header_offset": 6216469,
+      "sha256": "ebd89ed98b7d3683c7376aeb67207fad1397f8b2d49ab6ba466c3f90d44fdbc4"
+    }
+  ],
+  "output_archive": "E:\\PythonProject\\优化\\l1_e2_mosaic_pair_minimal_evidence_20260823\\control_minimal_evidence.zip",
+  "output_archive_sha256": "01eb78411181f9b376f1b1653c2b408f09c53481c149162fc9429cf05d443cda",
+  "output_archive_bytes": 81148232
+}

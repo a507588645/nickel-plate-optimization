@@ -61,5 +61,12 @@ config/workspace.local.json
 raw_predictions/
 *_raw_*.jsonl
 *_raw_*.jsonl.gz
+# 带后缀的原始转储目录与融合预测转储（如 raw_predictions_yolo26/、fusion_predictions/）
+raw_predictions_*/
+fusion_predictions/
+# Kaggle 原始完整输出下载转储（数 GB ZIP 或分块临时文件，可由 Kernel 重新下载复现）
+*_kaggle_raw_*/
+*.zip.part
+*.chunk-*
 # 注意：kaggle_*/remote_output_v*/ 下的清单/标签/指标 JSON 是实验归档的一部分，保持入库；
 # 其中的 *.zip、*.jsonl.gz、raw_predictions/ 由上面规则自动排除。

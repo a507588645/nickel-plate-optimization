@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "data_version": "oofconsensusv1",
+  "development_only": true,
+  "fold": 1,
+  "model": "YOLO11m",
+  "imgsz": 640,
+  "source_weight": "E:\\PythonProject\\models\\runs\\dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_fold01\\weights\\best.pt",
+  "source_weight_sha256": "b00aad9cc8041424f0b1e7263a6c9a2be5675827fd7017fcdec395b40ccac0ce",
+  "purpose": "Fixed Fold 1 baseline for the original-image tiled evaluation protocol; not a final release model."
+}

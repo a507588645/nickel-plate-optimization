@@ -1,0 +1,21 @@
+{
+  "pair_id": "l1_e2_mosaicpair_f01_ft30_v1",
+  "role": "control",
+  "mosaic": 1.0,
+  "evaluation_mode": "full_image",
+  "baseline_full_mAP50_95": 0.16800147577890728,
+  "candidate_best_mAP50_95": 0.16246528343441785,
+  "candidate_minus_fixed_baseline_mAP50_95": -0.005536192344489432,
+  "candidate_focus_recall_conf025_iou50": {
+    "wuzi": 0.34152046783625734,
+    "waterstain": 0.5567593028732926,
+    "airhole": 0.18976897689768976,
+    "bubble": 0.23943661971830985,
+    "greenstain": 0.0707070707070707,
+    "watermark": 0.343878954607978
+  },
+  "baseline_model_sha256": "b00aad9cc8041424f0b1e7263a6c9a2be5675827fd7017fcdec395b40ccac0ce",
+  "candidate_best_model_sha256": "253f0431cfc179ddc77f95d420266896132c0f1239a4076e227ebab7ad165eeb",
+  "tile_size": 4096,
+  "overlap": 0.0
+}

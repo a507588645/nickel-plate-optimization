@@ -1,0 +1,7 @@
+{
+  "baseline_full_mAP50_95": 0.16800147577890728,
+  "baseline_tiled_mAP50_95": 0.16800147577890728,
+  "tile_model_full_mAP50_95": 0.16246528343441785,
+  "tile_model_tiled_mAP50_95": 0.16246528343441785,
+  "primary_comparison": "tile_model_tiled minus baseline_full under the same custom original-image evaluator"
+}

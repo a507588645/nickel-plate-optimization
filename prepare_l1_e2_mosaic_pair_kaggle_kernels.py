@@ -30,11 +30,15 @@ IMAGE_DATASET_REF = "lly3323w/dianjienie"
 CONFIG_DATASET_REF = "lly3323w/dianjienie-ryw18-oof-consensus-v1-dev-config"
 DEFAULT_OWNER = "lly3323w"
 DEFAULT_PAIR_ID = "l1_e2_mosaicpair_f01_ft30_v1"
-DEFAULT_DATASET_SLUG = "dianjienie-ryw18-oof-y11m-fold01-640-e2-mosaicpair-base"
-DEFAULT_DATASET_TITLE = "RYW18 OOF YOLO11m Fold01 E2 Mosaic Pair Base"
+DEFAULT_DATASET_SLUG = "dianjienie-ryw18-oof-yolo11m-fold01-640-weight"
+DEFAULT_DATASET_TITLE = "RYW18 OOF YOLO11m Fold01 640 Weight"
 # The first local draft remains intact for provenance.  This is the canonical
 # staging root after adding archive runtime evidence needed by pair validation.
-DEFAULT_PAIR_OUTPUT_ROOT = ROOT / "l1_e2_mosaic_pair_20260822_r2"
+# r2 used a Dataset slug that Kaggle rejected for exceeding its 50-character cap.
+# r3 was not uploaded because its new Dataset upload endpoint was unreachable.
+# r4 surfaced Kaggle's title-to-id validation. Reuse the already verified
+# private Dataset and keep titles that normalize to their fixed Kernel IDs.
+DEFAULT_PAIR_OUTPUT_ROOT = ROOT / "l1_e2_mosaic_pair_20260822_r5"
 BASELINE_FULL_MAP50_95 = 0.16800147577890728
 BASELINE_TOLERANCE = 1e-6
 PAIR_DELTA_THRESHOLD = 0.01
@@ -71,13 +75,13 @@ EXPECTED_CLASSES = (
 VARIANT_DEFAULTS = {
     "control": {
         "slug": "l1-ryw18-y11m-oof-v1-mosaic1-ft30-f01",
-        "title": "L1 RYW18 YOLO11m OOF v1 Mosaic 1 Control 30 Epoch Fold01",
+        "title": "L1 RYW18 Y11m OOF V1 Mosaic1 FT30 F01",
         "run_name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic1_ft30_fold01",
         "mosaic": 1.0,
     },
     "candidate": {
         "slug": "l1-ryw18-y11m-oof-v1-mosaic0-ft30-f01",
-        "title": "L1 RYW18 YOLO11m OOF v1 Mosaic 0 Candidate 30 Epoch Fold01",
+        "title": "L1 RYW18 Y11m OOF V1 Mosaic0 FT30 F01",
         "run_name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_mosaic0_ft30_fold01",
         "mosaic": 0.0,
     },
@@ -567,8 +571,8 @@ def write_json(path: Path, payload: Any) -> None:
 
 
 def validate_slug(value: str, field: str) -> str:
-    if not re.fullmatch(r"[a-z0-9][a-z0-9-]{2,62}", value):
-        raise ValueError(f"{field} must be 3-63 lowercase letters, digits, or hyphens")
+    if not re.fullmatch(r"[a-z0-9][a-z0-9-]{2,49}", value):
+        raise ValueError(f"{field} must be 3-50 lowercase letters, digits, or hyphens")
     return value
 
 
@@ -790,7 +794,7 @@ def create_checkpoint_dataset_staging(
         output_root / "checkpoint_manifest.json",
         {
             "schema_version": 1,
-            "purpose": "Shared immutable initialization checkpoint for the paired E2 Mosaic ablation; staging only.",
+            "purpose": "Local audit mirror of the immutable checkpoint reused by the paired E2 Mosaic ablation.",
             "checkpoint": {"file_name": CHECKPOINT_NAME, "sha256": actual_hash, "source": str(source_weight)},
             "common_contract_sha256": hashlib.sha256(canonical_json(common_contract).encode("utf-8")).hexdigest(),
             "development_only": True,
@@ -799,8 +803,9 @@ def create_checkpoint_dataset_staging(
     )
     (output_root / "README.md").write_text(
         "# L1 E2 paired Mosaic checkpoint staging\n\n"
-        "This private Dataset staging contains one immutable Fold 1 YOLO11m base checkpoint shared by the "
-        "Mosaic=1 control and Mosaic=0 candidate. It is local only and has not been uploaded.\n",
+        "This local audit mirror verifies the immutable Fold 1 YOLO11m base checkpoint shared by the "
+        "Mosaic=1 control and Mosaic=0 candidate. The Kernels reuse the already-uploaded private Dataset "
+        "identified by this staging metadata; this folder must not be uploaded as a new Dataset version.\n",
         encoding="utf-8",
     )
 
@@ -883,6 +888,7 @@ def main(argv: list[str] | None = None) -> int:
         "pair_root": str(pair_root),
         "checkpoint_dataset_root": str(pair_root / "checkpoint_dataset"),
         "checkpoint_dataset": checkpoint_dataset_ref,
+        "checkpoint_dataset_mode": "reuse_existing_private_dataset",
         "common_contract": common_contract,
         "variants": {
             role: {
@@ -920,9 +926,10 @@ def main(argv: list[str] | None = None) -> int:
     write_json(pair_root / "pair_contract_common.json", common_contract)
     (pair_root / "README.md").write_text(
         "# L1 E2 paired Mosaic ablation staging\n\n"
-        "Contains one shared checkpoint Dataset staging and two private Kernel stagings: Mosaic=1 control and "
-        "Mosaic=0 candidate. No Kaggle upload or submission has occurred. Submit both only after explicit GPU "
-        "authorization, then verify their completed archives together with `verify_l1_e2_mosaic_pair.py`.\n",
+        "Contains an audit mirror of one verified existing private checkpoint Dataset and two private Kernel "
+        "stagings: Mosaic=1 control and Mosaic=0 candidate. No new checkpoint Dataset upload is required. "
+        "Submit both only after explicit GPU authorization, then verify their completed archives together with "
+        "`verify_l1_e2_mosaic_pair.py`.\n",
         encoding="utf-8",
     )
     validation = validate_staging(pair_root, variants)

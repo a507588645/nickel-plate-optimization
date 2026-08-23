@@ -56,3 +56,4 @@
 ## 6. 当前专项状态
 
 - `dianjienie_ryw18_oofconsensus_v1_yolo11m_tile1024o25_phase1_wbfedge_fold01_kaggle.md`：已完成且证据完整的单 Fold `auto_only` 停止闸门。后处理虽清除了大量低置信/边缘切片框，但所有切片 profile 仍显著低于固定整图基线；Phase 2/3 不启动。
+- `dianjienie_ryw18_oofconsensus_v1_yolo11m_e2_mosaicpair_fold01_kaggle.md`：`complete`、`provisional`。两个完成 ZIP 的最小必需证据已逐成员 CRC 提取并通过成对合同校验；Mosaic=0 候选 mAP50-95 比 Mosaic=1 对照低 `0.006518`，且 `wuzi/airhole/bubble` Recall 下降，结论为 `not_passed_do_not_expand`，不启动 Fold 2/3。
