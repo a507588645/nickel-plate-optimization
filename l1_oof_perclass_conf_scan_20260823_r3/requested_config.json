@@ -1,0 +1,36 @@
+{
+  "command": "E:\\PythonProject\\models\\.venv\\Scripts\\python.exe run_l1_oof_perclass_conf_scan.py",
+  "phase0_root": "E:\\PythonProject\\优化\\l1_phase0_diagnostics_20260822_1455",
+  "e1_root": "E:\\PythonProject\\优化\\l1_oof_dualmodel_wbf_20260822_1830",
+  "base_threshold": 0.25,
+  "thresholds": [
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5
+  ],
+  "raw_conf_floor": 0.001,
+  "nms_iou": 0.7,
+  "focus_classes": [
+    "wuzi",
+    "waterstain",
+    "airhole",
+    "bubble",
+    "greenstain",
+    "watermark"
+  ],
+  "fixed_raw_anchors": {
+    "yolo26m": 0.148939031666318,
+    "wbf_iou_0.55": 0.16751980771806158
+  },
+  "development_only": true,
+  "frozen_test_set": null,
+  "new_inference": false,
+  "new_training": false
+}

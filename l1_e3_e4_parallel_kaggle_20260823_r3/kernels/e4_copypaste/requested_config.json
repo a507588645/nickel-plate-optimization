@@ -1,0 +1,40 @@
+{
+  "experiment": "L1 E4 Copy-Paste Fold 1",
+  "variant": "E4_COPYPASTE",
+  "status": "prepared_pending_submission",
+  "run_name": "dianjienie_medium_yolo11m_cp_640_kaggle_seed0_oofconsensusv1_fold01",
+  "development_only": true,
+  "auto_only": true,
+  "frozen_test_set": null,
+  "fold": 1,
+  "gpu_slots_authorized": 2,
+  "runtime_pins": {
+    "torch": "2.6.0+cu124",
+    "torchvision": "0.21.0",
+    "numpy": "1.26.4",
+    "ultralytics": "8.4.66"
+  },
+  "training": {
+    "epochs": 300,
+    "time_hours": 9.0,
+    "imgsz": 640,
+    "batch": 8,
+    "optimizer": "SGD",
+    "seed": 0,
+    "deterministic": true,
+    "resume": false,
+    "patience": 100,
+    "save_period": 1
+  },
+  "fixed_baseline": {
+    "sha256": "b00aad9cc8041424f0b1e7263a6c9a2be5675827fd7017fcdec395b40ccac0ce",
+    "full_image_mAP50_95": 0.16800147577890728
+  },
+  "pipeline_sha256": "7128b72c1e4fbd30d2cc25ce1daf051692f9da68a2933115540b2a5df863a1b8",
+  "gate": {
+    "screening_only": true,
+    "continue_only_if": "original-image Fold 1 mAP50-95 improves by at least 0.02 and rare-class AP/Recall improve without material regression; otherwise do not expand to Fold 2/3.",
+    "comparison": "fixed full-image evaluator and baseline SHA-256 only"
+  },
+  "submission": "not yet performed by this preparation script"
+}

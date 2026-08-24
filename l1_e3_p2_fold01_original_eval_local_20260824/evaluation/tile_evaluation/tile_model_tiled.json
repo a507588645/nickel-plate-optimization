@@ -1,0 +1,158 @@
+{
+  "metric_protocol": {
+    "scope": "original-image evaluation after mapping tiled predictions back to source coordinates",
+    "iou_thresholds": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "prediction_confidence_floor": 0.001,
+    "precision_recall_confidence": 0.25,
+    "global_class_aware_nms_iou": 0.7,
+    "ap_interpolation": "101-point precision envelope"
+  },
+  "images": 376,
+  "precision_conf025_iou50_micro": 0.37952784285456836,
+  "recall_conf025_iou50_micro": 0.4355739400206825,
+  "mAP50": 0.27001182043668176,
+  "mAP50_95": 0.1386461363318139,
+  "per_class": {
+    "wuzi": {
+      "support": 855,
+      "ap50": 0.2695390843857848,
+      "ap50_95": 0.11332994636017524,
+      "precision_conf025_iou50": 0.3503480278422274,
+      "recall_conf025_iou50": 0.3532163742690059
+    },
+    "waterstain": {
+      "support": 2123,
+      "ap50": 0.5083287792944415,
+      "ap50_95": 0.2948348968565798,
+      "precision_conf025_iou50": 0.3855098389982111,
+      "recall_conf025_iou50": 0.6090438059349976
+    },
+    "yellowstain": {
+      "support": 21,
+      "ap50": 0.08747696212427142,
+      "ap50_95": 0.008773346445844266,
+      "precision_conf025_iou50": 1.0,
+      "recall_conf025_iou50": 0.047619047619047616
+    },
+    "nodule": {
+      "support": 25,
+      "ap50": 0.5138441020690656,
+      "ap50_95": 0.26368275248659667,
+      "precision_conf025_iou50": 0.42424242424242425,
+      "recall_conf025_iou50": 0.56
+    },
+    "airhole": {
+      "support": 606,
+      "ap50": 0.14306731845706108,
+      "ap50_95": 0.05447304263068552,
+      "precision_conf025_iou50": 0.35379061371841153,
+      "recall_conf025_iou50": 0.1617161716171617
+    },
+    "bubble": {
+      "support": 142,
+      "ap50": 0.21538251963956395,
+      "ap50_95": 0.07945634237579738,
+      "precision_conf025_iou50": 0.23267326732673269,
+      "recall_conf025_iou50": 0.33098591549295775
+    },
+    "bump": {
+      "support": 82,
+      "ap50": 0.16481275177001423,
+      "ap50_95": 0.06667646643342359,
+      "precision_conf025_iou50": 0.26153846153846155,
+      "recall_conf025_iou50": 0.2073170731707317
+    },
+    "fawu": {
+      "support": 3,
+      "ap50": 0.0,
+      "ap50_95": 0.0,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "overfire": {
+      "support": 109,
+      "ap50": 0.1576319440486034,
+      "ap50_95": 0.0770073331478421,
+      "precision_conf025_iou50": 0.3392857142857143,
+      "recall_conf025_iou50": 0.1743119266055046
+    },
+    "NiOH": {
+      "support": 2,
+      "ap50": 0.03155940594059406,
+      "ap50_95": 0.02209158415841584,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "greenstain": {
+      "support": 99,
+      "ap50": 0.22981666774461804,
+      "ap50_95": 0.0808372084369626,
+      "precision_conf025_iou50": 0.43137254901960786,
+      "recall_conf025_iou50": 0.2222222222222222
+    },
+    "suanwuran": {
+      "support": 22,
+      "ap50": 0.5823780977885098,
+      "ap50_95": 0.45991524551249885,
+      "precision_conf025_iou50": 0.9230769230769231,
+      "recall_conf025_iou50": 0.5454545454545454
+    },
+    "quejiao": {
+      "support": 14,
+      "ap50": 0.5900983166273647,
+      "ap50_95": 0.2639228638551427,
+      "precision_conf025_iou50": 0.5294117647058824,
+      "recall_conf025_iou50": 0.6428571428571429
+    },
+    "watermark": {
+      "support": 727,
+      "ap50": 0.3483205645811264,
+      "ap50_95": 0.1699385410297199,
+      "precision_conf025_iou50": 0.44208809135399674,
+      "recall_conf025_iou50": 0.37276478679504815
+    },
+    "youpao": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "heibian": {
+      "support": 5,
+      "ap50": 0.2079207920792079,
+      "ap50_95": 0.12475247524752475,
+      "precision_conf025_iou50": 1.0,
+      "recall_conf025_iou50": 0.2
+    },
+    "mijixiaokeng": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    },
+    "fanxitong": {
+      "support": 0,
+      "ap50": null,
+      "ap50_95": null,
+      "precision_conf025_iou50": 0.0,
+      "recall_conf025_iou50": 0.0
+    }
+  },
+  "model_path": "E:\\PythonProject\\优化\\l1_e3_p2_v4_recovery_20260824_r2\\dianjienie_medium_yolo11m_p2_640_kaggle_seed0_oofconsensusv1_fold01\\weights\\best.pt",
+  "model_sha256": "4206ee85d9887a07f199fd7a046f1bc3ac22813ab9b672b6021b4ccd552e81c2",
+  "inference_mode": "tiled",
+  "post_nms_prediction_count": 92886
+}

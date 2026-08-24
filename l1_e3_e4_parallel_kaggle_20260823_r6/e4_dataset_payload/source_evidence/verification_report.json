@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "stage": "E4 Copy-Paste postbuild verification",
+  "source_root": "E:\\PythonProject\\优化\\dianjienie_ryw18_oofconsensus_v1_dev_only_r1",
+  "output_root": "E:\\PythonProject\\优化\\l1_e4_oofconsensus_v1_cp_v1_20260823",
+  "development_only": true,
+  "frozen_test_access": "not read; not linked; not included",
+  "auto_only": true,
+  "source_view_name": "dianjienie_ryw18_oofconsensus_v1_dev_only_r1",
+  "source_label_tree_sha256": "f2a443e46292d26eb685ea3ce50f66abc0709eb057c12254fea8232acb6bb423",
+  "build_manifest_sha256": "291cd5cc43c1fb47bd4fbe8623bf7a45d71762ecea60fbc19adab691f85a8751",
+  "folds": [
+    {
+      "fold": 1,
+      "original_hardlinks_verified": 1127,
+      "synthetic_samples_verified": 36,
+      "train_images": 787,
+      "val_images": 376,
+      "train_val_overlap": 0,
+      "manifest_sha256": "6a1a7dfc38fb5201b8bd8db7403f85ace8a5135e7e3446aee80ee561baa651a3"
+    },
+    {
+      "fold": 2,
+      "original_hardlinks_verified": 1127,
+      "synthetic_samples_verified": 30,
+      "train_images": 782,
+      "val_images": 375,
+      "train_val_overlap": 0,
+      "manifest_sha256": "0c2f0a3e3cf25a06f008e865a45f1ba71986e875c2de257fe30a25207694b074"
+    },
+    {
+      "fold": 3,
+      "original_hardlinks_verified": 1127,
+      "synthetic_samples_verified": 36,
+      "train_images": 787,
+      "val_images": 376,
+      "train_val_overlap": 0,
+      "manifest_sha256": "70ab4f2947c6bcf1952f987e8609456c11052d183bdfe422da81777f8a4beb97"
+    }
+  ],
+  "totals": {
+    "original_hardlinks_verified": 3381,
+    "synthetic_samples_verified": 102
+  },
+  "checks": [
+    "source view declares development_only and frozen test isolation",
+    "all original output images are NTFS hard links to source development images",
+    "all source and derived labels parse as valid five-column YOLO labels",
+    "each Fold keeps its source val list unchanged and appends synthetic images only to train",
+    "every donor and target is a source train member for that same Fold",
+    "each recorded patch and pasted box has zero intersection with all original target labels",
+    "pasted dimensions equal donor pixel-box dimensions at target normalization, proving no resize"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "purpose": "Version 3 retry record for exactly two user-authorized L1 Fold 1 Kaggle GPU screening jobs.",
+  "max_parallel_gpu_jobs": 2,
+  "submission_date": "2026-08-23",
+  "initial_status_checked_at": "2026-08-23T16:06:09+08:00",
+  "frozen_test_set": null,
+  "supersedes": "E:/PythonProject/优化/l1_e3_e4_parallel_kaggle_20260823_r7/submission_record.json",
+  "jobs": [
+    {
+      "variant": "E3_P2",
+      "kaggle_kernel": "lly3323w/l1-ryw18-y11m-p2-e3-fold01",
+      "kernel_version": 3,
+      "initial_status": "KernelWorkerStatus.RUNNING",
+      "code_sha256": "29533de3925153efad984d57a0b1b7f3203038af0939410b66a2ba3c4b398723",
+      "training_time_hours": null,
+      "retry_change": "Remove the explicit Ultralytics time argument; retain the version 2 workers=0 and one-epoch P2 preflight."
+    },
+    {
+      "variant": "E4_COPYPASTE",
+      "kaggle_kernel": "lly3323w/l1-ryw18-y11m-cp-e4-fold01",
+      "kernel_version": 3,
+      "initial_status": "KernelWorkerStatus.RUNNING",
+      "code_sha256": "fb0d134545d1c6eaddf6a786af956519d56ef61242c7e99e6c2a685ca5066cba",
+      "training_time_hours": null,
+      "retry_change": "Remove the explicit Ultralytics time argument; retain the verified payload-path de-duplication."
+    }
+  ],
+  "note": "Version 2 ended in ERROR with the same low-level segmentation fault in both formal training calls. Version 3 replaces the same two kernels; no third GPU job or persistent local monitor was created."
+}

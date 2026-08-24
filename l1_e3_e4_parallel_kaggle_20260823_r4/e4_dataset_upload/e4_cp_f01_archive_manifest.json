@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "experiment": "L1 E4 Copy-Paste Fold 1 Kaggle archive wrapper",
+  "archive": "e4_cp_f01_payload_v1.zip",
+  "sha256": "ec02c1ce6ee8acfe8aba0a5093e8f71d7e65c1a0037d8c06b0dd39cf7debe02c",
+  "payload_manifest_sha256": "84725bc59996619563a330aa8e132ecca9fdbdab08649792a0988e37be587b77",
+  "payload_file_count": 1208,
+  "development_only": true,
+  "frozen_test_set": null
+}

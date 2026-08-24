@@ -58,7 +58,7 @@
 | `YOLO冻结与迁移学习指南.md` | 冻结 backbone、续训、权重兼容（勿跨架构硬 load） |
 | `旧数据与新三光数据混合训练指南.md` | 同镍种旧单光 + 新三光混合，防遗忘 |
 | `L1_Kaggle高分辨率验证计划.md` | L1-hr Kaggle-only 执行计划：本机不跑 medium 训练，优先验证 `imgsz=1280` 是否改善小目标 mAP |
-| `L1_小目标优化分阶段计划.md` | L1 小目标研究计划：切片路线与 E2 Mosaic=0 均已停止；E1 双模型 OOF WBF 已保留，后续 E3/E4 均受独立闸门约束 |
+| `L1_小目标优化分阶段计划.md` | L1 小目标研究计划：切片路线、E2 Mosaic=0 与 E1b 严格原始锚点扫描均已停止；E1 WBF 保留，E3 P2 与 E4 Copy-Paste Fold 1 正在两个 GPU 槽并行筛选，仍受独立自动闸门约束 |
 | `config/workspace.example.json` / `config/dataset_catalog.json` | 本机路径映射模板与逻辑数据集校验规则 | 真实 `workspace.local.json` 不提交；用 `validate_workspace.py` 验证 |
 
 ### C. 已完成实验记录（专项，非通用规范）
@@ -80,6 +80,7 @@
 | `experiments/dianjienie_ryw18_oofconsensus_v1_yolo11m_tile1024o25_focus6_mix_fold01_kaggle.md` | L1 小目标切片 Fold 1 的中断训练证据、数据边界、独立原图映射评测口径与恢复入口 |
 | `experiments/dianjienie_ryw18_oofconsensus_v1_yolo11m_tile1024o25_phase1_wbfedge_fold01_kaggle.md` | L1 小目标 Phase 1 后处理评测的完整归档校验、逐框归因与停止切片路线结论 |
 | `experiments/dianjienie_ryw18_oofconsensus_v1_yolo11m_e2_mosaicpair_fold01_kaggle.md` | L1 E2 Mosaic 成对消融实验卡：完整成对验收后为 `not_passed_do_not_expand`，不扩展 Fold 2/3 |
+| `experiments/dianjienie_ryw18_oofconsensus_v1_e1b_perclass_confscan_20260823.md` | L1 E1b 逐类别阈值扫描：局部运行对照有召回候选，但相对固定原始 E1 锚点为 `not_passed_strict_fixed_anchor` |
 | `l1_auto_gate_oofconsensusv1_20260809/report.md` | OOF 候选权重按未改动历史标签复评的自动非回退闸门、模型选择和边界 |
 | `类别体系清单_v1.md` | 全部数据集类别体系总览（ryw.pt 18 类 / dianjienie 17 类 / Dianjinie0211 与 slf.pt 5 类 / 等级分类 / 0309 缺陷目录）+ 缺口与处置候选 |
 | `ryw_pt模型身份与电积镍检测结果说明.md` | 明确 `ryw.pt` 是 YOLOv5 检测模型、`ryw.pth` 是 ResNet 分类模型，并汇总两个电积镍分类集的检测与硬编码结果 |
@@ -183,6 +184,11 @@
 | `verify_l1_e2_mosaic_pair.py` | E2 完成后成对校验两个结果 ZIP：CRC、路径、共享契约、运行时、清单、权重、评测锚与逐类 Recall 后才输出自动闸门 |
 | `test_verify_l1_e2_mosaic_pair.py` | E2 成对归档校验器的合成端到端单元测试，不读取真实数据或权重 |
 | `collect_l1_e2_minimal_evidence.py` | 从包含无关大型工作区的 Kaggle E2 完整结果 ZIP 按中央目录范围读取必需成员，逐成员 CRC 校验后生成最小可验收证据 ZIP；不读取源数据集或改写 Kaggle 输出 |
+| `run_l1_oof_perclass_conf_scan.py` | CPU-only L1 E1b：只重评 Phase 0/E1 持久化 OOF 预测的单类别置信度覆盖，明确区分运行阈值对照与固定原始 mAP 锚点；不读冻结集、不做新推理 |
+| `l1_e3_p2_smoke_20260823/run_l1_e3_p2_smoke.py` | E3 原生 Ultralytics P2 检测头零 GPU 冒烟：校验 YAML、构建、合成前反向与参数/FLOPs，不训练、不读数据集 |
+| `build_l1_e4_copypaste_dataset.py` | E4 Copy-Paste 派生视图构建器：按 Fold 隔离、原图硬链接、训练内供体/目标、原始像素尺度与零标签相交；支持 `--dry-run` |
+| `verify_l1_e4_copypaste_dataset.py` | 独立验证 E4 派生视图的冻结边界、硬链接、训练/验证隔离、五列标签、供体/目标和粘贴记录 |
+| `prepare_l1_e3_e4_parallel_kaggle.py` | 生成 E3 P2 与 E4 Copy-Paste 的两条 Kaggle Fold 1 筛选任务包；固定开发集边界、9 小时时间上限、原图级评测器和自动闸门，生成器本身不提交任务 |
 | `derive_l1_phase0_holdout_thresholds.py` | 从非目标 Fold 的 Phase 0 原始预测生成留出 Fold 专用阈值 JSON，避免在本 Fold 评测数据上挑阈值 |
 | `verify_l1_phase1_tile_evaluation.py` | 只读校验并安全解压 Phase 1 评测 ZIP：验证 SHA-256、CRC、开发集边界、权重、profile 和逐框明细，生成停止/继续闸门报告 |
 | `summarize_l1_oof_auto_gate.py` | 汇总 OOF 候选的三折自评与历史锚点自动非回退复评；只读归档 JSON，不访问 release-validation |

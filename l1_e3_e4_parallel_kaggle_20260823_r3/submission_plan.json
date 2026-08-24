@@ -1,0 +1,28 @@
+{
+  "created_at_utc": "2026-08-23T05:48:00.979291+00:00",
+  "purpose": "Prepare exactly two user-authorized parallel Kaggle GPU jobs: E3 P2 Fold 1 and E4 Copy-Paste Fold 1.",
+  "max_parallel_gpu_jobs": 2,
+  "jobs": [
+    {
+      "variant": "E3_P2",
+      "kernel": "lly3323w/l1-ryw18-y11m-p2-e3-f01",
+      "training_time_hours": 9.0
+    },
+    {
+      "variant": "E4_COPYPASTE",
+      "kernel": "lly3323w/l1-ryw18-y11m-cp-e4-f01",
+      "training_time_hours": 9.0
+    }
+  ],
+  "development_only": true,
+  "frozen_test_set": null,
+  "evidence": {
+    "p2_yaml_sha256": "1738eb00730cd0403f291a954b2e0f19a77d9fb3ad83dc1bce353743e3acf5ac",
+    "p2_smoke_sha256": "899711721181ed875aed2e538df249b4b3a14dea52a80ec3b10fc23067f13b77",
+    "pipeline_sha256": "7128b72c1e4fbd30d2cc25ce1daf051692f9da68a2933115540b2a5df863a1b8",
+    "dev_config_manifest_sha256": "349c3629f0ade7b8397b42a1cc3926a904daa2e5d117219381f6afbc03cd0e14",
+    "baseline_weight_sha256": "b00aad9cc8041424f0b1e7263a6c9a2be5675827fd7017fcdec395b40ccac0ce",
+    "e4_build_manifest_sha256": "291cd5cc43c1fb47bd4fbe8623bf7a45d71762ecea60fbc19adab691f85a8751",
+    "e4_verification_report_sha256": "628c7fba9d7f2bd3e7beb978838ba5ebb3839e28cf05f974fe41f81ca5f5d30b"
+  }
+}

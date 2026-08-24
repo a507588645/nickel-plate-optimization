@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "purpose": "E1b per-class confidence threshold scan from persisted OOF predictions",
+  "development_only": true,
+  "frozen_test_set": null,
+  "release_validation_access": "not read; not mounted; not linked; not evaluated",
+  "no_new_inference": true,
+  "no_training": true,
+  "scan_mode": "one_focus_class_override_other_classes_fixed_at_base_threshold",
+  "base_threshold": 0.25,
+  "thresholds": [
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5
+  ],
+  "focus_classes": [
+    "wuzi",
+    "waterstain",
+    "airhole",
+    "bubble",
+    "greenstain",
+    "watermark"
+  ],
+  "raw_conf_floor": 0.001,
+  "nms_iou": 0.7,
+  "pooled_images": 1127,
+  "expected_prediction_counts": {
+    "phase0_yolo11m": 149826,
+    "yolo26m": 100292,
+    "wbf_iou_0.55": 169187
+  },
+  "actual_prediction_counts": {
+    "phase0_yolo11m": 149826,
+    "yolo26m": 100292,
+    "wbf_iou_0.55": 169187
+  },
+  "phase0_folds": [
+    {
+      "fold": 1,
+      "path": "E:\\PythonProject\\优化\\l1_phase0_diagnostics_20260822_1455\\raw_predictions\\fold01.jsonl",
+      "sha256": "99c6675247322841fa4cd7ec8f8ebfa589199f1b7d5a4784a3679ab335a89529",
+      "images": 376,
+      "predictions_after_model_nms": 36840,
+      "targets": 4835
+    },
+    {
+      "fold": 2,
+      "path": "E:\\PythonProject\\优化\\l1_phase0_diagnostics_20260822_1455\\raw_predictions\\fold02.jsonl",
+      "sha256": "9d42f01d6b74018eb195b66962cf88700162ce5fb0bfdfcf4e9d82057f8963d9",
+      "images": 375,
+      "predictions_after_model_nms": 67592,
+      "targets": 5453
+    },
+    {
+      "fold": 3,
+      "path": "E:\\PythonProject\\优化\\l1_phase0_diagnostics_20260822_1455\\raw_predictions\\fold03.jsonl",
+      "sha256": "bb729b1e53dafdc9e33d2054538a79d85318fc2086ec38e7e6e460dab7da335a",
+      "images": 376,
+      "predictions_after_model_nms": 45394,
+      "targets": 5383
+    }
+  ],
+  "yolo26_folds": [
+    {
+      "fold": 1,
+      "path": "E:\\PythonProject\\优化\\l1_oof_dualmodel_wbf_20260822_1830\\raw_predictions_yolo26\\fold01.jsonl",
+      "sha256": "95b881595b4a0a953e580b04cf5efc12a904b81d6ee12ab660432a29a6ade18b",
+      "images": 376,
+      "predictions_after_model_nms": 41172,
+      "targets": 4835
+    },
+    {
+      "fold": 2,
+      "path": "E:\\PythonProject\\优化\\l1_oof_dualmodel_wbf_20260822_1830\\raw_predictions_yolo26\\fold02.jsonl",
+      "sha256": "1f93500c0b5e96f1fc4b84a0576bef584abf7ea7eddb4afee9f1e94bd45ee52c",
+      "images": 375,
+      "predictions_after_model_nms": 28401,
+      "targets": 5453
+    },
+    {
+      "fold": 3,
+      "path": "E:\\PythonProject\\优化\\l1_oof_dualmodel_wbf_20260822_1830\\raw_predictions_yolo26\\fold03.jsonl",
+      "sha256": "e8e778de6d9823bce03e9f4ad5f3831c31708e3be835e67c601f351416988668",
+      "images": 376,
+      "predictions_after_model_nms": 30719,
+      "targets": 5383
+    }
+  ],
+  "wbf_iou_0.55": {
+    "path": "E:\\PythonProject\\优化\\l1_oof_dualmodel_wbf_20260822_1830\\fusion_predictions\\wbf_iou_0.55.jsonl",
+    "sha256": "fe5d6f9cfc1d8d4c1fcd4e7a0255e2c2f6c24a6dc1eaab4b6cf2b1638c78bab8",
+    "images": 1127,
+    "predictions_after_model_nms": 169187,
+    "targets": 15671
+  },
+  "sources_aligned_to_phase0_targets": true
+}

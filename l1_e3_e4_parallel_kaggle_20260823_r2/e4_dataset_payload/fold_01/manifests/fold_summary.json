@@ -1,0 +1,35 @@
+{
+  "fold": 1,
+  "original_train_images": 751,
+  "original_val_images": 376,
+  "candidate_donors_by_class": {
+    "yellowstain": 5,
+    "nodule": 42,
+    "fawu": 0,
+    "NiOH": 0,
+    "suanwuran": 3,
+    "quejiao": 2,
+    "heibian": 1,
+    "mijixiaokeng": 5
+  },
+  "selected_synthetic_by_class": {
+    "yellowstain": 8,
+    "nodule": 8,
+    "fawu": 0,
+    "NiOH": 0,
+    "suanwuran": 6,
+    "quejiao": 4,
+    "heibian": 2,
+    "mijixiaokeng": 8
+  },
+  "selected_synthetic_total": 36,
+  "requested_synthetic_cap": 48,
+  "donor_rejections": {
+    "near_other_annotated_box": 42,
+    "too_large": 149
+  },
+  "donors_without_safe_target_placement": 0,
+  "train_images_after_augmentation": 787,
+  "val_images_after_augmentation": 376,
+  "synthetic_manifest_sha256": "6a1a7dfc38fb5201b8bd8db7403f85ace8a5135e7e3446aee80ee561baa651a3"
+}

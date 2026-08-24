@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-08-23T15:07:45+08:00",
+  "scope": "L1 E3/E4 Fold 1 Kaggle version 1 failure evidence",
+  "frozen_test_set": null,
+  "jobs": [
+    {
+      "variant": "E3_P2",
+      "kernel": "lly3323w/l1-ryw18-y11m-p2-e3-fold01",
+      "version": 1,
+      "terminal_status": "KernelWorkerStatus.ERROR",
+      "phase_reached": "Pinned runtime installed; P2 model loaded; train and validation label scans completed; first training batch started.",
+      "failure": "Segmentation fault (core dumped)",
+      "failure_log_seconds": 286.25122803,
+      "valid_training_result": false,
+      "version_2_mitigation": "Use workers=0 and require a fresh one-epoch P2 GPU preflight before the bounded full run."
+    },
+    {
+      "variant": "E4_COPYPASTE",
+      "kernel": "lly3323w/l1-ryw18-y11m-cp-e4-fold01",
+      "version": 1,
+      "terminal_status": "KernelWorkerStatus.ERROR",
+      "phase_reached": "Mounted input inventory only; no dependency installation or model training began.",
+      "failure": "The same E4 payload manifest was discovered repeatedly through overlapping mounted input roots and rejected as non-unique.",
+      "valid_training_result": false,
+      "version_2_mitigation": "Deduplicate payload and archive paths before enforcing the unique-payload contract."
+    }
+  ]
+}

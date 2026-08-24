@@ -1,0 +1,44 @@
+{
+  "created_at_utc": "2026-08-23T05:19:13.352129+00:00",
+  "status": "dry_run_passed",
+  "gate": "not_evaluated_dry_run",
+  "scope": {
+    "synthetic_tensors_only": true,
+    "dataset_read": false,
+    "release_validation_read": false,
+    "kaggle_started": false,
+    "training_started": false,
+    "vendor_patch_used": false
+  },
+  "arguments": {
+    "nc": 18,
+    "microbatch_size": 1,
+    "microbatch_imgsz": 64,
+    "microbatches": 3,
+    "profile_imgsz": 640,
+    "seed": 0,
+    "dry_run": true
+  },
+  "runtime": {
+    "python": "3.10.11",
+    "platform": "Windows-10-10.0.22621-SP0",
+    "torch": "2.6.0+cu124",
+    "ultralytics": "8.4.66",
+    "device": "cpu",
+    "cuda_visible_devices": "-1",
+    "torch_cuda_available_after_cpu_mask": false
+  },
+  "model_yaml": "E:\\PythonProject\\优化\\l1_e3_p2_smoke_20260823\\yolo11m_p2.yaml",
+  "model_yaml_sha256": "1738eb00730cd0403f291a954b2e0f19a77d9fb3ad83dc1bce353743e3acf5ac",
+  "official_yolo11_yaml": "E:\\PythonProject\\models\\.venv\\Lib\\site-packages\\ultralytics\\cfg\\models\\11\\yolo11.yaml",
+  "yaml_validation": {
+    "passed": true,
+    "p2_detect_inputs": [
+      19,
+      22,
+      25,
+      28
+    ],
+    "baseline_yaml_exists": true
+  }
+}

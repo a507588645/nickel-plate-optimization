@@ -1,0 +1,296 @@
+{
+  "stage": "E4 Copy-Paste offline preparation",
+  "data_version": "oofconsensus_v1_cp_v1",
+  "source_root": "E:\\PythonProject\\优化\\dianjienie_ryw18_oofconsensus_v1_dev_only_r1",
+  "output_root": "E:\\PythonProject\\优化\\l1_e4_oofconsensus_v1_cp_v1_20260823",
+  "development_only": true,
+  "frozen_test_access": "not read; not linked; not included",
+  "auto_only": true,
+  "source_view_name": "dianjienie_ryw18_oofconsensus_v1_dev_only_r1",
+  "source_view_manifest_sha256": "712def337be52a7ee326a389bb3a6c52e81ad7d37202173836ef66a9f7861a34",
+  "source_audit": {
+    "images": 1127,
+    "labels": 1127,
+    "missing_labels": 0,
+    "orphan_labels": 0,
+    "empty_labels": 0,
+    "boxes": 15671,
+    "class_box_counts": {
+      "0": 2632,
+      "1": 7478,
+      "2": 78,
+      "3": 90,
+      "4": 1537,
+      "5": 763,
+      "6": 281,
+      "7": 5,
+      "8": 304,
+      "9": 7,
+      "10": 334,
+      "11": 66,
+      "12": 50,
+      "13": 2001,
+      "14": 0,
+      "15": 12,
+      "16": 33,
+      "17": 0
+    },
+    "image_sizes": {
+      "4096x3554": 1076,
+      "4096x3600": 51
+    },
+    "source_label_tree_sha256": "f2a443e46292d26eb685ea3ce50f66abc0709eb057c12254fea8232acb6bb423"
+  },
+  "rare_class_ids": [
+    2,
+    3,
+    7,
+    9,
+    11,
+    12,
+    15,
+    16
+  ],
+  "rare_classes": [
+    "yellowstain",
+    "nodule",
+    "fawu",
+    "NiOH",
+    "suanwuran",
+    "quejiao",
+    "heibian",
+    "mijixiaokeng"
+  ],
+  "arguments": {
+    "folds": [
+      1,
+      2,
+      3
+    ],
+    "data_version": "oofconsensus_v1_cp_v1",
+    "seed": 20260823,
+    "max_class_boxes": 100,
+    "max_donor_area_ratio": 0.0025,
+    "patch_padding_px": 16,
+    "max_synthetic_per_fold": 48,
+    "max_replicas_per_donor": 2,
+    "max_per_class": 8,
+    "placement_attempts": 300,
+    "target_attempts": 80,
+    "blend_edge_px": 6,
+    "png_compress_level": 3,
+    "dry_run": false
+  },
+  "fold_preflight": {
+    "1": {
+      "fold": 1,
+      "original_train_images": 751,
+      "original_val_images": 376,
+      "candidate_donors_by_class": {
+        "yellowstain": 5,
+        "nodule": 42,
+        "fawu": 0,
+        "NiOH": 0,
+        "suanwuran": 3,
+        "quejiao": 2,
+        "heibian": 1,
+        "mijixiaokeng": 5
+      },
+      "selected_synthetic_by_class": {
+        "yellowstain": 8,
+        "nodule": 8,
+        "fawu": 0,
+        "NiOH": 0,
+        "suanwuran": 6,
+        "quejiao": 4,
+        "heibian": 2,
+        "mijixiaokeng": 8
+      },
+      "selected_synthetic_total": 36,
+      "requested_synthetic_cap": 48,
+      "donor_rejections": {
+        "near_other_annotated_box": 42,
+        "too_large": 149
+      },
+      "donors_without_safe_target_placement": 0
+    },
+    "2": {
+      "fold": 2,
+      "original_train_images": 752,
+      "original_val_images": 375,
+      "candidate_donors_by_class": {
+        "yellowstain": 6,
+        "nodule": 39,
+        "fawu": 0,
+        "NiOH": 0,
+        "suanwuran": 4,
+        "quejiao": 2,
+        "heibian": 0,
+        "mijixiaokeng": 1
+      },
+      "selected_synthetic_by_class": {
+        "yellowstain": 8,
+        "nodule": 8,
+        "fawu": 0,
+        "NiOH": 0,
+        "suanwuran": 8,
+        "quejiao": 4,
+        "heibian": 0,
+        "mijixiaokeng": 2
+      },
+      "selected_synthetic_total": 30,
+      "requested_synthetic_cap": 48,
+      "donor_rejections": {
+        "near_other_annotated_box": 18,
+        "too_close_to_image_edge": 1,
+        "too_large": 133
+      },
+      "donors_without_safe_target_placement": 0
+    },
+    "3": {
+      "fold": 3,
+      "original_train_images": 751,
+      "original_val_images": 376,
+      "candidate_donors_by_class": {
+        "yellowstain": 3,
+        "nodule": 33,
+        "fawu": 0,
+        "NiOH": 0,
+        "suanwuran": 5,
+        "quejiao": 2,
+        "heibian": 1,
+        "mijixiaokeng": 4
+      },
+      "selected_synthetic_by_class": {
+        "yellowstain": 6,
+        "nodule": 8,
+        "fawu": 0,
+        "NiOH": 0,
+        "suanwuran": 8,
+        "quejiao": 4,
+        "heibian": 2,
+        "mijixiaokeng": 8
+      },
+      "selected_synthetic_total": 36,
+      "requested_synthetic_cap": 48,
+      "donor_rejections": {
+        "near_other_annotated_box": 24,
+        "too_close_to_image_edge": 1,
+        "too_large": 156
+      },
+      "donors_without_safe_target_placement": 0
+    }
+  },
+  "generated_at": "2026-08-23T13:05:32",
+  "folds": {
+    "1": {
+      "fold": 1,
+      "original_train_images": 751,
+      "original_val_images": 376,
+      "candidate_donors_by_class": {
+        "yellowstain": 5,
+        "nodule": 42,
+        "fawu": 0,
+        "NiOH": 0,
+        "suanwuran": 3,
+        "quejiao": 2,
+        "heibian": 1,
+        "mijixiaokeng": 5
+      },
+      "selected_synthetic_by_class": {
+        "yellowstain": 8,
+        "nodule": 8,
+        "fawu": 0,
+        "NiOH": 0,
+        "suanwuran": 6,
+        "quejiao": 4,
+        "heibian": 2,
+        "mijixiaokeng": 8
+      },
+      "selected_synthetic_total": 36,
+      "requested_synthetic_cap": 48,
+      "donor_rejections": {
+        "near_other_annotated_box": 42,
+        "too_large": 149
+      },
+      "donors_without_safe_target_placement": 0,
+      "train_images_after_augmentation": 787,
+      "val_images_after_augmentation": 376,
+      "synthetic_manifest_sha256": "6a1a7dfc38fb5201b8bd8db7403f85ace8a5135e7e3446aee80ee561baa651a3"
+    },
+    "2": {
+      "fold": 2,
+      "original_train_images": 752,
+      "original_val_images": 375,
+      "candidate_donors_by_class": {
+        "yellowstain": 6,
+        "nodule": 39,
+        "fawu": 0,
+        "NiOH": 0,
+        "suanwuran": 4,
+        "quejiao": 2,
+        "heibian": 0,
+        "mijixiaokeng": 1
+      },
+      "selected_synthetic_by_class": {
+        "yellowstain": 8,
+        "nodule": 8,
+        "fawu": 0,
+        "NiOH": 0,
+        "suanwuran": 8,
+        "quejiao": 4,
+        "heibian": 0,
+        "mijixiaokeng": 2
+      },
+      "selected_synthetic_total": 30,
+      "requested_synthetic_cap": 48,
+      "donor_rejections": {
+        "near_other_annotated_box": 18,
+        "too_close_to_image_edge": 1,
+        "too_large": 133
+      },
+      "donors_without_safe_target_placement": 0,
+      "train_images_after_augmentation": 782,
+      "val_images_after_augmentation": 375,
+      "synthetic_manifest_sha256": "0c2f0a3e3cf25a06f008e865a45f1ba71986e875c2de257fe30a25207694b074"
+    },
+    "3": {
+      "fold": 3,
+      "original_train_images": 751,
+      "original_val_images": 376,
+      "candidate_donors_by_class": {
+        "yellowstain": 3,
+        "nodule": 33,
+        "fawu": 0,
+        "NiOH": 0,
+        "suanwuran": 5,
+        "quejiao": 2,
+        "heibian": 1,
+        "mijixiaokeng": 4
+      },
+      "selected_synthetic_by_class": {
+        "yellowstain": 6,
+        "nodule": 8,
+        "fawu": 0,
+        "NiOH": 0,
+        "suanwuran": 8,
+        "quejiao": 4,
+        "heibian": 2,
+        "mijixiaokeng": 8
+      },
+      "selected_synthetic_total": 36,
+      "requested_synthetic_cap": 48,
+      "donor_rejections": {
+        "near_other_annotated_box": 24,
+        "too_close_to_image_edge": 1,
+        "too_large": 156
+      },
+      "donors_without_safe_target_placement": 0,
+      "train_images_after_augmentation": 787,
+      "val_images_after_augmentation": 376,
+      "synthetic_manifest_sha256": "70ab4f2947c6bcf1952f987e8609456c11052d183bdfe422da81777f8a4beb97"
+    }
+  },
+  "image_storage": "original images are NTFS hard links; synthetic images are newly rendered PNG files",
+  "synthetic_label_format": "five-column YOLO training labels; source candidate labels remain unmodified"
+}

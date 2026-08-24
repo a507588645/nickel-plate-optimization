@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "purpose": "Version 2 retry record for exactly two user-authorized L1 Fold 1 Kaggle GPU screening jobs.",
+  "max_parallel_gpu_jobs": 2,
+  "submission_date": "2026-08-23",
+  "initial_status_checked_at": "2026-08-23T15:07:45+08:00",
+  "frozen_test_set": null,
+  "supersedes": "E:/PythonProject/优化/l1_e3_e4_parallel_kaggle_20260823_r6/submission_record.json",
+  "jobs": [
+    {
+      "variant": "E3_P2",
+      "kaggle_kernel": "lly3323w/l1-ryw18-y11m-p2-e3-fold01",
+      "kernel_version": 2,
+      "initial_status": "KernelWorkerStatus.RUNNING",
+      "code_sha256": "533012c999d6439df7f6b591c27f5a224b48603cfc032216447e31bdc4c64107",
+      "training_time_hours": 9.0,
+      "retry_change": "workers=0 plus an exact-model one-epoch GPU preflight before full training"
+    },
+    {
+      "variant": "E4_COPYPASTE",
+      "kaggle_kernel": "lly3323w/l1-ryw18-y11m-cp-e4-fold01",
+      "kernel_version": 2,
+      "initial_status": "KernelWorkerStatus.RUNNING",
+      "code_sha256": "139003279d304e9287a878820e5cd4b5db95fa9ee655826b314e6a9b251314c0",
+      "training_time_hours": 9.0,
+      "retry_change": "deduplicate overlapping mounted-root payload discoveries before enforcing uniqueness"
+    }
+  ],
+  "note": "Version 1 ended in ERROR and produced no valid training result. Version 2 replaces the same two kernels; no third GPU job or persistent local monitor was created."
+}

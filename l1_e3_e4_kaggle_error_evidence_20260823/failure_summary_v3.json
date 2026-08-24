@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-08-23T16:34:30+08:00",
+  "scope": "L1 E3/E4 Fold 1 Kaggle version 3 failure evidence",
+  "frozen_test_set": null,
+  "jobs": [
+    {
+      "variant": "E3_P2",
+      "kernel": "lly3323w/l1-ryw18-y11m-p2-e3-fold01",
+      "version": 3,
+      "terminal_status": "KernelWorkerStatus.ERROR",
+      "phase_reached": "The one-epoch P2 GPU preflight completed; the formal 300-epoch run reached backward/progress reporting for its first batch.",
+      "failure": "Segmentation fault (core dumped)",
+      "formal_start_seconds": 956.315719908,
+      "failure_seconds": 960.08342431,
+      "valid_training_result": false
+    },
+    {
+      "variant": "E4_COPYPASTE",
+      "kernel": "lly3323w/l1-ryw18-y11m-cp-e4-fold01",
+      "version": 3,
+      "terminal_status": "KernelWorkerStatus.ERROR",
+      "phase_reached": "Payload resolution, runtime-view construction, train/validation scans, and backward/progress reporting for the first formal batch completed.",
+      "failure": "Segmentation fault (core dumped)",
+      "formal_start_seconds": 396.747735388,
+      "failure_seconds": 399.624057941,
+      "valid_training_result": false
+    }
+  ],
+  "rejected_hypothesis": {
+    "name": "explicit_ultralytics_time_argument",
+    "version_3_change": "The formal model.train calls did not pass time.",
+    "result": "Both jobs reproduced the same fault, so this hypothesis is rejected."
+  },
+  "next_hypothesis": {
+    "name": "batch_zero_training_plot_callback",
+    "evidence": "In Ultralytics 8.4.66, plots=True calls plot_training_samples at ni=0 after the first batch backward/progress path. E3's plots=False one-epoch preflight completed, while all failed formal calls used plots=True and failed at this position.",
+    "causality": "unconfirmed_runtime_hypothesis"
+  },
+  "version_4_change": "Keep the no-time configuration and set only the formal training plots argument to false; checkpoint saving remains enabled."
+}

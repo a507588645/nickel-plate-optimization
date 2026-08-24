@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "purpose": "Submission record for exactly two user-authorized L1 Fold 1 Kaggle GPU screening jobs.",
+  "max_parallel_gpu_jobs": 2,
+  "submission_date": "2026-08-23",
+  "initial_status_checked_at": "2026-08-23T14:22:48+08:00",
+  "frozen_test_set": null,
+  "jobs": [
+    {
+      "variant": "E3_P2",
+      "staging_requested_kernel": "lly3323w/l1-ryw18-y11m-p2-e3-f01",
+      "kaggle_canonical_kernel": "lly3323w/l1-ryw18-y11m-p2-e3-fold01",
+      "initial_status": "KernelWorkerStatus.RUNNING",
+      "code_sha256": "de56bd6211b518ef005b5f7c03a0cb8e8a356cd10836af1bb553d3c13a11adf3",
+      "training_time_hours": 9.0
+    },
+    {
+      "variant": "E4_COPYPASTE",
+      "staging_requested_kernel": "lly3323w/l1-ryw18-y11m-cp-e4-f01",
+      "kaggle_canonical_kernel": "lly3323w/l1-ryw18-y11m-cp-e4-fold01",
+      "initial_status": "KernelWorkerStatus.RUNNING",
+      "code_sha256": "3c5e72c64312f8d4efb292cb2069365ace3e6acb4eefa85250ffe4f28f68b88a",
+      "training_time_hours": 9.0
+    }
+  ],
+  "note": "Kaggle normalized the requested f01 suffixes from the staging metadata to canonical fold01 kernel ids. No third GPU job or local persistent monitor was created."
+}

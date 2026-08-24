@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-08-23T16:06:09+08:00",
+  "scope": "L1 E3/E4 Fold 1 Kaggle version 2 failure evidence",
+  "frozen_test_set": null,
+  "runtime": {
+    "python": "3.12.13",
+    "torch": "2.6.0+cu124",
+    "ultralytics": "8.4.66",
+    "gpu": "Tesla P100-PCIE-16GB"
+  },
+  "jobs": [
+    {
+      "variant": "E3_P2",
+      "kernel": "lly3323w/l1-ryw18-y11m-p2-e3-fold01",
+      "version": 2,
+      "terminal_status": "KernelWorkerStatus.ERROR",
+      "phase_reached": "The one-epoch P2 GPU preflight completed and wrote its required results.csv; the fresh 300-epoch full training then reached its first batch.",
+      "failure": "Segmentation fault (core dumped)",
+      "valid_training_result": false
+    },
+    {
+      "variant": "E4_COPYPASTE",
+      "kernel": "lly3323w/l1-ryw18-y11m-cp-e4-fold01",
+      "version": 2,
+      "terminal_status": "KernelWorkerStatus.ERROR",
+      "phase_reached": "Payload resolution, dependency installation, runtime-view construction, train/validation scans, and the first full-training batch completed.",
+      "failure": "Segmentation fault (core dumped)",
+      "valid_training_result": false
+    }
+  ],
+  "comparison_with_completed_baselines": {
+    "same_runtime": true,
+    "same_gpu": true,
+    "common_formal_training_difference": "Both failing full-training calls explicitly passed time=9.0, whereas completed 640 baselines used time: null.",
+    "causality": "unconfirmed_runtime_hypothesis"
+  },
+  "version_3_change": "Remove only the explicit Ultralytics time argument while retaining model/data/augmentation/batch/seed and the two-GPU boundary."
+}

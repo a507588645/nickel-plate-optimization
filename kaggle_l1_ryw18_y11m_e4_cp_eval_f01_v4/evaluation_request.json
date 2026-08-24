@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "experiment": "L1 E4 Copy-Paste Fold 1 recovered-checkpoint evaluation",
+  "mode": "evaluate_only",
+  "development_only": true,
+  "auto_only": true,
+  "frozen_test_set": null,
+  "fold": 1,
+  "run_name": "dianjienie_medium_yolo11m_cp_640_kaggle_seed0_oofconsensusv1_fold01_evaluation",
+  "candidate_dataset": "lly3323w/dianjienie-ryw18-oof-e4-cp-f01-v4-best",
+  "candidate_weight": "e4_copypaste_fold01_v4_best.pt",
+  "baseline_dataset": "lly3323w/dianjienie-ryw18-oof-yolo11m-fold01-640-weight",
+  "baseline_weight": "baseline_fold01_640_best.pt",
+  "evaluator": {
+    "pipeline": "l1_tile_pipeline.py",
+    "tile_size": 4096,
+    "overlap": 0.0,
+    "negative_ratio": 0.0,
+    "min_visible_fraction": 1.0,
+    "imgsz": 640,
+    "predict_batch": 8,
+    "profiles": [
+      "legacy"
+    ],
+    "focus_classes": [
+      "wuzi",
+      "waterstain",
+      "airhole",
+      "bubble",
+      "greenstain",
+      "watermark"
+    ]
+  },
+  "prohibition": "No training, no checkpoint resume, no source-label modification, and no frozen historical release-validation mount or read."
+}

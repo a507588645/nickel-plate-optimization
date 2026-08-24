@@ -1,0 +1,10 @@
+{
+  "generated_at": "2026-08-23T13:03:33.761821+08:00",
+  "python": "3.10.11 (main, May  7 2023, 18:05:05) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.22621-SP0",
+  "numpy": "2.2.6",
+  "device": "cpu_only_no_model_loaded",
+  "new_inference": false,
+  "new_training": false,
+  "plot_note": null
+}

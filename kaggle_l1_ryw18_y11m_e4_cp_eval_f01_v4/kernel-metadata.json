@@ -1,0 +1,20 @@
+{
+  "id": "lly3323w/l1-ryw18-y11m-e4-cp-eval-f01-v4",
+  "title": "L1 RYW18 Y11m E4 CP Eval Fold01 V4",
+  "code_file": "l1-ryw18-y11m-e4-cp-eval-f01-v4.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "lly3323w/dianjienie",
+    "lly3323w/dianjienie-ryw18-oof-consensus-v1-dev-config",
+    "lly3323w/dianjienie-ryw18-oof-yolo11m-fold01-640-weight",
+    "lly3323w/dianjienie-ryw18-oof-e4-cp-f01-v4-best"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

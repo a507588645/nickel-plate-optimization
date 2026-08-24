@@ -1,0 +1,33 @@
+{
+  "jobs": [
+    {
+      "kernel": "lly3323w/l1-ryw18-y11m-p2-e3-f01",
+      "root": "E:\\PythonProject\\优化\\l1_e3_e4_parallel_kaggle_20260823_r5\\kernels\\e3_p2",
+      "code_sha256": "de56bd6211b518ef005b5f7c03a0cb8e8a356cd10836af1bb553d3c13a11adf3"
+    },
+    {
+      "kernel": "lly3323w/l1-ryw18-y11m-cp-e4-f01",
+      "root": "E:\\PythonProject\\优化\\l1_e3_e4_parallel_kaggle_20260823_r5\\kernels\\e4_copypaste",
+      "code_sha256": "ed558dfab7d20d73bc47dd6f67c006fd325fe7b31b2287a937eee12dd56e1b04"
+    }
+  ],
+  "e4_dataset": "lly3323w/dianjienie-ryw18-oof-cp-v1-f01-r2",
+  "validation": {
+    "status": "passed",
+    "kernels": [
+      {
+        "variant": "E3_P2",
+        "kernel": "lly3323w/l1-ryw18-y11m-p2-e3-f01",
+        "code_sha256": "de56bd6211b518ef005b5f7c03a0cb8e8a356cd10836af1bb553d3c13a11adf3"
+      },
+      {
+        "variant": "E4_COPYPASTE",
+        "kernel": "lly3323w/l1-ryw18-y11m-cp-e4-f01",
+        "code_sha256": "ed558dfab7d20d73bc47dd6f67c006fd325fe7b31b2287a937eee12dd56e1b04"
+      }
+    ],
+    "e4_payload_files": 1172,
+    "e4_archive_sha256": "0a562b80b7a0d99642887437ab9b245ff22f354818707d07d00b25cd14221593",
+    "frozen_test_set": null
+  }
+}

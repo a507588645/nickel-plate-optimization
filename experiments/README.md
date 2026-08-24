@@ -57,3 +57,6 @@
 
 - `dianjienie_ryw18_oofconsensus_v1_yolo11m_tile1024o25_phase1_wbfedge_fold01_kaggle.md`：已完成且证据完整的单 Fold `auto_only` 停止闸门。后处理虽清除了大量低置信/边缘切片框，但所有切片 profile 仍显著低于固定整图基线；Phase 2/3 不启动。
 - `dianjienie_ryw18_oofconsensus_v1_yolo11m_e2_mosaicpair_fold01_kaggle.md`：`complete`、`provisional`。两个完成 ZIP 的最小必需证据已逐成员 CRC 提取并通过成对合同校验；Mosaic=0 候选 mAP50-95 比 Mosaic=1 对照低 `0.006518`，且 `wuzi/airhole/bubble` Recall 下降，结论为 `not_passed_do_not_expand`，不启动 Fold 2/3。
+- `dianjienie_ryw18_oofconsensus_v1_e1b_perclass_confscan_20260823.md`：`complete`、`provisional`。仅用持久化开发 OOF 预测完成单类别阈值扫描；22 个候选通过同一 `0.25` 运行对照，但相对计划固定原始 mAP 锚点全部不达标，最终为 `not_passed_strict_fixed_anchor`，不生成联合阈值配置。
+- `dianjienie_ryw18_oofconsensus_v1_yolo11m_e3_p2_fold01_kaggle_20260823.md`：`running`、`inconclusive`。E3 version 1/2/3 的正式训练均首批次底层崩溃；version 2 的 1 epoch P2 GPU 预检通过，version 3 已否定 `time=9.0` 假设。version 4 仅关闭首批训练图绘制回调，仍只在归档和固定原图级评测后判断 `+0.02` 扩展闸门。
+- `dianjienie_ryw18_oofconsensus_v1_yolo11m_e4_copypaste_fold01_kaggle_20260823.md`：`running`、`inconclusive`。E4 version 1 在 payload 唯一性检查错误时结束；version 2/3 已进入首个 batch但同样底层崩溃，version 3 已否定 `time=9.0` 假设。version 4 仅关闭首批训练图绘制回调，不读取冻结集，未满足闸门不得扩展。

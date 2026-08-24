@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "kernel": "lly3323w/l1-ryw18-y11m-cp-e4-fold01",
+  "kernel_status": "ERROR",
+  "run_name": "dianjienie_medium_yolo11m_cp_640_kaggle_seed0_oofconsensusv1_fold01",
+  "development_only": true,
+  "frozen_test_set": null,
+  "output_pages_scanned": 5,
+  "include_last": false,
+  "remote_files": [
+    "runs/dianjienie_medium_yolo11m_cp_640_kaggle_seed0_oofconsensusv1_fold01/args.yaml",
+    "runs/dianjienie_medium_yolo11m_cp_640_kaggle_seed0_oofconsensusv1_fold01/results.csv",
+    "runs/dianjienie_medium_yolo11m_cp_640_kaggle_seed0_oofconsensusv1_fold01/weights/best.pt"
+  ],
+  "downloaded_files": {
+    "dianjienie_medium_yolo11m_cp_640_kaggle_seed0_oofconsensusv1_fold01/args.yaml": {
+      "bytes": 1745,
+      "sha256": "a38981b3174879caad48e4bf158654d500daf4aa52668b25f5d0113b84785e03"
+    },
+    "dianjienie_medium_yolo11m_cp_640_kaggle_seed0_oofconsensusv1_fold01/results.csv": {
+      "bytes": 27591,
+      "sha256": "ab3b4f6d5cb06960aeed06cfd9b087cc00abab5d7f40d872b10b489301bb7ca9"
+    },
+    "dianjienie_medium_yolo11m_cp_640_kaggle_seed0_oofconsensusv1_fold01/weights/best.pt": {
+      "bytes": 40558885,
+      "sha256": "d75500d532ee7ca3984ed3000882193a356b5f130f4a0829cf2c9d71ef61b00b"
+    }
+  },
+  "results_csv_sha256": "ab3b4f6d5cb06960aeed06cfd9b087cc00abab5d7f40d872b10b489301bb7ca9"
+}

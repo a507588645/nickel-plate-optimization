@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "data_version": "oofconsensusv1",
+  "development_only": true,
+  "auto_only": true,
+  "frozen_test_set": null,
+  "fold": 1,
+  "experiment": "L1 E4 Copy-Paste Fold 1 recovered best checkpoint",
+  "source_kernel": "lly3323w/l1-ryw18-y11m-cp-e4-fold01",
+  "source_kernel_status": "ERROR",
+  "source_run_name": "dianjienie_medium_yolo11m_cp_640_kaggle_seed0_oofconsensusv1_fold01",
+  "source_recovery_manifest_sha256": "a791bf9cada67766a86e4de358b4e4de035ee8ab06495177cacbf3d2c00714e5",
+  "training_summary": {
+    "recorded_epochs": 234,
+    "best_training_epoch": 134,
+    "best_training_mAP50_95": 0.16505,
+    "last_recorded_epoch": 234,
+    "last_training_mAP50_95": 0.15167
+  },
+  "weights": {
+    "e4_copypaste_fold01_v4_best.pt": {
+      "source": "E:\\PythonProject\\优化\\l1_e4_copypaste_v4_recovery_20260824_r2\\dianjienie_medium_yolo11m_cp_640_kaggle_seed0_oofconsensusv1_fold01\\weights\\best.pt",
+      "bytes": 40558885,
+      "sha256": "d75500d532ee7ca3984ed3000882193a356b5f130f4a0829cf2c9d71ef61b00b"
+    }
+  },
+  "purpose": "Development-only original-image Fold 1 evaluation after the training completed but the original Kaggle notebook failed in its post-training evaluator. This is not a final release model."
+}

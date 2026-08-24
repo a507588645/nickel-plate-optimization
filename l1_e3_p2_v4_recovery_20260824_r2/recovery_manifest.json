@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "kernel": "lly3323w/l1-ryw18-y11m-p2-e3-fold01",
+  "kernel_status": "CANCEL_ACKNOWLEDGED",
+  "run_name": "dianjienie_medium_yolo11m_p2_640_kaggle_seed0_oofconsensusv1_fold01",
+  "development_only": true,
+  "frozen_test_set": null,
+  "output_pages_scanned": 5,
+  "include_last": false,
+  "remote_files": [
+    "runs/dianjienie_medium_yolo11m_p2_640_kaggle_seed0_oofconsensusv1_fold01/args.yaml",
+    "runs/dianjienie_medium_yolo11m_p2_640_kaggle_seed0_oofconsensusv1_fold01/results.csv",
+    "runs/dianjienie_medium_yolo11m_p2_640_kaggle_seed0_oofconsensusv1_fold01/weights/best.pt"
+  ],
+  "downloaded_files": {
+    "dianjienie_medium_yolo11m_p2_640_kaggle_seed0_oofconsensusv1_fold01/args.yaml": {
+      "bytes": 1759,
+      "sha256": "4a7024cc9f64950d2cc1001fc28a998a0ec07dedc27e5fed94d6c5b6f410d4db"
+    },
+    "dianjienie_medium_yolo11m_p2_640_kaggle_seed0_oofconsensusv1_fold01/results.csv": {
+      "bytes": 11018,
+      "sha256": "652701b7aad3eb3a9ec1adcfd325fceb5298032a29f21bea7e766d74ded0b2bd"
+    },
+    "dianjienie_medium_yolo11m_p2_640_kaggle_seed0_oofconsensusv1_fold01/weights/best.pt": {
+      "bytes": 88058312,
+      "sha256": "4206ee85d9887a07f199fd7a046f1bc3ac22813ab9b672b6021b4ccd552e81c2"
+    }
+  },
+  "results_csv_sha256": "652701b7aad3eb3a9ec1adcfd325fceb5298032a29f21bea7e766d74ded0b2bd"
+}

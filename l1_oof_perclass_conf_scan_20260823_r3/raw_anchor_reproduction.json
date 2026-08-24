@@ -1,0 +1,14 @@
+{
+  "yolo26m": {
+    "fixed_mAP50_95": 0.148939031666318,
+    "reproduced_mAP50_95": 0.148939031666318,
+    "delta": 0.0,
+    "within_1e_9": true
+  },
+  "wbf_iou_0.55": {
+    "fixed_mAP50_95": 0.16751980771806158,
+    "reproduced_mAP50_95": 0.16751980771806158,
+    "delta": 0.0,
+    "within_1e_9": true
+  }
+}

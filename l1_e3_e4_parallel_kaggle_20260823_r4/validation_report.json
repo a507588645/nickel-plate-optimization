@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "kernels": [
+    {
+      "variant": "E3_P2",
+      "kernel": "lly3323w/l1-ryw18-y11m-p2-e3-f01",
+      "code_sha256": "c77614771de8254b1d64baf2e050271e565e794fc2ee4a7ce1410492e5137bdc"
+    },
+    {
+      "variant": "E4_COPYPASTE",
+      "kernel": "lly3323w/l1-ryw18-y11m-cp-e4-f01",
+      "code_sha256": "e063cf5b34337593070c77ef9ecace1c855a58af253b9da75467a7e488a9f426"
+    }
+  ],
+  "e4_payload_files": 1208,
+  "e4_archive_sha256": "ec02c1ce6ee8acfe8aba0a5093e8f71d7e65c1a0037d8c06b0dd39cf7debe02c",
+  "frozen_test_set": null
+}

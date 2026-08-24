@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "source_root": "E:\\PythonProject\\优化\\kaggle_dianjienie_ryw18_oofconsensus_v1_dev_only\\config_upload_flat_v1",
+  "source_manifest_sha256": "349c3629f0ade7b8397b42a1cc3926a904daa2e5d117219381f6afbc03cd0e14",
+  "development_only": true,
+  "frozen_test_set": null,
+  "labels": 1127,
+  "metadata": 12,
+  "output_root": "E:\\PythonProject\\优化\\l1_e4_original_eval_config_runtime_20260824",
+  "hardlinks_created": 1139
+}

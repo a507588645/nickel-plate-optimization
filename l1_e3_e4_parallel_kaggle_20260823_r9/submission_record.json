@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "purpose": "Version 4 retry record for exactly two user-authorized L1 Fold 1 Kaggle GPU screening jobs.",
+  "max_parallel_gpu_jobs": 2,
+  "submission_date": "2026-08-23",
+  "initial_status_checked_at": "2026-08-23T16:34:30+08:00",
+  "frozen_test_set": null,
+  "supersedes": "E:/PythonProject/优化/l1_e3_e4_parallel_kaggle_20260823_r8/submission_record.json",
+  "jobs": [
+    {
+      "variant": "E3_P2",
+      "kaggle_kernel": "lly3323w/l1-ryw18-y11m-p2-e3-fold01",
+      "kernel_version": 4,
+      "initial_status": "KernelWorkerStatus.RUNNING",
+      "code_sha256": "d29bd8ef20f2b56c6a7fd75dcb6a22ed06e648796b426cded50c9dc7eadbc504",
+      "training_time_hours": null,
+      "training_plots": false,
+      "retry_change": "Keep the version 3 no-time protocol and disable only the formal batch-plot callback; retain workers=0 and the one-epoch P2 preflight."
+    },
+    {
+      "variant": "E4_COPYPASTE",
+      "kaggle_kernel": "lly3323w/l1-ryw18-y11m-cp-e4-fold01",
+      "kernel_version": 4,
+      "initial_status": "KernelWorkerStatus.RUNNING",
+      "code_sha256": "606b96b9cb69093a867a56cc899e347556cea53bf5150d79c379ce9ea357b78d",
+      "training_time_hours": null,
+      "training_plots": false,
+      "retry_change": "Keep the version 3 no-time protocol and disable only the formal batch-plot callback; retain verified payload-path de-duplication."
+    }
+  ],
+  "note": "Version 3 ended in ERROR with the same low-level segmentation fault after time removal. Version 4 replaces the same two kernels; no third GPU job or persistent local monitor was created."
+}
