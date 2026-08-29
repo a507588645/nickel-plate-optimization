@@ -1,0 +1,95 @@
+{
+  "images": [
+    {
+      "name": "dianjienie__train__20221029165616271_0_2.png",
+      "candidate_count": 1,
+      "candidate_ids": [
+        "e3_p2__dianjienie__train__20221029165616271_0_2__p0001"
+      ]
+    },
+    {
+      "name": "dianjienie__train__20221102183724660_0_2.png",
+      "candidate_count": 1,
+      "candidate_ids": [
+        "e4_copypaste__dianjienie__train__20221102183724660_0_2__p0000"
+      ]
+    },
+    {
+      "name": "dianjienie__train__20230104180348914_0_2.png",
+      "candidate_count": 1,
+      "candidate_ids": [
+        "e4_copypaste__dianjienie__train__20230104180348914_0_2__p0000"
+      ]
+    },
+    {
+      "name": "dianjienie__train__20230108170017402_0_2.png",
+      "candidate_count": 1,
+      "candidate_ids": [
+        "e3_p2__dianjienie__train__20230108170017402_0_2__p0000"
+      ]
+    },
+    {
+      "name": "dianjienie__train__2024_03_18_171049_0.png",
+      "candidate_count": 1,
+      "candidate_ids": [
+        "e4_copypaste__dianjienie__train__2024_03_18_171049_0__p0000"
+      ]
+    },
+    {
+      "name": "dianjienie__train__2024_03_24_151119_0.png",
+      "candidate_count": 1,
+      "candidate_ids": [
+        "e3_p2__dianjienie__train__2024_03_24_151119_0__p0001"
+      ]
+    },
+    {
+      "name": "dianjienie__train__2024_04_26_094718_1.png",
+      "candidate_count": 1,
+      "candidate_ids": [
+        "e4_copypaste__dianjienie__train__2024_04_26_094718_1__p0000"
+      ]
+    },
+    {
+      "name": "dianjienie__train__2024_05_20_100736_1.png",
+      "candidate_count": 1,
+      "candidate_ids": [
+        "e4_copypaste__dianjienie__train__2024_05_20_100736_1__p0002"
+      ]
+    },
+    {
+      "name": "dianjienie__train__597.png",
+      "candidate_count": 1,
+      "candidate_ids": [
+        "e4_copypaste__dianjienie__train__597__p0002"
+      ]
+    },
+    {
+      "name": "dianjienie__valid__20221029163712064_0_2.png",
+      "candidate_count": 1,
+      "candidate_ids": [
+        "e4_copypaste__dianjienie__valid__20221029163712064_0_2__p0000"
+      ]
+    },
+    {
+      "name": "dianjienie__valid__20221203174149182_0_2.png",
+      "candidate_count": 1,
+      "candidate_ids": [
+        "e4_copypaste__dianjienie__valid__20221203174149182_0_2__p0002"
+      ]
+    },
+    {
+      "name": "dianjienie__valid__2024_03_23_100135_0.png",
+      "candidate_count": 1,
+      "candidate_ids": [
+        "e4_copypaste__dianjienie__valid__2024_03_23_100135_0__p0003"
+      ]
+    },
+    {
+      "name": "dianjienie__valid__2024_03_24_104201_0.png",
+      "candidate_count": 1,
+      "candidate_ids": [
+        "e4_copypaste__dianjienie__valid__2024_03_24_104201_0__p0000"
+      ]
+    }
+  ]
+}

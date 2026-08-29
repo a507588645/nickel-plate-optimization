@@ -1,0 +1,18 @@
+{
+  "models": [
+    {
+      "model": "e3_p2",
+      "weight": "E:\\PythonProject\\优化\\l1_e3_p2_v4_recovery_20260824_r2\\dianjienie_medium_yolo11m_p2_640_kaggle_seed0_oofconsensusv1_fold01\\weights\\best.pt",
+      "weight_sha256": "4206ee85d9887a07f199fd7a046f1bc3ac22813ab9b672b6021b4ccd552e81c2",
+      "images": 376,
+      "predictions_after_model_nms": 92988
+    },
+    {
+      "model": "e4_copypaste",
+      "weight": "E:\\PythonProject\\优化\\l1_e4_copypaste_v4_recovery_20260824_r2\\dianjienie_medium_yolo11m_cp_640_kaggle_seed0_oofconsensusv1_fold01\\weights\\best.pt",
+      "weight_sha256": "d75500d532ee7ca3984ed3000882193a356b5f130f4a0829cf2c9d71ef61b00b",
+      "images": 376,
+      "predictions_after_model_nms": 44775
+    }
+  ]
+}

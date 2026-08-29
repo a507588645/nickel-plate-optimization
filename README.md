@@ -27,7 +27,7 @@
 | 线 | 目标 | 当前状态 | 关键约束 |
 | --- | --- | --- | --- |
 | **L1 检测模型优化** | 以 `dianjienie` 历史标签锚点 `dianjienie_ryw18_anchor_v1` 的 OOF 共识候选训练 18 类 YOLO11m | 1325 张、18232 框已完成去重、分组分层重划；OOF 双模型共识形成 1,127 张开发集候选视图与 245 个 accepted 新框，历史标签未覆盖。YOLO11m 主候选（83 epoch）和 YOLO26m 辅助候选（174 epoch）均已归档；预选 YOLO11m 的唯一 198 图历史确认得到 P/R/mAP50/mAP50-95=`0.42582/0.38473/0.35959/0.23147`。G4 高分辨率 YOLO11m、OOF 候选开发集、Fold 1 的 1280/batch 4 试验已完成，最佳 mAP50-95=`0.16264`，低于同 Fold 640 的 `0.16382`，不扩展 Fold 2/3。报告：`l1_auto_gate_oofconsensusv1_20260809/report.md` | 固定历史集只用于已选 YOLO11m 的一次确认，YOLO26m 不读取它；候选五列视图不是人工真值；无人工路线只提供 OOF 证据和自动安全闸门，不宣称逐框正确；不启动本机 medium 训练 |
-| **L2 电积镍分类等级** | 缺陷种类+面积规则/LightGBM 判级（3#/9950/9996/bad） | `dianjinie_grade_classification_v1`（1072）+ `dianji_grade_v2/v3` 产物，纹理特征 LGBM test 0.776/0.663 | 全部 `unconfirmed_pending_enterprise`；待企业书面标准 + 批次元数据 + 新会话验证；批次混淆未排除 |
+| **L2 电积镍分类等级** | 缺陷种类+面积规则/LightGBM 判级（3#/9950/9996/bad） | `dianjinie_grade_classification_v1`（1072）+ `dianji_grade_v2/v3` 历史产物；YOLO11m@640 新提取 `dianji_grade_y11m640_v1`：63 特征、test acc=0.7453、macroF1=0.6797、round-trip 通过 | 全部 `unconfirmed_pending_enterprise`；新结果待企业书面标准 + 批次元数据 + Kimi 复核；历史 0.7764/0.6631 仅作参考 |
 | **L3 电解镍分类硬编码优化** | `DianjieGradeRule` 阈值/规则/决策层优化（检测权重 `ryw.pt` 不变） | 规则已封装（`dianjie_grade_rule.py`）；电积镍迁移已实锤不可用（acc=0.02） | 商业约束：权重不变，优化只落加载代码/阈值/规则/决策层；改动须在固定人工评测集做前后对比（AGENTS.md §8） |
 
 ---
@@ -195,11 +195,14 @@
 | `select_l1_oof_final_epoch.py` | 从已归档的 YOLO11m OOF 三折曲线选择固定最终训练时长；本次结果固定为 83 epoch |
 | `train_l1_oof_final.py` | 在 OOF 候选的 1,127 张开发图上训练固定时长的 YOLO11m；发布权重固定为 `last.pt` 副本，不以最终开发集日志选择权重 |
 | `build_l1_oof_final_kaggle_config.py` / `prepare_l1_oof_final_kaggle_kernel.py` | 构建仅标签/清单/脚本的私有 Kaggle 配置包，并生成无 GPU 预检或最终 GPU Kernel；不上传图片或 `release-validation` |
+| `train_l1_freeze_two_stage.py` / `prepare_l1_freeze_kaggle_kernel.py` | L1 冻结层独立成对消融：同一 83 epoch 两阶段流程下比较 Stage 1 `freeze=0` 对照与 `freeze=10` 候选；仅 OOF 开发视图、仅 Fold 1 筛选 |
+| `verify_l1_freeze_pair.py` | 冻结层成对验收：核验两个归档 run 的参数/运行时/开发边界，并比较统一本机复评的 mAP50-95 与六个重点类别 Recall；未通过不得训练全开发集或导出新 ONNX |
 | `kaggle_l1_ryw18_oofconsensusv1_preflight/l1-ryw18-oofconsensusv1-preflight.py` | 已提交的 OOF 候选无 GPU 挂载预检：只恢复、校验 1,127 图/标签和三份 train/val，不读取冻结测试集 |
 | `monitor_l1_kaggle_chain.py` | L1 可选串行监控入口：仅在用户明确要求自动推进时使用；当前已停用，训练完成后由用户通知再手动归档与提交下一 Kernel |
 | `rebuild_worklog_index.py` | 工作日志索引维护：扫描 `工作日志条目/` 全部条目文件，重建可点击「条目索引」表（日期/标题链接/主线），标签按标题继承、新条目人工补标；支持 `--dry-run` 只审计 |
 | `split_worklog_entries.py` | 一次性迁移（2026-07-27 已执行）：把主文件/分片正文拆分为 `工作日志条目/` 独立文件并截断主文件；保留备查 |
 | `extract_dianji_grade_features.py` | 视图上 v2a join + v2b ryw.pt@1536 特征提取 |
+| `extract_dianji_grade_y11m640_features.py` | 冻结 YOLO11m ONNX@640 推理，按历史定义重建 43 BASE 特征，并复用 20 个 `tx__` 特征 |
 | `train_dianji_grade_lgbm.py` | 四分类模型对比（majority/规则/树/LightGBM），test 仅最终评估 |
 | `build_dianji_grade_v2_dataset.py` | 历史草稿（上一任务中断遗留），**非**当前流水线入口 |
 | `extract_dianji_grade_v3_features.py` | v3 空间（3×3 分区/边缘带/聚簇度，源自 detections_1536）+ 纹理（LBP/GLCM，numpy 手写）特征提取 |
@@ -249,6 +252,7 @@
 | 电积镍等级分类 **合并硬链接视图 v1** | `E:\PythonProject\datasets\dianjinie_grade_classification_v1`（4types+0309 去重后 1072 张，70/15/15 分组分层；标签口头确认，模型未企业确认） |
 | 电积镍等级 v2 **特征/模型产物** | `E:\PythonProject\优化\dianji_grade_v2`（v2a/v2b 特征、detections_1536、report.md；`unconfirmed_pending_enterprise`） |
 | 电积镍等级 v3 **空间/纹理+拒判产物** | `E:\PythonProject\优化\dianji_grade_v3`（features_v3_full、model_comparison、reject_curve、report.md、robustness_4types_only；`unconfirmed_pending_enterprise`） |
+| 电积镍等级 YOLO11m@640 **重提取/重训产物** | `E:\PythonProject\优化\dianji_grade_y11m640_v1`（43 新 BASE + 20 `tx__`、LightGBM、contract、实验记录；`unconfirmed_pending_enterprise`） |
 | L1 **汇总数据集（检测+等级双用途）** | `E:\PythonProject\datasets\union_original_labels_v1`（3265 图/1455 原标签 + 1072 张等级真值哈希接入；SHA-256 去重；**不划分**；datasets 目录最终形态 = 5 原始集 + 本集） |
 | 归档（已迁出 datasets） | `E:\PythonProject\archives\`：`combined_all_pseudo_v2`（伪标签主版本）、`enterprise_label_raw_20260716`、`enterprise_dianji_0309_classification`、`dianjinie_grade_classification_v1`（L2 脚本默认路径需同步改） |
 | 伪标签审查（已归档） | `E:\PythonProject\优化\_archived\pseudo_label_reviews_20260723`（用户 2026-07-23 决定弃用伪标签审查线） |

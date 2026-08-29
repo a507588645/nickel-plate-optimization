@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>按框 ROI 审查 - review_dataset (conf<1.0)</title>
+<style>
+:root{--ink:#18201c;--paper:#f3efe4;--panel:#fffdf7;--line:#c8c0ae;--green:#2f6f4e;--red:#a33b32;--amber:#b07a18;--blue:#27658a}
+*{box-sizing:border-box}body{margin:0;font-family:"Microsoft YaHei",sans-serif;background:var(--paper);color:var(--ink)}
+header{padding:10px 16px;background:#1d2923;color:#fff;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+h1{margin:0;font-size:16px}.stats{font-size:12px;color:#d9e2dc}
+.app{display:grid;grid-template-columns:300px 1fr;height:calc(100vh - 56px)}
+aside{border-right:1px solid var(--line);background:var(--panel);padding:10px;overflow:auto}
+.filters{display:grid;gap:6px;margin-bottom:8px}input,select,button,textarea{font:inherit}
+input,select,textarea{width:100%;border:1px solid var(--line);padding:6px;background:#fff}
+.list{display:grid;gap:4px}.item{padding:6px;font-size:11px;background:#f8f5ec;cursor:pointer;border-left:4px solid transparent;word-break:break-all}
+.item.active{outline:1px solid var(--blue);background:#e7f1f5}
+.item.keep{border-left-color:var(--green)}.item.remove{border-left-color:var(--red)}.item.uncertain{border-left-color:var(--amber)}
+main{display:grid;grid-template-rows:auto 1fr auto;min-width:0;background:#111}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:8px 12px;background:var(--panel);border-bottom:1px solid var(--line)}
+.btn{border:0;padding:8px 12px;color:#fff;cursor:pointer}.keepBtn{background:var(--green)}.removeBtn{background:var(--red)}.uncertainBtn{background:var(--amber)}.neutral{background:#59645d}.exportBtn{background:var(--blue)}
+.viewer{overflow:auto;display:flex;align-items:flex-start;justify-content:center;padding:12px}
+.viewer img{max-width:100%;height:auto;background:#000;box-shadow:0 8px 24px #0008}
+.meta{padding:10px 12px;background:var(--panel);border-top:1px solid var(--line);display:grid;gap:6px}
+.meta .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.hint{font-size:12px;color:#625f57}.filename{font-weight:700;font-size:13px}
+.score{font-family:Consolas,monospace;font-size:12px;background:#eef6f0;padding:6px 8px;border:1px solid #c5d6cb}
+.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;color:#fff}
+.badge.low{background:#a33b32}.badge.mid{background:#b07a18}.badge.ok{background:#2f6f4e}
+textarea{min-height:40px}
+</style></head><body>
+<header>
+  <h1>按框 ROI 审查 - review_dataset (conf<1.0)</h1>
+  <div class="stats" id="stats"></div>
+  <div>
+    <button class="btn exportBtn" onclick="exportReview()">导出 JSONL</button>
+    <button class="btn neutral" onclick="clearReview()">清空进度</button>
+  </div>
+</header>
+<div class="app">
+<aside>
+  <div class="filters">
+    <input id="search" placeholder="搜索图片名/类别" oninput="renderList()">
+    <select id="statusFilter" onchange="renderList()">
+      <option value="all">全部状态</option>
+      <option value="pending" selected>未审查</option>
+      <option value="keep">保留</option>
+      <option value="remove">删除</option>
+      <option value="uncertain">存疑</option>
+    </select>
+    <select id="structFilter" onchange="renderList()">
+      <option value="all" selected>全部结构分</option>
+      <option value="very_low">结构很低 (&lt;0.15)</option>
+      <option value="low">结构偏低 (&lt;0.30)</option>
+      <option value="ok">结构尚可 (≥0.30)</option>
+    </select>
+    <select id="sortBy" onchange="renderList()">
+      <option value="structure_asc" selected>排序：结构分升序（更难先看）</option>
+      <option value="conf_asc">排序：置信度升序</option>
+      <option value="area_asc">排序：框面积升序</option>
+      <option value="name">排序：文件名</option>
+    </select>
+  </div>
+  <div class="list" id="list"></div>
+</aside>
+<main>
+  <div class="toolbar">
+    <button class="btn neutral" onclick="move(-1)">上一框 A</button>
+    <button class="btn neutral" onclick="move(1)">下一框 D</button>
+    <button class="btn keepBtn" onclick="mark('keep')">保留 K</button>
+    <button class="btn removeBtn" onclick="mark('remove')">删除 R</button>
+    <button class="btn uncertainBtn" onclick="mark('uncertain')">存疑 U</button>
+    <button class="btn neutral" onclick="mark('remove');">空框一键删（同删除）</button>
+    <span class="hint">建议：montage 中框内若各面板都像均匀噪声/无边缘 → 删；有连贯结构 → 保留；拿不准 → 存疑。默认自动跳下一未审框。</span>
+  </div>
+  <div class="viewer"><img id="roiImg" alt="roi"></div>
+  <div class="meta">
+    <div class="filename" id="title"></div>
+    <div class="row">
+      <span id="badge" class="badge"></span>
+      <span class="score" id="score"></span>
+    </div>
+    <div class="hint" id="advice"></div>
+    <textarea id="note" placeholder="备注（假纹理/框偏了/边缘在框外…）" oninput="saveNote()"></textarea>
+  </div>
+</main>
+</div>
+<script>
+const ITEMS=[{"id":"dianjienie__train__20221029165616271_0_2.png#0","image_name":"dianjienie__train__20221029165616271_0_2.png","box_index":0,"class_id":6,"class_name":"bump","confidence":0.79740173,"xywh":[0.62249535,0.62856078,0.11571729,0.12780604],"area":0.014789368594431602,"structure":0.8279,"edge_mean":56.563,"std":34.01,"highfreq":4.39,"roi_rel":"rois/dianjienie__train__20221029165616271_0_2__b000.jpg","box_xyxy":[2313,2007,2787,2461],"crop_xyxy":[1460,1190,3640,3278]},{"id":"dianjienie__train__20221102183724660_0_2.png#0","image_name":"dianjienie__train__20221102183724660_0_2.png","box_index":0,"class_id":1,"class_name":"waterstain","confidence":0.86582172,"xywh":[0.61180297,0.86059797,0.03425175,0.04598582],"area":0.0015750948101849998,"structure":0.324,"edge_mean":23.848,"std":9.765,"highfreq":2.632,"roi_rel":"rois/dianjienie__train__20221102183724660_0_2__b000.jpg","box_xyxy":[2436,2977,2576,3140],"crop_xyxy":[2184,2684,2828,3433]},{"id":"dianjienie__train__20230104180348914_0_2.png#0","image_name":"dianjienie__train__20230104180348914_0_2.png","box_index":0,"class_id":1,"class_name":"waterstain","confidence":0.87341285,"xywh":[0.79137442,0.17928179,0.01048738,0.01252622],"area":0.0001313672291036,"structure":0.5062,"edge_mean":40.667,"std":12.873,"highfreq":3.6,"roi_rel":"rois/dianjienie__train__20230104180348914_0_2__b000.jpg","box_xyxy":[3220,615,3263,659],"crop_xyxy":[3143,536,3340,738]},{"id":"dianjienie__train__20230108170017402_0_2.png#0","image_name":"dianjienie__train__20230108170017402_0_2.png","box_index":0,"class_id":0,"class_name":"wuzi","confidence":0.88500142,"xywh":[0.14598009,0.68420836,0.04465928,0.31428716],"area":0.014035838278844802,"structure":0.2666,"edge_mean":19.677,"std":8.419,"highfreq":1.947,"roi_rel":"rois/dianjienie__train__20230108170017402_0_2__b000.jpg","box_xyxy":[506,1873,689,2990],"crop_xyxy":[177,0,1018,3554]},{"id":"dianjienie__train__2024_03_18_171049_0.png#0","image_name":"dianjienie__train__2024_03_18_171049_0.png","box_index":0,"class_id":6,"class_name":"bump","confidence":0.89133108,"xywh":[0.25829718,0.31750531,0.03286348,0.04227201],"area":0.0013892053551948,"structure":0.3327,"edge_mean":20.728,"std":17.693,"highfreq":0.751,"roi_rel":"rois/dianjienie__train__2024_03_18_171049_0__b000.jpg","box_xyxy":[991,1053,1125,1204],"crop_xyxy":[750,782,1366,1475]},{"id":"dianjienie__train__2024_03_24_151119_0.png#0","image_name":"dianjienie__train__2024_03_24_151119_0.png","box_index":0,"class_id":0,"class_name":"wuzi","confidence":0.88888747,"xywh":[0.51081467,0.13088941,0.05741203,0.06186131],"area":0.0035515833855593003,"structure":0.2703,"edge_mean":12.263,"std":19.241,"highfreq":0.466,"roi_rel":"rois/dianjienie__train__2024_03_24_151119_0__b000.jpg","box_xyxy":[1975,355,2210,575],"crop_xyxy":[1552,0,2633,971]},{"id":"dianjienie__train__2024_04_26_094718_1.png#0","image_name":"dianjienie__train__2024_04_26_094718_1.png","box_index":0,"class_id":13,"class_name":"watermark","confidence":0.92036217,"xywh":[0.21401257,0.79367761,0.17877696,0.24450127],"area":0.0437111937667392,"structure":0.113,"edge_mean":7.158,"std":5.74,"highfreq":0.329,"roi_rel":"rois/dianjienie__train__2024_04_26_094718_1__b000.jpg","box_xyxy":[510,2386,1243,3255],"crop_xyxy":[0,822,2562,3554]},{"id":"dianjienie__train__2024_05_20_100736_1.png#0","image_name":"dianjienie__train__2024_05_20_100736_1.png","box_index":0,"class_id":1,"class_name":"waterstain","confidence":0.8556143,"xywh":[0.22194581,0.56870032,0.03218202,0.04048266],"area":0.0013028137737732,"structure":0.0967,"edge_mean":6.945,"std":4.036,"highfreq":0.311,"roi_rel":"rois/dianjienie__train__2024_05_20_100736_1__b000.jpg","box_xyxy":[843,1949,975,2093],"crop_xyxy":[606,1690,1212,2352]},{"id":"dianjienie__train__597.png#0","image_name":"dianjienie__train__597.png","box_index":0,"class_id":15,"class_name":"heibian","confidence":0.70780766,"xywh":[0.18687147,0.62826185,0.05569479,0.57298611],"area":0.0319123410693669,"structure":0.2944,"edge_mean":9.021,"std":24.345,"highfreq":0.983,"roi_rel":"rois/dianjienie__train__597__b000.jpg","box_xyxy":[651,1230,879,3293],"crop_xyxy":[241,0,1289,3600]},{"id":"dianjienie__valid__20221029163712064_0_2.png#0","image_name":"dianjienie__valid__20221029163712064_0_2.png","box_index":0,"class_id":1,"class_name":"waterstain","confidence":0.85976171,"xywh":[0.23132939,0.82066799,0.12729846,0.09844555],"area":0.012531966908853002,"structure":0.2937,"edge_mean":23.624,"std":6.753,"highfreq":2.434,"roi_rel":"rois/dianjienie__valid__20221029163712064_0_2__b000.jpg","box_xyxy":[687,2742,1208,3092],"crop_xyxy":[0,2112,2145,3554]},{"id":"dianjienie__valid__20221203174149182_0_2.png#0","image_name":"dianjienie__valid__20221203174149182_0_2.png","box_index":0,"class_id":1,"class_name":"waterstain","confidence":0.85347849,"xywh":[0.40707469,0.76402524,0.04110086,0.17133135],"area":0.0070418658299610006,"structure":0.31,"edge_mean":25.163,"std":7.493,"highfreq":2.273,"roi_rel":"rois/dianjienie__valid__20221203174149182_0_2__b000.jpg","box_xyxy":[1583,2411,1752,3020],"crop_xyxy":[1279,1315,2056,3554]},{"id":"dianjienie__valid__2024_03_23_100135_0.png#0","image_name":"dianjienie__valid__2024_03_23_100135_0.png","box_index":0,"class_id":1,"class_name":"waterstain","confidence":0.85275638,"xywh":[0.13587997,0.68523617,0.02886219,0.05815699],"area":0.0016785380952081,"structure":0.0653,"edge_mean":4.383,"std":3.061,"highfreq":0.195,"roi_rel":"rois/dianjienie__valid__2024_03_23_100135_0__b000.jpg","box_xyxy":[497,2332,616,2539],"crop_xyxy":[283,1960,830,2911]},{"id":"dianjienie__valid__2024_03_24_104201_0.png#0","image_name":"dianjienie__valid__2024_03_24_104201_0.png","box_index":0,"class_id":13,"class_name":"watermark","confidence":0.91115147,"xywh":[0.72047323,0.16159682,0.27328694,0.13250923],"area":0.0362130419884562,"structure":0.0883,"edge_mean":2.56,"std":7.789,"highfreq":0.121,"roi_rel":"rois/dianjienie__valid__2024_03_24_104201_0__b000.jpg","box_xyxy":[2391,339,3511,810],"crop_xyxy":[375,0,4096,1657]}];
+const KEY="boxroi::review_dataset";
+let states=JSON.parse(localStorage.getItem(KEY)||'{}');
+let filtered=[]; let current=0;
+function stateFor(id){return states[id]||(states[id]={decision:'',note:''})}
+function persist(){localStorage.setItem(KEY,JSON.stringify(states));updateStats()}
+function decisionOf(it){return stateFor(it.id).decision||'pending'}
+function renderList(){
+  const q=document.getElementById('search').value.toLowerCase();
+  const f=document.getElementById('statusFilter').value;
+  const sf=document.getElementById('structFilter').value;
+  const sort=document.getElementById('sortBy').value;
+  filtered=ITEMS.filter(it=>{
+    const st=decisionOf(it);
+    const text=(it.image_name+' '+it.class_name+' '+it.id).toLowerCase();
+    if(q && !text.includes(q)) return false;
+    if(f!=='all' && st!==f) return false;
+    const s=it.structure||0;
+    if(sf==='very_low' && s>=0.15) return false;
+    if(sf==='low' && s>=0.30) return false;
+    if(sf==='ok' && s<0.30) return false;
+    return true;
+  });
+  filtered.sort((a,b)=>{
+    if(sort==='structure_asc') return (a.structure||0)-(b.structure||0);
+    if(sort==='conf_asc') return (a.confidence||0)-(b.confidence||0);
+    if(sort==='area_asc') return (a.area||0)-(b.area||0);
+    return a.image_name.localeCompare(b.image_name)||(a.box_index-b.box_index);
+  });
+  const list=document.getElementById('list'); list.innerHTML='';
+  filtered.forEach((it,i)=>{
+    const d=document.createElement('div');
+    const st=decisionOf(it);
+    d.className='item '+st+(i===current?' active':'');
+    d.textContent=`${i+1}. ${it.image_name} #${it.box_index} ${it.class_name} c=${it.confidence?.toFixed?.(3)??it.confidence} s=${(it.structure||0).toFixed(2)}`;
+    d.onclick=()=>{current=i;show()};
+    list.appendChild(d);
+  });
+  if(current>=filtered.length) current=Math.max(0,filtered.length-1);
+  show();
+}
+function adviceFor(it){
+  const s=it.structure||0;
+  if(s<0.12) return '启发式：结构分很低，框内可能几乎无缺陷结构 → 优先考虑删除（仍需人眼确认 montage）。';
+  if(s<0.25) return '启发式：结构分偏低，仔细看 top-hat/black-hat/边缘 面板是否有连贯结构。';
+  return '启发式：结构分尚可，检查结构是否落在黄框内；若结构在框外则位置偏了，应删除。';
+}
+function show(){
+  if(!filtered.length){document.getElementById('title').textContent='无匹配框';document.getElementById('roiImg').removeAttribute('src');return}
+  const it=filtered[current];
+  const st=stateFor(it.id);
+  document.getElementById('title').textContent=`${current+1}/${filtered.length} | ${it.image_name} | 框#${it.box_index} | ${it.class_name} | conf=${it.confidence}`;
+  document.getElementById('roiImg').src=it.roi_rel;
+  document.getElementById('note').value=st.note||'';
+  const s=it.structure||0;
+  const badge=document.getElementById('badge');
+  badge.textContent=s<0.15?'结构很低':(s<0.30?'结构偏低':'结构尚可');
+  badge.className='badge '+(s<0.15?'low':(s<0.30?'mid':'ok'));
+  document.getElementById('score').textContent=`structure=${s.toFixed(3)} | edge=${it.edge_mean} | std=${it.std} | highfreq=${it.highfreq} | area=${it.area?.toFixed?.(6)} | 当前=${decisionOf(it)}`;
+  document.getElementById('advice').textContent=adviceFor(it);
+  [...document.querySelectorAll('.item')].forEach((e,i)=>e.classList.toggle('active',i===current));
+  updateStats();
+}
+function mark(v){
+  if(!filtered.length)return;
+  const it=filtered[current];
+  stateFor(it.id).decision=v;
+  persist();
+  // jump to next pending in full list order of current filter
+  const start=current;
+  for(let step=1; step<=filtered.length; step++){
+    const j=(start+step)%filtered.length;
+    if(decisionOf(filtered[j])==='pending'){current=j;renderList();return}
+  }
+  renderList();
+}
+function saveNote(){if(!filtered.length)return;stateFor(filtered[current].id).note=document.getElementById('note').value;persist()}
+function move(d){if(!filtered.length)return;current=Math.max(0,Math.min(filtered.length-1,current+d));show()}
+function updateStats(){
+  let k=0,r=0,u=0,p=0;
+  ITEMS.forEach(it=>{const d=decisionOf(it);if(d==='keep')k++;else if(d==='remove')r++;else if(d==='uncertain')u++;else p++});
+  document.getElementById('stats').textContent=`框 ${ITEMS.length} | 未审 ${p} | 保留 ${k} | 删除 ${r} | 存疑 ${u}`;
+}
+function exportReview(){
+  const lines=ITEMS.map(it=>{
+    const s=stateFor(it.id);
+    return JSON.stringify({
+      id:it.id,
+      image_name:it.image_name,
+      box_index:it.box_index,
+      class_id:it.class_id,
+      class_name:it.class_name,
+      confidence:it.confidence,
+      xywh:it.xywh,
+      structure:it.structure,
+      decision:s.decision||'pending',
+      note:s.note||'',
+      scores:{edge_mean:it.edge_mean,std:it.std,highfreq:it.highfreq}
+    });
+  }).join('\n');
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([lines],{type:'application/jsonl'}));
+  a.download='review_dataset_boxroi_review.jsonl';
+  a.click();
+}
+function clearReview(){if(confirm('清空本页全部框审查进度？')){states={};persist();renderList()}}
+document.addEventListener('keydown',e=>{
+  if(e.target.tagName==='TEXTAREA'||e.target.tagName==='INPUT'||e.target.tagName==='SELECT')return;
+  const k=e.key.toLowerCase();
+  if(k==='a')move(-1); if(k==='d')move(1);
+  if(k==='k')mark('keep'); if(k==='r')mark('remove'); if(k==='u')mark('uncertain');
+});
+renderList();
+</script></body></html>

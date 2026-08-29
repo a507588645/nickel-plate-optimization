@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "status": "pre_registered_before_inference",
+  "created_at": "2026-08-24T18:45:15",
+  "experiment": "L1 E5a E3/E4 high-confidence FP visual autopsy",
+  "development_only": true,
+  "frozen_test_set": null,
+  "scope": {
+    "fold": 1,
+    "images": 376,
+    "validation_list": "E:\\PythonProject\\优化\\dianjienie_ryw18_oofconsensus_v1_dev_only_r1\\splits\\folds\\fold_01\\val.txt",
+    "forbidden_sources": [
+      "release-validation"
+    ]
+  },
+  "registered_parameters": {
+    "inference": {
+      "device": "cpu",
+      "imgsz": 640,
+      "batch": 4,
+      "conf_floor": 0.001,
+      "nms_iou": 0.7,
+      "max_det": 300
+    },
+    "candidate": {
+      "confidence_floor": 0.7,
+      "confidence_quantile": 0.9,
+      "match_iou": 0.1,
+      "match_scope": "same_class_only"
+    },
+    "sampling": {
+      "seed": 20260824,
+      "per_class_cap": 20,
+      "source_quota_per_class": {
+        "e3_p2": 10,
+        "e4_copypaste": 10
+      },
+      "strategy": "per-class pooled cap; source quotas first; deterministic fill from remaining candidates"
+    },
+    "review_decisions": {
+      "keep": "true_defect",
+      "remove": "not_defect",
+      "uncertain": "uncertain"
+    }
+  },
+  "input": {
+    "data_root": "E:\\PythonProject\\优化\\dianjienie_ryw18_oofconsensus_v1_dev_only_r1",
+    "val_list": "E:\\PythonProject\\优化\\dianjienie_ryw18_oofconsensus_v1_dev_only_r1\\splits\\folds\\fold_01\\val.txt",
+    "val_list_sha256": "dc2fc3162b0368a5bc193333c2e5457f666ad5a4f3144eb05e970ef590c744a1",
+    "data_yaml": "E:\\PythonProject\\优化\\dianjienie_ryw18_oofconsensus_v1_dev_only_r1\\data.yaml",
+    "data_yaml_sha256": "0458213dff8ffde4991216802499a45ac0e5725aeaafdbfe3c7750c8e152693c",
+    "classes_file": "E:\\PythonProject\\优化\\dianjienie_ryw18_oofconsensus_v1_dev_only_r1\\classes.txt",
+    "classes_sha256": "caca16ab94a5d962a614113a4a8b9db9aa66f089758f0f870e25a54b0f8cd31f",
+    "images": 376,
+    "auto_label_boxes": 4835,
+    "weights": {
+      "e3_p2": {
+        "path": "E:\\PythonProject\\优化\\l1_e3_p2_v4_recovery_20260824_r2\\dianjienie_medium_yolo11m_p2_640_kaggle_seed0_oofconsensusv1_fold01\\weights\\best.pt",
+        "sha256": "4206ee85d9887a07f199fd7a046f1bc3ac22813ab9b672b6021b4ccd552e81c2"
+      },
+      "e4_copypaste": {
+        "path": "E:\\PythonProject\\优化\\l1_e4_copypaste_v4_recovery_20260824_r2\\dianjienie_medium_yolo11m_cp_640_kaggle_seed0_oofconsensusv1_fold01\\weights\\best.pt",
+        "sha256": "d75500d532ee7ca3984ed3000882193a356b5f130f4a0829cf2c9d71ef61b00b"
+      }
+    }
+  },
+  "non_claims": [
+    "not_manual_truth",
+    "not_Golden_Set",
+    "not_model_ranking_evidence",
+    "not_training_labels"
+  ]
+}

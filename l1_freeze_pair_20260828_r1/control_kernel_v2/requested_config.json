@@ -1,0 +1,15 @@
+{
+  "experiment": "L1 YOLO11m paired two-stage freeze ablation",
+  "variant": "control",
+  "stage1_freeze": 0,
+  "stage1_epochs": 20,
+  "stage2_freeze": 0,
+  "stage2_epochs": 63,
+  "mode": "fold",
+  "fold": 1,
+  "data_version": "oofconsensusv1",
+  "development_only": true,
+  "frozen_test_set": null,
+  "run_name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_control_s1e020_s2e063_fold01",
+  "trainer_sha256": "5fcc0306839dba93477e1f9a3f344599da5dbf307cad2f38052ef00efdf310c4"
+}

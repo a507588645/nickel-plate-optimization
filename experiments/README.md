@@ -55,6 +55,7 @@
 
 ## 6. 当前专项状态
 
+- `dianjienie_ryw18_oofconsensus_v1_yolo11m_freeze10pair_fold01_kaggle_20260828.md`：`running`、`inconclusive`。用户已授权独立 GPU 筛选；两个 Kaggle version 1 任务均在运行。固定第一阶段 `freeze=0` 对照与 `freeze=10` 候选，均第二阶段解冻至 83 epoch、仅开发集 Fold 1。未通过 `+0.01` mAP50-95 且六个重点类别 Recall 不下降的成对闸门，不训练全开发集、也不导出新的 ONNX。
 - `dianjienie_ryw18_oofconsensus_v1_yolo11m_tile1024o25_phase1_wbfedge_fold01_kaggle.md`：已完成且证据完整的单 Fold `auto_only` 停止闸门。后处理虽清除了大量低置信/边缘切片框，但所有切片 profile 仍显著低于固定整图基线；Phase 2/3 不启动。
 - `dianjienie_ryw18_oofconsensus_v1_yolo11m_e2_mosaicpair_fold01_kaggle.md`：`complete`、`provisional`。两个完成 ZIP 的最小必需证据已逐成员 CRC 提取并通过成对合同校验；Mosaic=0 候选 mAP50-95 比 Mosaic=1 对照低 `0.006518`，且 `wuzi/airhole/bubble` Recall 下降，结论为 `not_passed_do_not_expand`，不启动 Fold 2/3。
 - `dianjienie_ryw18_oofconsensus_v1_e1b_perclass_confscan_20260823.md`：`complete`、`provisional`。仅用持久化开发 OOF 预测完成单类别阈值扫描；22 个候选通过同一 `0.25` 运行对照，但相对计划固定原始 mAP 锚点全部不达标，最终为 `not_passed_strict_fixed_anchor`，不生成联合阈值配置。

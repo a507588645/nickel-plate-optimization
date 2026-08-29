@@ -1,0 +1,562 @@
+[
+  {
+    "arm_id": "arm1",
+    "arm_name": "① ryw.pt@1536",
+    "arm_desc": "历史基线 (YOLOv5 ryw.pt 18类, 1536分辨率)",
+    "source_type": "历史复用 (reused from dianji_grade_v3)",
+    "detector_classes": 18,
+    "imgsz": 1536,
+    "conf_thres": 0.25,
+    "iou_thres": 0.45,
+    "detector_weight_sha256": "f404ceda25e083964f84fbe35fad2be9b48ebe42f0bf4b3d11813068542178eb",
+    "base_features_count": 43,
+    "texture_features_count": 63,
+    "base_only": {
+      "valid_accuracy": 0.6025,
+      "valid_macro_f1": 0.3562,
+      "test_accuracy": 0.6398,
+      "test_macro_f1": 0.4131,
+      "test_per_class": {
+        "3#": {
+          "precision": 0.125,
+          "recall": 0.1429,
+          "f1": 0.1333,
+          "support": 7
+        },
+        "9950": {
+          "precision": 0.7534,
+          "recall": 0.6707,
+          "f1": 0.7097,
+          "support": 82
+        },
+        "9996": {
+          "precision": 0.6571,
+          "recall": 0.6765,
+          "f1": 0.6667,
+          "support": 68
+        },
+        "bad": {
+          "precision": 0.1,
+          "recall": 0.25,
+          "f1": 0.1429,
+          "support": 4
+        }
+      }
+    },
+    "texture_only": {
+      "valid_accuracy": 0.7453,
+      "valid_macro_f1": 0.6086,
+      "test_accuracy": 0.7764,
+      "test_macro_f1": 0.6631,
+      "test_per_class": {
+        "3#": {
+          "precision": 0.6,
+          "recall": 0.4286,
+          "f1": 0.5,
+          "support": 7
+        },
+        "9950": {
+          "precision": 0.7976,
+          "recall": 0.8171,
+          "f1": 0.8072,
+          "support": 82
+        },
+        "9996": {
+          "precision": 0.7681,
+          "recall": 0.7794,
+          "f1": 0.7737,
+          "support": 68
+        },
+        "bad": {
+          "precision": 0.6667,
+          "recall": 0.5,
+          "f1": 0.5714,
+          "support": 4
+        }
+      },
+      "delta_test_accuracy": 0.1366,
+      "delta_test_macro_f1": 0.25
+    },
+    "rejection_070": {
+      "target_coverage": 0.7,
+      "threshold_from_valid": 0.7397,
+      "valid_coverage": 0.7019,
+      "test_coverage": 0.7143,
+      "test_n_accepted": 115,
+      "test_accepted_accuracy": 0.8696,
+      "test_accepted_macro_f1": 0.7254
+    },
+    "reject_curve_all": [
+      {
+        "coverage_target": "1.0",
+        "threshold_from_valid": "0.0",
+        "valid_coverage": "1.0",
+        "valid_accuracy": "0.7453",
+        "test_coverage": "1.0",
+        "test_n_accepted": "161",
+        "test_accuracy": "0.7764",
+        "test_macro_f1": "0.6631"
+      },
+      {
+        "coverage_target": "0.9",
+        "threshold_from_valid": "0.5613",
+        "valid_coverage": "0.9006",
+        "valid_accuracy": "0.7793",
+        "test_coverage": "0.8882",
+        "test_n_accepted": "143",
+        "test_accuracy": "0.8042",
+        "test_macro_f1": "0.6254"
+      },
+      {
+        "coverage_target": "0.8",
+        "threshold_from_valid": "0.6593",
+        "valid_coverage": "0.8012",
+        "valid_accuracy": "0.814",
+        "test_coverage": "0.8012",
+        "test_n_accepted": "129",
+        "test_accuracy": "0.8217",
+        "test_macro_f1": "0.6892"
+      },
+      {
+        "coverage_target": "0.7",
+        "threshold_from_valid": "0.7397",
+        "valid_coverage": "0.7019",
+        "valid_accuracy": "0.8142",
+        "test_coverage": "0.7143",
+        "test_n_accepted": "115",
+        "test_accuracy": "0.8696",
+        "test_macro_f1": "0.7254"
+      },
+      {
+        "coverage_target": "0.6",
+        "threshold_from_valid": "0.7991",
+        "valid_coverage": "0.6025",
+        "valid_accuracy": "0.8557",
+        "test_coverage": "0.6646",
+        "test_n_accepted": "107",
+        "test_accuracy": "0.8972",
+        "test_macro_f1": "0.7408"
+      }
+    ]
+  },
+  {
+    "arm_id": "arm2",
+    "arm_name": "② YOLO11m@640",
+    "arm_desc": "前序产物 (YOLO11m ONNX 18类, 640分辨率)",
+    "source_type": "前序复用 (reused from dianji_grade_y11m640_v1)",
+    "detector_classes": 18,
+    "imgsz": 640,
+    "conf_thres": 0.25,
+    "iou_thres": 0.45,
+    "detector_weight_sha256": "901ccf6006f44689483aaf6f0d1d1b8c18132a85c7d881be7e62fcdccc255b21",
+    "base_features_count": 43,
+    "texture_features_count": 63,
+    "base_only": {
+      "valid_accuracy": 0.6584,
+      "valid_macro_f1": 0.4648,
+      "test_accuracy": 0.6149,
+      "test_macro_f1": 0.5192,
+      "test_per_class": {
+        "3#": {
+          "precision": 0.4615,
+          "recall": 0.8571,
+          "f1": 0.6,
+          "support": 7
+        },
+        "9950": {
+          "precision": 0.7206,
+          "recall": 0.5976,
+          "f1": 0.6533,
+          "support": 82
+        },
+        "9996": {
+          "precision": 0.5733,
+          "recall": 0.6324,
+          "f1": 0.6014,
+          "support": 68
+        },
+        "bad": {
+          "precision": 0.2,
+          "recall": 0.25,
+          "f1": 0.2222,
+          "support": 4
+        }
+      }
+    },
+    "texture_only": {
+      "valid_accuracy": 0.7453,
+      "valid_macro_f1": 0.7058,
+      "test_accuracy": 0.7453,
+      "test_macro_f1": 0.6797,
+      "test_per_class": {
+        "3#": {
+          "precision": 0.75,
+          "recall": 0.4286,
+          "f1": 0.5455,
+          "support": 7
+        },
+        "9950": {
+          "precision": 0.775,
+          "recall": 0.7561,
+          "f1": 0.7654,
+          "support": 82
+        },
+        "9996": {
+          "precision": 0.7067,
+          "recall": 0.7794,
+          "f1": 0.7413,
+          "support": 68
+        },
+        "bad": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667,
+          "support": 4
+        }
+      },
+      "delta_test_accuracy": 0.1304,
+      "delta_test_macro_f1": 0.1605
+    },
+    "rejection_070": {
+      "target_coverage": 0.7,
+      "threshold_from_valid": 0.7362,
+      "valid_coverage": 0.7019,
+      "test_coverage": 0.7391,
+      "test_n_accepted": 119,
+      "test_accepted_accuracy": 0.8487,
+      "test_accepted_macro_f1": 0.782
+    },
+    "reject_curve_all": [
+      {
+        "coverage_target": "1.0",
+        "threshold_from_valid": "0.0",
+        "valid_coverage": "1.0",
+        "valid_accuracy": "0.7453",
+        "test_coverage": "1.0",
+        "test_n_accepted": "161",
+        "test_accuracy": "0.7453",
+        "test_macro_f1": "0.6797"
+      },
+      {
+        "coverage_target": "0.9",
+        "threshold_from_valid": "0.5783",
+        "valid_coverage": "0.9006",
+        "valid_accuracy": "0.7862",
+        "test_coverage": "0.9193",
+        "test_n_accepted": "148",
+        "test_accuracy": "0.7838",
+        "test_macro_f1": "0.7475"
+      },
+      {
+        "coverage_target": "0.8",
+        "threshold_from_valid": "0.6625",
+        "valid_coverage": "0.8012",
+        "valid_accuracy": "0.8295",
+        "test_coverage": "0.8075",
+        "test_n_accepted": "130",
+        "test_accuracy": "0.8154",
+        "test_macro_f1": "0.7637"
+      },
+      {
+        "coverage_target": "0.7",
+        "threshold_from_valid": "0.7362",
+        "valid_coverage": "0.7019",
+        "valid_accuracy": "0.8407",
+        "test_coverage": "0.7391",
+        "test_n_accepted": "119",
+        "test_accuracy": "0.8487",
+        "test_macro_f1": "0.782"
+      },
+      {
+        "coverage_target": "0.6",
+        "threshold_from_valid": "0.7871",
+        "valid_coverage": "0.6025",
+        "valid_accuracy": "0.8763",
+        "test_coverage": "0.6522",
+        "test_n_accepted": "105",
+        "test_accuracy": "0.8667",
+        "test_macro_f1": "0.7708"
+      }
+    ]
+  },
+  {
+    "arm_id": "arm3",
+    "arm_name": "③ slf.pt@640",
+    "arm_desc": "全新提取 (YOLOv5 slf.pt 5类, 640分辨率)",
+    "source_type": "全新提取 (new extraction in arm3_slf640)",
+    "detector_classes": 5,
+    "imgsz": 640,
+    "conf_thres": 0.25,
+    "iou_thres": 0.45,
+    "detector_weight_sha256": "d15831042281747965d0a4f4eb2dd85c95b121e0112fbd90ea2e200cd8dbeb40",
+    "base_features_count": 13,
+    "texture_features_count": 33,
+    "base_only": {
+      "valid_accuracy": 0.677,
+      "valid_macro_f1": 0.5143,
+      "test_accuracy": 0.646,
+      "test_macro_f1": 0.4278,
+      "test_per_class": {
+        "3#": {
+          "precision": 0.2727,
+          "recall": 0.4286,
+          "f1": 0.3333,
+          "support": 7
+        },
+        "9950": {
+          "precision": 0.7397,
+          "recall": 0.6585,
+          "f1": 0.6968,
+          "support": 82
+        },
+        "9996": {
+          "precision": 0.6714,
+          "recall": 0.6912,
+          "f1": 0.6812,
+          "support": 68
+        },
+        "bad": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 4
+        }
+      }
+    },
+    "texture_only": {
+      "valid_accuracy": 0.7888,
+      "valid_macro_f1": 0.7074,
+      "test_accuracy": 0.7702,
+      "test_macro_f1": 0.6528,
+      "test_per_class": {
+        "3#": {
+          "precision": 0.75,
+          "recall": 0.4286,
+          "f1": 0.5455,
+          "support": 7
+        },
+        "9950": {
+          "precision": 0.8072,
+          "recall": 0.8171,
+          "f1": 0.8121,
+          "support": 82
+        },
+        "9996": {
+          "precision": 0.7429,
+          "recall": 0.7647,
+          "f1": 0.7536,
+          "support": 68
+        },
+        "bad": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "support": 4
+        }
+      },
+      "delta_test_accuracy": 0.1242,
+      "delta_test_macro_f1": 0.225
+    },
+    "rejection_070": {
+      "target_coverage": 0.7,
+      "threshold_from_valid": 0.7872,
+      "valid_coverage": 0.7019,
+      "test_coverage": 0.6584,
+      "test_n_accepted": 106,
+      "test_accepted_accuracy": 0.8491,
+      "test_accepted_macro_f1": 0.7183
+    },
+    "reject_curve_all": [
+      {
+        "coverage_target": "1.0",
+        "threshold_from_valid": "0.0",
+        "valid_coverage": "1.0",
+        "valid_accuracy": "0.7888",
+        "test_coverage": "1.0",
+        "test_n_accepted": "161",
+        "test_accuracy": "0.7702",
+        "test_macro_f1": "0.6528"
+      },
+      {
+        "coverage_target": "0.9",
+        "threshold_from_valid": "0.5866",
+        "valid_coverage": "0.9006",
+        "valid_accuracy": "0.8276",
+        "test_coverage": "0.882",
+        "test_n_accepted": "142",
+        "test_accuracy": "0.8028",
+        "test_macro_f1": "0.6986"
+      },
+      {
+        "coverage_target": "0.8",
+        "threshold_from_valid": "0.7117",
+        "valid_coverage": "0.8012",
+        "valid_accuracy": "0.845",
+        "test_coverage": "0.7764",
+        "test_n_accepted": "125",
+        "test_accuracy": "0.816",
+        "test_macro_f1": "0.6839"
+      },
+      {
+        "coverage_target": "0.7",
+        "threshold_from_valid": "0.7872",
+        "valid_coverage": "0.7019",
+        "valid_accuracy": "0.8761",
+        "test_coverage": "0.6584",
+        "test_n_accepted": "106",
+        "test_accuracy": "0.8491",
+        "test_macro_f1": "0.7183"
+      },
+      {
+        "coverage_target": "0.6",
+        "threshold_from_valid": "0.8485",
+        "valid_coverage": "0.6025",
+        "valid_accuracy": "0.8969",
+        "test_coverage": "0.5652",
+        "test_n_accepted": "91",
+        "test_accuracy": "0.8901",
+        "test_macro_f1": "0.7427"
+      }
+    ]
+  },
+  {
+    "arm_id": "arm4",
+    "arm_name": "④ ryw.pt@640",
+    "arm_desc": "全新提取控制臂 (YOLOv5 ryw.pt 18类, 640分辨率)",
+    "source_type": "全新提取 (new extraction in arm4_ryw640)",
+    "detector_classes": 18,
+    "imgsz": 640,
+    "conf_thres": 0.25,
+    "iou_thres": 0.45,
+    "detector_weight_sha256": "f404ceda25e083964f84fbe35fad2be9b48ebe42f0bf4b3d11813068542178eb",
+    "base_features_count": 43,
+    "texture_features_count": 63,
+    "base_only": {
+      "valid_accuracy": 0.646,
+      "valid_macro_f1": 0.4219,
+      "test_accuracy": 0.6025,
+      "test_macro_f1": 0.39,
+      "test_per_class": {
+        "3#": {
+          "precision": 0.3333,
+          "recall": 0.2857,
+          "f1": 0.3077,
+          "support": 7
+        },
+        "9950": {
+          "precision": 0.642,
+          "recall": 0.6341,
+          "f1": 0.638,
+          "support": 82
+        },
+        "9996": {
+          "precision": 0.5972,
+          "recall": 0.6324,
+          "f1": 0.6143,
+          "support": 68
+        },
+        "bad": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 4
+        }
+      }
+    },
+    "texture_only": {
+      "valid_accuracy": 0.7764,
+      "valid_macro_f1": 0.6856,
+      "test_accuracy": 0.7578,
+      "test_macro_f1": 0.6628,
+      "test_per_class": {
+        "3#": {
+          "precision": 0.75,
+          "recall": 0.4286,
+          "f1": 0.5455,
+          "support": 7
+        },
+        "9950": {
+          "precision": 0.7857,
+          "recall": 0.8049,
+          "f1": 0.7952,
+          "support": 82
+        },
+        "9996": {
+          "precision": 0.7286,
+          "recall": 0.75,
+          "f1": 0.7391,
+          "support": 68
+        },
+        "bad": {
+          "precision": 0.6667,
+          "recall": 0.5,
+          "f1": 0.5714,
+          "support": 4
+        }
+      },
+      "delta_test_accuracy": 0.1553,
+      "delta_test_macro_f1": 0.2728
+    },
+    "rejection_070": {
+      "target_coverage": 0.7,
+      "threshold_from_valid": 0.7288,
+      "valid_coverage": 0.7019,
+      "test_coverage": 0.7391,
+      "test_n_accepted": 119,
+      "test_accepted_accuracy": 0.8067,
+      "test_accepted_macro_f1": 0.7011
+    },
+    "reject_curve_all": [
+      {
+        "coverage_target": "1.0",
+        "threshold_from_valid": "0.0",
+        "valid_coverage": "1.0",
+        "valid_accuracy": "0.7764",
+        "test_coverage": "1.0",
+        "test_n_accepted": "161",
+        "test_accuracy": "0.7578",
+        "test_macro_f1": "0.6628"
+      },
+      {
+        "coverage_target": "0.9",
+        "threshold_from_valid": "0.5762",
+        "valid_coverage": "0.9006",
+        "valid_accuracy": "0.8069",
+        "test_coverage": "0.8944",
+        "test_n_accepted": "144",
+        "test_accuracy": "0.7708",
+        "test_macro_f1": "0.6462"
+      },
+      {
+        "coverage_target": "0.8",
+        "threshold_from_valid": "0.6596",
+        "valid_coverage": "0.8012",
+        "valid_accuracy": "0.8217",
+        "test_coverage": "0.8199",
+        "test_n_accepted": "132",
+        "test_accuracy": "0.7879",
+        "test_macro_f1": "0.6677"
+      },
+      {
+        "coverage_target": "0.7",
+        "threshold_from_valid": "0.7288",
+        "valid_coverage": "0.7019",
+        "valid_accuracy": "0.8407",
+        "test_coverage": "0.7391",
+        "test_n_accepted": "119",
+        "test_accuracy": "0.8067",
+        "test_macro_f1": "0.7011"
+      },
+      {
+        "coverage_target": "0.6",
+        "threshold_from_valid": "0.8348",
+        "valid_coverage": "0.6025",
+        "valid_accuracy": "0.8557",
+        "test_coverage": "0.6273",
+        "test_n_accepted": "101",
+        "test_accuracy": "0.8614",
+        "test_macro_f1": "0.7053"
+      }
+    ]
+  }
+]

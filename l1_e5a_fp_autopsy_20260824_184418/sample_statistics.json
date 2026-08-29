@@ -1,0 +1,178 @@
+{
+  "images": 376,
+  "auto_label_boxes": 4835,
+  "all_candidate_boxes": 13,
+  "sampled_candidate_boxes": 13,
+  "candidate_images": 13,
+  "sampled_images": 13,
+  "by_source": {
+    "e3_p2": {
+      "all_candidates": 3,
+      "sampled_candidates": 3
+    },
+    "e4_copypaste": {
+      "all_candidates": 10,
+      "sampled_candidates": 10
+    }
+  },
+  "by_class": {
+    "wuzi": {
+      "class_id": 0,
+      "all_candidates": 2,
+      "sampled_candidates": 2,
+      "all_by_source": {
+        "e3_p2": 2
+      },
+      "sampled_by_source": {
+        "e3_p2": 2
+      }
+    },
+    "waterstain": {
+      "class_id": 1,
+      "all_candidates": 6,
+      "sampled_candidates": 6,
+      "all_by_source": {
+        "e4_copypaste": 6
+      },
+      "sampled_by_source": {
+        "e4_copypaste": 6
+      }
+    },
+    "yellowstain": {
+      "class_id": 2,
+      "all_candidates": 0,
+      "sampled_candidates": 0,
+      "all_by_source": {},
+      "sampled_by_source": {}
+    },
+    "nodule": {
+      "class_id": 3,
+      "all_candidates": 0,
+      "sampled_candidates": 0,
+      "all_by_source": {},
+      "sampled_by_source": {}
+    },
+    "airhole": {
+      "class_id": 4,
+      "all_candidates": 0,
+      "sampled_candidates": 0,
+      "all_by_source": {},
+      "sampled_by_source": {}
+    },
+    "bubble": {
+      "class_id": 5,
+      "all_candidates": 0,
+      "sampled_candidates": 0,
+      "all_by_source": {},
+      "sampled_by_source": {}
+    },
+    "bump": {
+      "class_id": 6,
+      "all_candidates": 2,
+      "sampled_candidates": 2,
+      "all_by_source": {
+        "e3_p2": 1,
+        "e4_copypaste": 1
+      },
+      "sampled_by_source": {
+        "e3_p2": 1,
+        "e4_copypaste": 1
+      }
+    },
+    "fawu": {
+      "class_id": 7,
+      "all_candidates": 0,
+      "sampled_candidates": 0,
+      "all_by_source": {},
+      "sampled_by_source": {}
+    },
+    "overfire": {
+      "class_id": 8,
+      "all_candidates": 0,
+      "sampled_candidates": 0,
+      "all_by_source": {},
+      "sampled_by_source": {}
+    },
+    "NiOH": {
+      "class_id": 9,
+      "all_candidates": 0,
+      "sampled_candidates": 0,
+      "all_by_source": {},
+      "sampled_by_source": {}
+    },
+    "greenstain": {
+      "class_id": 10,
+      "all_candidates": 0,
+      "sampled_candidates": 0,
+      "all_by_source": {},
+      "sampled_by_source": {}
+    },
+    "suanwuran": {
+      "class_id": 11,
+      "all_candidates": 0,
+      "sampled_candidates": 0,
+      "all_by_source": {},
+      "sampled_by_source": {}
+    },
+    "quejiao": {
+      "class_id": 12,
+      "all_candidates": 0,
+      "sampled_candidates": 0,
+      "all_by_source": {},
+      "sampled_by_source": {}
+    },
+    "watermark": {
+      "class_id": 13,
+      "all_candidates": 2,
+      "sampled_candidates": 2,
+      "all_by_source": {
+        "e4_copypaste": 2
+      },
+      "sampled_by_source": {
+        "e4_copypaste": 2
+      }
+    },
+    "youpao": {
+      "class_id": 14,
+      "all_candidates": 0,
+      "sampled_candidates": 0,
+      "all_by_source": {},
+      "sampled_by_source": {}
+    },
+    "heibian": {
+      "class_id": 15,
+      "all_candidates": 1,
+      "sampled_candidates": 1,
+      "all_by_source": {
+        "e4_copypaste": 1
+      },
+      "sampled_by_source": {
+        "e4_copypaste": 1
+      }
+    },
+    "mijixiaokeng": {
+      "class_id": 16,
+      "all_candidates": 0,
+      "sampled_candidates": 0,
+      "all_by_source": {},
+      "sampled_by_source": {}
+    },
+    "fanxitong": {
+      "class_id": 17,
+      "all_candidates": 0,
+      "sampled_candidates": 0,
+      "all_by_source": {},
+      "sampled_by_source": {}
+    }
+  },
+  "review_dataset": {
+    "review_root": "E:\\PythonProject\\优化\\l1_e5a_fp_autopsy_20260824_184418\\review_dataset",
+    "images": 13,
+    "boxes": 13,
+    "materialization_modes": {
+      "hardlink": 13
+    },
+    "labels_with_conf": "E:\\PythonProject\\优化\\l1_e5a_fp_autopsy_20260824_184418\\review_dataset\\labels_with_conf"
+  },
+  "gate_status": "pending_user_review"
+}

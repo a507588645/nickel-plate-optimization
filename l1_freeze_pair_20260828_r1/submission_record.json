@@ -1,0 +1,130 @@
+{
+  "experiment": "L1 YOLO11m paired two-stage Freeze10 ablation",
+  "submitted_at": "2026-08-28T14:44:00+08:00",
+  "user_authorization": "2026-08-28 user replied: 允许",
+  "scope": "development-only OOF Fold 1; frozen test and release-validation are not mounted, read, or evaluated",
+  "common_training": {
+    "model": "yolo11m.pt",
+    "stage1_epochs": 20,
+    "stage2_epochs": 63,
+    "total_epochs": 83,
+    "imgsz": 640,
+    "batch": 8,
+    "optimizer": "SGD",
+    "seed": 0,
+    "stage2_freeze": 0,
+    "resume": false,
+    "plots": false
+  },
+  "submitted_trainer_sha256": "b2c228be3b1e8bf70d754f38d118815e46682e02a35c0c04d18e1ffe25c02bef",
+  "tasks": {
+    "control": {
+      "stage1_freeze": 0,
+      "local_package": "control_kernel",
+      "requested_kernel_id": "lly3323w/l1-ryw18-y11m-control-s1e20-s2e63-f01",
+      "actual_kernel_id": "lly3323w/l1-ryw18-yolo11m-control-s1e20-s2e63-fold-01",
+      "url": "https://www.kaggle.com/code/lly3323w/l1-ryw18-yolo11m-control-s1e20-s2e63-fold-01",
+      "version": 1,
+      "status_after_submit": "RUNNING",
+      "run_name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_control_s1e020_s2e063_fold01",
+      "kernel_script_sha256": "cc7b0a25f244947c5404275bb600dc55bca2558691d54eab7bc2dac04bf2abee"
+    },
+    "freeze10": {
+      "stage1_freeze": 10,
+      "local_package": "freeze10_kernel",
+      "requested_kernel_id": "lly3323w/l1-ryw18-y11m-freeze10-s1e20-s2e63-f01",
+      "actual_kernel_id": "lly3323w/l1-ryw18-yolo11m-freeze10-s1e20-s2e63-fold-01",
+      "url": "https://www.kaggle.com/code/lly3323w/l1-ryw18-yolo11m-freeze10-s1e20-s2e63-fold-01",
+      "version": 1,
+      "status_after_submit": "RUNNING",
+      "run_name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_freeze10_s1e020_s2e063_fold01",
+      "kernel_script_sha256": "241f5b659d62a89c9f63ccf9fa04819dadf93a7c54429864094eab71da52c17f"
+    }
+  },
+  "v1_outcome": {
+    "status": "ERROR",
+    "training_started": false,
+    "weights_or_metrics_produced": false,
+    "cause": "Path.resolve() followed a restored Kaggle image symlink and changed the anchor basename to the source basename, producing a lookup for labels/1.txt instead of labels/dianjienie__train__1.txt.",
+    "evidence": [
+      "remote_logs/control_v1_utf8/l1-ryw18-yolo11m-control-s1e20-s2e63-fold-01.log",
+      "remote_logs/freeze10_v1_utf8/l1-ryw18-yolo11m-freeze10-s1e20-s2e63-fold-01.log"
+    ]
+  },
+  "v2_submission": {
+    "submitted_at": "2026-08-28T15:01:00+08:00",
+    "status_after_submit": "COMPLETE",
+    "fix": "Use Path.absolute() rather than Path.resolve() for restored anchor images, preserving the anchor basename used by the one-to-one labels directory.",
+    "local_regression": {
+      "entry": "kaggle_dianjienie_ryw18_existing_data_runner.py --prepare-only followed by train_l1_freeze_two_stage.py --dry-run",
+      "images": 1127,
+      "candidate_boxes": 15671,
+      "fold_01": {
+        "train": 751,
+        "val": 376
+      }
+    },
+    "trainer_sha256": "5fcc0306839dba93477e1f9a3f344599da5dbf307cad2f38052ef00efdf310c4",
+    "tasks": {
+      "control": {
+        "stage1_freeze": 0,
+        "local_package": "control_kernel_v2",
+        "kernel_id": "lly3323w/l1-ryw18-yolo11m-control-s1e20-s2e63-fold-01",
+        "url": "https://www.kaggle.com/lly3323w/l1-ryw18-yolo11m-control-s1e20-s2e63-fold-01",
+        "run_name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_control_s1e020_s2e063_fold01",
+        "kernel_script_sha256": "2bc31a71ae0b616f8d0ed679faa6dfd1aaef07364431f23a54704b4a3c2dbbf6"
+      },
+      "freeze10": {
+        "stage1_freeze": 10,
+        "local_package": "freeze10_kernel_v2",
+        "kernel_id": "lly3323w/l1-ryw18-yolo11m-freeze10-s1e20-s2e63-fold-01",
+        "url": "https://www.kaggle.com/lly3323w/l1-ryw18-yolo11m-freeze10-s1e20-s2e63-fold-01",
+        "run_name": "dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_freeze10_s1e020_s2e063_fold01",
+        "kernel_script_sha256": "37f1d366f89d3bd5f84a486111e0f54c3e1d3e9e0663eb6a62fc230b04e5242d"
+      }
+    }
+  },
+  "v2_outcome": {
+    "status": "not_passed_do_not_train_finaldev",
+    "kernel_status": {
+      "control": "COMPLETE",
+      "freeze10": "COMPLETE"
+    },
+    "collection": {
+      "control_archive_sha256": "4064cb1f1fda7a84ec1c8f97fdd9f2892bc26e94c1fc031bd2ea004e2338089e",
+      "freeze10_archive_sha256": "73732e615378734276c2106358c326eb45dadc9f40f8bcf1e78dca89cf78ae0c",
+      "archive_file_count_each": 16,
+      "development_only": true,
+      "frozen_test_or_release_validation_read": false
+    },
+    "reevaluation": {
+      "scope": "fixed OOF development Fold 1 validation only",
+      "val_images": 376,
+      "imgsz": 640,
+      "batch": 4,
+      "seed": 0,
+      "control": {
+        "precision": 0.5871029718647633,
+        "recall": 0.3106673115117148,
+        "map50": 0.3156731871159845,
+        "map50_95": 0.1624991795507151
+      },
+      "freeze10": {
+        "precision": 0.43203422372404027,
+        "recall": 0.309154397314564,
+        "map50": 0.3036686399983189,
+        "map50_95": 0.1559941655590636
+      }
+    },
+    "gate_artifacts": {
+      "decision": "E:\\PythonProject\\优化\\l1_freeze_pair_verification_20260828_v2\\l1_freeze_pair_gate_decision.json",
+      "report": "E:\\PythonProject\\优化\\l1_freeze_pair_verification_20260828_v2\\l1_freeze_pair_gate_report.md"
+    },
+    "decision": "Freeze10 lost 0.006505 mAP50-95 versus control and reduced recall for wuzi, airhole, and watermark; do not train finaldev and do not export a new ONNX."
+  },
+  "next_steps": [
+    "Do not train a Freeze10 finaldev model or export an ONNX from this candidate.",
+    "Keep the existing released YOLO11m ONNX unchanged.",
+    "Retain the development-only archive and gate evidence for future research comparison."
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "derived_after_inference_before_sampling": true,
+  "rule": "threshold=max(conf_floor=0.7, q0.90 among predictions at or above conf_floor)",
+  "thresholds": {
+    "e3_p2": {
+      "wuzi": {
+        "class_id": 0,
+        "eligible_count_at_conf_floor": 52,
+        "quantile": 0.9,
+        "quantile_value": 0.88450437,
+        "threshold": 0.88450437
+      },
+      "waterstain": {
+        "class_id": 1,
+        "eligible_count_at_conf_floor": 709,
+        "quantile": 0.9,
+        "quantile_value": 0.87635466,
+        "threshold": 0.87635466
+      },
+      "yellowstain": {
+        "class_id": 2,
+        "eligible_count_at_conf_floor": 0,
+        "quantile": 0.9,
+        "quantile_value": 0.7,
+        "threshold": 0.7
+      },
+      "nodule": {
+        "class_id": 3,
+        "eligible_count_at_conf_floor": 11,
+        "quantile": 0.9,
+        "quantile_value": 0.91221285,
+        "threshold": 0.91221285
+      },
+      "airhole": {
+        "class_id": 4,
+        "eligible_count_at_conf_floor": 45,
+        "quantile": 0.9,
+        "quantile_value": 0.8976913,
+        "threshold": 0.8976913
+      },
+      "bubble": {
+        "class_id": 5,
+        "eligible_count_at_conf_floor": 34,
+        "quantile": 0.9,
+        "quantile_value": 0.9639843,
+        "threshold": 0.9639843
+      },
+      "bump": {
+        "class_id": 6,
+        "eligible_count_at_conf_floor": 3,
+        "quantile": 0.9,
+        "quantile_value": 0.78213584,
+        "threshold": 0.78213584
+      },
+      "fawu": {
+        "class_id": 7,
+        "eligible_count_at_conf_floor": 0,
+        "quantile": 0.9,
+        "quantile_value": 0.7,
+        "threshold": 0.7
+      },
+      "overfire": {
+        "class_id": 8,
+        "eligible_count_at_conf_floor": 11,
+        "quantile": 0.9,
+        "quantile_value": 0.94720012,
+        "threshold": 0.94720012
+      },
+      "NiOH": {
+        "class_id": 9,
+        "eligible_count_at_conf_floor": 0,
+        "quantile": 0.9,
+        "quantile_value": 0.7,
+        "threshold": 0.7
+      },
+      "greenstain": {
+        "class_id": 10,
+        "eligible_count_at_conf_floor": 15,
+        "quantile": 0.9,
+        "quantile_value": 0.96926605,
+        "threshold": 0.96926605
+      },
+      "suanwuran": {
+        "class_id": 11,
+        "eligible_count_at_conf_floor": 8,
+        "quantile": 0.9,
+        "quantile_value": 0.97474569,
+        "threshold": 0.97474569
+      },
+      "quejiao": {
+        "class_id": 12,
+        "eligible_count_at_conf_floor": 4,
+        "quantile": 0.9,
+        "quantile_value": 0.92446653,
+        "threshold": 0.92446653
+      },
+      "watermark": {
+        "class_id": 13,
+        "eligible_count_at_conf_floor": 146,
+        "quantile": 0.9,
+        "quantile_value": 0.93362921,
+        "threshold": 0.93362921
+      },
+      "youpao": {
+        "class_id": 14,
+        "eligible_count_at_conf_floor": 0,
+        "quantile": 0.9,
+        "quantile_value": 0.7,
+        "threshold": 0.7
+      },
+      "heibian": {
+        "class_id": 15,
+        "eligible_count_at_conf_floor": 0,
+        "quantile": 0.9,
+        "quantile_value": 0.7,
+        "threshold": 0.7
+      },
+      "mijixiaokeng": {
+        "class_id": 16,
+        "eligible_count_at_conf_floor": 0,
+        "quantile": 0.9,
+        "quantile_value": 0.7,
+        "threshold": 0.7
+      },
+      "fanxitong": {
+        "class_id": 17,
+        "eligible_count_at_conf_floor": 0,
+        "quantile": 0.9,
+        "quantile_value": 0.7,
+        "threshold": 0.7
+      }
+    },
+    "e4_copypaste": {
+      "wuzi": {
+        "class_id": 0,
+        "eligible_count_at_conf_floor": 64,
+        "quantile": 0.9,
+        "quantile_value": 0.81634533,
+        "threshold": 0.81634533
+      },
+      "waterstain": {
+        "class_id": 1,
+        "eligible_count_at_conf_floor": 885,
+        "quantile": 0.9,
+        "quantile_value": 0.85189338,
+        "threshold": 0.85189338
+      },
+      "yellowstain": {
+        "class_id": 2,
+        "eligible_count_at_conf_floor": 1,
+        "quantile": 0.9,
+        "quantile_value": 0.75147063,
+        "threshold": 0.75147063
+      },
+      "nodule": {
+        "class_id": 3,
+        "eligible_count_at_conf_floor": 15,
+        "quantile": 0.9,
+        "quantile_value": 0.87744719,
+        "threshold": 0.87744719
+      },
+      "airhole": {
+        "class_id": 4,
+        "eligible_count_at_conf_floor": 76,
+        "quantile": 0.9,
+        "quantile_value": 0.85617682,
+        "threshold": 0.85617682
+      },
+      "bubble": {
+        "class_id": 5,
+        "eligible_count_at_conf_floor": 21,
+        "quantile": 0.9,
+        "quantile_value": 0.92747164,
+        "threshold": 0.92747164
+      },
+      "bump": {
+        "class_id": 6,
+        "eligible_count_at_conf_floor": 12,
+        "quantile": 0.9,
+        "quantile_value": 0.88657905,
+        "threshold": 0.88657905
+      },
+      "fawu": {
+        "class_id": 7,
+        "eligible_count_at_conf_floor": 0,
+        "quantile": 0.9,
+        "quantile_value": 0.7,
+        "threshold": 0.7
+      },
+      "overfire": {
+        "class_id": 8,
+        "eligible_count_at_conf_floor": 30,
+        "quantile": 0.9,
+        "quantile_value": 0.91430196,
+        "threshold": 0.91430196
+      },
+      "NiOH": {
+        "class_id": 9,
+        "eligible_count_at_conf_floor": 0,
+        "quantile": 0.9,
+        "quantile_value": 0.7,
+        "threshold": 0.7
+      },
+      "greenstain": {
+        "class_id": 10,
+        "eligible_count_at_conf_floor": 14,
+        "quantile": 0.9,
+        "quantile_value": 0.92899862,
+        "threshold": 0.92899862
+      },
+      "suanwuran": {
+        "class_id": 11,
+        "eligible_count_at_conf_floor": 10,
+        "quantile": 0.9,
+        "quantile_value": 0.93988349,
+        "threshold": 0.93988349
+      },
+      "quejiao": {
+        "class_id": 12,
+        "eligible_count_at_conf_floor": 8,
+        "quantile": 0.9,
+        "quantile_value": 0.88846417,
+        "threshold": 0.88846417
+      },
+      "watermark": {
+        "class_id": 13,
+        "eligible_count_at_conf_floor": 193,
+        "quantile": 0.9,
+        "quantile_value": 0.89164859,
+        "threshold": 0.89164859
+      },
+      "youpao": {
+        "class_id": 14,
+        "eligible_count_at_conf_floor": 0,
+        "quantile": 0.9,
+        "quantile_value": 0.7,
+        "threshold": 0.7
+      },
+      "heibian": {
+        "class_id": 15,
+        "eligible_count_at_conf_floor": 1,
+        "quantile": 0.9,
+        "quantile_value": 0.70780766,
+        "threshold": 0.70780766
+      },
+      "mijixiaokeng": {
+        "class_id": 16,
+        "eligible_count_at_conf_floor": 0,
+        "quantile": 0.9,
+        "quantile_value": 0.7,
+        "threshold": 0.7
+      },
+      "fanxitong": {
+        "class_id": 17,
+        "eligible_count_at_conf_floor": 0,
+        "quantile": 0.9,
+        "quantile_value": 0.7,
+        "threshold": 0.7
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "lly3323w/l1-ryw18-y11m-control-s1e20-s2e63-f01",
+  "title": "L1 RYW18 YOLO11m control S1E20 S2E63 Fold 01",
+  "code_file": "l1-ryw18-y11m-control-s1e20-s2e63-f01.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "lly3323w/dianjienie",
+    "lly3323w/dianjienie-ryw18-oof-consensus-v1-dev-config"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

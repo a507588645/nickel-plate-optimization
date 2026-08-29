@@ -1,0 +1,23 @@
+path: E:\PythonProject\优化\l1_freeze_pair_reeval_20260828_v2\control\dataset_view
+train: E:\PythonProject\优化\l1_freeze_pair_reeval_20260828_v2\control\dataset_view\val.txt
+val: E:\PythonProject\优化\l1_freeze_pair_reeval_20260828_v2\control\dataset_view\val.txt
+nc: 18
+names:
+  0: wuzi
+  1: waterstain
+  2: yellowstain
+  3: nodule
+  4: airhole
+  5: bubble
+  6: bump
+  7: fawu
+  8: overfire
+  9: NiOH
+  10: greenstain
+  11: suanwuran
+  12: quejiao
+  13: watermark
+  14: youpao
+  15: heibian
+  16: mijixiaokeng
+  17: fanxitong

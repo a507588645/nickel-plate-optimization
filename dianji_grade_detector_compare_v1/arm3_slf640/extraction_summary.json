@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-08-28T15:27:20",
+  "status": "unconfirmed_pending_enterprise",
+  "weights": "E:\\PythonProject\\ImetricCodes\\JinchuanPythonWebapi\\weights\\slf.pt",
+  "weights_sha256": "d15831042281747965d0a4f4eb2dd85c95b121e0112fbd90ea2e200cd8dbeb40",
+  "images_processed": 1072,
+  "manifest_total": 1072,
+  "total_boxes_detected": 13792,
+  "detections_per_class": {
+    "colorstain": 219,
+    "waterblock": 5547,
+    "waterstain": 5827,
+    "bubble": 2199
+  },
+  "plate_area_fallbacks": 0,
+  "base_columns_count": 13,
+  "texture_columns_count": 20,
+  "total_feature_columns": 33,
+  "texture_join": {
+    "source_path": "E:\\PythonProject\\优化\\dianji_grade_v3\\features_v3_full.csv",
+    "join_key": "sha256",
+    "source_rows": 1072,
+    "matched_rows": 1072,
+    "mismatch_rows": 0,
+    "texture_columns": [
+      "tx__gray_mean",
+      "tx__gray_var",
+      "tx__grad_mean",
+      "tx__grad_var",
+      "tx__grad_p90",
+      "tx__lbp_bin00",
+      "tx__lbp_bin01",
+      "tx__lbp_bin02",
+      "tx__lbp_bin03",
+      "tx__lbp_bin04",
+      "tx__lbp_bin05",
+      "tx__lbp_bin06",
+      "tx__lbp_bin07",
+      "tx__lbp_bin08",
+      "tx__lbp_bin09",
+      "tx__glcm_contrast",
+      "tx__glcm_dissimilarity",
+      "tx__glcm_homogeneity",
+      "tx__glcm_energy",
+      "tx__glcm_correlation"
+    ]
+  },
+  "output_files": {
+    "features_base13_csv": "E:\\PythonProject\\优化\\dianji_grade_detector_compare_v1\\arm3_slf640\\features_slf640_base13.csv",
+    "features_full_csv": "E:\\PythonProject\\优化\\dianji_grade_detector_compare_v1\\arm3_slf640\\features_slf640_v1.csv",
+    "per_box_csv": "E:\\PythonProject\\优化\\dianji_grade_detector_compare_v1\\arm3_slf640\\per_box_slf640.csv"
+  }
+}

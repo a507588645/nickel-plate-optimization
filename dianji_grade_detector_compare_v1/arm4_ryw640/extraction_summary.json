@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-08-28T15:34:23",
+  "status": "unconfirmed_pending_enterprise",
+  "weights": "E:\\PythonProject\\Tools\\ModelAutoLabelTool\\weights\\yolov5\\ryw.pt",
+  "weights_sha256": "f404ceda25e083964f84fbe35fad2be9b48ebe42f0bf4b3d11813068542178eb",
+  "images_processed": 1072,
+  "manifest_total": 1072,
+  "total_boxes_detected": 7182,
+  "detections_per_class": {
+    "bubble": 255,
+    "watermark": 633,
+    "wuzi": 4405,
+    "greenstain": 167,
+    "bump": 668,
+    "fawu": 1,
+    "waterstain": 828,
+    "suanwuran": 85,
+    "airhole": 119,
+    "nodule": 11,
+    "overfire": 3,
+    "quejiao": 7
+  },
+  "plate_area_fallbacks": 0,
+  "base_columns_count": 43,
+  "texture_columns_count": 20,
+  "total_feature_columns": 63,
+  "texture_join": {
+    "source_path": "E:\\PythonProject\\优化\\dianji_grade_v3\\features_v3_full.csv",
+    "join_key": "sha256",
+    "source_rows": 1072,
+    "matched_rows": 1072,
+    "mismatch_rows": 0,
+    "texture_columns": [
+      "tx__gray_mean",
+      "tx__gray_var",
+      "tx__grad_mean",
+      "tx__grad_var",
+      "tx__grad_p90",
+      "tx__lbp_bin00",
+      "tx__lbp_bin01",
+      "tx__lbp_bin02",
+      "tx__lbp_bin03",
+      "tx__lbp_bin04",
+      "tx__lbp_bin05",
+      "tx__lbp_bin06",
+      "tx__lbp_bin07",
+      "tx__lbp_bin08",
+      "tx__lbp_bin09",
+      "tx__glcm_contrast",
+      "tx__glcm_dissimilarity",
+      "tx__glcm_homogeneity",
+      "tx__glcm_energy",
+      "tx__glcm_correlation"
+    ]
+  },
+  "output_files": {
+    "features_base43_csv": "E:\\PythonProject\\优化\\dianji_grade_detector_compare_v1\\arm4_ryw640\\features_ryw640_base43.csv",
+    "features_full_csv": "E:\\PythonProject\\优化\\dianji_grade_detector_compare_v1\\arm4_ryw640\\features_ryw640_v1.csv",
+    "per_box_csv": "E:\\PythonProject\\优化\\dianji_grade_detector_compare_v1\\arm4_ryw640\\per_box_ryw640.csv"
+  }
+}

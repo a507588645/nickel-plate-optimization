@@ -1,0 +1,10 @@
+{
+  "dataset": "E:\\PythonProject\\优化\\l1_e5a_fp_autopsy_20260824_184418\\review_dataset",
+  "output": "l1_e5a_fp_autopsy_20260824_184418\\roi_review\\review_dataset_boxroi",
+  "review_html": "l1_e5a_fp_autopsy_20260824_184418\\roi_review\\review_dataset_boxroi\\review.html",
+  "n_boxes": 13,
+  "conf_max": 1.0,
+  "structure_mean": 0.2915,
+  "structure_lt_0.15": 4,
+  "structure_lt_0.30": 8
+}

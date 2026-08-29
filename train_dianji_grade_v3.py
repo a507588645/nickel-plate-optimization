@@ -44,6 +44,16 @@ BASE_COLUMNS = (
     + [f"area_ratio__{n}" for n in CLASS_NAMES_18]
 )
 
+CLASS_NAMES_SLF = [
+    "waterstain", "waterblock", "colorstain", "nodule", "bubble",
+]
+
+SLF_BASE_COLUMNS = (
+    ["detection_count", "total_bbox_union_image_ratio", "has_nodule"]
+    + [f"count__{n}" for n in CLASS_NAMES_SLF]
+    + [f"area_ratio__{n}" for n in CLASS_NAMES_SLF]
+)
+
 GRADES = ["3#", "9950", "9996", "bad"]
 GRADE_TO_ID = {g: i for i, g in enumerate(GRADES)}
 
@@ -285,18 +295,34 @@ def main(argv: list[str] | None = None) -> int:
         print(f"[dry-run] 样本 {len(rows)}，跳过训练")
         return 0
 
-    header = rows[0].keys()
+    header = list(rows[0].keys())
     sp_cols = [c for c in header if c.startswith("sp__")]
     tx_cols = [c for c in header if c.startswith("tx__") and c != "tx__texture_ok"]
-    feature_sets = {
-        "v2b_base43": BASE_COLUMNS,
-        "v3_spatial_only": BASE_COLUMNS + sp_cols,
-        "v3_texture_only": BASE_COLUMNS + tx_cols,
-        "v3_full": BASE_COLUMNS + sp_cols + tx_cols,
-    }
+    if all(c in header for c in BASE_COLUMNS):
+        base_name = "v2b_base43"
+        base_cols = BASE_COLUMNS
+        feature_sets = {
+            "v2b_base43": base_cols,
+            "v3_spatial_only": base_cols + sp_cols,
+            "v3_texture_only": base_cols + tx_cols,
+            "v3_full": base_cols + sp_cols + tx_cols,
+        }
+    elif all(c in header for c in SLF_BASE_COLUMNS):
+        base_name = "slf_base13"
+        base_cols = SLF_BASE_COLUMNS
+        feature_sets = {
+            "slf_base13": base_cols,
+            "slf_texture33": base_cols + tx_cols,
+        }
+        if sp_cols:
+            feature_sets["slf_spatial_only"] = base_cols + sp_cols
+            feature_sets["slf_full"] = base_cols + sp_cols + tx_cols
+    else:
+        raise ValueError("输入 CSV 既不包含完整的 18 类 BASE_COLUMNS，也不包含完整的 5 类 SLF_BASE_COLUMNS")
+
     splits = split_rows(rows)
     print(f"split: train={len(splits['train'])} valid={len(splits['valid'])} test={len(splits['test'])}")
-    print(f"特征: base={len(BASE_COLUMNS)} sp={len(sp_cols)} tx={len(tx_cols)}")
+    print(f"特征: base={len(base_cols)} sp={len(sp_cols)} tx={len(tx_cols)}")
 
     results = []
     for name, cols in feature_sets.items():
@@ -322,7 +348,7 @@ def main(argv: list[str] | None = None) -> int:
 
     # 选最优（只用 valid macro_f1，lightgbm 范围内）
     best = max(results, key=lambda r: r["models"]["lightgbm"]["valid"]["macro_f1"])
-    base = next(r for r in results if r["feature_set"] == "v2b_base43")
+    base = next(r for r in results if r["feature_set"] == base_name)
     base_lgbm_test = base["models"]["lightgbm"]["test"]
     best_lgbm_test = best["models"]["lightgbm"]["test"]
 
@@ -370,7 +396,7 @@ def main(argv: list[str] | None = None) -> int:
 - 生成时间：`{datetime.now().isoformat(timespec="seconds")}`
 - 特征来源：`dianji_grade_v3\\features_v3_full.csv`（v2b conf0.25 43 列 + 空间 + 纹理）
 - 协议：train 训练、valid 选模/早停/定拒判阈值、test 仅最终一次；seed={args.seed}
-- v2 基线重训行（v2b_base43）test LGBM：acc={base_acc:.4f} / macroF1={base_f1:.4f}
+- v2 基线重训行（{base_name}）test LGBM：acc={base_acc:.4f} / macroF1={base_f1:.4f}
   （03:00 条目参考值 0.640/0.413，漂移 {base_drift:+.4f}，±0.01 内视为自洽）
 
 ## 1. 方案 4：特征增量对照（LightGBM, test）
@@ -417,7 +443,7 @@ cd /d E:\\PythonProject\\优化
   - `metrics_*.json`：各特征集详细指标与混淆矩阵
   - `reject_curve.csv`：拒判曲线（阈值仅来自 valid）
   - `report.md`：结论报告
-- 基线对齐：v2b_base43 重训 test LGBM acc={base_acc:.4f} / macroF1={base_f1:.4f}（03:00 条目 0.640/0.413）
+- 基线对齐：{base_name} 重训 test LGBM acc={base_acc:.4f} / macroF1={base_f1:.4f}（03:00 条目 0.640/0.413）
 - 生成时间：{datetime.now().isoformat(timespec="seconds")}
 """
     (out / "README.md").write_text(readme, encoding="utf-8")

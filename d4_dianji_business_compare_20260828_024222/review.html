@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>D4 dianji business comparison review</title>
+<style>
+:root { color-scheme: light; --ink: #1d2927; --muted: #5b6965; --paper: #f2eee6; --card: #fffdf8; --line: #d8d0c2; --accent: #086b66; }
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); background: linear-gradient(135deg, #e7eee9, var(--paper)); font-family: "Microsoft YaHei", "Segoe UI", sans-serif; }
+header { padding: 24px clamp(16px, 4vw, 56px) 18px; border-bottom: 1px solid var(--line); background: #fffdf8dd; position: sticky; top: 0; z-index: 2; backdrop-filter: blur(8px); }
+h1 { margin: 0 0 8px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(24px, 3vw, 38px); }
+.summary { margin: 0; color: var(--muted); line-height: 1.6; }
+main { width: min(1800px, 100%); margin: 0 auto; padding: 24px clamp(12px, 3vw, 42px) 60px; display: grid; gap: 22px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 10px 30px #30413b12; padding: 14px; overflow: hidden; }
+.card h2 { margin: 0 0 5px; font-size: 18px; }
+.metrics { margin: 0 0 12px; color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.card img { display: block; width: 100%; height: auto; border: 1px solid #cfc7b9; background: #eee; }
+.empty { padding: 40px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+@media (min-width: 1500px) { main { grid-template-columns: repeat(2, minmax(0, 1fr)); } .card:first-child { grid-column: 1 / -1; } }
+</style>
+</head>
+<body>
+<header>
+<h1>D4 dianji business-output review</h1>
+<p class="summary">Top 20 non-zero divergence comparisons from 216 evaluated images. Left: current <code>slf.pt</code>; right: candidate YOLO11m 640 ONNX. Both use original BGR images, CPU inference, confidence threshold 0.25. Open this file with its sibling <code>review_images</code> directory.</p>
+</header>
+<main>
+<article class="card">
+<h2>#01 20230515153500820_0_2.png</h2>
+<div class="metrics">SLF 34 boxes / candidate 13 boxes; count delta -21; area delta -8.27%; score 21.0827</div>
+<img src="review_images/01_20230515153500820_0_2.png" alt="20230515153500820_0_2.png comparison">
+</article>
+<article class="card">
+<h2>#02 20230519171742091_0_1.png</h2>
+<div class="metrics">SLF 25 boxes / candidate 45 boxes; count delta +20; area delta -4.75%; score 20.0475</div>
+<img src="review_images/02_20230519171742091_0_1.png" alt="20230519171742091_0_1.png comparison">
+</article>
+<article class="card">
+<h2>#03 20230514161156186_0_2.png</h2>
+<div class="metrics">SLF 26 boxes / candidate 6 boxes; count delta -20; area delta -3.63%; score 20.0363</div>
+<img src="review_images/03_20230514161156186_0_2.png" alt="20230514161156186_0_2.png comparison">
+</article>
+<article class="card">
+<h2>#04 113554top_0.png</h2>
+<div class="metrics">SLF 21 boxes / candidate 2 boxes; count delta -19; area delta +50.78%; score 19.5078</div>
+<img src="review_images/04_113554top_0.png" alt="113554top_0.png comparison">
+</article>
+<article class="card">
+<h2>#05 20230514160147721_0_2.png</h2>
+<div class="metrics">SLF 23 boxes / candidate 5 boxes; count delta -18; area delta -8.49%; score 18.0849</div>
+<img src="review_images/05_20230514160147721_0_2.png" alt="20230514160147721_0_2.png comparison">
+</article>
+<article class="card">
+<h2>#06 20230519163356955_0_2.png</h2>
+<div class="metrics">SLF 26 boxes / candidate 10 boxes; count delta -16; area delta -4.68%; score 16.0468</div>
+<img src="review_images/06_20230519163356955_0_2.png" alt="20230519163356955_0_2.png comparison">
+</article>
+<article class="card">
+<h2>#07 20230515163512376_0_2.png</h2>
+<div class="metrics">SLF 2 boxes / candidate 17 boxes; count delta +15; area delta +5.34%; score 15.0534</div>
+<img src="review_images/07_20230515163512376_0_2.png" alt="20230515163512376_0_2.png comparison">
+</article>
+<article class="card">
+<h2>#08 113353top_0.png</h2>
+<div class="metrics">SLF 20 boxes / candidate 6 boxes; count delta -14; area delta -1.02%; score 14.0102</div>
+<img src="review_images/08_113353top_0.png" alt="113353top_0.png comparison">
+</article>
+<article class="card">
+<h2>#09 20230519154708145_0_2.png</h2>
+<div class="metrics">SLF 18 boxes / candidate 5 boxes; count delta -13; area delta -1.77%; score 13.0177</div>
+<img src="review_images/09_20230519154708145_0_2.png" alt="20230519154708145_0_2.png comparison">
+</article>
+<article class="card">
+<h2>#10 20230515153624955_0_2.png</h2>
+<div class="metrics">SLF 22 boxes / candidate 9 boxes; count delta -13; area delta -1.34%; score 13.0134</div>
+<img src="review_images/10_20230515153624955_0_2.png" alt="20230515153624955_0_2.png comparison">
+</article>
+<article class="card">
+<h2>#11 20230515163228460_0_2.png</h2>
+<div class="metrics">SLF 2 boxes / candidate 14 boxes; count delta +12; area delta +6.03%; score 12.0603</div>
+<img src="review_images/11_20230515163228460_0_2.png" alt="20230515163228460_0_2.png comparison">
+</article>
+<article class="card">
+<h2>#12 20230519153621078_0_2.png</h2>
+<div class="metrics">SLF 15 boxes / candidate 27 boxes; count delta +12; area delta -5.77%; score 12.0577</div>
+<img src="review_images/12_20230519153621078_0_2.png" alt="20230519153621078_0_2.png comparison">
+</article>
+<article class="card">
+<h2>#13 20230519154902446_0_2.png</h2>
+<div class="metrics">SLF 21 boxes / candidate 9 boxes; count delta -12; area delta +2.26%; score 12.0226</div>
+<img src="review_images/13_20230519154902446_0_2.png" alt="20230519154902446_0_2.png comparison">
+</article>
+<article class="card">
+<h2>#14 20230519171823582_0_1.png</h2>
+<div class="metrics">SLF 6 boxes / candidate 18 boxes; count delta +12; area delta +0.65%; score 12.0065</div>
+<img src="review_images/14_20230519171823582_0_1.png" alt="20230519171823582_0_1.png comparison">
+</article>
+<article class="card">
+<h2>#15 20230515153259296_0_2.png</h2>
+<div class="metrics">SLF 15 boxes / candidate 4 boxes; count delta -11; area delta -15.65%; score 11.1565</div>
+<img src="review_images/15_20230515153259296_0_2.png" alt="20230515153259296_0_2.png comparison">
+</article>
+<article class="card">
+<h2>#16 20230519155231834_0_2.png</h2>
+<div class="metrics">SLF 19 boxes / candidate 8 boxes; count delta -11; area delta +14.06%; score 11.1406</div>
+<img src="review_images/16_20230519155231834_0_2.png" alt="20230519155231834_0_2.png comparison">
+</article>
+<article class="card">
+<h2>#17 20230519160130067_0_2.png</h2>
+<div class="metrics">SLF 16 boxes / candidate 5 boxes; count delta -11; area delta -9.42%; score 11.0942</div>
+<img src="review_images/17_20230519160130067_0_2.png" alt="20230519160130067_0_2.png comparison">
+</article>
+<article class="card">
+<h2>#18 20230514160756977_0_2.png</h2>
+<div class="metrics">SLF 20 boxes / candidate 9 boxes; count delta -11; area delta -5.79%; score 11.0579</div>
+<img src="review_images/18_20230514160756977_0_2.png" alt="20230514160756977_0_2.png comparison">
+</article>
+<article class="card">
+<h2>#19 20230519164636511_0_2.png</h2>
+<div class="metrics">SLF 25 boxes / candidate 36 boxes; count delta +11; area delta +5.12%; score 11.0512</div>
+<img src="review_images/19_20230519164636511_0_2.png" alt="20230519164636511_0_2.png comparison">
+</article>
+<article class="card">
+<h2>#20 20230519162601238_0_2.png</h2>
+<div class="metrics">SLF 18 boxes / candidate 7 boxes; count delta -11; area delta +4.28%; score 11.0428</div>
+<img src="review_images/20_20230519162601238_0_2.png" alt="20230519162601238_0_2.png comparison">
+</article>
+</main>
+</body>
+</html>
