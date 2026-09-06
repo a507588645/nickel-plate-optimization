@@ -1,0 +1,16 @@
+contour_mode: max_only
+label:
+- color: '#000000'
+  name: __background__
+- color: '#00ff00'
+  name: nietiao
+language: zh
+mask_alpha: 0.5
+names:
+  0: nietiao
+path: D:\Projects\JinchuanPythonWebapi\data\images\nietiao
+show_prompt: false
+test: null
+train: images\train
+val: images\valid
+vertex_size: 2

@@ -1,0 +1,6134 @@
+{
+  "data.yaml": {
+    "size": 147
+  },
+  "images/train/091115bottom_0.png": {
+    "size": 6893131
+  },
+  "images/train/091115top_0.png": {
+    "size": 8741158
+  },
+  "images/train/091215bottom_0.png": {
+    "size": 6913213
+  },
+  "images/train/091215top_0.png": {
+    "size": 8789653
+  },
+  "images/train/091256bottom_0.png": {
+    "size": 6613214
+  },
+  "images/train/091256top_0.png": {
+    "size": 8715174
+  },
+  "images/train/091336bottom_0.png": {
+    "size": 7014976
+  },
+  "images/train/091336top_0.png": {
+    "size": 9797462
+  },
+  "images/train/091416bottom_0.png": {
+    "size": 6589454
+  },
+  "images/train/091416top_0.png": {
+    "size": 9452077
+  },
+  "images/train/091456bottom_0.png": {
+    "size": 6508958
+  },
+  "images/train/091456top_0.png": {
+    "size": 8191220
+  },
+  "images/train/091615bottom_0.png": {
+    "size": 6481825
+  },
+  "images/train/091615top_0.png": {
+    "size": 12115226
+  },
+  "images/train/091655bottom_0.png": {
+    "size": 6682756
+  },
+  "images/train/091655top_0.png": {
+    "size": 9463017
+  },
+  "images/train/091858bottom_0.png": {
+    "size": 6970562
+  },
+  "images/train/091858top_0.png": {
+    "size": 9440580
+  },
+  "images/train/091937bottom_0.png": {
+    "size": 6729044
+  },
+  "images/train/091937top_0.png": {
+    "size": 9889044
+  },
+  "images/train/092017bottom_0.png": {
+    "size": 6641551
+  },
+  "images/train/092017top_0.png": {
+    "size": 10567640
+  },
+  "images/train/092623bottom_0.png": {
+    "size": 6717692
+  },
+  "images/train/092623top_0.png": {
+    "size": 9604273
+  },
+  "images/train/101637bottom_0.png": {
+    "size": 6668182
+  },
+  "images/train/101637top_0.png": {
+    "size": 10040470
+  },
+  "images/train/101757bottom_0.png": {
+    "size": 6498259
+  },
+  "images/train/101757top_0.png": {
+    "size": 9362493
+  },
+  "images/train/101918bottom_0.png": {
+    "size": 6862814
+  },
+  "images/train/101918top_0.png": {
+    "size": 9954584
+  },
+  "images/train/101958bottom_0.png": {
+    "size": 6995316
+  },
+  "images/train/101958top_0.png": {
+    "size": 10578346
+  },
+  "images/train/102038bottom_0.png": {
+    "size": 7248407
+  },
+  "images/train/102038top_0.png": {
+    "size": 9784438
+  },
+  "images/train/102359bottom_0.png": {
+    "size": 6845799
+  },
+  "images/train/102359top_0.png": {
+    "size": 8647046
+  },
+  "images/train/103100bottom_0.png": {
+    "size": 6243033
+  },
+  "images/train/103100top_0.png": {
+    "size": 9385179
+  },
+  "images/train/103904bottom_0.png": {
+    "size": 6819975
+  },
+  "images/train/103904top_0.png": {
+    "size": 8991272
+  },
+  "images/train/104537bottom_0.png": {
+    "size": 6549664
+  },
+  "images/train/104537top_0.png": {
+    "size": 9566742
+  },
+  "images/train/104617bottom_0.png": {
+    "size": 7018343
+  },
+  "images/train/104617top_0.png": {
+    "size": 8819233
+  },
+  "images/train/105114bottom_0.png": {
+    "size": 6934137
+  },
+  "images/train/105114top_0.png": {
+    "size": 9094090
+  },
+  "images/train/105752bottom_0.png": {
+    "size": 6854731
+  },
+  "images/train/105752top_0.png": {
+    "size": 11355886
+  },
+  "images/train/105831bottom_0.png": {
+    "size": 7352801
+  },
+  "images/train/105831top_0.png": {
+    "size": 9191056
+  },
+  "images/train/105956bottom_0.png": {
+    "size": 6954338
+  },
+  "images/train/105956top_0.png": {
+    "size": 9305478
+  },
+  "images/train/110035bottom_0.png": {
+    "size": 7123650
+  },
+  "images/train/110035top_0.png": {
+    "size": 10424825
+  },
+  "images/train/110119bottom_0.png": {
+    "size": 7185235
+  },
+  "images/train/110119top_0.png": {
+    "size": 10942904
+  },
+  "images/train/110159bottom_0.png": {
+    "size": 7136262
+  },
+  "images/train/110159top_0.png": {
+    "size": 9142196
+  },
+  "images/train/110247bottom_0.png": {
+    "size": 7107422
+  },
+  "images/train/110247top_0.png": {
+    "size": 8771016
+  },
+  "images/train/110327bottom_0.png": {
+    "size": 7253023
+  },
+  "images/train/110327top_0.png": {
+    "size": 9105487
+  },
+  "images/train/110407bottom_0.png": {
+    "size": 6996039
+  },
+  "images/train/110407top_0.png": {
+    "size": 8956403
+  },
+  "images/train/110447bottom_0.png": {
+    "size": 6789779
+  },
+  "images/train/110447top_0.png": {
+    "size": 8374496
+  },
+  "images/train/110527bottom_0.png": {
+    "size": 6722787
+  },
+  "images/train/110527top_0.png": {
+    "size": 9433800
+  },
+  "images/train/110726bottom_0.png": {
+    "size": 6515418
+  },
+  "images/train/110726top_0.png": {
+    "size": 8034868
+  },
+  "images/train/111040bottom_0.png": {
+    "size": 19300852
+  },
+  "images/train/111040top_0.png": {
+    "size": 10086825
+  },
+  "images/train/111120bottom_0.png": {
+    "size": 4384317
+  },
+  "images/train/111120top_0.png": {
+    "size": 8694549
+  },
+  "images/train/111200bottom_0.png": {
+    "size": 6195955
+  },
+  "images/train/111200top_0.png": {
+    "size": 9179575
+  },
+  "images/train/111241bottom_0.png": {
+    "size": 6344775
+  },
+  "images/train/111241top_0.png": {
+    "size": 9284406
+  },
+  "images/train/111535bottom_0.png": {
+    "size": 6570702
+  },
+  "images/train/111535top_0.png": {
+    "size": 9543574
+  },
+  "images/train/111615bottom_0.png": {
+    "size": 4005891
+  },
+  "images/train/111615top_0.png": {
+    "size": 8177157
+  },
+  "images/train/112135bottom_0.png": {
+    "size": 6391283
+  },
+  "images/train/112135top_0.png": {
+    "size": 12027168
+  },
+  "images/train/112613bottom_0.png": {
+    "size": 6611599
+  },
+  "images/train/112613top_0.png": {
+    "size": 8610584
+  },
+  "images/train/112846bottom_0.png": {
+    "size": 6389986
+  },
+  "images/train/112846top_0.png": {
+    "size": 9295837
+  },
+  "images/train/113313bottom_0.png": {
+    "size": 7040827
+  },
+  "images/train/113313top_0.png": {
+    "size": 10835299
+  },
+  "images/train/20230508145655586_0_2.png": {
+    "size": 20394531
+  },
+  "images/train/20230508145914382_0_2.png": {
+    "size": 19863807
+  },
+  "images/train/20230508145953091_0_2.png": {
+    "size": 20337413
+  },
+  "images/train/20230508150038862_0_2.png": {
+    "size": 19446573
+  },
+  "images/train/20230508150124585_0_2.png": {
+    "size": 20298649
+  },
+  "images/train/20230508150203967_0_2.png": {
+    "size": 20586808
+  },
+  "images/train/20230508150250315_0_2.png": {
+    "size": 19966095
+  },
+  "images/train/20230508150336601_0_2.png": {
+    "size": 20206936
+  },
+  "images/train/20230508150423199_0_2.png": {
+    "size": 21845118
+  },
+  "images/train/20230508150509782_0_2.png": {
+    "size": 19714472
+  },
+  "images/train/20230508151134488_0_2.png": {
+    "size": 19626100
+  },
+  "images/train/20230508151221868_0_2.png": {
+    "size": 20086131
+  },
+  "images/train/20230508151321885_0_2.png": {
+    "size": 21854819
+  },
+  "images/train/20230508151425198_0_2.png": {
+    "size": 19541443
+  },
+  "images/train/20230508151512827_0_2.png": {
+    "size": 19521292
+  },
+  "images/train/20230508151600644_0_2.png": {
+    "size": 19594196
+  },
+  "images/train/20230508151802381_0_2.png": {
+    "size": 19941113
+  },
+  "images/train/20230508151844043_0_2.png": {
+    "size": 19696074
+  },
+  "images/train/20230508152059152_0_2.png": {
+    "size": 19876044
+  },
+  "images/train/20230508152148047_0_2.png": {
+    "size": 19500539
+  },
+  "images/train/20230508152236988_0_2.png": {
+    "size": 19612811
+  },
+  "images/train/20230508152326007_0_2.png": {
+    "size": 19554622
+  },
+  "images/train/20230508152537851_0_2.png": {
+    "size": 19913783
+  },
+  "images/train/20230508152627460_0_2.png": {
+    "size": 19300858
+  },
+  "images/train/20230508154228342_0_2.png": {
+    "size": 19639110
+  },
+  "images/train/20230508154314175_0_2.png": {
+    "size": 19831526
+  },
+  "images/train/20230508154425205_0_2.png": {
+    "size": 20152048
+  },
+  "images/train/20230508154511570_0_2.png": {
+    "size": 22098716
+  },
+  "images/train/20230508154557699_0_2.png": {
+    "size": 21747548
+  },
+  "images/train/20230508154644204_0_2.png": {
+    "size": 20015039
+  },
+  "images/train/20230508154730568_0_2.png": {
+    "size": 20217290
+  },
+  "images/train/20230508154810699_0_2.png": {
+    "size": 20237434
+  },
+  "images/train/20230508154857563_0_2.png": {
+    "size": 20380510
+  },
+  "images/train/20230508154944583_0_2.png": {
+    "size": 20186247
+  },
+  "images/train/20230508155031884_0_2.png": {
+    "size": 20228756
+  },
+  "images/train/20230508155119030_0_2.png": {
+    "size": 20311964
+  },
+  "images/train/20230508155206237_0_2.png": {
+    "size": 20155771
+  },
+  "images/train/20230508155254132_0_2.png": {
+    "size": 20541978
+  },
+  "images/train/20230508155341949_0_2.png": {
+    "size": 20339178
+  },
+  "images/train/20230508155429625_0_2.png": {
+    "size": 20425148
+  },
+  "images/train/20230508155517551_0_2.png": {
+    "size": 20307153
+  },
+  "images/train/20230508155605649_0_2.png": {
+    "size": 20246192
+  },
+  "images/train/20230508155653919_0_2.png": {
+    "size": 19878678
+  },
+  "images/train/20230508155742346_0_2.png": {
+    "size": 20005792
+  },
+  "images/train/20230508155831068_0_2.png": {
+    "size": 21058718
+  },
+  "images/train/20230508155919728_0_2.png": {
+    "size": 20236121
+  },
+  "images/train/20230508160008546_0_2.png": {
+    "size": 20572207
+  },
+  "images/train/20230508160057393_0_2.png": {
+    "size": 21718616
+  },
+  "images/train/20230508160146569_0_2.png": {
+    "size": 20140197
+  },
+  "images/train/20230508160235948_0_2.png": {
+    "size": 20306589
+  },
+  "images/train/20230508160325452_0_2.png": {
+    "size": 20206655
+  },
+  "images/train/20230508161814272_0_2.png": {
+    "size": 20707893
+  },
+  "images/train/20230508161914274_0_2.png": {
+    "size": 20147720
+  },
+  "images/train/20230508162014603_0_2.png": {
+    "size": 20501651
+  },
+  "images/train/20230508162100623_0_2.png": {
+    "size": 20792205
+  },
+  "images/train/20230508162146956_0_2.png": {
+    "size": 22261047
+  },
+  "images/train/20230508162229680_0_2.png": {
+    "size": 20292958
+  },
+  "images/train/20230508162313061_0_2.png": {
+    "size": 20908209
+  },
+  "images/train/20230508162359690_0_2.png": {
+    "size": 22436751
+  },
+  "images/train/20230508162446336_0_2.png": {
+    "size": 20131610
+  },
+  "images/train/20230508162533137_0_2.png": {
+    "size": 20557842
+  },
+  "images/train/20230508162620079_0_2.png": {
+    "size": 20383983
+  },
+  "images/train/20230508162707052_0_2.png": {
+    "size": 20922144
+  },
+  "images/train/20230508162754088_0_2.png": {
+    "size": 20771054
+  },
+  "images/train/20230508162841640_0_2.png": {
+    "size": 20997780
+  },
+  "images/train/20230508162929019_0_2.png": {
+    "size": 22493760
+  },
+  "images/train/20230508163016430_0_2.png": {
+    "size": 20503186
+  },
+  "images/train/20230508163446163_0_2.png": {
+    "size": 20619755
+  },
+  "images/train/20230508163534089_0_2.png": {
+    "size": 20257103
+  },
+  "images/train/20230508163622359_0_2.png": {
+    "size": 20462764
+  },
+  "images/train/20230508163710613_0_2.png": {
+    "size": 20352444
+  },
+  "images/train/20230508163759195_0_2.png": {
+    "size": 20606090
+  },
+  "images/train/20230508163847778_0_2.png": {
+    "size": 20727004
+  },
+  "images/train/20230508163929908_0_2.png": {
+    "size": 20064955
+  },
+  "images/train/20230508164019037_0_2.png": {
+    "size": 19696507
+  },
+  "images/train/20230508164108104_0_2.png": {
+    "size": 20044130
+  },
+  "images/train/20230508164157420_0_2.png": {
+    "size": 19494017
+  },
+  "images/train/20230508164246893_0_2.png": {
+    "size": 20758781
+  },
+  "images/train/20230508164336475_0_2.png": {
+    "size": 20447173
+  },
+  "images/train/20230508171751497_0_2.png": {
+    "size": 19873971
+  },
+  "images/train/20230508171826472_0_2.png": {
+    "size": 18958500
+  },
+  "images/train/20230508171908494_0_2.png": {
+    "size": 18869358
+  },
+  "images/train/20230508171954092_0_2.png": {
+    "size": 19768831
+  },
+  "images/train/20230508172100302_0_2.png": {
+    "size": 20017955
+  },
+  "images/train/20230508172142729_0_2.png": {
+    "size": 19678899
+  },
+  "images/train/20230508172228422_0_2.png": {
+    "size": 20138139
+  },
+  "images/train/20230508172307819_0_2.png": {
+    "size": 20102619
+  },
+  "images/train/20230508172354089_0_2.png": {
+    "size": 20010005
+  },
+  "images/train/20230508172440391_0_2.png": {
+    "size": 19896544
+  },
+  "images/train/20230508172526817_0_2.png": {
+    "size": 20105439
+  },
+  "images/train/20230508172613228_0_2.png": {
+    "size": 20112262
+  },
+  "images/train/20230508172659998_0_2.png": {
+    "size": 19791527
+  },
+  "images/train/20230508172746784_0_2.png": {
+    "size": 20127146
+  },
+  "images/train/20230508172833773_0_2.png": {
+    "size": 20338350
+  },
+  "images/train/20230508172921074_0_2.png": {
+    "size": 20269498
+  },
+  "images/train/20230508173008282_0_2.png": {
+    "size": 20378326
+  },
+  "images/train/20230508173055692_0_2.png": {
+    "size": 20047055
+  },
+  "images/train/20230508173143416_0_2.png": {
+    "size": 20245736
+  },
+  "images/train/20230508173231029_0_2.png": {
+    "size": 20290483
+  },
+  "images/train/20230508173318721_0_2.png": {
+    "size": 19754390
+  },
+  "images/train/20230508173406616_0_2.png": {
+    "size": 20177941
+  },
+  "images/train/20230508173454667_0_2.png": {
+    "size": 20513671
+  },
+  "images/train/20230508173543171_0_2.png": {
+    "size": 19955070
+  },
+  "images/train/20230508173631426_0_2.png": {
+    "size": 20005412
+  },
+  "images/train/20230508173719992_0_2.png": {
+    "size": 19942592
+  },
+  "images/train/20230508173808497_0_2.png": {
+    "size": 19843722
+  },
+  "images/train/20230508173857235_0_2.png": {
+    "size": 20355575
+  },
+  "images/train/20230508173945973_0_2.png": {
+    "size": 19773795
+  },
+  "images/train/20230508174035040_0_2.png": {
+    "size": 19971161
+  },
+  "images/train/20230508174124122_0_2.png": {
+    "size": 19939417
+  },
+  "images/train/20230508174213392_0_2.png": {
+    "size": 19617250
+  },
+  "images/train/20230508174302802_0_2.png": {
+    "size": 19807872
+  },
+  "images/train/20230508174352368_0_2.png": {
+    "size": 19730129
+  },
+  "images/train/20230508175424625_0_2.png": {
+    "size": 19642890
+  },
+  "images/train/20230508175510099_0_2.png": {
+    "size": 20089940
+  },
+  "images/train/20230508175549136_0_2.png": {
+    "size": 19903112
+  },
+  "images/train/20230508175634938_0_2.png": {
+    "size": 20204386
+  },
+  "images/train/20230508175721130_0_2.png": {
+    "size": 19425224
+  },
+  "images/train/20230508175807213_0_2.png": {
+    "size": 19936911
+  },
+  "images/train/20230508175846861_0_2.png": {
+    "size": 19955268
+  },
+  "images/train/20230508175933271_0_2.png": {
+    "size": 19995872
+  },
+  "images/train/20230508180019932_0_2.png": {
+    "size": 20960668
+  },
+  "images/train/20230508180106780_0_2.png": {
+    "size": 20492650
+  },
+  "images/train/20230508180153472_0_2.png": {
+    "size": 20628125
+  },
+  "images/train/20230508180240742_0_2.png": {
+    "size": 20687621
+  },
+  "images/train/20230508180327747_0_2.png": {
+    "size": 20270219
+  },
+  "images/train/20230508180415407_0_2.png": {
+    "size": 20271031
+  },
+  "images/train/20230508181132789_0_2.png": {
+    "size": 20239840
+  },
+  "images/train/20230508181220418_0_2.png": {
+    "size": 19689971
+  },
+  "images/train/20230508181307860_0_2.png": {
+    "size": 19997027
+  },
+  "images/train/20230508181355723_0_2.png": {
+    "size": 20634761
+  },
+  "images/train/20230508181443650_0_2.png": {
+    "size": 19852742
+  },
+  "images/train/20230508181531842_0_2.png": {
+    "size": 19482060
+  },
+  "images/train/20230508181620205_0_2.png": {
+    "size": 19700049
+  },
+  "images/train/20230508181708491_0_2.png": {
+    "size": 19609936
+  },
+  "images/train/20230508181757323_0_2.png": {
+    "size": 20026443
+  },
+  "images/train/20230508181845999_0_2.png": {
+    "size": 20092732
+  },
+  "images/train/20230508181934893_0_2.png": {
+    "size": 20116616
+  },
+  "images/train/20230508182023991_0_2.png": {
+    "size": 19682260
+  },
+  "images/train/20230508182112917_0_2.png": {
+    "size": 20092209
+  },
+  "images/train/20230508182202234_0_2.png": {
+    "size": 19713348
+  },
+  "images/train/20230508182418701_0_2.png": {
+    "size": 19958764
+  },
+  "images/train/20230508182504909_0_2.png": {
+    "size": 19162820
+  },
+  "images/train/20230509154039383_0_2.png": {
+    "size": 20245692
+  },
+  "images/train/20230509154119483_0_2.png": {
+    "size": 20221552
+  },
+  "images/train/20230509154159879_0_2.png": {
+    "size": 20037908
+  },
+  "images/train/20230509154240370_0_2.png": {
+    "size": 20254163
+  },
+  "images/train/20230509154320735_0_2.png": {
+    "size": 20406341
+  },
+  "images/train/20230509154401726_0_2.png": {
+    "size": 20196408
+  },
+  "images/train/20230509154442638_0_2.png": {
+    "size": 20429582
+  },
+  "images/train/20230509154523347_0_2.png": {
+    "size": 19885142
+  },
+  "images/train/20230509154604228_0_2 - 副本.png": {
+    "size": 19960059
+  },
+  "images/train/20230509154604228_0_2.png": {
+    "size": 19960059
+  },
+  "images/train/20230509154645453_0_2 - 副本.png": {
+    "size": 20329296
+  },
+  "images/train/20230509154645453_0_2.png": {
+    "size": 20329296
+  },
+  "images/train/20230509154727396_0_2 - 副本.png": {
+    "size": 20578136
+  },
+  "images/train/20230509154727396_0_2.png": {
+    "size": 20578136
+  },
+  "images/train/20230509154815588_0_2 - 副本.png": {
+    "size": 20551764
+  },
+  "images/train/20230509154815588_0_2.png": {
+    "size": 20551764
+  },
+  "images/train/20230509154903998_0_2 - 副本.png": {
+    "size": 20212805
+  },
+  "images/train/20230509154903998_0_2.png": {
+    "size": 20212805
+  },
+  "images/train/20230509154952408_0_2 - 副本.png": {
+    "size": 22465750
+  },
+  "images/train/20230509154952408_0_2.png": {
+    "size": 22465750
+  },
+  "images/train/20230509155034367_0_2 - 副本.png": {
+    "size": 20365148
+  },
+  "images/train/20230509155034367_0_2.png": {
+    "size": 20365148
+  },
+  "images/train/20230509155116529_0_2 - 副本.png": {
+    "size": 22567482
+  },
+  "images/train/20230509155116529_0_2.png": {
+    "size": 22567482
+  },
+  "images/train/20230509155205439_0_2 - 副本.png": {
+    "size": 20446265
+  },
+  "images/train/20230509155205439_0_2.png": {
+    "size": 20446265
+  },
+  "images/train/20230509155254287_0_2 - 副本.png": {
+    "size": 20675718
+  },
+  "images/train/20230509155254287_0_2.png": {
+    "size": 20675718
+  },
+  "images/train/20230509155336543_0_2 - 副本.png": {
+    "size": 22233452
+  },
+  "images/train/20230509155336543_0_2.png": {
+    "size": 22233452
+  },
+  "images/train/20230509155419189_0_2 - 副本.png": {
+    "size": 20677974
+  },
+  "images/train/20230509155419189_0_2.png": {
+    "size": 20677974
+  },
+  "images/train/20230509155501913_0_2 - 副本.png": {
+    "size": 19927357
+  },
+  "images/train/20230509155501913_0_2.png": {
+    "size": 19927357
+  },
+  "images/train/20230509155544903_0_2 - 副本.png": {
+    "size": 22409965
+  },
+  "images/train/20230509155544903_0_2.png": {
+    "size": 22409965
+  },
+  "images/train/20230509155627846_0_2 - 副本.png": {
+    "size": 20201609
+  },
+  "images/train/20230509155627846_0_2.png": {
+    "size": 20201609
+  },
+  "images/train/20230509155711222_0_2 - 副本.png": {
+    "size": 20571947
+  },
+  "images/train/20230509155711222_0_2.png": {
+    "size": 20571947
+  },
+  "images/train/20230509155801382_0_2 - 副本.png": {
+    "size": 20342070
+  },
+  "images/train/20230509155801382_0_2.png": {
+    "size": 20342070
+  },
+  "images/train/20230509155851433_0_2 - 副本.png": {
+    "size": 20408232
+  },
+  "images/train/20230509155851433_0_2.png": {
+    "size": 20408232
+  },
+  "images/train/20230509155941640_0_2 - 副本.png": {
+    "size": 20854884
+  },
+  "images/train/20230509155941640_0_2.png": {
+    "size": 20854884
+  },
+  "images/train/20230509160025317_0_2 - 副本.png": {
+    "size": 20447303
+  },
+  "images/train/20230509160025317_0_2.png": {
+    "size": 20447303
+  },
+  "images/train/20230509160109103_0_2 - 副本.png": {
+    "size": 20518057
+  },
+  "images/train/20230509160109103_0_2.png": {
+    "size": 20518057
+  },
+  "images/train/20230509160153046_0_2 - 副本.png": {
+    "size": 20687220
+  },
+  "images/train/20230509160153046_0_2.png": {
+    "size": 20687220
+  },
+  "images/train/20230509160237082_0_2 - 副本.png": {
+    "size": 20733240
+  },
+  "images/train/20230509160237082_0_2.png": {
+    "size": 20733240
+  },
+  "images/train/20230509160321275_0_2 - 副本.png": {
+    "size": 20829504
+  },
+  "images/train/20230509160321275_0_2.png": {
+    "size": 20829504
+  },
+  "images/train/20230509161156919_0_2 - 副本.png": {
+    "size": 20999930
+  },
+  "images/train/20230509161156919_0_2.png": {
+    "size": 20999930
+  },
+  "images/train/20230509161236363_0_2 - 副本.png": {
+    "size": 21241553
+  },
+  "images/train/20230509161236363_0_2.png": {
+    "size": 21241553
+  },
+  "images/train/20230509161315416_0_2 - 副本.png": {
+    "size": 22692663
+  },
+  "images/train/20230509161315416_0_2.png": {
+    "size": 22692663
+  },
+  "images/train/20230509161554566_0_2 - 副本.png": {
+    "size": 22821610
+  },
+  "images/train/20230509161554566_0_2.png": {
+    "size": 22821610
+  },
+  "images/train/20230509161634744_0_2 - 副本.png": {
+    "size": 21085206
+  },
+  "images/train/20230509161634744_0_2.png": {
+    "size": 21085206
+  },
+  "images/train/20230509161714782_0_2 - 副本.png": {
+    "size": 22420936
+  },
+  "images/train/20230509161714782_0_2.png": {
+    "size": 22420936
+  },
+  "images/train/20230509161755303_0_2 - 副本.png": {
+    "size": 21142130
+  },
+  "images/train/20230509161755303_0_2.png": {
+    "size": 21142130
+  },
+  "images/train/20230509161835918_0_2 - 副本.png": {
+    "size": 20557047
+  },
+  "images/train/20230509161835918_0_2.png": {
+    "size": 20557047
+  },
+  "images/train/20230509161916253_0_2 - 副本.png": {
+    "size": 20933630
+  },
+  "images/train/20230509161916253_0_2.png": {
+    "size": 20933630
+  },
+  "images/train/20230509161957056_0_2 - 副本.png": {
+    "size": 20634365
+  },
+  "images/train/20230509161957056_0_2.png": {
+    "size": 20634365
+  },
+  "images/train/20230509162037889_0_2 - 副本.png": {
+    "size": 20846481
+  },
+  "images/train/20230509162037889_0_2.png": {
+    "size": 20846481
+  },
+  "images/train/20230509162119348_0_2 - 副本.png": {
+    "size": 20209072
+  },
+  "images/train/20230509162119348_0_2.png": {
+    "size": 20209072
+  },
+  "images/train/20230509162200464_0_2 - 副本.png": {
+    "size": 20498342
+  },
+  "images/train/20230509162200464_0_2.png": {
+    "size": 20498342
+  },
+  "images/train/20230509162241658_0_2 - 副本.png": {
+    "size": 20066200
+  },
+  "images/train/20230509162241658_0_2.png": {
+    "size": 20066200
+  },
+  "images/train/20230509162322992_0_2 - 副本.png": {
+    "size": 20562278
+  },
+  "images/train/20230509162322992_0_2.png": {
+    "size": 20562278
+  },
+  "images/train/20230509162404762_0_2 - 副本.png": {
+    "size": 20301797
+  },
+  "images/train/20230509162404762_0_2.png": {
+    "size": 20301797
+  },
+  "images/train/20230509162446378_0_2 - 副本.png": {
+    "size": 20240857
+  },
+  "images/train/20230509162446378_0_2.png": {
+    "size": 20240857
+  },
+  "images/train/20230509162527775_0_2 - 副本.png": {
+    "size": 20402607
+  },
+  "images/train/20230509162527775_0_2.png": {
+    "size": 20402607
+  },
+  "images/train/20230509162609952_0_2 - 副本.png": {
+    "size": 20508905
+  },
+  "images/train/20230509162609952_0_2.png": {
+    "size": 20508905
+  },
+  "images/train/20230509162658597_0_2 - 副本.png": {
+    "size": 20795336
+  },
+  "images/train/20230509162658597_0_2.png": {
+    "size": 20795336
+  },
+  "images/train/20230509162740587_0_2 - 副本.png": {
+    "size": 20527139
+  },
+  "images/train/20230509162740587_0_2.png": {
+    "size": 20527139
+  },
+  "images/train/20230509162822748_0_2 - 副本.png": {
+    "size": 21136926
+  },
+  "images/train/20230509162822748_0_2.png": {
+    "size": 21136926
+  },
+  "images/train/20230509162905035_0_2 - 副本.png": {
+    "size": 20885172
+  },
+  "images/train/20230509162905035_0_2.png": {
+    "size": 20885172
+  },
+  "images/train/20230509162947853_0_2 - 副本.png": {
+    "size": 20832133
+  },
+  "images/train/20230509162947853_0_2.png": {
+    "size": 20832133
+  },
+  "images/train/20230509163030484_0_2 - 副本.png": {
+    "size": 20636466
+  },
+  "images/train/20230509163030484_0_2.png": {
+    "size": 20636466
+  },
+  "images/train/20230509163119754_0_2 - 副本.png": {
+    "size": 20918013
+  },
+  "images/train/20230509163119754_0_2.png": {
+    "size": 20918013
+  },
+  "images/train/20230509163202868_0_2 - 副本.png": {
+    "size": 20711408
+  },
+  "images/train/20230509163202868_0_2.png": {
+    "size": 20711408
+  },
+  "images/train/20230509163246124_0_2 - 副本.png": {
+    "size": 20857799
+  },
+  "images/train/20230509163246124_0_2.png": {
+    "size": 20857799
+  },
+  "images/train/20230509163329613_0_2 - 副本.png": {
+    "size": 20639624
+  },
+  "images/train/20230509163329613_0_2.png": {
+    "size": 20639624
+  },
+  "images/train/20230509163412963_0_2 - 副本.png": {
+    "size": 21096520
+  },
+  "images/train/20230509163412963_0_2.png": {
+    "size": 21096520
+  },
+  "images/train/20230509163456718_0_2 - 副本.png": {
+    "size": 20808152
+  },
+  "images/train/20230509163456718_0_2.png": {
+    "size": 20808152
+  },
+  "images/train/20230509163540552_0_2.png": {
+    "size": 20831500
+  },
+  "images/train/20230509163624619_0_2.png": {
+    "size": 20569960
+  },
+  "images/train/20230509163708797_0_2.png": {
+    "size": 20306164
+  },
+  "images/train/20230509165356877_0_2.png": {
+    "size": 19508052
+  },
+  "images/train/20230509165437460_0_2.png": {
+    "size": 20732871
+  },
+  "images/train/20230509165518210_0_2.png": {
+    "size": 19457424
+  },
+  "images/train/20230509165618211_0_2.png": {
+    "size": 19508188
+  },
+  "images/train/20230509165740676_0_2.png": {
+    "size": 18959406
+  },
+  "images/train/20230509165821917_0_2.png": {
+    "size": 18738155
+  },
+  "images/train/20230509165903266_0_2.png": {
+    "size": 19432596
+  },
+  "images/train/20230509165944725_0_2.png": {
+    "size": 19792789
+  },
+  "images/train/20230509170026200_0_2.png": {
+    "size": 19460582
+  },
+  "images/train/20230509170107955_0_2.png": {
+    "size": 18561786
+  },
+  "images/train/20230509170149789_0_2.png": {
+    "size": 18452381
+  },
+  "images/train/20230509170231905_0_2.png": {
+    "size": 18043937
+  },
+  "images/train/20230509170314285_0_2.png": {
+    "size": 19076047
+  },
+  "images/train/20230509170356697_0_2.png": {
+    "size": 19055421
+  },
+  "images/train/20230509170435562_0_2.png": {
+    "size": 18200213
+  },
+  "images/train/20230509170521880_0_2.png": {
+    "size": 19213976
+  },
+  "images/train/20230509170604729_0_2.png": {
+    "size": 18946405
+  },
+  "images/train/20230509170647610_0_2.png": {
+    "size": 18764384
+  },
+  "images/train/20230509170730677_0_2.png": {
+    "size": 19765869
+  },
+  "images/train/20230509170814136_0_2.png": {
+    "size": 18312848
+  },
+  "images/train/20230509170857517_0_2.png": {
+    "size": 18331745
+  },
+  "images/train/20230509170940990_0_2.png": {
+    "size": 18649085
+  },
+  "images/train/20230509171117771_0_2.png": {
+    "size": 18623442
+  },
+  "images/train/20230509171218928_0_2.png": {
+    "size": 19290864
+  },
+  "images/train/20230509171229723_0_2.png": {
+    "size": 18623463
+  },
+  "images/train/20230509171442115_0_2.png": {
+    "size": 19422619
+  },
+  "images/train/20230509172025081_0_2.png": {
+    "size": 18946726
+  },
+  "images/train/20230509173824201_0_2.png": {
+    "size": 19324597
+  },
+  "images/train/20230509173900583_0_2.png": {
+    "size": 20914642
+  },
+  "images/train/20230509174106554_0_2.png": {
+    "size": 20584290
+  },
+  "images/train/20230509174146935_0_2.png": {
+    "size": 19312973
+  },
+  "images/train/20230509174336581_0_2.png": {
+    "size": 19674523
+  },
+  "images/train/20230509174417294_0_2.png": {
+    "size": 19478443
+  },
+  "images/train/20230509174458456_0_2.png": {
+    "size": 21535042
+  },
+  "images/train/20230509174539446_0_2.png": {
+    "size": 21399984
+  },
+  "images/train/20230509174620640_0_2.png": {
+    "size": 20138888
+  },
+  "images/train/20230509174705973_0_2.png": {
+    "size": 19321288
+  },
+  "images/train/20230509174747775_0_2.png": {
+    "size": 19775817
+  },
+  "images/train/20230509174832390_0_2.png": {
+    "size": 20616284
+  },
+  "images/train/20230509174914192_0_2.png": {
+    "size": 22311937
+  },
+  "images/train/20230509174956245_0_2.png": {
+    "size": 20038236
+  },
+  "images/train/20230509175219212_0_2.png": {
+    "size": 20038857
+  },
+  "images/train/20230509175842874_0_2.png": {
+    "size": 19368852
+  },
+  "images/train/20230509175925504_0_2.png": {
+    "size": 21447016
+  },
+  "images/train/20230509180051749_0_2.png": {
+    "size": 19721754
+  },
+  "images/train/20230509180241957_0_2.png": {
+    "size": 19488387
+  },
+  "images/train/20230509180325338_0_2.png": {
+    "size": 20025426
+  },
+  "images/train/20230509180408703_0_2.png": {
+    "size": 17862340
+  },
+  "images/train/20230509180451989_0_2.png": {
+    "size": 19660558
+  },
+  "images/train/20230509180535822_0_2.png": {
+    "size": 21904132
+  },
+  "images/train/20230509180818253_0_2.png": {
+    "size": 21270714
+  },
+  "images/train/20230509180902024_0_2.png": {
+    "size": 19312951
+  },
+  "images/train/20230509180946060_0_2.png": {
+    "size": 19736871
+  },
+  "images/train/20230509181030034_0_2.png": {
+    "size": 19557125
+  },
+  "images/train/20230509181114087_0_2.png": {
+    "size": 19672235
+  },
+  "images/train/20230510153430363_0_2.png": {
+    "size": 20433237
+  },
+  "images/train/20230510153511166_0_2.png": {
+    "size": 19746707
+  },
+  "images/train/20230510153551844_0_2.png": {
+    "size": 22529489
+  },
+  "images/train/20230510153632725_0_2.png": {
+    "size": 20452933
+  },
+  "images/train/20230510153713856_0_2.png": {
+    "size": 22683141
+  },
+  "images/train/20230510153754893_0_2.png": {
+    "size": 20175449
+  },
+  "images/train/20230510153836117_0_2.png": {
+    "size": 20892947
+  },
+  "images/train/20230510153917404_0_2.png": {
+    "size": 20566031
+  },
+  "images/train/20230510153958551_0_2.png": {
+    "size": 21006475
+  },
+  "images/train/20230510154040057_0_2.png": {
+    "size": 21125894
+  },
+  "images/train/20230510154121719_0_2.png": {
+    "size": 20523832
+  },
+  "images/train/20230510154203475_0_2.png": {
+    "size": 20913971
+  },
+  "images/train/20230510154245199_0_2.png": {
+    "size": 20339892
+  },
+  "images/train/20230510154327049_0_2.png": {
+    "size": 20368989
+  },
+  "images/train/20230510154408976_0_2.png": {
+    "size": 20687046
+  },
+  "images/train/20230510154451185_0_2.png": {
+    "size": 20691080
+  },
+  "images/train/20230510154533175_0_2.png": {
+    "size": 20006961
+  },
+  "images/train/20230510154615681_0_2.png": {
+    "size": 20640814
+  },
+  "images/train/20230510154658014_0_2.png": {
+    "size": 20057559
+  },
+  "images/train/20230510154740286_0_2.png": {
+    "size": 22797938
+  },
+  "images/train/20230510154822932_0_2.png": {
+    "size": 20408071
+  },
+  "images/train/20230510154905750_0_2.png": {
+    "size": 22882520
+  },
+  "images/train/20230510154948490_0_2.png": {
+    "size": 20146291
+  },
+  "images/train/20230510155031230_0_2.png": {
+    "size": 20273290
+  },
+  "images/train/20230510155114126_0_2.png": {
+    "size": 20590294
+  },
+  "images/train/20230510155157350_0_2.png": {
+    "size": 21017323
+  },
+  "images/train/20230510155240433_0_2.png": {
+    "size": 20340359
+  },
+  "images/train/20230510164111954_0_2.png": {
+    "size": 21192123
+  },
+  "images/train/20230510164155428_0_2.png": {
+    "size": 20206799
+  },
+  "images/train/20230510164239058_0_2.png": {
+    "size": 20152105
+  },
+  "images/train/20230510164322611_0_2.png": {
+    "size": 20467378
+  },
+  "images/train/20230510164406475_0_2.png": {
+    "size": 21105096
+  },
+  "images/train/20230510164450230_0_2.png": {
+    "size": 20020655
+  },
+  "images/train/20230510164534220_0_2.png": {
+    "size": 20920419
+  },
+  "images/train/20230510164618303_0_2.png": {
+    "size": 20341701
+  },
+  "images/train/20230510164702481_0_2.png": {
+    "size": 20479283
+  },
+  "images/train/20230510164746736_0_2.png": {
+    "size": 20718737
+  },
+  "images/train/20230510170201255_0_2.png": {
+    "size": 20495624
+  },
+  "images/train/20230510170349183_0_2.png": {
+    "size": 19686412
+  },
+  "images/train/20230510170643516_0_2.png": {
+    "size": 19710290
+  },
+  "images/train/20230510170723804_0_2.png": {
+    "size": 20202059
+  },
+  "images/train/20230510170804482_0_2.png": {
+    "size": 20658457
+  },
+  "images/train/20230510170845503_0_2.png": {
+    "size": 21966135
+  },
+  "images/train/20230510170926650_0_2.png": {
+    "size": 21666591
+  },
+  "images/train/20230510171007656_0_2.png": {
+    "size": 20047634
+  },
+  "images/train/20230510171048943_0_2.png": {
+    "size": 20449784
+  },
+  "images/train/20230510171130152_0_2.png": {
+    "size": 20104536
+  },
+  "images/train/20230510171211611_0_2.png": {
+    "size": 20240213
+  },
+  "images/train/20230510171253132_0_2.png": {
+    "size": 20207701
+  },
+  "images/train/20230510171335045_0_2.png": {
+    "size": 20244533
+  },
+  "images/train/20230510171416722_0_2.png": {
+    "size": 22078850
+  },
+  "images/train/20230510171458368_0_2.png": {
+    "size": 20004411
+  },
+  "images/train/20230510171540593_0_2.png": {
+    "size": 19970454
+  },
+  "images/train/20230510171622879_0_2.png": {
+    "size": 20173474
+  },
+  "images/train/20230510171704994_0_2.png": {
+    "size": 20008755
+  },
+  "images/train/20230510171747344_0_2.png": {
+    "size": 19729688
+  },
+  "images/train/20230510171841738_0_2.png": {
+    "size": 19814210
+  },
+  "images/train/20230510171924368_0_2.png": {
+    "size": 20010300
+  },
+  "images/train/20230510172007108_0_2.png": {
+    "size": 20124010
+  },
+  "images/train/20230510172049973_0_2.png": {
+    "size": 20034091
+  },
+  "images/train/20230510172133166_0_2.png": {
+    "size": 20441416
+  },
+  "images/train/20230510172216312_0_2.png": {
+    "size": 19774046
+  },
+  "images/train/20230510172259848_0_2.png": {
+    "size": 19704053
+  },
+  "images/train/20230510172343432_0_2.png": {
+    "size": 20012840
+  },
+  "images/train/20230510172427265_0_2.png": {
+    "size": 19716492
+  },
+  "images/train/20230510172511020_0_2.png": {
+    "size": 20130843
+  },
+  "images/train/20230510172554776_0_2.png": {
+    "size": 19975496
+  },
+  "images/train/20230510172638875_0_2.png": {
+    "size": 19974463
+  },
+  "images/train/20230510172723099_0_2.png": {
+    "size": 19944613
+  },
+  "images/train/20230510172851843_0_2.png": {
+    "size": 19736831
+  },
+  "images/train/20230510174959765_0_2.png": {
+    "size": 20693500
+  },
+  "images/train/20230510175039458_0_2.png": {
+    "size": 20416525
+  },
+  "images/train/20230510175222981_0_2.png": {
+    "size": 20929602
+  },
+  "images/train/20230510175303455_0_2.png": {
+    "size": 20553087
+  },
+  "images/train/20230510175343711_0_2.png": {
+    "size": 20996164
+  },
+  "images/train/20230510175423983_0_2.png": {
+    "size": 20611169
+  },
+  "images/train/20230510175504396_0_2.png": {
+    "size": 22353661
+  },
+  "images/train/20230510175545402_0_2.png": {
+    "size": 20781603
+  },
+  "images/train/20230510175626158_0_2.png": {
+    "size": 20871488
+  },
+  "images/train/20230510175707679_0_2.png": {
+    "size": 20998845
+  },
+  "images/train/20230510175748857_0_2.png": {
+    "size": 20812242
+  },
+  "images/train/20230510175830426_0_2.png": {
+    "size": 20892250
+  },
+  "images/train/20230510175911853_0_2.png": {
+    "size": 20503628
+  },
+  "images/train/20230510175953390_0_2.png": {
+    "size": 21027857
+  },
+  "images/train/20230510180035489_0_2.png": {
+    "size": 22396610
+  },
+  "images/train/20230510180117480_0_2.png": {
+    "size": 22757759
+  },
+  "images/train/20230510180159532_0_2.png": {
+    "size": 22663039
+  },
+  "images/train/20230510180242116_0_2.png": {
+    "size": 20688342
+  },
+  "images/train/20230510180324481_0_2.png": {
+    "size": 20753823
+  },
+  "images/train/20230510180407377_0_2.png": {
+    "size": 20637279
+  },
+  "images/train/20230510180450007_0_2.png": {
+    "size": 20440339
+  },
+  "images/train/20230510180533106_0_2.png": {
+    "size": 20539887
+  },
+  "images/train/20230510180616237_0_2.png": {
+    "size": 20066203
+  },
+  "images/train/20230510180659461_0_2.png": {
+    "size": 20541872
+  },
+  "images/train/20230510180742654_0_2.png": {
+    "size": 20123968
+  },
+  "images/train/20230510180826425_0_2.png": {
+    "size": 20371593
+  },
+  "images/train/20230510180909977_0_2.png": {
+    "size": 20628392
+  },
+  "images/train/20230510180953842_0_2.png": {
+    "size": 20405516
+  },
+  "images/train/20230510181037378_0_2.png": {
+    "size": 20882952
+  },
+  "images/train/20230511152513529_0_2.png": {
+    "size": 20021177
+  },
+  "images/train/20230511152726250_0_2.png": {
+    "size": 19705265
+  },
+  "images/train/20230511152805334_0_2.png": {
+    "size": 19580027
+  },
+  "images/train/20230511152844669_0_2.png": {
+    "size": 19262309
+  },
+  "images/train/20230511152924222_0_2.png": {
+    "size": 19927047
+  },
+  "images/train/20230511153003981_0_2.png": {
+    "size": 19481764
+  },
+  "images/train/20230511153043916_0_2.png": {
+    "size": 19534339
+  },
+  "images/train/20230511153124000_0_2.png": {
+    "size": 19488377
+  },
+  "images/train/20230511153204397_0_2.png": {
+    "size": 19954535
+  },
+  "images/train/20230511153508514_0_2.png": {
+    "size": 19567533
+  },
+  "images/train/20230511153548913_0_2.png": {
+    "size": 19863689
+  },
+  "images/train/20230511153629544_0_2.png": {
+    "size": 19796559
+  },
+  "images/train/20230511153710315_0_2.png": {
+    "size": 20202266
+  },
+  "images/train/20230511153751477_0_2.png": {
+    "size": 19283925
+  },
+  "images/train/20230511153832577_0_2.png": {
+    "size": 19479023
+  },
+  "images/train/20230511153913552_0_2.png": {
+    "size": 19845713
+  },
+  "images/train/20230511153954933_0_2.png": {
+    "size": 20138312
+  },
+  "images/train/20230511154036313_0_2.png": {
+    "size": 19057390
+  },
+  "images/train/20230511154117866_0_2.png": {
+    "size": 20254535
+  },
+  "images/train/20230511154159249_0_2.png": {
+    "size": 19101937
+  },
+  "images/train/20230511154241130_0_2.png": {
+    "size": 18757514
+  },
+  "images/train/20230511154322808_0_2.png": {
+    "size": 20125901
+  },
+  "images/train/20230511154404750_0_2.png": {
+    "size": 18832132
+  },
+  "images/train/20230511154446663_0_2.png": {
+    "size": 19472271
+  },
+  "images/train/20230511154529043_0_2.png": {
+    "size": 19908157
+  },
+  "images/train/20230511154611568_0_2.png": {
+    "size": 18866749
+  },
+  "images/train/20230511154653871_0_2.png": {
+    "size": 20033647
+  },
+  "images/train/20230511154736408_0_2.png": {
+    "size": 20203565
+  },
+  "images/train/20230511154819366_0_2.png": {
+    "size": 20066710
+  },
+  "images/train/20230511154902387_0_2.png": {
+    "size": 20095996
+  },
+  "images/train/20230511154945549_0_2.png": {
+    "size": 19539628
+  },
+  "images/train/20230511155035271_0_2.png": {
+    "size": 19417288
+  },
+  "images/train/20230511155118542_0_2.png": {
+    "size": 19804584
+  },
+  "images/train/20230511155201816_0_2.png": {
+    "size": 18505281
+  },
+  "images/train/20230511155245462_0_2.png": {
+    "size": 19671586
+  },
+  "images/train/20230511155329076_0_2.png": {
+    "size": 18822438
+  },
+  "images/train/20230511155412957_0_2.png": {
+    "size": 19721726
+  },
+  "images/train/20230511162259849_0_2.png": {
+    "size": 20090791
+  },
+  "images/train/20230511162339699_0_2.png": {
+    "size": 20049402
+  },
+  "images/train/20230511162419674_0_2.png": {
+    "size": 19636834
+  },
+  "images/train/20230511162459852_0_2.png": {
+    "size": 20157871
+  },
+  "images/train/20230511162540186_0_2.png": {
+    "size": 19072736
+  },
+  "images/train/20230511162620817_0_2.png": {
+    "size": 19466190
+  },
+  "images/train/20230511162701651_0_2.png": {
+    "size": 19171439
+  },
+  "images/train/20230511162742251_0_2.png": {
+    "size": 18959202
+  },
+  "images/train/20230511162823210_0_2.png": {
+    "size": 18750478
+  },
+  "images/train/20230511162904310_0_2.png": {
+    "size": 18461311
+  },
+  "images/train/20230511162945331_0_2.png": {
+    "size": 18997524
+  },
+  "images/train/20230511163026603_0_2.png": {
+    "size": 19188390
+  },
+  "images/train/20230511163107921_0_2.png": {
+    "size": 18873274
+  },
+  "images/train/20230511163145709_0_2.png": {
+    "size": 18767680
+  },
+  "images/train/20230511163230542_0_2.png": {
+    "size": 18961730
+  },
+  "images/train/20230511163312063_0_2.png": {
+    "size": 19812099
+  },
+  "images/train/20230511163353804_0_2.png": {
+    "size": 20156247
+  },
+  "images/train/20230511163435810_0_2.png": {
+    "size": 19305562
+  },
+  "images/train/20230511163535827_0_2.png": {
+    "size": 19811877
+  },
+  "images/train/20230511163715475_0_2.png": {
+    "size": 19927026
+  },
+  "images/train/20230511163757496_0_2.png": {
+    "size": 20200550
+  },
+  "images/train/20230511163839596_0_2.png": {
+    "size": 20213135
+  },
+  "images/train/20230511163922085_0_2.png": {
+    "size": 20017886
+  },
+  "images/train/20230511164004200_0_2.png": {
+    "size": 20608691
+  },
+  "images/train/20230511164046441_0_2.png": {
+    "size": 22086500
+  },
+  "images/train/20230511164129290_0_2.png": {
+    "size": 20508140
+  },
+  "images/train/20230511164211811_0_2.png": {
+    "size": 19684877
+  },
+  "images/train/20230511164254176_0_2.png": {
+    "size": 20003652
+  },
+  "images/train/20230511164336963_0_2.png": {
+    "size": 20066036
+  },
+  "images/train/20230511164419906_0_2.png": {
+    "size": 20128522
+  },
+  "images/train/20230511164509363_0_2.png": {
+    "size": 20117603
+  },
+  "images/train/20230511164552071_0_2.png": {
+    "size": 20423915
+  },
+  "images/train/20230511165543380_0_2.png": {
+    "size": 20110958
+  },
+  "images/train/20230511165626401_0_2.png": {
+    "size": 19968781
+  },
+  "images/train/20230511165709781_0_2.png": {
+    "size": 20550672
+  },
+  "images/train/20230511165753334_0_2.png": {
+    "size": 20199869
+  },
+  "images/train/20230511165836980_0_2.png": {
+    "size": 19882585
+  },
+  "images/train/20230511165920453_0_2.png": {
+    "size": 19953321
+  },
+  "images/train/20230511170004318_0_2.png": {
+    "size": 20427647
+  },
+  "images/train/20230511170048308_0_2.png": {
+    "size": 20470945
+  },
+  "images/train/20230511170132391_0_2.png": {
+    "size": 20655449
+  },
+  "images/train/20230511171149120_0_2.png": {
+    "size": 20109300
+  },
+  "images/train/20230511171349436_0_2.png": {
+    "size": 20214320
+  },
+  "images/train/20230511171428801_0_2.png": {
+    "size": 20216569
+  },
+  "images/train/20230511171508542_0_2.png": {
+    "size": 19676258
+  },
+  "images/train/20230511171548173_0_2.png": {
+    "size": 20411364
+  },
+  "images/train/20230511171628143_0_2.png": {
+    "size": 20194908
+  },
+  "images/train/20230511171708352_0_2.png": {
+    "size": 19986786
+  },
+  "images/train/20230511171748593_0_2.png": {
+    "size": 20098125
+  },
+  "images/train/20230511171828865_0_2.png": {
+    "size": 19630433
+  },
+  "images/train/20230511171909324_0_2.png": {
+    "size": 19760544
+  },
+  "images/train/20230511171950268_0_2.png": {
+    "size": 20492916
+  },
+  "images/train/20230511172031164_0_2.png": {
+    "size": 19742490
+  },
+  "images/train/20230511172111889_0_2.png": {
+    "size": 19933404
+  },
+  "images/train/20230511172550432_0_2.png": {
+    "size": 20418133
+  },
+  "images/train/20230511172632251_0_2.png": {
+    "size": 19305773
+  },
+  "images/train/20230511172714319_0_2.png": {
+    "size": 19830506
+  },
+  "images/train/20230511172756653_0_2.png": {
+    "size": 19695051
+  },
+  "images/train/20230511172838971_0_2.png": {
+    "size": 19574616
+  },
+  "images/train/20230511172921273_0_2.png": {
+    "size": 20196684
+  },
+  "images/train/20230511173004029_0_2.png": {
+    "size": 19584416
+  },
+  "images/train/20230511173047128_0_2.png": {
+    "size": 18991960
+  },
+  "images/train/20230511173129977_0_2.png": {
+    "size": 19628494
+  },
+  "images/train/20230511173533560_0_2.png": {
+    "size": 20155323
+  },
+  "images/train/20230511173617206_0_2.png": {
+    "size": 19130570
+  },
+  "images/train/20230511173700977_0_2.png": {
+    "size": 19415173
+  },
+  "images/train/20230511173844484_0_2.png": {
+    "size": 19599244
+  },
+  "images/train/20230511174039144_0_2.png": {
+    "size": 19252899
+  },
+  "images/train/20230511174123259_0_2.png": {
+    "size": 19740683
+  },
+  "images/train/20230512155923198_0_2.png": {
+    "size": 20213622
+  },
+  "images/train/20230512160034431_0_2.png": {
+    "size": 20058231
+  },
+  "images/train/20230512160115547_0_2.png": {
+    "size": 21147233
+  },
+  "images/train/20230512160156396_0_2.png": {
+    "size": 19648747
+  },
+  "images/train/20230512160237293_0_2.png": {
+    "size": 20043435
+  },
+  "images/train/20230512160318799_0_2.png": {
+    "size": 20482122
+  },
+  "images/train/20230512160400304_0_2.png": {
+    "size": 21223665
+  },
+  "images/train/20230512160441748_0_2.png": {
+    "size": 19827524
+  },
+  "images/train/20230512160523488_0_2.png": {
+    "size": 20197561
+  },
+  "images/train/20230512160605634_0_2.png": {
+    "size": 21405298
+  },
+  "images/train/20230512160810073_0_2.png": {
+    "size": 21067794
+  },
+  "images/train/20230512160852079_0_2.png": {
+    "size": 20626716
+  },
+  "images/train/20230512161105751_0_2.png": {
+    "size": 20763136
+  },
+  "images/train/20230512161148537_0_2.png": {
+    "size": 21372075
+  },
+  "images/train/20230512161231215_0_2.png": {
+    "size": 21099719
+  },
+  "images/train/20230512161314299_0_2.png": {
+    "size": 20128279
+  },
+  "images/train/20230512161539795_0_2.png": {
+    "size": 20858017
+  },
+  "images/train/20230512161623019_0_2.png": {
+    "size": 20393524
+  },
+  "images/train/20230512161706571_0_2.png": {
+    "size": 19774289
+  },
+  "images/train/20230512161750233_0_2.png": {
+    "size": 19079825
+  },
+  "images/train/20230512161833832_0_2.png": {
+    "size": 19674115
+  },
+  "images/train/20230512161917853_0_2.png": {
+    "size": 19858645
+  },
+  "images/train/20230512162001983_0_2.png": {
+    "size": 18452655
+  },
+  "images/train/20230512162046348_0_2.png": {
+    "size": 19739202
+  },
+  "images/train/20230512162146366_0_2.png": {
+    "size": 19858244
+  },
+  "images/train/20230512163052752_0_2.png": {
+    "size": 20758901
+  },
+  "images/train/20230512163132617_0_2.png": {
+    "size": 20492957
+  },
+  "images/train/20230512163212733_0_2.png": {
+    "size": 20439806
+  },
+  "images/train/20230512163252958_0_2.png": {
+    "size": 20623635
+  },
+  "images/train/20230512163333354_0_2.png": {
+    "size": 21247804
+  },
+  "images/train/20230512163414266_0_2.png": {
+    "size": 21248080
+  },
+  "images/train/20230512163454960_0_2.png": {
+    "size": 20929389
+  },
+  "images/train/20230512163536028_0_2.png": {
+    "size": 20968681
+  },
+  "images/train/20230512163617143_0_2.png": {
+    "size": 20825748
+  },
+  "images/train/20230512163658181_0_2.png": {
+    "size": 20740803
+  },
+  "images/train/20230512163739765_0_2.png": {
+    "size": 20678784
+  },
+  "images/train/20230512163821208_0_2.png": {
+    "size": 20500495
+  },
+  "images/train/20230512163921210_0_2.png": {
+    "size": 20747909
+  },
+  "images/train/20230512164036504_0_2.png": {
+    "size": 20964144
+  },
+  "images/train/20230512164119025_0_2.png": {
+    "size": 21062827
+  },
+  "images/train/20230512164219043_0_2.png": {
+    "size": 20724536
+  },
+  "images/train/20230512164336587_0_2.png": {
+    "size": 20909469
+  },
+  "images/train/20230512164418905_0_2.png": {
+    "size": 21096672
+  },
+  "images/train/20230512164501754_0_2.png": {
+    "size": 20992451
+  },
+  "images/train/20230512164804664_0_2.png": {
+    "size": 20373261
+  },
+  "images/train/20230512164848060_0_2.png": {
+    "size": 20818430
+  },
+  "images/train/20230512164931315_0_2.png": {
+    "size": 20651673
+  },
+  "images/train/20230512165015039_0_2.png": {
+    "size": 20450912
+  },
+  "images/train/20230512165058685_0_2.png": {
+    "size": 20117594
+  },
+  "images/train/20230512165242848_0_2.png": {
+    "size": 20958099
+  },
+  "images/train/20230512165854182_0_2.png": {
+    "size": 20549386
+  },
+  "images/train/20230512165910725_0_2.png": {
+    "size": 20958150
+  },
+  "images/train/20230512170931797_0_2.png": {
+    "size": 22617856
+  },
+  "images/train/20230512171011740_0_2.png": {
+    "size": 21556495
+  },
+  "images/train/20230512171051981_0_2.png": {
+    "size": 20462886
+  },
+  "images/train/20230512171132331_0_2.png": {
+    "size": 21042172
+  },
+  "images/train/20230512171212821_0_2.png": {
+    "size": 20690920
+  },
+  "images/train/20230512171253530_0_2.png": {
+    "size": 20061918
+  },
+  "images/train/20230512171334474_0_2.png": {
+    "size": 20248630
+  },
+  "images/train/20230512171415495_0_2.png": {
+    "size": 20565701
+  },
+  "images/train/20230512171456829_0_2.png": {
+    "size": 20589625
+  },
+  "images/train/20230512171538164_0_2.png": {
+    "size": 20770195
+  },
+  "images/train/20230512171619887_0_2.png": {
+    "size": 20906247
+  },
+  "images/train/20230512171701753_0_2.png": {
+    "size": 21053609
+  },
+  "images/train/20230512172537271_0_2.png": {
+    "size": 20058349
+  },
+  "images/train/20230512173931061_0_2.png": {
+    "size": 20695126
+  },
+  "images/train/20230512174109428_0_2.png": {
+    "size": 20729594
+  },
+  "images/train/20230512174152403_0_2.png": {
+    "size": 20260316
+  },
+  "images/train/20230512174425429_0_2.png": {
+    "size": 20262343
+  },
+  "images/train/20230513154802765_0_2.png": {
+    "size": 21674387
+  },
+  "images/train/20230513155105847_0_2.png": {
+    "size": 21202616
+  },
+  "images/train/20230513155151102_0_2.png": {
+    "size": 21439920
+  },
+  "images/train/20230513155229687_0_2.png": {
+    "size": 21397835
+  },
+  "images/train/20230513155308568_0_2.png": {
+    "size": 21380298
+  },
+  "images/train/20230513155354292_0_2.png": {
+    "size": 21197310
+  },
+  "images/train/20230513155439718_0_2.png": {
+    "size": 21845986
+  },
+  "images/train/20230513155518897_0_2.png": {
+    "size": 23152188
+  },
+  "images/train/20230513155558325_0_2.png": {
+    "size": 21839309
+  },
+  "images/train/20230513155644704_0_2.png": {
+    "size": 20642110
+  },
+  "images/train/20230513155731178_0_2.png": {
+    "size": 21000565
+  },
+  "images/train/20230513155817729_0_2.png": {
+    "size": 21740564
+  },
+  "images/train/20230513155904562_0_2.png": {
+    "size": 21547804
+  },
+  "images/train/20230513155951488_0_2.png": {
+    "size": 20578063
+  },
+  "images/train/20230513160038602_0_2.png": {
+    "size": 21360843
+  },
+  "images/train/20230513160125747_0_2.png": {
+    "size": 21288708
+  },
+  "images/train/20230513160212939_0_2.png": {
+    "size": 21373839
+  },
+  "images/train/20230513160300366_0_2.png": {
+    "size": 23305046
+  },
+  "images/train/20230513160348026_0_2.png": {
+    "size": 21430201
+  },
+  "images/train/20230513160435718_0_2.png": {
+    "size": 21604115
+  },
+  "images/train/20230513160523535_0_2.png": {
+    "size": 20977825
+  },
+  "images/train/20230513160611555_0_2.png": {
+    "size": 21295452
+  },
+  "images/train/20230513160659668_0_2.png": {
+    "size": 19646513
+  },
+  "images/train/20230513160747938_0_2.png": {
+    "size": 19976134
+  },
+  "images/train/20230513160836395_0_2.png": {
+    "size": 20472495
+  },
+  "images/train/20230513160925103_0_2.png": {
+    "size": 20966619
+  },
+  "images/train/20230513161013997_0_2.png": {
+    "size": 21015086
+  },
+  "images/train/20230513161114015_0_2.png": {
+    "size": 20393056
+  },
+  "images/train/20230513161223029_0_2.png": {
+    "size": 21272138
+  },
+  "images/train/20230513161312252_0_2.png": {
+    "size": 20914465
+  },
+  "images/train/20230513161401756_0_2.png": {
+    "size": 20758053
+  },
+  "images/train/20230513161451291_0_2.png": {
+    "size": 21046422
+  },
+  "images/train/20230513162403395_0_2.png": {
+    "size": 21046442
+  },
+  "images/train/20230513165400480_0_2.png": {
+    "size": 21693748
+  },
+  "images/train/20230513165841742_0_2.png": {
+    "size": 19559654
+  },
+  "images/train/20230513170455622_0_2.png": {
+    "size": 20172194
+  },
+  "images/train/20230513170541720_0_2.png": {
+    "size": 21414489
+  },
+  "images/train/20230513170627834_0_2.png": {
+    "size": 21114570
+  },
+  "images/train/20230513170714354_0_2.png": {
+    "size": 21530520
+  },
+  "images/train/20230513170801047_0_2.png": {
+    "size": 21181792
+  },
+  "images/train/20230513170847661_0_2.png": {
+    "size": 20307696
+  },
+  "images/train/20230513170934181_0_2.png": {
+    "size": 21311360
+  },
+  "images/train/20230513171021279_0_2.png": {
+    "size": 20429114
+  },
+  "images/train/20230513171108237_0_2.png": {
+    "size": 20326440
+  },
+  "images/train/20230513171155429_0_2.png": {
+    "size": 19856082
+  },
+  "images/train/20230513171243152_0_2.png": {
+    "size": 19791499
+  },
+  "images/train/20230513171330484_0_2.png": {
+    "size": 19935520
+  },
+  "images/train/20230513171418286_0_2.png": {
+    "size": 20495745
+  },
+  "images/train/20230513171506134_0_2.png": {
+    "size": 20101946
+  },
+  "images/train/20230513171553513_0_2.png": {
+    "size": 20040804
+  },
+  "images/train/20230513171641923_0_2.png": {
+    "size": 19912660
+  },
+  "images/train/20230513171729928_0_2.png": {
+    "size": 20148810
+  },
+  "images/train/20230513171906843_0_2.png": {
+    "size": 19302892
+  },
+  "images/train/20230513172133620_0_2.png": {
+    "size": 20221800
+  },
+  "images/train/20230513172222906_0_2.png": {
+    "size": 19604069
+  },
+  "images/train/20230513172312206_0_2.png": {
+    "size": 19479334
+  },
+  "images/train/20230513172401772_0_2.png": {
+    "size": 20176962
+  },
+  "images/train/20230513173538717_0_2.png": {
+    "size": 22035257
+  },
+  "images/train/20230513173623487_0_2.png": {
+    "size": 23268033
+  },
+  "images/train/20230513173918040_0_2.png": {
+    "size": 22034897
+  },
+  "images/train/20230513173940988_0_2.png": {
+    "size": 20942896
+  },
+  "images/train/20230513174026211_0_2.png": {
+    "size": 21228696
+  },
+  "images/train/20230513174407409_0_2.png": {
+    "size": 20699974
+  },
+  "images/train/20230513174640827_0_2.png": {
+    "size": 20845110
+  },
+  "images/train/20230513174727207_0_2.png": {
+    "size": 20209298
+  },
+  "images/train/20230513174813883_0_2.png": {
+    "size": 20765444
+  },
+  "images/train/20230513174900263_0_2.png": {
+    "size": 20530028
+  },
+  "images/train/20230513174947049_0_2.png": {
+    "size": 20227674
+  },
+  "images/train/20230513175034318_0_2.png": {
+    "size": 20848362
+  },
+  "images/train/20230513175121385_0_2.png": {
+    "size": 20784246
+  },
+  "images/train/20230513175208437_0_2.png": {
+    "size": 20532557
+  },
+  "images/train/20230513175255878_0_2.png": {
+    "size": 20832505
+  },
+  "images/train/20230513175343493_0_2.png": {
+    "size": 20448634
+  },
+  "images/train/20230513175431356_0_2.png": {
+    "size": 20296375
+  },
+  "images/train/20230513175519204_0_2.png": {
+    "size": 20576592
+  },
+  "images/train/20230513175607459_0_2.png": {
+    "size": 20991761
+  },
+  "images/train/20230513175655384_0_2.png": {
+    "size": 19626194
+  },
+  "images/train/20230513175743998_0_2.png": {
+    "size": 20841571
+  },
+  "images/train/20230513175832455_0_2.png": {
+    "size": 19820550
+  },
+  "images/train/20230513175921381_0_2.png": {
+    "size": 20437758
+  },
+  "images/train/20230513180010198_0_2.png": {
+    "size": 19298548
+  },
+  "images/train/20230513180059499_0_2.png": {
+    "size": 20164694
+  },
+  "images/train/20230513180148627_0_2.png": {
+    "size": 20768467
+  },
+  "images/train/20230513180238100_0_2.png": {
+    "size": 20831928
+  },
+  "images/train/20230513180338118_0_2.png": {
+    "size": 20163745
+  },
+  "images/train/20230514150232283_0_2.png": {
+    "size": 20332608
+  },
+  "images/train/20230514150352279_0_2.png": {
+    "size": 20899562
+  },
+  "images/train/20230514150432661_0_2.png": {
+    "size": 20242589
+  },
+  "images/train/20230514150721699_0_2.png": {
+    "size": 19911959
+  },
+  "images/train/20230514150802439_0_2.png": {
+    "size": 21075733
+  },
+  "images/train/20230514150843305_0_2.png": {
+    "size": 21019680
+  },
+  "images/train/20230514150924295_0_2.png": {
+    "size": 21120398
+  },
+  "images/train/20230514151139231_0_2.png": {
+    "size": 22158979
+  },
+  "images/train/20230514151220816_0_2.png": {
+    "size": 21107501
+  },
+  "images/train/20230514151308773_0_2.png": {
+    "size": 20948346
+  },
+  "images/train/20230514151350310_0_2.png": {
+    "size": 20769266
+  },
+  "images/train/20230514151432112_0_2.png": {
+    "size": 21042086
+  },
+  "images/train/20230514151514102_0_2.png": {
+    "size": 21048380
+  },
+  "images/train/20230514151602747_0_2.png": {
+    "size": 20597922
+  },
+  "images/train/20230514151645065_0_2.png": {
+    "size": 21661164
+  },
+  "images/train/20230514151734194_0_2.png": {
+    "size": 22495180
+  },
+  "images/train/20230514151823230_0_2.png": {
+    "size": 21460489
+  },
+  "images/train/20230514151912531_0_2.png": {
+    "size": 21067006
+  },
+  "images/train/20230514151955442_0_2.png": {
+    "size": 20937297
+  },
+  "images/train/20230514152045024_0_2.png": {
+    "size": 20886323
+  },
+  "images/train/20230514152134872_0_2.png": {
+    "size": 20482970
+  },
+  "images/train/20230514152224860_0_2.png": {
+    "size": 20159929
+  },
+  "images/train/20230514152314942_0_2.png": {
+    "size": 20960509
+  },
+  "images/train/20230514152405242_0_2.png": {
+    "size": 21277871
+  },
+  "images/train/20230514152455699_0_2.png": {
+    "size": 21143570
+  },
+  "images/train/20230514152546343_0_2.png": {
+    "size": 20042081
+  },
+  "images/train/20230514152637050_0_2.png": {
+    "size": 19984229
+  },
+  "images/train/20230514152728007_0_2.png": {
+    "size": 20298586
+  },
+  "images/train/20230514152819011_0_2.png": {
+    "size": 20088644
+  },
+  "images/train/20230514154229262_0_2.png": {
+    "size": 20315753
+  },
+  "images/train/20230514154434217_0_2.png": {
+    "size": 21022904
+  },
+  "images/train/20230514154555229_0_2.png": {
+    "size": 21215772
+  },
+  "images/train/20230514155256204_0_2.png": {
+    "size": 23241019
+  },
+  "images/train/20230514155423248_0_2.png": {
+    "size": 20024501
+  },
+  "images/train/20230514155638122_0_2.png": {
+    "size": 21601128
+  },
+  "images/train/20230514155845827_0_2.png": {
+    "size": 20992431
+  },
+  "images/train/20260212-1045.png": {
+    "size": 8949584
+  },
+  "images/train/20260212-1047.png": {
+    "size": 9884675
+  },
+  "images/train/20260212-1052.png": {
+    "size": 8066660
+  },
+  "images/train/20260212-1055.png": {
+    "size": 8928133
+  },
+  "images/train/20260212-1056.png": {
+    "size": 7888444
+  },
+  "images/train/20260212-1145.png": {
+    "size": 10822639
+  },
+  "images/train/20260212-1168.png": {
+    "size": 9058417
+  },
+  "images/train/20260212-1263.png": {
+    "size": 8815594
+  },
+  "images/train/20260212-2133.png": {
+    "size": 10921167
+  },
+  "images/train/20260212-2165.png": {
+    "size": 8709140
+  },
+  "images/train/20260212-2169.png": {
+    "size": 8542494
+  },
+  "images/train/20260212-2178.png": {
+    "size": 11945640
+  },
+  "images/train/20260212-2187.png": {
+    "size": 9486971
+  },
+  "images/train/20260212-448.png": {
+    "size": 11687566
+  },
+  "images/train/20260212-451.png": {
+    "size": 9400520
+  },
+  "images/train/20260212-455.png": {
+    "size": 9816799
+  },
+  "images/train/20260212-543.png": {
+    "size": 11084118
+  },
+  "images/train/20260212-558.png": {
+    "size": 12187371
+  },
+  "images/train/20260212-584.png": {
+    "size": 10379346
+  },
+  "images/train/20260212-597.png": {
+    "size": 9580755
+  },
+  "images/train/20260212-601.png": {
+    "size": 9198058
+  },
+  "images/train/20260212-602.png": {
+    "size": 9792971
+  },
+  "images/train/20260212-609.png": {
+    "size": 9271714
+  },
+  "images/train/20260212-657.png": {
+    "size": 9413620
+  },
+  "images/train/20260212-659.png": {
+    "size": 8793796
+  },
+  "images/train/20260212-661.png": {
+    "size": 11773492
+  },
+  "images/train/20260212-676.png": {
+    "size": 13255819
+  },
+  "images/train/20260212-684.png": {
+    "size": 11444564
+  },
+  "images/train/20260212-711.png": {
+    "size": 8423322
+  },
+  "images/train/20260212-782.png": {
+    "size": 10681928
+  },
+  "images/train/20260212-791.png": {
+    "size": 12583352
+  },
+  "images/train/20260212-915.png": {
+    "size": 10403674
+  },
+  "images/val/113353bottom_0.png": {
+    "size": 6622046
+  },
+  "images/val/113353top_0.png": {
+    "size": 9090549
+  },
+  "images/val/113434bottom_0.png": {
+    "size": 6541067
+  },
+  "images/val/113434top_0.png": {
+    "size": 10060823
+  },
+  "images/val/113514bottom_0.png": {
+    "size": 6344639
+  },
+  "images/val/113514top_0.png": {
+    "size": 10324173
+  },
+  "images/val/113554bottom_0.png": {
+    "size": 6372042
+  },
+  "images/val/113554top_0.png": {
+    "size": 10011848
+  },
+  "images/val/141159bottom_0.png": {
+    "size": 7049881
+  },
+  "images/val/141159top_0.png": {
+    "size": 10364186
+  },
+  "images/val/141240bottom_0.png": {
+    "size": 7414738
+  },
+  "images/val/141240top_0.png": {
+    "size": 10304963
+  },
+  "images/val/141321bottom_0.png": {
+    "size": 6926762
+  },
+  "images/val/141321top_0.png": {
+    "size": 9656979
+  },
+  "images/val/141521bottom_0.png": {
+    "size": 7118240
+  },
+  "images/val/141521top_0.png": {
+    "size": 8846760
+  },
+  "images/val/141641bottom_0.png": {
+    "size": 7050432
+  },
+  "images/val/141641top_0.png": {
+    "size": 9753689
+  },
+  "images/val/20230514155927988_0_2.png": {
+    "size": 20219898
+  },
+  "images/val/20230514160016727_0_2.png": {
+    "size": 21031958
+  },
+  "images/val/20230514160105340_0_2.png": {
+    "size": 20493628
+  },
+  "images/val/20230514160147721_0_2.png": {
+    "size": 20929811
+  },
+  "images/val/20230514160236553_0_2.png": {
+    "size": 20283486
+  },
+  "images/val/20230514160318887_0_2.png": {
+    "size": 19807294
+  },
+  "images/val/20230514160401736_0_2.png": {
+    "size": 21009764
+  },
+  "images/val/20230514160451287_0_2.png": {
+    "size": 22331636
+  },
+  "images/val/20230514160540838_0_2.png": {
+    "size": 21517344
+  },
+  "images/val/20230514160630326_0_2.png": {
+    "size": 21083849
+  },
+  "images/val/20230514160713566_0_2.png": {
+    "size": 21672040
+  },
+  "images/val/20230514160756977_0_2.png": {
+    "size": 21691673
+  },
+  "images/val/20230514160840404_0_2.png": {
+    "size": 20652828
+  },
+  "images/val/20230514160930877_0_2.png": {
+    "size": 20976121
+  },
+  "images/val/20230514161021365_0_2.png": {
+    "size": 20870555
+  },
+  "images/val/20230514161105354_0_2.png": {
+    "size": 20433480
+  },
+  "images/val/20230514161156186_0_2.png": {
+    "size": 21465181
+  },
+  "images/val/20230514161240504_0_2.png": {
+    "size": 20250488
+  },
+  "images/val/20230515153216042_0_2.png": {
+    "size": 20828148
+  },
+  "images/val/20230515153259296_0_2.png": {
+    "size": 21095801
+  },
+  "images/val/20230515153500820_0_2.png": {
+    "size": 21258409
+  },
+  "images/val/20230515153542386_0_2.png": {
+    "size": 20757639
+  },
+  "images/val/20230515153624955_0_2.png": {
+    "size": 21289994
+  },
+  "images/val/20230515153707141_0_2.png": {
+    "size": 20950736
+  },
+  "images/val/20230515153749574_0_2.png": {
+    "size": 21347212
+  },
+  "images/val/20230515153831938_0_2.png": {
+    "size": 20691990
+  },
+  "images/val/20230515153914639_0_2.png": {
+    "size": 20477729
+  },
+  "images/val/20230515153957490_0_2.png": {
+    "size": 20886741
+  },
+  "images/val/20230515154040093_0_2.png": {
+    "size": 20222167
+  },
+  "images/val/20230515154123172_0_2.png": {
+    "size": 20706354
+  },
+  "images/val/20230515154206791_0_2.png": {
+    "size": 22943121
+  },
+  "images/val/20230515154256653_0_2.png": {
+    "size": 21065585
+  },
+  "images/val/20230515154340231_0_2.png": {
+    "size": 20869709
+  },
+  "images/val/20230515154426452_0_2.png": {
+    "size": 20921050
+  },
+  "images/val/20230515154514264_0_2.png": {
+    "size": 21324538
+  },
+  "images/val/20230515154605202_0_2.png": {
+    "size": 20269150
+  },
+  "images/val/20230515154655799_0_2.png": {
+    "size": 20646098
+  },
+  "images/val/20230515154746366_0_2.png": {
+    "size": 20946027
+  },
+  "images/val/20230515154830803_0_2.png": {
+    "size": 20962823
+  },
+  "images/val/20230515160402918_0_2.png": {
+    "size": 19988497
+  },
+  "images/val/20230515160502934_0_2.png": {
+    "size": 20962852
+  },
+  "images/val/20230515160838214_0_2.png": {
+    "size": 21195669
+  },
+  "images/val/20230515161012845_0_2.png": {
+    "size": 20266905
+  },
+  "images/val/20230515161052858_0_2.png": {
+    "size": 20600577
+  },
+  "images/val/20230515161136790_0_2.png": {
+    "size": 20187499
+  },
+  "images/val/20230515161217117_0_2.png": {
+    "size": 20301441
+  },
+  "images/val/20230515161257179_0_2.png": {
+    "size": 20328286
+  },
+  "images/val/20230515161337939_0_2.png": {
+    "size": 20617996
+  },
+  "images/val/20230515161418369_0_2.png": {
+    "size": 21557092
+  },
+  "images/val/20230515161548343_0_2.png": {
+    "size": 21195888
+  },
+  "images/val/20230515161710528_0_2.png": {
+    "size": 19939958
+  },
+  "images/val/20230515161751454_0_2.png": {
+    "size": 20463993
+  },
+  "images/val/20230515161832958_0_2.png": {
+    "size": 20360009
+  },
+  "images/val/20230515161914770_0_2.png": {
+    "size": 19846574
+  },
+  "images/val/20230515162002610_0_2.png": {
+    "size": 20661262
+  },
+  "images/val/20230515162044501_0_2.png": {
+    "size": 20103651
+  },
+  "images/val/20230515162122603_0_2.png": {
+    "size": 20344360
+  },
+  "images/val/20230515162208198_0_2.png": {
+    "size": 20115401
+  },
+  "images/val/20230515162250313_0_2.png": {
+    "size": 20250207
+  },
+  "images/val/20230515162332349_0_2.png": {
+    "size": 21140291
+  },
+  "images/val/20230515162414896_0_2.png": {
+    "size": 20606748
+  },
+  "images/val/20230515162503851_0_2.png": {
+    "size": 19763863
+  },
+  "images/val/20230515162546390_0_2.png": {
+    "size": 20328808
+  },
+  "images/val/20230515162629297_0_2.png": {
+    "size": 19986988
+  },
+  "images/val/20230515162712227_0_2.png": {
+    "size": 20350239
+  },
+  "images/val/20230515162755018_0_2.png": {
+    "size": 20423135
+  },
+  "images/val/20230515162838473_0_2.png": {
+    "size": 20074061
+  },
+  "images/val/20230515162921757_0_2.png": {
+    "size": 20719211
+  },
+  "images/val/20230515163008025_0_2.png": {
+    "size": 20573116
+  },
+  "images/val/20230515163140813_0_2.png": {
+    "size": 23270763
+  },
+  "images/val/20230515163228460_0_2.png": {
+    "size": 21152961
+  },
+  "images/val/20230515163422230_0_2.png": {
+    "size": 21206537
+  },
+  "images/val/20230515163512376_0_2.png": {
+    "size": 20109802
+  },
+  "images/val/20230515163556259_0_2.png": {
+    "size": 20069807
+  },
+  "images/val/20230515163640425_0_2.png": {
+    "size": 20100349
+  },
+  "images/val/20230515163724610_0_2.png": {
+    "size": 19685167
+  },
+  "images/val/20230519153355674_0_2.png": {
+    "size": 20824974
+  },
+  "images/val/20230519153541383_0_2.png": {
+    "size": 20681264
+  },
+  "images/val/20230519153621078_0_2.png": {
+    "size": 19882593
+  },
+  "images/val/20230519153700537_0_2.png": {
+    "size": 20558246
+  },
+  "images/val/20230519153740356_0_2.png": {
+    "size": 19859526
+  },
+  "images/val/20230519153820190_0_2.png": {
+    "size": 21066139
+  },
+  "images/val/20230519153900087_0_2.png": {
+    "size": 20506890
+  },
+  "images/val/20230519153940171_0_2.png": {
+    "size": 20203720
+  },
+  "images/val/20230519154020381_0_2.png": {
+    "size": 22297096
+  },
+  "images/val/20230519154100637_0_2.png": {
+    "size": 21705959
+  },
+  "images/val/20230519154141112_0_2.png": {
+    "size": 20916001
+  },
+  "images/val/20230519154221508_0_2.png": {
+    "size": 20966258
+  },
+  "images/val/20230519154302030_0_2.png": {
+    "size": 20762813
+  },
+  "images/val/20230519154342942_0_2.png": {
+    "size": 20416095
+  },
+  "images/val/20230519154423839_0_2.png": {
+    "size": 20191475
+  },
+  "images/val/20230519154504736_0_2.png": {
+    "size": 21191320
+  },
+  "images/val/20230519154545836_0_2.png": {
+    "size": 20531975
+  },
+  "images/val/20230519154627170_0_2.png": {
+    "size": 22278254
+  },
+  "images/val/20230519154708145_0_2.png": {
+    "size": 20543293
+  },
+  "images/val/20230519154808162_0_2.png": {
+    "size": 20529458
+  },
+  "images/val/20230519154902446_0_2.png": {
+    "size": 20687252
+  },
+  "images/val/20230519154943858_0_2.png": {
+    "size": 19575096
+  },
+  "images/val/20230519155025724_0_2.png": {
+    "size": 20708286
+  },
+  "images/val/20230519155107823_0_2.png": {
+    "size": 19968636
+  },
+  "images/val/20230519155149766_0_2.png": {
+    "size": 21037019
+  },
+  "images/val/20230519155231834_0_2.png": {
+    "size": 20731278
+  },
+  "images/val/20230519155314090_0_2.png": {
+    "size": 20560045
+  },
+  "images/val/20230519155356236_0_2.png": {
+    "size": 20302837
+  },
+  "images/val/20230519155438492_0_2.png": {
+    "size": 20284378
+  },
+  "images/val/20230519155521341_0_2.png": {
+    "size": 20455094
+  },
+  "images/val/20230519155603878_0_2.png": {
+    "size": 21003818
+  },
+  "images/val/20230519155837405_0_2.png": {
+    "size": 20390349
+  },
+  "images/val/20230519155920426_0_2.png": {
+    "size": 20330489
+  },
+  "images/val/20230519160003525_0_2.png": {
+    "size": 20827774
+  },
+  "images/val/20230519160046749_0_2.png": {
+    "size": 20636571
+  },
+  "images/val/20230519160130067_0_2.png": {
+    "size": 20489725
+  },
+  "images/val/20230519160213510_0_2.png": {
+    "size": 19589383
+  },
+  "images/val/20230519160257078_0_2.png": {
+    "size": 20143036
+  },
+  "images/val/20230519160340787_0_2.png": {
+    "size": 20154354
+  },
+  "images/val/20230519160424683_0_2.png": {
+    "size": 20779317
+  },
+  "images/val/20230519160512281_0_2.png": {
+    "size": 22005256
+  },
+  "images/val/20230519162402751_0_2.png": {
+    "size": 20243443
+  },
+  "images/val/20230519162521763_0_2.png": {
+    "size": 19945521
+  },
+  "images/val/20230519162601238_0_2.png": {
+    "size": 20954149
+  },
+  "images/val/20230519162640870_0_2.png": {
+    "size": 21472403
+  },
+  "images/val/20230519162740872_0_2.png": {
+    "size": 19945209
+  },
+  "images/val/20230519162833453_0_2.png": {
+    "size": 20605450
+  },
+  "images/val/20230519162913428_0_2.png": {
+    "size": 23107357
+  },
+  "images/val/20230519162953699_0_2.png": {
+    "size": 19753293
+  },
+  "images/val/20230519163034018_0_2.png": {
+    "size": 20197303
+  },
+  "images/val/20230519163114259_0_2.png": {
+    "size": 20740455
+  },
+  "images/val/20230519163154749_0_2.png": {
+    "size": 20644220
+  },
+  "images/val/20230519163235302_0_2.png": {
+    "size": 20752937
+  },
+  "images/val/20230519163315949_0_2.png": {
+    "size": 20147075
+  },
+  "images/val/20230519163356955_0_2.png": {
+    "size": 20658397
+  },
+  "images/val/20230519163437836_0_2.png": {
+    "size": 20286218
+  },
+  "images/val/20230519163518733_0_2.png": {
+    "size": 19380516
+  },
+  "images/val/20230519163559895_0_2.png": {
+    "size": 19104103
+  },
+  "images/val/20230519163641088_0_2.png": {
+    "size": 18932784
+  },
+  "images/val/20230519163722625_0_2.png": {
+    "size": 19505447
+  },
+  "images/val/20230519163803991_0_2.png": {
+    "size": 20047836
+  },
+  "images/val/20230519163845763_0_2.png": {
+    "size": 19893105
+  },
+  "images/val/20230519164015273_0_2.png": {
+    "size": 19888374
+  },
+  "images/val/20230519164057060_0_2.png": {
+    "size": 19533390
+  },
+  "images/val/20230519164139034_0_2.png": {
+    "size": 20336189
+  },
+  "images/val/20230519164221353_0_2.png": {
+    "size": 19544710
+  },
+  "images/val/20230519164303592_0_2.png": {
+    "size": 20516719
+  },
+  "images/val/20230519164345973_0_2.png": {
+    "size": 20182524
+  },
+  "images/val/20230519164428385_0_2.png": {
+    "size": 19986410
+  },
+  "images/val/20230519164511031_0_2.png": {
+    "size": 20328163
+  },
+  "images/val/20230519164553787_0_2.png": {
+    "size": 20406778
+  },
+  "images/val/20230519164636511_0_2.png": {
+    "size": 20171113
+  },
+  "images/val/20230519164719611_0_2.png": {
+    "size": 20515378
+  },
+  "images/val/20230519164802538_0_2.png": {
+    "size": 19608233
+  },
+  "images/val/20230519164845872_0_2.png": {
+    "size": 20107698
+  },
+  "images/val/20230519164929158_0_2.png": {
+    "size": 21175789
+  },
+  "images/val/20230519165012476_0_2.png": {
+    "size": 20029350
+  },
+  "images/val/20230519165055997_0_2.png": {
+    "size": 20818657
+  },
+  "images/val/20230519165139440_0_2.png": {
+    "size": 20010675
+  },
+  "images/val/20230519165223180_0_2.png": {
+    "size": 20194415
+  },
+  "images/val/20230519165306828_0_2.png": {
+    "size": 20531296
+  },
+  "images/val/20230519165354566_0_2.png": {
+    "size": 20760585
+  },
+  "images/val/20230519165438541_0_2.png": {
+    "size": 20283103
+  },
+  "images/val/20230519170733687_0_1.png": {
+    "size": 19836102
+  },
+  "images/val/20230519170813412_0_1.png": {
+    "size": 20610951
+  },
+  "images/val/20230519170853356_0_1.png": {
+    "size": 21337990
+  },
+  "images/val/20230519170933300_0_1.png": {
+    "size": 20291267
+  },
+  "images/val/20230519171013306_0_1.png": {
+    "size": 20475878
+  },
+  "images/val/20230519171053546_0_1.png": {
+    "size": 20102116
+  },
+  "images/val/20230519171133865_0_1.png": {
+    "size": 19740510
+  },
+  "images/val/20230519171214418_0_1.png": {
+    "size": 20154392
+  },
+  "images/val/20230519171255018_0_1.png": {
+    "size": 20233013
+  },
+  "images/val/20230519171335759_0_1.png": {
+    "size": 20427860
+  },
+  "images/val/20230519171416655_0_1.png": {
+    "size": 19817734
+  },
+  "images/val/20230519171457364_0_1.png": {
+    "size": 19689576
+  },
+  "images/val/20230519171538308_0_1.png": {
+    "size": 19119069
+  },
+  "images/val/20230519171619611_0_1.png": {
+    "size": 20587037
+  },
+  "images/val/20230519171701195_0_1.png": {
+    "size": 20478148
+  },
+  "images/val/20230519171742091_0_1.png": {
+    "size": 20428888
+  },
+  "images/val/20230519171823582_0_1.png": {
+    "size": 20370236
+  },
+  "images/val/20230519171905134_0_1.png": {
+    "size": 20842065
+  },
+  "images/val/20230519171946875_0_1.png": {
+    "size": 20447973
+  },
+  "images/val/20230519172028755_0_1.png": {
+    "size": 20350432
+  },
+  "images/val/20230519172110715_0_1.png": {
+    "size": 20638718
+  },
+  "images/val/20230519172152767_0_1.png": {
+    "size": 20971035
+  },
+  "images/val/20230519172234835_0_1.png": {
+    "size": 20101280
+  },
+  "images/val/20230519172317153_0_1.png": {
+    "size": 20321527
+  },
+  "images/val/20230519172359581_0_1.png": {
+    "size": 20577366
+  },
+  "images/val/20230519172442150_0_1.png": {
+    "size": 20239359
+  },
+  "images/val/20230519172524765_0_1.png": {
+    "size": 20408033
+  },
+  "images/val/20230519172607488_0_1.png": {
+    "size": 20741549
+  },
+  "images/val/20230519172650416_0_1.png": {
+    "size": 20971517
+  },
+  "images/val/20230519172733609_0_1.png": {
+    "size": 19665283
+  },
+  "images/val/20230519172816302_0_1.png": {
+    "size": 20446017
+  },
+  "images/val/20230519173007495_0_1.png": {
+    "size": 20428817
+  },
+  "images/val/20230519173050813_0_1.png": {
+    "size": 19931936
+  },
+  "images/val/20230519173134240_0_1.png": {
+    "size": 20004630
+  },
+  "images/val/20230519173217683_0_1.png": {
+    "size": 20302780
+  },
+  "images/val/20230519173301360_0_1.png": {
+    "size": 19765581
+  },
+  "images/val/20230519173345272_0_1.png": {
+    "size": 20332258
+  },
+  "images/val/20230519173429246_0_1.png": {
+    "size": 19885116
+  },
+  "images/val/20230519173513204_0_1.png": {
+    "size": 20443261
+  },
+  "labels/train/091115bottom_0.txt": {
+    "size": 1090
+  },
+  "labels/train/091115top_0.txt": {
+    "size": 817
+  },
+  "labels/train/091215bottom_0.txt": {
+    "size": 2377
+  },
+  "labels/train/091215top_0.txt": {
+    "size": 2065
+  },
+  "labels/train/091256bottom_0.txt": {
+    "size": 1090
+  },
+  "labels/train/091256top_0.txt": {
+    "size": 817
+  },
+  "labels/train/091336bottom_0.txt": {
+    "size": 856
+  },
+  "labels/train/091336top_0.txt": {
+    "size": 1480
+  },
+  "labels/train/091416bottom_0.txt": {
+    "size": 154
+  },
+  "labels/train/091416top_0.txt": {
+    "size": 4093
+  },
+  "labels/train/091456bottom_0.txt": {
+    "size": 154
+  },
+  "labels/train/091456top_0.txt": {
+    "size": 232
+  },
+  "labels/train/091615bottom_0.txt": {
+    "size": 193
+  },
+  "labels/train/091615top_0.txt": {
+    "size": 1519
+  },
+  "labels/train/091655bottom_0.txt": {
+    "size": 154
+  },
+  "labels/train/091655top_0.txt": {
+    "size": 661
+  },
+  "labels/train/091858bottom_0.txt": {
+    "size": 37
+  },
+  "labels/train/091858top_0.txt": {
+    "size": 1558
+  },
+  "labels/train/091937bottom_0.txt": {
+    "size": 37
+  },
+  "labels/train/091937top_0.txt": {
+    "size": 232
+  },
+  "labels/train/092017bottom_0.txt": {
+    "size": 115
+  },
+  "labels/train/092017top_0.txt": {
+    "size": 1012
+  },
+  "labels/train/092623bottom_0.txt": {
+    "size": 583
+  },
+  "labels/train/092623top_0.txt": {
+    "size": 583
+  },
+  "labels/train/101637bottom_0.txt": {
+    "size": 466
+  },
+  "labels/train/101637top_0.txt": {
+    "size": 310
+  },
+  "labels/train/101757bottom_0.txt": {
+    "size": 37
+  },
+  "labels/train/101757top_0.txt": {
+    "size": 349
+  },
+  "labels/train/101918bottom_0.txt": {
+    "size": 232
+  },
+  "labels/train/101918top_0.txt": {
+    "size": 349
+  },
+  "labels/train/101958bottom_0.txt": {
+    "size": 76
+  },
+  "labels/train/101958top_0.txt": {
+    "size": 1402
+  },
+  "labels/train/102038bottom_0.txt": {
+    "size": 154
+  },
+  "labels/train/102038top_0.txt": {
+    "size": 1285
+  },
+  "labels/train/102359bottom_0.txt": {
+    "size": 388
+  },
+  "labels/train/102359top_0.txt": {
+    "size": 505
+  },
+  "labels/train/103100bottom_0.txt": {
+    "size": 76
+  },
+  "labels/train/103100top_0.txt": {
+    "size": 817
+  },
+  "labels/train/103904bottom_0.txt": {
+    "size": 115
+  },
+  "labels/train/103904top_0.txt": {
+    "size": 154
+  },
+  "labels/train/104537bottom_0.txt": {
+    "size": 232
+  },
+  "labels/train/104537top_0.txt": {
+    "size": 856
+  },
+  "labels/train/104617bottom_0.txt": {
+    "size": 115
+  },
+  "labels/train/104617top_0.txt": {
+    "size": 544
+  },
+  "labels/train/105114bottom_0.txt": {
+    "size": 193
+  },
+  "labels/train/105114top_0.txt": {
+    "size": 349
+  },
+  "labels/train/105752bottom_0.txt": {
+    "size": 37
+  },
+  "labels/train/105752top_0.txt": {
+    "size": 973
+  },
+  "labels/train/105831bottom_0.txt": {
+    "size": 37
+  },
+  "labels/train/105831top_0.txt": {
+    "size": 1285
+  },
+  "labels/train/105956bottom_0.txt": {
+    "size": 76
+  },
+  "labels/train/105956top_0.txt": {
+    "size": 271
+  },
+  "labels/train/110035top_0.txt": {
+    "size": 1168
+  },
+  "labels/train/110119bottom_0.txt": {
+    "size": 76
+  },
+  "labels/train/110119top_0.txt": {
+    "size": 1402
+  },
+  "labels/train/110159bottom_0.txt": {
+    "size": 115
+  },
+  "labels/train/110159top_0.txt": {
+    "size": 1597
+  },
+  "labels/train/110247bottom_0.txt": {
+    "size": 154
+  },
+  "labels/train/110247top_0.txt": {
+    "size": 583
+  },
+  "labels/train/110327bottom_0.txt": {
+    "size": 232
+  },
+  "labels/train/110327top_0.txt": {
+    "size": 115
+  },
+  "labels/train/110407bottom_0.txt": {
+    "size": 193
+  },
+  "labels/train/110407top_0.txt": {
+    "size": 817
+  },
+  "labels/train/110447bottom_0.txt": {
+    "size": 76
+  },
+  "labels/train/110447top_0.txt": {
+    "size": 310
+  },
+  "labels/train/110527bottom_0.txt": {
+    "size": 193
+  },
+  "labels/train/110527top_0.txt": {
+    "size": 973
+  },
+  "labels/train/110726bottom_0.txt": {
+    "size": 232
+  },
+  "labels/train/110726top_0.txt": {
+    "size": 271
+  },
+  "labels/train/111040bottom_0.txt": {
+    "size": 544
+  },
+  "labels/train/111040top_0.txt": {
+    "size": 427
+  },
+  "labels/train/111120bottom_0.txt": {
+    "size": 232
+  },
+  "labels/train/111120top_0.txt": {
+    "size": 154
+  },
+  "labels/train/111200bottom_0.txt": {
+    "size": 76
+  },
+  "labels/train/111200top_0.txt": {
+    "size": 505
+  },
+  "labels/train/111241bottom_0.txt": {
+    "size": 37
+  },
+  "labels/train/111241top_0.txt": {
+    "size": 817
+  },
+  "labels/train/111535bottom_0.txt": {
+    "size": 193
+  },
+  "labels/train/111535top_0.txt": {
+    "size": 349
+  },
+  "labels/train/111615top_0.txt": {
+    "size": 583
+  },
+  "labels/train/112135bottom_0.txt": {
+    "size": 115
+  },
+  "labels/train/112135top_0.txt": {
+    "size": 3586
+  },
+  "labels/train/112613top_0.txt": {
+    "size": 700
+  },
+  "labels/train/112846bottom_0.txt": {
+    "size": 76
+  },
+  "labels/train/112846top_0.txt": {
+    "size": 2650
+  },
+  "labels/train/113313bottom_0.txt": {
+    "size": 115
+  },
+  "labels/train/113313top_0.txt": {
+    "size": 2494
+  },
+  "labels/train/20230508145655586_0_2.txt": {
+    "size": 380
+  },
+  "labels/train/20230508145914382_0_2.txt": {
+    "size": 342
+  },
+  "labels/train/20230508145953091_0_2.txt": {
+    "size": 304
+  },
+  "labels/train/20230508150038862_0_2.txt": {
+    "size": 304
+  },
+  "labels/train/20230508150124585_0_2.txt": {
+    "size": 380
+  },
+  "labels/train/20230508150203967_0_2.txt": {
+    "size": 304
+  },
+  "labels/train/20230508150250315_0_2.txt": {
+    "size": 152
+  },
+  "labels/train/20230508150336601_0_2.txt": {
+    "size": 380
+  },
+  "labels/train/20230508150423199_0_2.txt": {
+    "size": 304
+  },
+  "labels/train/20230508150509782_0_2.txt": {
+    "size": 266
+  },
+  "labels/train/20230508151134488_0_2.txt": {
+    "size": 152
+  },
+  "labels/train/20230508151221868_0_2.txt": {
+    "size": 380
+  },
+  "labels/train/20230508151321885_0_2.txt": {
+    "size": 228
+  },
+  "labels/train/20230508151425198_0_2.txt": {
+    "size": 304
+  },
+  "labels/train/20230508151512827_0_2.txt": {
+    "size": 304
+  },
+  "labels/train/20230508151600644_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230508151802381_0_2.txt": {
+    "size": 266
+  },
+  "labels/train/20230508151844043_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230508152059152_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230508152148047_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230508152236988_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230508152326007_0_2.txt": {
+    "size": 342
+  },
+  "labels/train/20230508152537851_0_2.txt": {
+    "size": 342
+  },
+  "labels/train/20230508152627460_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230508154228342_0_2.txt": {
+    "size": 684
+  },
+  "labels/train/20230508154314175_0_2.txt": {
+    "size": 570
+  },
+  "labels/train/20230508154425205_0_2.txt": {
+    "size": 304
+  },
+  "labels/train/20230508154511570_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230508154557699_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230508154644204_0_2.txt": {
+    "size": 684
+  },
+  "labels/train/20230508154730568_0_2.txt": {
+    "size": 570
+  },
+  "labels/train/20230508154810699_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230508154857563_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230508154944583_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230508155031884_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230508155119030_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230508155206237_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230508155254132_0_2.txt": {
+    "size": 380
+  },
+  "labels/train/20230508155341949_0_2.txt": {
+    "size": 836
+  },
+  "labels/train/20230508155429625_0_2.txt": {
+    "size": 950
+  },
+  "labels/train/20230508155517551_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230508155605649_0_2.txt": {
+    "size": 836
+  },
+  "labels/train/20230508155653919_0_2.txt": {
+    "size": 532
+  },
+  "labels/train/20230508155742346_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230508155831068_0_2.txt": {
+    "size": 684
+  },
+  "labels/train/20230508155919728_0_2.txt": {
+    "size": 570
+  },
+  "labels/train/20230508160008546_0_2.txt": {
+    "size": 608
+  },
+  "labels/train/20230508160057393_0_2.txt": {
+    "size": 532
+  },
+  "labels/train/20230508160146569_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230508160235948_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230508160325452_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230508161814272_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230508161914274_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230508162014603_0_2.txt": {
+    "size": 342
+  },
+  "labels/train/20230508162100623_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230508162146956_0_2.txt": {
+    "size": 266
+  },
+  "labels/train/20230508162229680_0_2.txt": {
+    "size": 304
+  },
+  "labels/train/20230508162313061_0_2.txt": {
+    "size": 228
+  },
+  "labels/train/20230508162359690_0_2.txt": {
+    "size": 570
+  },
+  "labels/train/20230508162446336_0_2.txt": {
+    "size": 190
+  },
+  "labels/train/20230508162533137_0_2.txt": {
+    "size": 228
+  },
+  "labels/train/20230508162620079_0_2.txt": {
+    "size": 532
+  },
+  "labels/train/20230508162707052_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230508162754088_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230508162841640_0_2.txt": {
+    "size": 304
+  },
+  "labels/train/20230508162929019_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230508163016430_0_2.txt": {
+    "size": 190
+  },
+  "labels/train/20230508163446163_0_2.txt": {
+    "size": 152
+  },
+  "labels/train/20230508163534089_0_2.txt": {
+    "size": 266
+  },
+  "labels/train/20230508163622359_0_2.txt": {
+    "size": 304
+  },
+  "labels/train/20230508163710613_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230508163759195_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230508163847778_0_2.txt": {
+    "size": 304
+  },
+  "labels/train/20230508163929908_0_2.txt": {
+    "size": 266
+  },
+  "labels/train/20230508164019037_0_2.txt": {
+    "size": 190
+  },
+  "labels/train/20230508164108104_0_2.txt": {
+    "size": 304
+  },
+  "labels/train/20230508164157420_0_2.txt": {
+    "size": 304
+  },
+  "labels/train/20230508164246893_0_2.txt": {
+    "size": 304
+  },
+  "labels/train/20230508164336475_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230508171751497_0_2.txt": {
+    "size": 380
+  },
+  "labels/train/20230508171826472_0_2.txt": {
+    "size": 608
+  },
+  "labels/train/20230508171908494_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230508171954092_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230508172100302_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230508172142729_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230508172228422_0_2.txt": {
+    "size": 1064
+  },
+  "labels/train/20230508172307819_0_2.txt": {
+    "size": 342
+  },
+  "labels/train/20230508172354089_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230508172440391_0_2.txt": {
+    "size": 380
+  },
+  "labels/train/20230508172526817_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230508172613228_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230508172659998_0_2.txt": {
+    "size": 570
+  },
+  "labels/train/20230508172746784_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230508172833773_0_2.txt": {
+    "size": 190
+  },
+  "labels/train/20230508172921074_0_2.txt": {
+    "size": 722
+  },
+  "labels/train/20230508173008282_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230508173055692_0_2.txt": {
+    "size": 570
+  },
+  "labels/train/20230508173143416_0_2.txt": {
+    "size": 684
+  },
+  "labels/train/20230508173231029_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230508173318721_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230508173406616_0_2.txt": {
+    "size": 608
+  },
+  "labels/train/20230508173454667_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230508173543171_0_2.txt": {
+    "size": 608
+  },
+  "labels/train/20230508173631426_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230508173719992_0_2.txt": {
+    "size": 342
+  },
+  "labels/train/20230508173808497_0_2.txt": {
+    "size": 266
+  },
+  "labels/train/20230508173857235_0_2.txt": {
+    "size": 570
+  },
+  "labels/train/20230508173945973_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230508174035040_0_2.txt": {
+    "size": 304
+  },
+  "labels/train/20230508174124122_0_2.txt": {
+    "size": 114
+  },
+  "labels/train/20230508174213392_0_2.txt": {
+    "size": 646
+  },
+  "labels/train/20230508174302802_0_2.txt": {
+    "size": 190
+  },
+  "labels/train/20230508174352368_0_2.txt": {
+    "size": 532
+  },
+  "labels/train/20230508175424625_0_2.txt": {
+    "size": 228
+  },
+  "labels/train/20230508175510099_0_2.txt": {
+    "size": 266
+  },
+  "labels/train/20230508175549136_0_2.txt": {
+    "size": 114
+  },
+  "labels/train/20230508175634938_0_2.txt": {
+    "size": 304
+  },
+  "labels/train/20230508175721130_0_2.txt": {
+    "size": 228
+  },
+  "labels/train/20230508175807213_0_2.txt": {
+    "size": 266
+  },
+  "labels/train/20230508175846861_0_2.txt": {
+    "size": 342
+  },
+  "labels/train/20230508175933271_0_2.txt": {
+    "size": 152
+  },
+  "labels/train/20230508180019932_0_2.txt": {
+    "size": 190
+  },
+  "labels/train/20230508180106780_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230508180153472_0_2.txt": {
+    "size": 342
+  },
+  "labels/train/20230508180240742_0_2.txt": {
+    "size": 266
+  },
+  "labels/train/20230508180327747_0_2.txt": {
+    "size": 228
+  },
+  "labels/train/20230508180415407_0_2.txt": {
+    "size": 304
+  },
+  "labels/train/20230508181132789_0_2.txt": {
+    "size": 228
+  },
+  "labels/train/20230508181220418_0_2.txt": {
+    "size": 266
+  },
+  "labels/train/20230508181307860_0_2.txt": {
+    "size": 342
+  },
+  "labels/train/20230508181355723_0_2.txt": {
+    "size": 190
+  },
+  "labels/train/20230508181443650_0_2.txt": {
+    "size": 380
+  },
+  "labels/train/20230508181531842_0_2.txt": {
+    "size": 304
+  },
+  "labels/train/20230508181620205_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230508181708491_0_2.txt": {
+    "size": 190
+  },
+  "labels/train/20230508181757323_0_2.txt": {
+    "size": 304
+  },
+  "labels/train/20230508181845999_0_2.txt": {
+    "size": 228
+  },
+  "labels/train/20230508181934893_0_2.txt": {
+    "size": 228
+  },
+  "labels/train/20230508182023991_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230508182112917_0_2.txt": {
+    "size": 342
+  },
+  "labels/train/20230508182202234_0_2.txt": {
+    "size": 1064
+  },
+  "labels/train/20230508182418701_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230508182504909_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230509154039383_0_2.txt": {
+    "size": 1216
+  },
+  "labels/train/20230509154119483_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230509154159879_0_2.txt": {
+    "size": 722
+  },
+  "labels/train/20230509154240370_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230509154320735_0_2.txt": {
+    "size": 380
+  },
+  "labels/train/20230509154401726_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230509154442638_0_2.txt": {
+    "size": 1026
+  },
+  "labels/train/20230509154523347_0_2.txt": {
+    "size": 570
+  },
+  "labels/train/20230509154604228_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230509154645453_0_2.txt": {
+    "size": 1026
+  },
+  "labels/train/20230509154727396_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230509154815588_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230509154903998_0_2.txt": {
+    "size": 342
+  },
+  "labels/train/20230509154952408_0_2.txt": {
+    "size": 76
+  },
+  "labels/train/20230509155034367_0_2.txt": {
+    "size": 684
+  },
+  "labels/train/20230509155116529_0_2.txt": {
+    "size": 1026
+  },
+  "labels/train/20230509155205439_0_2.txt": {
+    "size": 836
+  },
+  "labels/train/20230509155254287_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230509155336543_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230509155419189_0_2.txt": {
+    "size": 608
+  },
+  "labels/train/20230509155501913_0_2.txt": {
+    "size": 1216
+  },
+  "labels/train/20230509155544903_0_2.txt": {
+    "size": 836
+  },
+  "labels/train/20230509155627846_0_2.txt": {
+    "size": 1254
+  },
+  "labels/train/20230509155711222_0_2.txt": {
+    "size": 1178
+  },
+  "labels/train/20230509155801382_0_2.txt": {
+    "size": 836
+  },
+  "labels/train/20230509155851433_0_2.txt": {
+    "size": 1026
+  },
+  "labels/train/20230509155941640_0_2.txt": {
+    "size": 1444
+  },
+  "labels/train/20230509160025317_0_2.txt": {
+    "size": 1558
+  },
+  "labels/train/20230509160109103_0_2.txt": {
+    "size": 1254
+  },
+  "labels/train/20230509160153046_0_2.txt": {
+    "size": 1254
+  },
+  "labels/train/20230509160237082_0_2.txt": {
+    "size": 1254
+  },
+  "labels/train/20230509160321275_0_2.txt": {
+    "size": 1786
+  },
+  "labels/train/20230509161156919_0_2.txt": {
+    "size": 1216
+  },
+  "labels/train/20230509161236363_0_2.txt": {
+    "size": 722
+  },
+  "labels/train/20230509161315416_0_2.txt": {
+    "size": 950
+  },
+  "labels/train/20230509161554566_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230509161634744_0_2.txt": {
+    "size": 988
+  },
+  "labels/train/20230509161714782_0_2.txt": {
+    "size": 988
+  },
+  "labels/train/20230509161755303_0_2.txt": {
+    "size": 646
+  },
+  "labels/train/20230509161835918_0_2.txt": {
+    "size": 1178
+  },
+  "labels/train/20230509161916253_0_2.txt": {
+    "size": 950
+  },
+  "labels/train/20230509161957056_0_2.txt": {
+    "size": 1216
+  },
+  "labels/train/20230509162037889_0_2.txt": {
+    "size": 1026
+  },
+  "labels/train/20230509162119348_0_2.txt": {
+    "size": 1102
+  },
+  "labels/train/20230509162200464_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230509162241658_0_2.txt": {
+    "size": 2584
+  },
+  "labels/train/20230509162322992_0_2.txt": {
+    "size": 1596
+  },
+  "labels/train/20230509162404762_0_2.txt": {
+    "size": 1520
+  },
+  "labels/train/20230509162446378_0_2.txt": {
+    "size": 1330
+  },
+  "labels/train/20230509162527775_0_2.txt": {
+    "size": 1254
+  },
+  "labels/train/20230509162609952_0_2.txt": {
+    "size": 1596
+  },
+  "labels/train/20230509162658597_0_2.txt": {
+    "size": 608
+  },
+  "labels/train/20230509162740587_0_2.txt": {
+    "size": 2128
+  },
+  "labels/train/20230509162822748_0_2.txt": {
+    "size": 1254
+  },
+  "labels/train/20230509162905035_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230509162947853_0_2.txt": {
+    "size": 1178
+  },
+  "labels/train/20230509163030484_0_2.txt": {
+    "size": 1026
+  },
+  "labels/train/20230509163119754_0_2.txt": {
+    "size": 1102
+  },
+  "labels/train/20230509163202868_0_2.txt": {
+    "size": 570
+  },
+  "labels/train/20230509163246124_0_2.txt": {
+    "size": 646
+  },
+  "labels/train/20230509163329613_0_2.txt": {
+    "size": 1064
+  },
+  "labels/train/20230509163412963_0_2.txt": {
+    "size": 1102
+  },
+  "labels/train/20230509163456718_0_2.txt": {
+    "size": 1026
+  },
+  "labels/train/20230509163540552_0_2.txt": {
+    "size": 684
+  },
+  "labels/train/20230509163624619_0_2.txt": {
+    "size": 684
+  },
+  "labels/train/20230509163708797_0_2.txt": {
+    "size": 1178
+  },
+  "labels/train/20230509165356877_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230509165437460_0_2.txt": {
+    "size": 114
+  },
+  "labels/train/20230509165518210_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230509165618211_0_2.txt": {
+    "size": 114
+  },
+  "labels/train/20230509165740676_0_2.txt": {
+    "size": 190
+  },
+  "labels/train/20230509165821917_0_2.txt": {
+    "size": 342
+  },
+  "labels/train/20230509165903266_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230509165944725_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230509170026200_0_2.txt": {
+    "size": 342
+  },
+  "labels/train/20230509170107955_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230509170149789_0_2.txt": {
+    "size": 266
+  },
+  "labels/train/20230509170231905_0_2.txt": {
+    "size": 190
+  },
+  "labels/train/20230509170314285_0_2.txt": {
+    "size": 608
+  },
+  "labels/train/20230509170356697_0_2.txt": {
+    "size": 266
+  },
+  "labels/train/20230509170435562_0_2.txt": {
+    "size": 950
+  },
+  "labels/train/20230509170521880_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230509170604729_0_2.txt": {
+    "size": 608
+  },
+  "labels/train/20230509170647610_0_2.txt": {
+    "size": 836
+  },
+  "labels/train/20230509170730677_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230509170814136_0_2.txt": {
+    "size": 152
+  },
+  "labels/train/20230509170857517_0_2.txt": {
+    "size": 646
+  },
+  "labels/train/20230509170940990_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230509171117771_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230509171218928_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230509171229723_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230509171442115_0_2.txt": {
+    "size": 266
+  },
+  "labels/train/20230509172025081_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230509173824201_0_2.txt": {
+    "size": 304
+  },
+  "labels/train/20230509173900583_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230509174106554_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230509174146935_0_2.txt": {
+    "size": 570
+  },
+  "labels/train/20230509174336581_0_2.txt": {
+    "size": 722
+  },
+  "labels/train/20230509174417294_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230509174458456_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230509174539446_0_2.txt": {
+    "size": 646
+  },
+  "labels/train/20230509174620640_0_2.txt": {
+    "size": 1026
+  },
+  "labels/train/20230509174705973_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230509174747775_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230509174832390_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230509174914192_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230509174956245_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230509175219212_0_2.txt": {
+    "size": 684
+  },
+  "labels/train/20230509175842874_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230509175925504_0_2.txt": {
+    "size": 304
+  },
+  "labels/train/20230509180051749_0_2.txt": {
+    "size": 532
+  },
+  "labels/train/20230509180241957_0_2.txt": {
+    "size": 342
+  },
+  "labels/train/20230509180325338_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230509180408703_0_2.txt": {
+    "size": 380
+  },
+  "labels/train/20230509180451989_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230509180535822_0_2.txt": {
+    "size": 532
+  },
+  "labels/train/20230509180818253_0_2.txt": {
+    "size": 380
+  },
+  "labels/train/20230509180902024_0_2.txt": {
+    "size": 532
+  },
+  "labels/train/20230509180946060_0_2.txt": {
+    "size": 532
+  },
+  "labels/train/20230509181030034_0_2.txt": {
+    "size": 608
+  },
+  "labels/train/20230509181114087_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230510153430363_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230510153511166_0_2.txt": {
+    "size": 722
+  },
+  "labels/train/20230510153551844_0_2.txt": {
+    "size": 988
+  },
+  "labels/train/20230510153632725_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230510153713856_0_2.txt": {
+    "size": 1178
+  },
+  "labels/train/20230510153754893_0_2.txt": {
+    "size": 1140
+  },
+  "labels/train/20230510153836117_0_2.txt": {
+    "size": 1292
+  },
+  "labels/train/20230510153917404_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230510153958551_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230510154040057_0_2.txt": {
+    "size": 1558
+  },
+  "labels/train/20230510154121719_0_2.txt": {
+    "size": 1026
+  },
+  "labels/train/20230510154203475_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230510154245199_0_2.txt": {
+    "size": 1026
+  },
+  "labels/train/20230510154327049_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230510154408976_0_2.txt": {
+    "size": 1824
+  },
+  "labels/train/20230510154451185_0_2.txt": {
+    "size": 836
+  },
+  "labels/train/20230510154533175_0_2.txt": {
+    "size": 1140
+  },
+  "labels/train/20230510154615681_0_2.txt": {
+    "size": 1102
+  },
+  "labels/train/20230510154658014_0_2.txt": {
+    "size": 1102
+  },
+  "labels/train/20230510154740286_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230510154822932_0_2.txt": {
+    "size": 1368
+  },
+  "labels/train/20230510154905750_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230510154948490_0_2.txt": {
+    "size": 1976
+  },
+  "labels/train/20230510155031230_0_2.txt": {
+    "size": 1406
+  },
+  "labels/train/20230510155114126_0_2.txt": {
+    "size": 1520
+  },
+  "labels/train/20230510155157350_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230510155240433_0_2.txt": {
+    "size": 1216
+  },
+  "labels/train/20230510164111954_0_2.txt": {
+    "size": 988
+  },
+  "labels/train/20230510164155428_0_2.txt": {
+    "size": 1482
+  },
+  "labels/train/20230510164239058_0_2.txt": {
+    "size": 1330
+  },
+  "labels/train/20230510164322611_0_2.txt": {
+    "size": 1102
+  },
+  "labels/train/20230510164406475_0_2.txt": {
+    "size": 1406
+  },
+  "labels/train/20230510164450230_0_2.txt": {
+    "size": 1178
+  },
+  "labels/train/20230510164534220_0_2.txt": {
+    "size": 1064
+  },
+  "labels/train/20230510164618303_0_2.txt": {
+    "size": 1672
+  },
+  "labels/train/20230510164702481_0_2.txt": {
+    "size": 1140
+  },
+  "labels/train/20230510164746736_0_2.txt": {
+    "size": 1292
+  },
+  "labels/train/20230510170201255_0_2.txt": {
+    "size": 1102
+  },
+  "labels/train/20230510170349183_0_2.txt": {
+    "size": 1292
+  },
+  "labels/train/20230510170643516_0_2.txt": {
+    "size": 1634
+  },
+  "labels/train/20230510170723804_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230510170804482_0_2.txt": {
+    "size": 1596
+  },
+  "labels/train/20230510170845503_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230510170926650_0_2.txt": {
+    "size": 722
+  },
+  "labels/train/20230510171007656_0_2.txt": {
+    "size": 836
+  },
+  "labels/train/20230510171048943_0_2.txt": {
+    "size": 1102
+  },
+  "labels/train/20230510171130152_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230510171211611_0_2.txt": {
+    "size": 1064
+  },
+  "labels/train/20230510171253132_0_2.txt": {
+    "size": 1064
+  },
+  "labels/train/20230510171335045_0_2.txt": {
+    "size": 950
+  },
+  "labels/train/20230510171416722_0_2.txt": {
+    "size": 1330
+  },
+  "labels/train/20230510171458368_0_2.txt": {
+    "size": 1140
+  },
+  "labels/train/20230510171540593_0_2.txt": {
+    "size": 1178
+  },
+  "labels/train/20230510171622879_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230510171704994_0_2.txt": {
+    "size": 1102
+  },
+  "labels/train/20230510171747344_0_2.txt": {
+    "size": 1216
+  },
+  "labels/train/20230510171841738_0_2.txt": {
+    "size": 1064
+  },
+  "labels/train/20230510171924368_0_2.txt": {
+    "size": 1292
+  },
+  "labels/train/20230510172007108_0_2.txt": {
+    "size": 1938
+  },
+  "labels/train/20230510172049973_0_2.txt": {
+    "size": 1900
+  },
+  "labels/train/20230510172133166_0_2.txt": {
+    "size": 1292
+  },
+  "labels/train/20230510172216312_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230510172259848_0_2.txt": {
+    "size": 1748
+  },
+  "labels/train/20230510172343432_0_2.txt": {
+    "size": 1900
+  },
+  "labels/train/20230510172427265_0_2.txt": {
+    "size": 1786
+  },
+  "labels/train/20230510172511020_0_2.txt": {
+    "size": 1596
+  },
+  "labels/train/20230510172554776_0_2.txt": {
+    "size": 1102
+  },
+  "labels/train/20230510172638875_0_2.txt": {
+    "size": 1748
+  },
+  "labels/train/20230510172723099_0_2.txt": {
+    "size": 1938
+  },
+  "labels/train/20230510172851843_0_2.txt": {
+    "size": 1558
+  },
+  "labels/train/20230510174959765_0_2.txt": {
+    "size": 608
+  },
+  "labels/train/20230510175039458_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230510175222981_0_2.txt": {
+    "size": 532
+  },
+  "labels/train/20230510175303455_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230510175343711_0_2.txt": {
+    "size": 684
+  },
+  "labels/train/20230510175423983_0_2.txt": {
+    "size": 950
+  },
+  "labels/train/20230510175504396_0_2.txt": {
+    "size": 532
+  },
+  "labels/train/20230510175545402_0_2.txt": {
+    "size": 646
+  },
+  "labels/train/20230510175626158_0_2.txt": {
+    "size": 1178
+  },
+  "labels/train/20230510175707679_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230510175748857_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230510175830426_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230510175911853_0_2.txt": {
+    "size": 608
+  },
+  "labels/train/20230510175953390_0_2.txt": {
+    "size": 988
+  },
+  "labels/train/20230510180035489_0_2.txt": {
+    "size": 646
+  },
+  "labels/train/20230510180117480_0_2.txt": {
+    "size": 1064
+  },
+  "labels/train/20230510180159532_0_2.txt": {
+    "size": 646
+  },
+  "labels/train/20230510180242116_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230510180324481_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230510180407377_0_2.txt": {
+    "size": 608
+  },
+  "labels/train/20230510180450007_0_2.txt": {
+    "size": 646
+  },
+  "labels/train/20230510180533106_0_2.txt": {
+    "size": 1140
+  },
+  "labels/train/20230510180616237_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230510180659461_0_2.txt": {
+    "size": 684
+  },
+  "labels/train/20230510180742654_0_2.txt": {
+    "size": 1368
+  },
+  "labels/train/20230510180826425_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230510180909977_0_2.txt": {
+    "size": 1444
+  },
+  "labels/train/20230510180953842_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230510181037378_0_2.txt": {
+    "size": 646
+  },
+  "labels/train/20230511152513529_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230511152726250_0_2.txt": {
+    "size": 608
+  },
+  "labels/train/20230511152805334_0_2.txt": {
+    "size": 532
+  },
+  "labels/train/20230511152844669_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230511152924222_0_2.txt": {
+    "size": 646
+  },
+  "labels/train/20230511153003981_0_2.txt": {
+    "size": 342
+  },
+  "labels/train/20230511153043916_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230511153124000_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230511153204397_0_2.txt": {
+    "size": 532
+  },
+  "labels/train/20230511153508514_0_2.txt": {
+    "size": 684
+  },
+  "labels/train/20230511153548913_0_2.txt": {
+    "size": 608
+  },
+  "labels/train/20230511153629544_0_2.txt": {
+    "size": 988
+  },
+  "labels/train/20230511153710315_0_2.txt": {
+    "size": 1330
+  },
+  "labels/train/20230511153751477_0_2.txt": {
+    "size": 684
+  },
+  "labels/train/20230511153832577_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230511153913552_0_2.txt": {
+    "size": 1406
+  },
+  "labels/train/20230511153954933_0_2.txt": {
+    "size": 2166
+  },
+  "labels/train/20230511154036313_0_2.txt": {
+    "size": 1368
+  },
+  "labels/train/20230511154117866_0_2.txt": {
+    "size": 2394
+  },
+  "labels/train/20230511154159249_0_2.txt": {
+    "size": 988
+  },
+  "labels/train/20230511154241130_0_2.txt": {
+    "size": 1102
+  },
+  "labels/train/20230511154322808_0_2.txt": {
+    "size": 1102
+  },
+  "labels/train/20230511154404750_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230511154446663_0_2.txt": {
+    "size": 722
+  },
+  "labels/train/20230511154529043_0_2.txt": {
+    "size": 1482
+  },
+  "labels/train/20230511154611568_0_2.txt": {
+    "size": 1558
+  },
+  "labels/train/20230511154653871_0_2.txt": {
+    "size": 1292
+  },
+  "labels/train/20230511154736408_0_2.txt": {
+    "size": 2736
+  },
+  "labels/train/20230511154819366_0_2.txt": {
+    "size": 836
+  },
+  "labels/train/20230511154902387_0_2.txt": {
+    "size": 1140
+  },
+  "labels/train/20230511154945549_0_2.txt": {
+    "size": 1064
+  },
+  "labels/train/20230511155035271_0_2.txt": {
+    "size": 1102
+  },
+  "labels/train/20230511155118542_0_2.txt": {
+    "size": 1406
+  },
+  "labels/train/20230511155201816_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230511155245462_0_2.txt": {
+    "size": 1710
+  },
+  "labels/train/20230511155329076_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230511155412957_0_2.txt": {
+    "size": 2090
+  },
+  "labels/train/20230511162259849_0_2.txt": {
+    "size": 1406
+  },
+  "labels/train/20230511162339699_0_2.txt": {
+    "size": 1824
+  },
+  "labels/train/20230511162419674_0_2.txt": {
+    "size": 722
+  },
+  "labels/train/20230511162459852_0_2.txt": {
+    "size": 2090
+  },
+  "labels/train/20230511162540186_0_2.txt": {
+    "size": 1216
+  },
+  "labels/train/20230511162620817_0_2.txt": {
+    "size": 1520
+  },
+  "labels/train/20230511162701651_0_2.txt": {
+    "size": 722
+  },
+  "labels/train/20230511162742251_0_2.txt": {
+    "size": 950
+  },
+  "labels/train/20230511162823210_0_2.txt": {
+    "size": 1026
+  },
+  "labels/train/20230511162904310_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230511162945331_0_2.txt": {
+    "size": 2242
+  },
+  "labels/train/20230511163026603_0_2.txt": {
+    "size": 1406
+  },
+  "labels/train/20230511163107921_0_2.txt": {
+    "size": 1406
+  },
+  "labels/train/20230511163145709_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230511163230542_0_2.txt": {
+    "size": 836
+  },
+  "labels/train/20230511163312063_0_2.txt": {
+    "size": 1520
+  },
+  "labels/train/20230511163353804_0_2.txt": {
+    "size": 1368
+  },
+  "labels/train/20230511163435810_0_2.txt": {
+    "size": 1254
+  },
+  "labels/train/20230511163535827_0_2.txt": {
+    "size": 1482
+  },
+  "labels/train/20230511163715475_0_2.txt": {
+    "size": 1976
+  },
+  "labels/train/20230511163757496_0_2.txt": {
+    "size": 2812
+  },
+  "labels/train/20230511163839596_0_2.txt": {
+    "size": 988
+  },
+  "labels/train/20230511163922085_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230511164004200_0_2.txt": {
+    "size": 1368
+  },
+  "labels/train/20230511164046441_0_2.txt": {
+    "size": 836
+  },
+  "labels/train/20230511164129290_0_2.txt": {
+    "size": 1520
+  },
+  "labels/train/20230511164211811_0_2.txt": {
+    "size": 1216
+  },
+  "labels/train/20230511164254176_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230511164336963_0_2.txt": {
+    "size": 950
+  },
+  "labels/train/20230511164419906_0_2.txt": {
+    "size": 836
+  },
+  "labels/train/20230511164509363_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230511164552071_0_2.txt": {
+    "size": 988
+  },
+  "labels/train/20230511165543380_0_2.txt": {
+    "size": 950
+  },
+  "labels/train/20230511165626401_0_2.txt": {
+    "size": 1330
+  },
+  "labels/train/20230511165709781_0_2.txt": {
+    "size": 1140
+  },
+  "labels/train/20230511165753334_0_2.txt": {
+    "size": 1406
+  },
+  "labels/train/20230511165836980_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230511165920453_0_2.txt": {
+    "size": 1406
+  },
+  "labels/train/20230511170004318_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230511170048308_0_2.txt": {
+    "size": 1140
+  },
+  "labels/train/20230511170132391_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230511171149120_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230511171349436_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230511171428801_0_2.txt": {
+    "size": 722
+  },
+  "labels/train/20230511171508542_0_2.txt": {
+    "size": 418
+  },
+  "labels/train/20230511171548173_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230511171628143_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230511171708352_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230511171748593_0_2.txt": {
+    "size": 988
+  },
+  "labels/train/20230511171828865_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230511171909324_0_2.txt": {
+    "size": 1596
+  },
+  "labels/train/20230511171950268_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230511172031164_0_2.txt": {
+    "size": 570
+  },
+  "labels/train/20230511172111889_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230511172550432_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230511172632251_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230511172714319_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230511172756653_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230511172838971_0_2.txt": {
+    "size": 608
+  },
+  "labels/train/20230511172921273_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230511173004029_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230511173047128_0_2.txt": {
+    "size": 380
+  },
+  "labels/train/20230511173129977_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230511173533560_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230511173617206_0_2.txt": {
+    "size": 532
+  },
+  "labels/train/20230511173700977_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230511173844484_0_2.txt": {
+    "size": 608
+  },
+  "labels/train/20230511174039144_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230511174123259_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230512155923198_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230512160034431_0_2.txt": {
+    "size": 1254
+  },
+  "labels/train/20230512160115547_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230512160156396_0_2.txt": {
+    "size": 1748
+  },
+  "labels/train/20230512160237293_0_2.txt": {
+    "size": 1406
+  },
+  "labels/train/20230512160318799_0_2.txt": {
+    "size": 1330
+  },
+  "labels/train/20230512160400304_0_2.txt": {
+    "size": 1444
+  },
+  "labels/train/20230512160441748_0_2.txt": {
+    "size": 1064
+  },
+  "labels/train/20230512160523488_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230512160605634_0_2.txt": {
+    "size": 1216
+  },
+  "labels/train/20230512160810073_0_2.txt": {
+    "size": 1292
+  },
+  "labels/train/20230512160852079_0_2.txt": {
+    "size": 1710
+  },
+  "labels/train/20230512161105751_0_2.txt": {
+    "size": 1102
+  },
+  "labels/train/20230512161148537_0_2.txt": {
+    "size": 1596
+  },
+  "labels/train/20230512161231215_0_2.txt": {
+    "size": 1178
+  },
+  "labels/train/20230512161314299_0_2.txt": {
+    "size": 1216
+  },
+  "labels/train/20230512161539795_0_2.txt": {
+    "size": 1254
+  },
+  "labels/train/20230512161623019_0_2.txt": {
+    "size": 2584
+  },
+  "labels/train/20230512161706571_0_2.txt": {
+    "size": 1368
+  },
+  "labels/train/20230512161750233_0_2.txt": {
+    "size": 1026
+  },
+  "labels/train/20230512161833832_0_2.txt": {
+    "size": 1254
+  },
+  "labels/train/20230512161917853_0_2.txt": {
+    "size": 1482
+  },
+  "labels/train/20230512162001983_0_2.txt": {
+    "size": 836
+  },
+  "labels/train/20230512162046348_0_2.txt": {
+    "size": 2052
+  },
+  "labels/train/20230512162146366_0_2.txt": {
+    "size": 1368
+  },
+  "labels/train/20230512163052752_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230512163132617_0_2.txt": {
+    "size": 608
+  },
+  "labels/train/20230512163212733_0_2.txt": {
+    "size": 570
+  },
+  "labels/train/20230512163252958_0_2.txt": {
+    "size": 1026
+  },
+  "labels/train/20230512163333354_0_2.txt": {
+    "size": 570
+  },
+  "labels/train/20230512163414266_0_2.txt": {
+    "size": 1482
+  },
+  "labels/train/20230512163454960_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230512163536028_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230512163617143_0_2.txt": {
+    "size": 722
+  },
+  "labels/train/20230512163658181_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230512163739765_0_2.txt": {
+    "size": 722
+  },
+  "labels/train/20230512163821208_0_2.txt": {
+    "size": 950
+  },
+  "labels/train/20230512163921210_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230512164036504_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230512164119025_0_2.txt": {
+    "size": 722
+  },
+  "labels/train/20230512164336587_0_2.txt": {
+    "size": 608
+  },
+  "labels/train/20230512164418905_0_2.txt": {
+    "size": 684
+  },
+  "labels/train/20230512164501754_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230512164804664_0_2.txt": {
+    "size": 722
+  },
+  "labels/train/20230512164848060_0_2.txt": {
+    "size": 1064
+  },
+  "labels/train/20230512164931315_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230512165015039_0_2.txt": {
+    "size": 1368
+  },
+  "labels/train/20230512165058685_0_2.txt": {
+    "size": 988
+  },
+  "labels/train/20230512165242848_0_2.txt": {
+    "size": 2394
+  },
+  "labels/train/20230512165854182_0_2.txt": {
+    "size": 1596
+  },
+  "labels/train/20230512170931797_0_2.txt": {
+    "size": 950
+  },
+  "labels/train/20230512171011740_0_2.txt": {
+    "size": 1102
+  },
+  "labels/train/20230512171051981_0_2.txt": {
+    "size": 1520
+  },
+  "labels/train/20230512171132331_0_2.txt": {
+    "size": 722
+  },
+  "labels/train/20230512171212821_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230512171253530_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230512171334474_0_2.txt": {
+    "size": 494
+  },
+  "labels/train/20230512171415495_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230512171456829_0_2.txt": {
+    "size": 1748
+  },
+  "labels/train/20230512171538164_0_2.txt": {
+    "size": 1026
+  },
+  "labels/train/20230512171619887_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230512171701753_0_2.txt": {
+    "size": 684
+  },
+  "labels/train/20230512172537271_0_2.txt": {
+    "size": 1976
+  },
+  "labels/train/20230512173931061_0_2.txt": {
+    "size": 1292
+  },
+  "labels/train/20230512174109428_0_2.txt": {
+    "size": 1064
+  },
+  "labels/train/20230512174152403_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230513154802765_0_2.txt": {
+    "size": 1330
+  },
+  "labels/train/20230513155105847_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230513155151102_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230513155229687_0_2.txt": {
+    "size": 1102
+  },
+  "labels/train/20230513155308568_0_2.txt": {
+    "size": 1444
+  },
+  "labels/train/20230513155354292_0_2.txt": {
+    "size": 1140
+  },
+  "labels/train/20230513155439718_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230513155518897_0_2.txt": {
+    "size": 1710
+  },
+  "labels/train/20230513155558325_0_2.txt": {
+    "size": 950
+  },
+  "labels/train/20230513155644704_0_2.txt": {
+    "size": 1102
+  },
+  "labels/train/20230513155731178_0_2.txt": {
+    "size": 1026
+  },
+  "labels/train/20230513155817729_0_2.txt": {
+    "size": 1520
+  },
+  "labels/train/20230513155904562_0_2.txt": {
+    "size": 1558
+  },
+  "labels/train/20230513155951488_0_2.txt": {
+    "size": 1368
+  },
+  "labels/train/20230513160038602_0_2.txt": {
+    "size": 1634
+  },
+  "labels/train/20230513160125747_0_2.txt": {
+    "size": 1140
+  },
+  "labels/train/20230513160212939_0_2.txt": {
+    "size": 1596
+  },
+  "labels/train/20230513160300366_0_2.txt": {
+    "size": 1254
+  },
+  "labels/train/20230513160348026_0_2.txt": {
+    "size": 1558
+  },
+  "labels/train/20230513160435718_0_2.txt": {
+    "size": 950
+  },
+  "labels/train/20230513160523535_0_2.txt": {
+    "size": 1444
+  },
+  "labels/train/20230513160611555_0_2.txt": {
+    "size": 1824
+  },
+  "labels/train/20230513160659668_0_2.txt": {
+    "size": 1368
+  },
+  "labels/train/20230513160747938_0_2.txt": {
+    "size": 1292
+  },
+  "labels/train/20230513160836395_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230513160925103_0_2.txt": {
+    "size": 1406
+  },
+  "labels/train/20230513161013997_0_2.txt": {
+    "size": 1216
+  },
+  "labels/train/20230513161114015_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230513161223029_0_2.txt": {
+    "size": 1444
+  },
+  "labels/train/20230513161312252_0_2.txt": {
+    "size": 2128
+  },
+  "labels/train/20230513161401756_0_2.txt": {
+    "size": 1444
+  },
+  "labels/train/20230513161451291_0_2.txt": {
+    "size": 2128
+  },
+  "labels/train/20230513165400480_0_2.txt": {
+    "size": 570
+  },
+  "labels/train/20230513165841742_0_2.txt": {
+    "size": 1634
+  },
+  "labels/train/20230513170455622_0_2.txt": {
+    "size": 1254
+  },
+  "labels/train/20230513170541720_0_2.txt": {
+    "size": 1596
+  },
+  "labels/train/20230513170627834_0_2.txt": {
+    "size": 874
+  },
+  "labels/train/20230513170714354_0_2.txt": {
+    "size": 2356
+  },
+  "labels/train/20230513170801047_0_2.txt": {
+    "size": 1938
+  },
+  "labels/train/20230513170847661_0_2.txt": {
+    "size": 1558
+  },
+  "labels/train/20230513170934181_0_2.txt": {
+    "size": 1216
+  },
+  "labels/train/20230513171021279_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230513171108237_0_2.txt": {
+    "size": 1558
+  },
+  "labels/train/20230513171155429_0_2.txt": {
+    "size": 722
+  },
+  "labels/train/20230513171243152_0_2.txt": {
+    "size": 684
+  },
+  "labels/train/20230513171330484_0_2.txt": {
+    "size": 1102
+  },
+  "labels/train/20230513171418286_0_2.txt": {
+    "size": 722
+  },
+  "labels/train/20230513171506134_0_2.txt": {
+    "size": 1976
+  },
+  "labels/train/20230513171553513_0_2.txt": {
+    "size": 2090
+  },
+  "labels/train/20230513171641923_0_2.txt": {
+    "size": 1178
+  },
+  "labels/train/20230513171729928_0_2.txt": {
+    "size": 1178
+  },
+  "labels/train/20230513171906843_0_2.txt": {
+    "size": 988
+  },
+  "labels/train/20230513172133620_0_2.txt": {
+    "size": 1064
+  },
+  "labels/train/20230513172222906_0_2.txt": {
+    "size": 1102
+  },
+  "labels/train/20230513172312206_0_2.txt": {
+    "size": 2166
+  },
+  "labels/train/20230513172401772_0_2.txt": {
+    "size": 1672
+  },
+  "labels/train/20230513173538717_0_2.txt": {
+    "size": 570
+  },
+  "labels/train/20230513173623487_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230513173918040_0_2.txt": {
+    "size": 608
+  },
+  "labels/train/20230513173940988_0_2.txt": {
+    "size": 1178
+  },
+  "labels/train/20230513174026211_0_2.txt": {
+    "size": 1102
+  },
+  "labels/train/20230513174407409_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230513174640827_0_2.txt": {
+    "size": 1254
+  },
+  "labels/train/20230513174727207_0_2.txt": {
+    "size": 1064
+  },
+  "labels/train/20230513174813883_0_2.txt": {
+    "size": 1672
+  },
+  "labels/train/20230513174900263_0_2.txt": {
+    "size": 1330
+  },
+  "labels/train/20230513174947049_0_2.txt": {
+    "size": 684
+  },
+  "labels/train/20230513175034318_0_2.txt": {
+    "size": 1406
+  },
+  "labels/train/20230513175121385_0_2.txt": {
+    "size": 1330
+  },
+  "labels/train/20230513175208437_0_2.txt": {
+    "size": 1026
+  },
+  "labels/train/20230513175255878_0_2.txt": {
+    "size": 760
+  },
+  "labels/train/20230513175343493_0_2.txt": {
+    "size": 1216
+  },
+  "labels/train/20230513175431356_0_2.txt": {
+    "size": 1140
+  },
+  "labels/train/20230513175519204_0_2.txt": {
+    "size": 1064
+  },
+  "labels/train/20230513175607459_0_2.txt": {
+    "size": 570
+  },
+  "labels/train/20230513175655384_0_2.txt": {
+    "size": 950
+  },
+  "labels/train/20230513175743998_0_2.txt": {
+    "size": 1292
+  },
+  "labels/train/20230513175832455_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230513175921381_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230513180010198_0_2.txt": {
+    "size": 1672
+  },
+  "labels/train/20230513180059499_0_2.txt": {
+    "size": 1482
+  },
+  "labels/train/20230513180148627_0_2.txt": {
+    "size": 1292
+  },
+  "labels/train/20230513180238100_0_2.txt": {
+    "size": 2508
+  },
+  "labels/train/20230513180338118_0_2.txt": {
+    "size": 2318
+  },
+  "labels/train/20230514150232283_0_2.txt": {
+    "size": 1482
+  },
+  "labels/train/20230514150352279_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230514150432661_0_2.txt": {
+    "size": 1330
+  },
+  "labels/train/20230514150721699_0_2.txt": {
+    "size": 228
+  },
+  "labels/train/20230514150802439_0_2.txt": {
+    "size": 1140
+  },
+  "labels/train/20230514150843305_0_2.txt": {
+    "size": 1520
+  },
+  "labels/train/20230514150924295_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230514151139231_0_2.txt": {
+    "size": 1216
+  },
+  "labels/train/20230514151220816_0_2.txt": {
+    "size": 1026
+  },
+  "labels/train/20230514151308773_0_2.txt": {
+    "size": 608
+  },
+  "labels/train/20230514151350310_0_2.txt": {
+    "size": 1254
+  },
+  "labels/train/20230514151432112_0_2.txt": {
+    "size": 1786
+  },
+  "labels/train/20230514151514102_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230514151602747_0_2.txt": {
+    "size": 988
+  },
+  "labels/train/20230514151645065_0_2.txt": {
+    "size": 1026
+  },
+  "labels/train/20230514151734194_0_2.txt": {
+    "size": 1938
+  },
+  "labels/train/20230514151823230_0_2.txt": {
+    "size": 912
+  },
+  "labels/train/20230514151912531_0_2.txt": {
+    "size": 1064
+  },
+  "labels/train/20230514151955442_0_2.txt": {
+    "size": 3002
+  },
+  "labels/train/20230514152045024_0_2.txt": {
+    "size": 1368
+  },
+  "labels/train/20230514152134872_0_2.txt": {
+    "size": 1520
+  },
+  "labels/train/20230514152224860_0_2.txt": {
+    "size": 684
+  },
+  "labels/train/20230514152314942_0_2.txt": {
+    "size": 1368
+  },
+  "labels/train/20230514152405242_0_2.txt": {
+    "size": 1178
+  },
+  "labels/train/20230514152455699_0_2.txt": {
+    "size": 1102
+  },
+  "labels/train/20230514152546343_0_2.txt": {
+    "size": 1216
+  },
+  "labels/train/20230514152637050_0_2.txt": {
+    "size": 798
+  },
+  "labels/train/20230514152728007_0_2.txt": {
+    "size": 836
+  },
+  "labels/train/20230514152819011_0_2.txt": {
+    "size": 570
+  },
+  "labels/train/20230514154229262_0_2.txt": {
+    "size": 1178
+  },
+  "labels/train/20230514154434217_0_2.txt": {
+    "size": 722
+  },
+  "labels/train/20230514154555229_0_2.txt": {
+    "size": 1140
+  },
+  "labels/train/20230514155256204_0_2.txt": {
+    "size": 1178
+  },
+  "labels/train/20230514155423248_0_2.txt": {
+    "size": 456
+  },
+  "labels/train/20230514155638122_0_2.txt": {
+    "size": 1368
+  },
+  "labels/train/20230514155845827_0_2.txt": {
+    "size": 342
+  },
+  "labels/train/20260212-1045.txt": {
+    "size": 152
+  },
+  "labels/train/20260212-1047.txt": {
+    "size": 798
+  },
+  "labels/train/20260212-1052.txt": {
+    "size": 266
+  },
+  "labels/train/20260212-1055.txt": {
+    "size": 342
+  },
+  "labels/train/20260212-1056.txt": {
+    "size": 266
+  },
+  "labels/train/20260212-1145.txt": {
+    "size": 988
+  },
+  "labels/train/20260212-1168.txt": {
+    "size": 532
+  },
+  "labels/train/20260212-1263.txt": {
+    "size": 760
+  },
+  "labels/train/20260212-2133.txt": {
+    "size": 1140
+  },
+  "labels/train/20260212-2165.txt": {
+    "size": 114
+  },
+  "labels/train/20260212-2169.txt": {
+    "size": 152
+  },
+  "labels/train/20260212-2178.txt": {
+    "size": 456
+  },
+  "labels/train/20260212-2187.txt": {
+    "size": 608
+  },
+  "labels/train/20260212-448.txt": {
+    "size": 988
+  },
+  "labels/train/20260212-451.txt": {
+    "size": 798
+  },
+  "labels/train/20260212-455.txt": {
+    "size": 418
+  },
+  "labels/train/20260212-543.txt": {
+    "size": 570
+  },
+  "labels/train/20260212-558.txt": {
+    "size": 722
+  },
+  "labels/train/20260212-584.txt": {
+    "size": 418
+  },
+  "labels/train/20260212-597.txt": {
+    "size": 228
+  },
+  "labels/train/20260212-601.txt": {
+    "size": 418
+  },
+  "labels/train/20260212-602.txt": {
+    "size": 228
+  },
+  "labels/train/20260212-609.txt": {
+    "size": 380
+  },
+  "labels/train/20260212-657.txt": {
+    "size": 988
+  },
+  "labels/train/20260212-659.txt": {
+    "size": 304
+  },
+  "labels/train/20260212-661.txt": {
+    "size": 684
+  },
+  "labels/train/20260212-676.txt": {
+    "size": 950
+  },
+  "labels/train/20260212-684.txt": {
+    "size": 608
+  },
+  "labels/train/20260212-711.txt": {
+    "size": 1140
+  },
+  "labels/train/20260212-782.txt": {
+    "size": 1026
+  },
+  "labels/train/20260212-791.txt": {
+    "size": 722
+  },
+  "labels/train/20260212-915.txt": {
+    "size": 950
+  },
+  "labels/val/113353bottom_0.txt": {
+    "size": 232
+  },
+  "labels/val/113353top_0.txt": {
+    "size": 622
+  },
+  "labels/val/113434bottom_0.txt": {
+    "size": 115
+  },
+  "labels/val/113434top_0.txt": {
+    "size": 2806
+  },
+  "labels/val/113514bottom_0.txt": {
+    "size": 115
+  },
+  "labels/val/113514top_0.txt": {
+    "size": 2377
+  },
+  "labels/val/113554bottom_0.txt": {
+    "size": 193
+  },
+  "labels/val/113554top_0.txt": {
+    "size": 3079
+  },
+  "labels/val/141159bottom_0.txt": {
+    "size": 310
+  },
+  "labels/val/141159top_0.txt": {
+    "size": 1753
+  },
+  "labels/val/141240bottom_0.txt": {
+    "size": 505
+  },
+  "labels/val/141240top_0.txt": {
+    "size": 1675
+  },
+  "labels/val/141321bottom_0.txt": {
+    "size": 271
+  },
+  "labels/val/141321top_0.txt": {
+    "size": 817
+  },
+  "labels/val/141521bottom_0.txt": {
+    "size": 193
+  },
+  "labels/val/141521top_0.txt": {
+    "size": 76
+  },
+  "labels/val/141641bottom_0.txt": {
+    "size": 154
+  },
+  "labels/val/141641top_0.txt": {
+    "size": 1168
+  },
+  "labels/val/20230514155927988_0_2.txt": {
+    "size": 950
+  },
+  "labels/val/20230514160016727_0_2.txt": {
+    "size": 1216
+  },
+  "labels/val/20230514160105340_0_2.txt": {
+    "size": 1292
+  },
+  "labels/val/20230514160147721_0_2.txt": {
+    "size": 1254
+  },
+  "labels/val/20230514160236553_0_2.txt": {
+    "size": 684
+  },
+  "labels/val/20230514160318887_0_2.txt": {
+    "size": 798
+  },
+  "labels/val/20230514160401736_0_2.txt": {
+    "size": 1482
+  },
+  "labels/val/20230514160451287_0_2.txt": {
+    "size": 836
+  },
+  "labels/val/20230514160540838_0_2.txt": {
+    "size": 760
+  },
+  "labels/val/20230514160630326_0_2.txt": {
+    "size": 1102
+  },
+  "labels/val/20230514160713566_0_2.txt": {
+    "size": 912
+  },
+  "labels/val/20230514160756977_0_2.txt": {
+    "size": 1368
+  },
+  "labels/val/20230514160840404_0_2.txt": {
+    "size": 1140
+  },
+  "labels/val/20230514160930877_0_2.txt": {
+    "size": 1026
+  },
+  "labels/val/20230514161021365_0_2.txt": {
+    "size": 912
+  },
+  "labels/val/20230514161105354_0_2.txt": {
+    "size": 1026
+  },
+  "labels/val/20230514161156186_0_2.txt": {
+    "size": 1254
+  },
+  "labels/val/20230514161240504_0_2.txt": {
+    "size": 798
+  },
+  "labels/val/20230515153216042_0_2.txt": {
+    "size": 1520
+  },
+  "labels/val/20230515153259296_0_2.txt": {
+    "size": 1634
+  },
+  "labels/val/20230515153500820_0_2.txt": {
+    "size": 1558
+  },
+  "labels/val/20230515153542386_0_2.txt": {
+    "size": 494
+  },
+  "labels/val/20230515153624955_0_2.txt": {
+    "size": 760
+  },
+  "labels/val/20230515153707141_0_2.txt": {
+    "size": 684
+  },
+  "labels/val/20230515153749574_0_2.txt": {
+    "size": 912
+  },
+  "labels/val/20230515153831938_0_2.txt": {
+    "size": 1710
+  },
+  "labels/val/20230515153914639_0_2.txt": {
+    "size": 988
+  },
+  "labels/val/20230515153957490_0_2.txt": {
+    "size": 456
+  },
+  "labels/val/20230515154040093_0_2.txt": {
+    "size": 608
+  },
+  "labels/val/20230515154123172_0_2.txt": {
+    "size": 1178
+  },
+  "labels/val/20230515154206791_0_2.txt": {
+    "size": 1102
+  },
+  "labels/val/20230515154256653_0_2.txt": {
+    "size": 1520
+  },
+  "labels/val/20230515154340231_0_2.txt": {
+    "size": 836
+  },
+  "labels/val/20230515154426452_0_2.txt": {
+    "size": 798
+  },
+  "labels/val/20230515154514264_0_2.txt": {
+    "size": 912
+  },
+  "labels/val/20230515154605202_0_2.txt": {
+    "size": 1102
+  },
+  "labels/val/20230515154655799_0_2.txt": {
+    "size": 1064
+  },
+  "labels/val/20230515154746366_0_2.txt": {
+    "size": 722
+  },
+  "labels/val/20230515154830803_0_2.txt": {
+    "size": 342
+  },
+  "labels/val/20230515160402918_0_2.txt": {
+    "size": 912
+  },
+  "labels/val/20230515160502934_0_2.txt": {
+    "size": 456
+  },
+  "labels/val/20230515160838214_0_2.txt": {
+    "size": 1482
+  },
+  "labels/val/20230515161012845_0_2.txt": {
+    "size": 570
+  },
+  "labels/val/20230515161052858_0_2.txt": {
+    "size": 722
+  },
+  "labels/val/20230515161136790_0_2.txt": {
+    "size": 988
+  },
+  "labels/val/20230515161217117_0_2.txt": {
+    "size": 760
+  },
+  "labels/val/20230515161257179_0_2.txt": {
+    "size": 646
+  },
+  "labels/val/20230515161337939_0_2.txt": {
+    "size": 684
+  },
+  "labels/val/20230515161418369_0_2.txt": {
+    "size": 1102
+  },
+  "labels/val/20230515161548343_0_2.txt": {
+    "size": 950
+  },
+  "labels/val/20230515161710528_0_2.txt": {
+    "size": 836
+  },
+  "labels/val/20230515161751454_0_2.txt": {
+    "size": 912
+  },
+  "labels/val/20230515161832958_0_2.txt": {
+    "size": 1140
+  },
+  "labels/val/20230515161914770_0_2.txt": {
+    "size": 798
+  },
+  "labels/val/20230515162002610_0_2.txt": {
+    "size": 798
+  },
+  "labels/val/20230515162044501_0_2.txt": {
+    "size": 1026
+  },
+  "labels/val/20230515162122603_0_2.txt": {
+    "size": 722
+  },
+  "labels/val/20230515162208198_0_2.txt": {
+    "size": 950
+  },
+  "labels/val/20230515162250313_0_2.txt": {
+    "size": 912
+  },
+  "labels/val/20230515162332349_0_2.txt": {
+    "size": 684
+  },
+  "labels/val/20230515162414896_0_2.txt": {
+    "size": 874
+  },
+  "labels/val/20230515162503851_0_2.txt": {
+    "size": 646
+  },
+  "labels/val/20230515162546390_0_2.txt": {
+    "size": 1102
+  },
+  "labels/val/20230515162629297_0_2.txt": {
+    "size": 1102
+  },
+  "labels/val/20230515162712227_0_2.txt": {
+    "size": 1596
+  },
+  "labels/val/20230515162755018_0_2.txt": {
+    "size": 836
+  },
+  "labels/val/20230515162838473_0_2.txt": {
+    "size": 1330
+  },
+  "labels/val/20230515162921757_0_2.txt": {
+    "size": 342
+  },
+  "labels/val/20230515163008025_0_2.txt": {
+    "size": 646
+  },
+  "labels/val/20230515163140813_0_2.txt": {
+    "size": 304
+  },
+  "labels/val/20230515163228460_0_2.txt": {
+    "size": 1178
+  },
+  "labels/val/20230515163422230_0_2.txt": {
+    "size": 836
+  },
+  "labels/val/20230515163512376_0_2.txt": {
+    "size": 950
+  },
+  "labels/val/20230515163556259_0_2.txt": {
+    "size": 1482
+  },
+  "labels/val/20230515163640425_0_2.txt": {
+    "size": 494
+  },
+  "labels/val/20230515163724610_0_2.txt": {
+    "size": 608
+  },
+  "labels/val/20230519153355674_0_2.txt": {
+    "size": 988
+  },
+  "labels/val/20230519153541383_0_2.txt": {
+    "size": 988
+  },
+  "labels/val/20230519153621078_0_2.txt": {
+    "size": 684
+  },
+  "labels/val/20230519153700537_0_2.txt": {
+    "size": 570
+  },
+  "labels/val/20230519153740356_0_2.txt": {
+    "size": 1064
+  },
+  "labels/val/20230519153820190_0_2.txt": {
+    "size": 912
+  },
+  "labels/val/20230519153900087_0_2.txt": {
+    "size": 1216
+  },
+  "labels/val/20230519153940171_0_2.txt": {
+    "size": 1064
+  },
+  "labels/val/20230519154020381_0_2.txt": {
+    "size": 608
+  },
+  "labels/val/20230519154100637_0_2.txt": {
+    "size": 380
+  },
+  "labels/val/20230519154141112_0_2.txt": {
+    "size": 342
+  },
+  "labels/val/20230519154221508_0_2.txt": {
+    "size": 646
+  },
+  "labels/val/20230519154302030_0_2.txt": {
+    "size": 988
+  },
+  "labels/val/20230519154342942_0_2.txt": {
+    "size": 798
+  },
+  "labels/val/20230519154423839_0_2.txt": {
+    "size": 304
+  },
+  "labels/val/20230519154504736_0_2.txt": {
+    "size": 342
+  },
+  "labels/val/20230519154545836_0_2.txt": {
+    "size": 456
+  },
+  "labels/val/20230519154627170_0_2.txt": {
+    "size": 988
+  },
+  "labels/val/20230519154708145_0_2.txt": {
+    "size": 836
+  },
+  "labels/val/20230519154808162_0_2.txt": {
+    "size": 342
+  },
+  "labels/val/20230519154902446_0_2.txt": {
+    "size": 684
+  },
+  "labels/val/20230519154943858_0_2.txt": {
+    "size": 418
+  },
+  "labels/val/20230519155025724_0_2.txt": {
+    "size": 646
+  },
+  "labels/val/20230519155107823_0_2.txt": {
+    "size": 760
+  },
+  "labels/val/20230519155149766_0_2.txt": {
+    "size": 570
+  },
+  "labels/val/20230519155231834_0_2.txt": {
+    "size": 798
+  },
+  "labels/val/20230519155314090_0_2.txt": {
+    "size": 456
+  },
+  "labels/val/20230519155356236_0_2.txt": {
+    "size": 380
+  },
+  "labels/val/20230519155438492_0_2.txt": {
+    "size": 874
+  },
+  "labels/val/20230519155521341_0_2.txt": {
+    "size": 988
+  },
+  "labels/val/20230519155603878_0_2.txt": {
+    "size": 722
+  },
+  "labels/val/20230519155837405_0_2.txt": {
+    "size": 646
+  },
+  "labels/val/20230519155920426_0_2.txt": {
+    "size": 684
+  },
+  "labels/val/20230519160003525_0_2.txt": {
+    "size": 722
+  },
+  "labels/val/20230519160046749_0_2.txt": {
+    "size": 570
+  },
+  "labels/val/20230519160130067_0_2.txt": {
+    "size": 722
+  },
+  "labels/val/20230519160213510_0_2.txt": {
+    "size": 798
+  },
+  "labels/val/20230519160257078_0_2.txt": {
+    "size": 608
+  },
+  "labels/val/20230519160340787_0_2.txt": {
+    "size": 684
+  },
+  "labels/val/20230519160424683_0_2.txt": {
+    "size": 798
+  },
+  "labels/val/20230519160512281_0_2.txt": {
+    "size": 684
+  },
+  "labels/val/20230519162402751_0_2.txt": {
+    "size": 1216
+  },
+  "labels/val/20230519162521763_0_2.txt": {
+    "size": 456
+  },
+  "labels/val/20230519162601238_0_2.txt": {
+    "size": 988
+  },
+  "labels/val/20230519162640870_0_2.txt": {
+    "size": 836
+  },
+  "labels/val/20230519162740872_0_2.txt": {
+    "size": 494
+  },
+  "labels/val/20230519162833453_0_2.txt": {
+    "size": 760
+  },
+  "labels/val/20230519162913428_0_2.txt": {
+    "size": 950
+  },
+  "labels/val/20230519162953699_0_2.txt": {
+    "size": 494
+  },
+  "labels/val/20230519163034018_0_2.txt": {
+    "size": 722
+  },
+  "labels/val/20230519163114259_0_2.txt": {
+    "size": 304
+  },
+  "labels/val/20230519163154749_0_2.txt": {
+    "size": 684
+  },
+  "labels/val/20230519163235302_0_2.txt": {
+    "size": 684
+  },
+  "labels/val/20230519163315949_0_2.txt": {
+    "size": 874
+  },
+  "labels/val/20230519163356955_0_2.txt": {
+    "size": 1102
+  },
+  "labels/val/20230519163437836_0_2.txt": {
+    "size": 760
+  },
+  "labels/val/20230519163518733_0_2.txt": {
+    "size": 608
+  },
+  "labels/val/20230519163559895_0_2.txt": {
+    "size": 456
+  },
+  "labels/val/20230519163641088_0_2.txt": {
+    "size": 570
+  },
+  "labels/val/20230519163722625_0_2.txt": {
+    "size": 760
+  },
+  "labels/val/20230519163803991_0_2.txt": {
+    "size": 874
+  },
+  "labels/val/20230519163845763_0_2.txt": {
+    "size": 304
+  },
+  "labels/val/20230519164015273_0_2.txt": {
+    "size": 608
+  },
+  "labels/val/20230519164057060_0_2.txt": {
+    "size": 684
+  },
+  "labels/val/20230519164139034_0_2.txt": {
+    "size": 760
+  },
+  "labels/val/20230519164221353_0_2.txt": {
+    "size": 304
+  },
+  "labels/val/20230519164303592_0_2.txt": {
+    "size": 494
+  },
+  "labels/val/20230519164345973_0_2.txt": {
+    "size": 912
+  },
+  "labels/val/20230519164428385_0_2.txt": {
+    "size": 912
+  },
+  "labels/val/20230519164511031_0_2.txt": {
+    "size": 456
+  },
+  "labels/val/20230519164553787_0_2.txt": {
+    "size": 608
+  },
+  "labels/val/20230519164636511_0_2.txt": {
+    "size": 1368
+  },
+  "labels/val/20230519164719611_0_2.txt": {
+    "size": 608
+  },
+  "labels/val/20230519164802538_0_2.txt": {
+    "size": 342
+  },
+  "labels/val/20230519164845872_0_2.txt": {
+    "size": 418
+  },
+  "labels/val/20230519164929158_0_2.txt": {
+    "size": 646
+  },
+  "labels/val/20230519165012476_0_2.txt": {
+    "size": 684
+  },
+  "labels/val/20230519165055997_0_2.txt": {
+    "size": 722
+  },
+  "labels/val/20230519165139440_0_2.txt": {
+    "size": 456
+  },
+  "labels/val/20230519165223180_0_2.txt": {
+    "size": 684
+  },
+  "labels/val/20230519165306828_0_2.txt": {
+    "size": 608
+  },
+  "labels/val/20230519165354566_0_2.txt": {
+    "size": 456
+  },
+  "labels/val/20230519165438541_0_2.txt": {
+    "size": 608
+  },
+  "labels/val/20230519170733687_0_1.txt": {
+    "size": 494
+  },
+  "labels/val/20230519170813412_0_1.txt": {
+    "size": 494
+  },
+  "labels/val/20230519170853356_0_1.txt": {
+    "size": 494
+  },
+  "labels/val/20230519170933300_0_1.txt": {
+    "size": 418
+  },
+  "labels/val/20230519171013306_0_1.txt": {
+    "size": 1102
+  },
+  "labels/val/20230519171053546_0_1.txt": {
+    "size": 570
+  },
+  "labels/val/20230519171133865_0_1.txt": {
+    "size": 304
+  },
+  "labels/val/20230519171214418_0_1.txt": {
+    "size": 570
+  },
+  "labels/val/20230519171255018_0_1.txt": {
+    "size": 266
+  },
+  "labels/val/20230519171335759_0_1.txt": {
+    "size": 608
+  },
+  "labels/val/20230519171416655_0_1.txt": {
+    "size": 304
+  },
+  "labels/val/20230519171457364_0_1.txt": {
+    "size": 304
+  },
+  "labels/val/20230519171538308_0_1.txt": {
+    "size": 304
+  },
+  "labels/val/20230519171619611_0_1.txt": {
+    "size": 684
+  },
+  "labels/val/20230519171701195_0_1.txt": {
+    "size": 456
+  },
+  "labels/val/20230519171742091_0_1.txt": {
+    "size": 1786
+  },
+  "labels/val/20230519171823582_0_1.txt": {
+    "size": 1292
+  },
+  "labels/val/20230519171905134_0_1.txt": {
+    "size": 456
+  },
+  "labels/val/20230519171946875_0_1.txt": {
+    "size": 722
+  },
+  "labels/val/20230519172028755_0_1.txt": {
+    "size": 304
+  },
+  "labels/val/20230519172110715_0_1.txt": {
+    "size": 342
+  },
+  "labels/val/20230519172152767_0_1.txt": {
+    "size": 266
+  },
+  "labels/val/20230519172234835_0_1.txt": {
+    "size": 304
+  },
+  "labels/val/20230519172317153_0_1.txt": {
+    "size": 342
+  },
+  "labels/val/20230519172359581_0_1.txt": {
+    "size": 190
+  },
+  "labels/val/20230519172442150_0_1.txt": {
+    "size": 646
+  },
+  "labels/val/20230519172524765_0_1.txt": {
+    "size": 494
+  },
+  "labels/val/20230519172607488_0_1.txt": {
+    "size": 380
+  },
+  "labels/val/20230519172650416_0_1.txt": {
+    "size": 456
+  },
+  "labels/val/20230519172733609_0_1.txt": {
+    "size": 342
+  },
+  "labels/val/20230519172816302_0_1.txt": {
+    "size": 570
+  },
+  "labels/val/20230519173007495_0_1.txt": {
+    "size": 380
+  },
+  "labels/val/20230519173050813_0_1.txt": {
+    "size": 304
+  },
+  "labels/val/20230519173134240_0_1.txt": {
+    "size": 494
+  },
+  "labels/val/20230519173217683_0_1.txt": {
+    "size": 342
+  },
+  "labels/val/20230519173301360_0_1.txt": {
+    "size": 266
+  },
+  "labels/val/20230519173345272_0_1.txt": {
+    "size": 342
+  },
+  "labels/val/20230519173429246_0_1.txt": {
+    "size": 760
+  },
+  "labels/val/20230519173513204_0_1.txt": {
+    "size": 532
+  },
+  "labels/val/classes.txt": {
+    "size": 52
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "images": 1127,
+  "split_images": {
+    "train": 376,
+    "val": 375,
+    "test": 376
+  },
+  "split_groups": {
+    "train": 375,
+    "val": 373,
+    "test": 374
+  },
+  "cross_groups": 0
+}

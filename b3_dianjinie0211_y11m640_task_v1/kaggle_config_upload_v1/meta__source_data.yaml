@@ -1,0 +1,12 @@
+path: E:\PythonProject\datasets\Dianjinie0211
+train: images/train
+val: images/val
+test: images/val
+
+nc: 5
+names:
+  0: waterstain
+  1: waterblock
+  2: colorstain
+  3: nodule
+  4: bubble

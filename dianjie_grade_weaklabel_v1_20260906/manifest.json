@@ -1,0 +1,69 @@
+{
+  "task": "C2.1 电解镍判级弱标签数据集（路线文档 §4.2）",
+  "generated_at": "2026-09-06T02:39:25",
+  "pipeline": {
+    "description": "旧方案完整管线（企业认可配置）：dianjie=yolov5/ryw.pt + ryw.pth ResNet + findcent + 决策树",
+    "commit": "c5055bc",
+    "scratch_dir": "C:\\Users\\23916\\AppData\\Local\\Temp\\jcw_c21_weaklabel_scratch",
+    "files": {
+      "inference/detectors.py": "f5fbfd7656f928bfdd849af4abdee257f947fddc7dd3df2d82c31955ff2cd5fe",
+      "inference/grade_features.py": "649e7bfaf85b4f3757a2cca6c00a187b380107b21b5d021e6a821534323f09ad",
+      "inference/models.py": "ae80b30e1998a529eb9ba86078e8133e735876389fc05793d766a482e5623529",
+      "models.yaml": "97184c112525540db3b1539598c553c31708939b30235c3dc5265195883bf33a",
+      "preprocess.py": "49a4d0cd82d930db993ddfeee99463af6fffea952ce936eb54d8fd274bf8d2e9",
+      "model_decryptor.py": "e90e1bd4d0c6adde327a77b59d8796191d154e7cc7147f66c60add1bd49244e3",
+      "hubconf.py": "c9dbd15cfacd09c6255158c3102ff9fb17cbe41a3dc9846cb779c186213fef12",
+      "adapters/yolov5.py": "1dab220b0c6788a65aa524900d0b3e6f9ad7436ec7652d70d5fed7705eedb3d4"
+    },
+    "detector": {
+      "kind": "yolov5",
+      "weights": "weights/ryw.pt",
+      "threshold": 0.25,
+      "adapter_defaults": "AutoShape 640 / iou 0.45 / max_det 1000",
+      "ryw_pt_sha256": "f404ceda25e083964f84fbe35fad2be9b48ebe42f0bf4b3d11813068542178eb"
+    },
+    "classifier": {
+      "weights": "weights/ryw.pth",
+      "ryw_pth_sha256": "ae92f4e96ca4e955e7350c53ff9d5f8f9edab528e730a2c5471cc48c79469e0a"
+    }
+  },
+  "images": {
+    "total": 1127,
+    "source": "anchor_v1 dev = fold_01/02/03 val 并集（冻结 198 test 未读取）",
+    "split_images": {
+      "train": 376,
+      "val": 375,
+      "test": 376
+    },
+    "split_groups": {
+      "train": 375,
+      "val": 373,
+      "test": 374
+    },
+    "grouping": "anchor_v1 group_assignments.csv 板级分组；fold 分区一一对应，组无跨划分"
+  },
+  "labels": {
+    "type_range": "决策树输出 {1,2,3,4,6}（0/5 未使用）",
+    "nodule_range": "{0,1,2,3}",
+    "type_distribution": {
+      "3": 447,
+      "4": 509,
+      "6": 106,
+      "2": 29,
+      "1": 36
+    },
+    "nodule_distribution": {
+      "0": 447,
+      "3": 651,
+      "2": 29
+    }
+  },
+  "outputs": {
+    "jsonl": "E:\\PythonProject\\优化\\dianjie_grade_weaklabel_v1_20260906\\weaklabels.jsonl",
+    "summary_csv": "E:\\PythonProject\\优化\\dianjie_grade_weaklabel_v1_20260906\\weaklabels_summary.csv"
+  },
+  "provenance": {
+    "generator": "E:\\PythonProject\\优化\\dianjie_grade_weaklabel_v1_20260906\\generate_c2p1_weaklabels.py",
+    "python_env": "jcw_b3clean_wt/.venv (torch 2.12.1+cpu)"
+  }
+}

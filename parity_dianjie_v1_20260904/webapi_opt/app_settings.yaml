@@ -1,0 +1,60 @@
+server:
+  host: 127.0.0.1
+  port: 5005
+  workers: 1
+  reload: false
+  log_level: INFO
+  docs_enabled: true
+
+logging:
+  json: true
+  request_id_header: X-Request-ID
+
+cors:
+  allow_origins:
+    - tauri://localhost
+    - http://tauri.localhost
+    - http://localhost
+    - http://127.0.0.1
+  allow_methods:
+    - "*"
+  allow_headers:
+    - "*"
+
+management:
+  health_path: /health
+  config_path: /config
+  metrics_path: /metrics
+
+runtime:
+  mode: desktop
+  preload_models: true
+  graceful_shutdown_timeout_seconds: 15
+  allow_multi_worker_with_gpu: false
+  debug_artifacts_enabled: true
+
+business_rules:
+  abdetect:
+    value1: 100
+    value2: 200
+    value3: 500
+  dianjie:
+    nodule:
+      ignore_area_below: 13000
+      ignore_aspect_ratio_below: 3.0
+    non_water_labels: [2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    good_board:
+      a_ratio_max: 0.2
+      b_ratio_max: 0.1
+      airhole_ratio_max: 0.01
+      c_ratio_max: 0.03
+    hot_wash:
+      a_ratio_min: 0.2
+      b_ratio_max: 0.05
+      c_ratio_max: 0.05
+    c_ratio_bad_threshold: 0.5
+    b_ratio_bad_threshold: 0.5
+  nietiao_seg:
+    x_range: [588, 1828]
+    y_range: [360, 1688]
+    min_size: 500

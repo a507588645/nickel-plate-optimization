@@ -1,0 +1,5 @@
+waterstain
+waterblock
+colorstain
+nodule
+bubble

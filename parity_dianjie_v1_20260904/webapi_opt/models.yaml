@@ -1,0 +1,78 @@
+# 各检测任务使用哪个模型。
+# 换模型：改下面的 kind / weights（YOLOv5 / YOLO11 / YOLO26 / RF-DETR 一键切换）。
+# 加模型：在 adapters/ 加一个适配器文件并 @register("名字")，这里把 kind 指向它即可。
+#
+# kind 可选值（已注册的适配器）：
+#   yolov5       -> adapters/yolov5.py        经典 YOLOv5，weights 用 .pt（项目根相对路径，支持 .enc 加密）
+#   multibackend -> adapters/multibackend.py  DetectMultiBackend，支持 .pt/.onnx/.engine
+#   onnxruntime  -> adapters/multibackend.py  multibackend 显式别名，推荐 weights 用 .onnx
+#   tensorrt     -> adapters/multibackend.py  multibackend 显式别名，推荐 weights 用 .engine
+#   rfdetr       -> adapters/rfdetr.py        RF-DETR，weights 用 checkpoint_best_total.pth 绝对路径
+#   ultralytics  -> adapters/ultralytics.py   YOLOv8/v9/v10/v11/YOLO26，weights 用 .pt/.onnx（需先 uv add ultralytics）
+#   yolo26       -> adapters/ultralytics.py   YOLO26 显式别名，同 yolov26
+#   yolov26      -> adapters/ultralytics.py   YOLO26 显式别名，同 yolo26
+#
+# 用 YOLOv8~v11/YOLO26 的步骤：① uv add ultralytics  ② 把某任务改成 kind: ultralytics/yolo26 + weights 指向新 .pt/.onnx
+# YOLO11 ONNX 必须使用 kind: ultralytics，由 Ultralytics 负责输出解码和 NMS；仅兼容 YOLOv5 导出时使用 onnxruntime/tensorrt。
+# 之后再换更新的版本/权重，只改 weights 这一行即可。
+
+detectors:
+  # 电解镍（路由 /dianjiEclass，DianjieDetection，全局变量 yolo），恢复原始 RYW YOLOv5 检测器
+  dianjie:
+    kind: yolov5
+    weights: 'weights/ryw.pt'
+    threshold: 0.25
+    # 切到 RF-DETR 时改成：
+    #   kind: rfdetr
+    #   weights: 'E:\PythonProject\rf-detr\outputs\rfdetr_nano_dianji_smoke\checkpoint_best_total.pth'
+
+  # 电积镍（路由 /dianjiclass，DianjiDetection，全局变量 slf_yolo），切换到 YOLO11m 18 类检测器
+  dianji:
+    # 冻结 YOLO11m 640 部署权重，来源 run: dianjienie_medium_yolo11m_640_kaggle_seed0_cm0_oofconsensusv1_finaldev_ep083，SHA-256: 901ccf6006f44689483aaf6f0d1d1b8c18132a85c7d881be7e62fcdccc255b21
+    kind: ultralytics
+    weights: 'weights/dianjienie_yolo11m_ryw18_640.onnx'
+    threshold: 0.25
+    options:
+      imgsz: 640
+
+classifiers:
+  dianjie_resnet:
+    weights: 'weights/ryw.pth'
+    num_classes: 2
+
+  dianji_resnet:
+    weights: 'weights/slf.pth'
+    num_classes: 4
+
+grade_models:
+  dianji_lgbm:
+    weights: 'weights/dianji_grade_lgbm_v1.txt'
+    contract: 'weights/dianji_grade_lgbm_v1_contract.json'
+    threshold: 0.7362
+    enabled: true
+
+segments:
+  nietiao:
+    weights: 'weights/best.pt'
+
+# —— Ultralytics YOLOv8/v9/v10/v11/YOLO26 模板 ——
+# 需要时把上面某个任务改成下面这样（或照此新增任务）；换更新版本/权重只改 weights 这一行：
+#   dianji:
+#     kind: ultralytics
+#     weights: 'weights/yolo11x.pt'
+#     threshold: 0.25
+#
+#   dianji:
+#     kind: yolo26
+#     weights: 'weights/yolo26.pt'
+#     threshold: 0.25
+#
+#   dianjie:
+#     kind: ultralytics
+#     weights: 'weights/yolo11m.onnx'
+#     threshold: 0.25
+#
+#   dianjie:
+#     kind: tensorrt
+#     weights: 'weights/ryw.engine'
+#     threshold: 0.25

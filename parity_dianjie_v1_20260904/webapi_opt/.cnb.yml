@@ -1,0 +1,35 @@
+# .cnb.yml
+$:
+  # vscode 事件：专供页面中启动远程开发用
+  vscode:
+    - docker:
+        # 自定义开发环境
+        build:
+          # 指定构建镜像的 Dockerfile 文件
+          dockerfile: .ide/Dockerfile
+          # 用来声明缓存构建过程中依赖的文件列表。
+          # 注意：如果构建过程有用到其他文件，也需要在此处声明
+          # 参考文档：https://docs.cnb.cool/zh/grammar/pipeline.html#build
+          by:
+            - .ide/settings.json
+            - .ide/create_languagepacks
+      services:
+        # 声明使用 vscode 服务
+        - vscode
+        # 声明在容器中支持 docker 命令
+        - docker
+      stages:
+        # 环境启动后需要执行的命令
+        - name: ls
+          script: ls -al
+
+  # main push 事件：构建并上传 Docker 镜像
+main:
+  push:
+    - services:
+        - docker
+      stages:
+        - name: docker build
+          script: docker build -t ${CNB_DOCKER_REGISTRY}/${CNB_REPO_SLUG_LOWERCASE}:latest .
+        - name: docker push
+          script: docker push ${CNB_DOCKER_REGISTRY}/${CNB_REPO_SLUG_LOWERCASE}:latest

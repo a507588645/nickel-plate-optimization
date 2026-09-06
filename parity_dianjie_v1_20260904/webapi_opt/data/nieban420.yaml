@@ -1,0 +1,34 @@
+# YOLOv5 🚀 by Ultralytics, GPL-3.0 license
+# COCO128 dataset https://www.kaggle.com/ultralytics/coco128 (first 128 images from COCO train2017) by Ultralytics
+# Example usage: python train.py --data coco128.yaml
+# parent
+# ├── yolov5
+# └── datasets
+#     └── coco128  ← downloads here (7 MB)
+
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: ../datasets/nieban420_new  # dataset root dir
+train: images/train  # train images (relative to 'path') 128 images
+val: images/valid  # val images (relative to 'path') 128 images
+test:  # test images (optional)
+
+# Classes
+names:
+  0: camel
+  1: waterstain
+  2: waterpoint
+  3: waterwrinkle
+  4: yellowstain
+  5: blackstain
+  6: greenstain
+  7: whitestain
+  8: oilstain
+  9: overfire
+  10: nodule
+  11: bubble
+  12: airhole
+  13: waterstain_band
+  14：crease
+  15：scar
+  16：waste

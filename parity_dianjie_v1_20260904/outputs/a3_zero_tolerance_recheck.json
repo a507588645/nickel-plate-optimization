@@ -1,0 +1,9 @@
+{
+  "commit": "ce2f166",
+  "n_images": 376,
+  "exact_match": 376,
+  "match_rate": 1.0,
+  "n_boxes_verified": 5380,
+  "wall_s": 706.9,
+  "mismatches": []
+}

@@ -1,0 +1,11 @@
+path: "/kaggle/input/datasets/lly3323w/dianjinie"
+train: "/kaggle/working/runtime_configs/dianjinie0211_medium_yolo11m_640_kaggle_seed0_cm0_d0211clean1/train.txt"
+val: "/kaggle/working/runtime_configs/dianjinie0211_medium_yolo11m_640_kaggle_seed0_cm0_d0211clean1/val.txt"
+
+nc: 5
+names:
+  0: waterstain
+  1: waterblock
+  2: colorstain
+  3: nodule
+  4: bubble

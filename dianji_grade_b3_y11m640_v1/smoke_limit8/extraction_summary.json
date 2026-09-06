@@ -1,0 +1,55 @@
+{
+  "timestamp": "2026-09-05T13:33:56",
+  "status": "unconfirmed_pending_enterprise",
+  "weights": "E:\\PythonProject\\models\\runs\\dianjinie0211_medium_yolo11m_640_kaggle_seed0_cm0_d0211v1\\weights\\best.pt",
+  "weights_sha256": "95b56f70aaefe56e85440c15e00bc12be14f4caf81fbbc2adf84625cb538b606",
+  "weights_provenance": "B3 Kaggle run dianjinie0211_medium_yolo11m_640_kaggle_seed0_cm0_d0211v1 (139 epoch early stop, best epoch 39; val mAP50=0.243 mAP50-95=0.0997)",
+  "leakage_warning": "等级视图 1072 图中 986 张在 B3 训练/验证集内（770 train / 216 val）；由此特征得到的 LGBM 指标解读必须带此前提（与 arm3 slf.pt@640 同性质）。",
+  "images_processed": 8,
+  "manifest_total": 1072,
+  "total_boxes_detected": 68,
+  "detections_per_class": {
+    "waterstain": 23,
+    "colorstain": 17,
+    "waterblock": 12,
+    "bubble": 16
+  },
+  "plate_area_fallbacks": 0,
+  "base_columns_count": 13,
+  "texture_columns_count": 20,
+  "total_feature_columns": 33,
+  "texture_join": {
+    "source_path": "E:\\PythonProject\\优化\\dianji_grade_v3\\features_v3_full.csv",
+    "join_key": "sha256",
+    "source_rows": 1072,
+    "matched_rows": 8,
+    "mismatch_rows": 0,
+    "texture_columns": [
+      "tx__gray_mean",
+      "tx__gray_var",
+      "tx__grad_mean",
+      "tx__grad_var",
+      "tx__grad_p90",
+      "tx__lbp_bin00",
+      "tx__lbp_bin01",
+      "tx__lbp_bin02",
+      "tx__lbp_bin03",
+      "tx__lbp_bin04",
+      "tx__lbp_bin05",
+      "tx__lbp_bin06",
+      "tx__lbp_bin07",
+      "tx__lbp_bin08",
+      "tx__lbp_bin09",
+      "tx__glcm_contrast",
+      "tx__glcm_dissimilarity",
+      "tx__glcm_homogeneity",
+      "tx__glcm_energy",
+      "tx__glcm_correlation"
+    ]
+  },
+  "output_files": {
+    "features_base13_csv": "E:\\PythonProject\\优化\\dianji_grade_b3_y11m640_v1\\smoke_limit8\\features_b3y11m640_base13.csv",
+    "features_full_csv": "E:\\PythonProject\\优化\\dianji_grade_b3_y11m640_v1\\smoke_limit8\\features_b3y11m640_v1.csv",
+    "per_box_csv": "E:\\PythonProject\\优化\\dianji_grade_b3_y11m640_v1\\smoke_limit8\\per_box_b3y11m640.csv"
+  }
+}

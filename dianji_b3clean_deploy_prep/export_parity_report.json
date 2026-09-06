@@ -1,0 +1,51 @@
+{
+  "generated": "2026-09-05T23:26:25",
+  "pt_sha256": "849fe3c9467bfabc4113fd442723fbb65482ed2e5a1475ba9342f52011144459",
+  "onnx_sha256": "e9d090a7a20fbd3fde5576f3accfcd77a8c2eeccae71cc61963b423a7e990162",
+  "imgsz": 640,
+  "images": [
+    {
+      "image": "113353bottom_0.png",
+      "pt_boxes": 10,
+      "onnx_boxes": 10,
+      "matched_iou50": 10,
+      "match_rate": 1.0
+    },
+    {
+      "image": "113353top_0.png",
+      "pt_boxes": 12,
+      "onnx_boxes": 12,
+      "matched_iou50": 12,
+      "match_rate": 1.0
+    },
+    {
+      "image": "113434bottom_0.png",
+      "pt_boxes": 17,
+      "onnx_boxes": 17,
+      "matched_iou50": 17,
+      "match_rate": 1.0
+    },
+    {
+      "image": "113434top_0.png",
+      "pt_boxes": 5,
+      "onnx_boxes": 6,
+      "matched_iou50": 5,
+      "match_rate": 1.0
+    },
+    {
+      "image": "113514bottom_0.png",
+      "pt_boxes": 8,
+      "onnx_boxes": 7,
+      "matched_iou50": 7,
+      "match_rate": 0.875
+    },
+    {
+      "image": "113514top_0.png",
+      "pt_boxes": 9,
+      "onnx_boxes": 9,
+      "matched_iou50": 9,
+      "match_rate": 1.0
+    }
+  ],
+  "mean_match_rate": 0.97917
+}

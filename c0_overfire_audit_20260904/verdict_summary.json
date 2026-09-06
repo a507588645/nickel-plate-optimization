@@ -1,0 +1,16 @@
+{
+  "adjudicated_at": "2026-09-04",
+  "method": "用户批量裁决（review.html 111 单元通览）",
+  "verdict": "几乎全都是烧板，少数 uncertain（未逐一标注），无 over_labeled",
+  "counts": {
+    "true_overfire": 111,
+    "over_labeled": 0,
+    "uncertain": "少数未逐一标注"
+  },
+  "over_labeled_ratio": 0.0,
+  "gate": "过度标注 0% < 30% → C0.3 走「标签基本可用」分支：不清洗、不重训",
+  "business_definitions_confirmed": {
+    "overfire": "烧板：电解氧化程度重于发黄，黑色或灰青色，无明显边界轮廓，片状分布，小至一小片大至覆盖整板（师兄硕士学位论文定义）",
+    "multiple_boxes_per_plate": "允许且必要：烧板一般面积占比大，需要多个框覆盖"
+  }
+}

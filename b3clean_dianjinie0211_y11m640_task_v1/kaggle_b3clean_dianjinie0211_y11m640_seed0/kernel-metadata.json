@@ -1,0 +1,17 @@
+{
+  "id": "lly3323w/b3clean-dianjinie0211-yolo11m-640-seed0",
+  "title": "b3clean dianjinie0211 yolo11m 640 seed0",
+  "code_file": "b3clean-dianjinie0211-y11m640-seed0.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "lly3323w/dianjinie",
+    "lly3323w/dianjinie0211-b3-config-v1"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

@@ -1,0 +1,89 @@
+{
+  "task": "C2.5 闸门机械证据（3 seed 复验 + valid 拒判阈值标定）",
+  "generated_at": "2026-09-06T12:50:49",
+  "protocol": "train_dianji_grade_v3 逐字镜像；阈值 valid 分位数标定（目标覆盖 0.70）；test 报告一次后冻结",
+  "seeds": [
+    {
+      "seed": 42,
+      "best_iteration": 59,
+      "valid_agreement": 0.8506666666666667,
+      "test_agreement": 0.8723404255319149,
+      "test_macro_f1": 0.8489240416887476
+    },
+    {
+      "seed": 43,
+      "best_iteration": 58,
+      "valid_agreement": 0.8453333333333334,
+      "test_agreement": 0.8670212765957447,
+      "test_macro_f1": 0.8425260770975056
+    },
+    {
+      "seed": 44,
+      "best_iteration": 58,
+      "valid_agreement": 0.8346666666666667,
+      "test_agreement": 0.8723404255319149,
+      "test_macro_f1": 0.8432486096896643
+    }
+  ],
+  "test_agreement_mean": 0.8705673758865249,
+  "test_agreement_std": 0.002507470855271462,
+  "valid_coverage_sweep": [
+    {
+      "coverage": 1.0,
+      "threshold": 0.4201,
+      "val_agreement_within": 0.8506666666666667
+    },
+    {
+      "coverage": 0.9,
+      "threshold": 0.5887,
+      "val_agreement_within": 0.8813056379821959
+    },
+    {
+      "coverage": 0.85,
+      "threshold": 0.6912,
+      "val_agreement_within": 0.8867924528301887
+    },
+    {
+      "coverage": 0.8,
+      "threshold": 0.7522,
+      "val_agreement_within": 0.8866666666666667
+    },
+    {
+      "coverage": 0.75,
+      "threshold": 0.8157,
+      "val_agreement_within": 0.8896797153024911
+    },
+    {
+      "coverage": 0.7,
+      "threshold": 0.8525,
+      "val_agreement_within": 0.9045801526717557
+    },
+    {
+      "coverage": 0.65,
+      "threshold": 0.8719,
+      "val_agreement_within": 0.9098360655737705
+    },
+    {
+      "coverage": 0.6,
+      "threshold": 0.894,
+      "val_agreement_within": 0.9155555555555556
+    }
+  ],
+  "chosen_threshold": {
+    "coverage": 0.7,
+    "threshold": 0.8525,
+    "val_agreement_within": 0.9045801526717557
+  },
+  "test_at_threshold": {
+    "threshold": 0.8525,
+    "coverage": 0.6781914893617021,
+    "agreement_within": 0.9529411764705882,
+    "manual_review_rate": 0.32180851063829785,
+    "note": "test 以 valid 标定阈值报告一次（B3clean 契约同协议），此后不得再读 test"
+  },
+  "gate_interpretation": {
+    "一致率≥95%（无拒判）": "未达（3 seed test mean=0.8706）",
+    "一致率≥95%（带拒判）": "valid 覆盖 0.7 阈值 0.8525 下 test 接收区一致率 0.9529",
+    "复核集不劣于旧方案": "C2.4 人工复核未执行（用户 2026-09-06 反馈无法按 type 语义复核），该条件转由现场监控替代验证，需用户确认此口径"
+  }
+}

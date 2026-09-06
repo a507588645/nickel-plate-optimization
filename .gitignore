@@ -73,3 +73,9 @@ l1_e4_oofconsensus_v1_cp_v1_*/
 *.chunk-*
 # 注意：kaggle_*/remote_output_v*/ 下的清单/标签/指标 JSON 是实验归档的一部分，保持入库；
 # 其中的 *.zip、*.jsonl.gz、raw_predictions/ 由上面规则自动排除。
+
+# ===== B3 电积镍域内训练任务包（2026-09-04） =====
+# 18 GiB 扁平上传视图为硬链接（可由 build_b3_kaggle_dataset.py 重建），不进仓库
+b3_dianjinie0211_y11m640_task_v1/kaggle_dataset_upload_flat_v1/
+# 远端探针对比下载的临时文件（可由 probe_dianjinie_remote_reuse.py 重建）
+b3_dianjinie0211_y11m640_task_v1/probe_downloads/

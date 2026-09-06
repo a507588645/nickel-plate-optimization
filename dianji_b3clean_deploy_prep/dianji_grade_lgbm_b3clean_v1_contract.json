@@ -1,0 +1,178 @@
+{
+  "contract_version": "dianji_grade_b3clean_v1",
+  "status": "labels_enterprise_confirmed_20260904_deployment_pending_field_trial",
+  "feature_names": [
+    "detection_count",
+    "total_bbox_union_image_ratio",
+    "has_nodule",
+    "count__waterstain",
+    "count__waterblock",
+    "count__colorstain",
+    "count__nodule",
+    "count__bubble",
+    "area_ratio__waterstain",
+    "area_ratio__waterblock",
+    "area_ratio__colorstain",
+    "area_ratio__nodule",
+    "area_ratio__bubble",
+    "tx__gray_mean",
+    "tx__gray_var",
+    "tx__grad_mean",
+    "tx__grad_var",
+    "tx__grad_p90",
+    "tx__lbp_bin00",
+    "tx__lbp_bin01",
+    "tx__lbp_bin02",
+    "tx__lbp_bin03",
+    "tx__lbp_bin04",
+    "tx__lbp_bin05",
+    "tx__lbp_bin06",
+    "tx__lbp_bin07",
+    "tx__lbp_bin08",
+    "tx__lbp_bin09",
+    "tx__glcm_contrast",
+    "tx__glcm_dissimilarity",
+    "tx__glcm_homogeneity",
+    "tx__glcm_energy",
+    "tx__glcm_correlation"
+  ],
+  "feature_count": 33,
+  "grades": [
+    "3#",
+    "9950",
+    "9996",
+    "bad"
+  ],
+  "grade_to_id": {
+    "3#": 0,
+    "9950": 1,
+    "9996": 2,
+    "bad": 3
+  },
+  "id_to_grade": {
+    "0": "3#",
+    "1": "9950",
+    "2": "9996",
+    "3": "bad"
+  },
+  "model": {
+    "file": "dianji_grade_lgbm_b3clean_v1.txt",
+    "format": "lightgbm_booster_text",
+    "best_iteration": 119,
+    "num_class": 4,
+    "feature_names_in_model": [
+      "detection_count",
+      "total_bbox_union_image_ratio",
+      "has_nodule",
+      "count__waterstain",
+      "count__waterblock",
+      "count__colorstain",
+      "count__nodule",
+      "count__bubble",
+      "area_ratio__waterstain",
+      "area_ratio__waterblock",
+      "area_ratio__colorstain",
+      "area_ratio__nodule",
+      "area_ratio__bubble",
+      "tx__gray_mean",
+      "tx__gray_var",
+      "tx__grad_mean",
+      "tx__grad_var",
+      "tx__grad_p90",
+      "tx__lbp_bin00",
+      "tx__lbp_bin01",
+      "tx__lbp_bin02",
+      "tx__lbp_bin03",
+      "tx__lbp_bin04",
+      "tx__lbp_bin05",
+      "tx__lbp_bin06",
+      "tx__lbp_bin07",
+      "tx__lbp_bin08",
+      "tx__lbp_bin09",
+      "tx__glcm_contrast",
+      "tx__glcm_dissimilarity",
+      "tx__glcm_homogeneity",
+      "tx__glcm_energy",
+      "tx__glcm_correlation"
+    ]
+  },
+  "rejection": {
+    "selected_target_coverage": 0.7,
+    "threshold": 0.7819,
+    "valid_coverage": 0.7019,
+    "test_coverage_reference": 0.6708,
+    "test_n_accepted_reference": 108,
+    "source": "valid confidence quantile only; test evaluated once for reporting",
+    "manual_review_when_confidence_below_threshold": true
+  },
+  "extraction": {
+    "weight_path": "E:\\PythonProject\\优化\\dianji_b3clean_deploy_prep\\dianji0211_y11m640_b3clean.onnx",
+    "weight_sha256": "e9d090a7a20fbd3fde5576f3accfcd77a8c2eeccae71cc61963b423a7e990162",
+    "imgsz": 640,
+    "conf": 0.25,
+    "iou": 0.45,
+    "device": "cpu",
+    "class_names": [
+      "waterstain",
+      "waterblock",
+      "colorstain",
+      "nodule",
+      "bubble"
+    ],
+    "aggregation_reference": "B3clean 提取包装器（slf 5 类 13 BASE + 20 纹理）",
+    "source_checkpoint": {
+      "path": "E:\\PythonProject\\models\\runs\\dianjinie0211_medium_yolo11m_640_kaggle_seed0_cm0_d0211clean1\\weights\\best.pt",
+      "sha256": "849fe3c9467bfabc4113fd442723fbb65482ed2e5a1475ba9342f52011144459",
+      "note": "部署 ONNX 由该 best.pt 导出（PT↔ONNX 平均匹配率 0.979@IoU0.5，见 export_parity_report.json）"
+    }
+  },
+  "training": {
+    "seed": 42,
+    "protocol": "train_dianji_grade_v3 defaults (num_leaves=8, max_depth=4, min_data=10, lr=0.05, ff=0.9, bf=0.9, early_stop=40, 类平衡权重)",
+    "trained_at": "2026-09-05T23:32:28"
+  },
+  "data": {
+    "features_csv": "E:\\PythonProject\\优化\\dianji_grade_b3clean_y11m640_v1\\features_b3y11m640_v1.csv",
+    "view": null,
+    "splits": {
+      "train": 750,
+      "valid": 161,
+      "test": 161
+    },
+    "leakage": "zero-leakage：B3clean 训练集 653 图不含等级视图 valid/test 339 图"
+  },
+  "metrics": {
+    "test_accuracy": 0.75776,
+    "test_macro_f1": 0.72245,
+    "test_per_class": {
+      "3#": {
+        "precision": 0.75,
+        "recall": 0.8571428571428571,
+        "f1": 0.8,
+        "support": 7
+      },
+      "9950": {
+        "precision": 0.7848101265822784,
+        "recall": 0.7560975609756098,
+        "f1": 0.7701863354037267,
+        "support": 82
+      },
+      "9996": {
+        "precision": 0.7323943661971831,
+        "recall": 0.7647058823529411,
+        "f1": 0.7482014388489209,
+        "support": 68
+      },
+      "bad": {
+        "precision": 0.6666666666666666,
+        "recall": 0.5,
+        "f1": 0.5714285714285714,
+        "support": 4
+      }
+    }
+  },
+  "round_trip": {
+    "verified": true,
+    "predict_identical": true
+  }
+}

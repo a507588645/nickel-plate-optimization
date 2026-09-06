@@ -1,0 +1,46 @@
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+bigframes 2.39.0 requires google-cloud-bigquery-storage<3.0.0,>=2.30.0, which is not installed.
+google-adk 1.29.0 requires google-cloud-bigquery-storage>=2.0.0, which is not installed.
+datasets 5.0.0 requires fsspec[http]<=2026.4.0,>=2023.1.0, but you have fsspec 2026.7.0 which is incompatible.
+ydata-profiling 4.18.4 requires numpy<2.4,>=1.22, but you have numpy 2.5.2 which is incompatible.
+google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.
+google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.
+dopamine-rl 4.1.2 requires gym<=0.25.2, but you have gym 0.26.2 which is incompatible.
+moviepy 1.0.3 requires decorator<5.0,>=4.0.2, but you have decorator 5.3.1 which is incompatible.
+torchaudio 2.10.0+cu128 requires torch==2.10.0, but you have torch 2.6.0+cu124 which is incompatible.
+numba 0.60.0 requires numpy<2.1,>=1.22, but you have numpy 2.5.2 which is incompatible.
+gcsfs 2025.3.0 requires fsspec==2025.3.0, but you have fsspec 2026.7.0 which is incompatible.
+gradio 5.50.0 requires pillow<12.0,>=8.0, but you have pillow 12.3.0 which is incompatible.
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+bigframes 2.39.0 requires google-cloud-bigquery-storage<3.0.0,>=2.30.0, which is not installed.
+datasets 5.0.0 requires fsspec[http]<=2026.4.0,>=2023.1.0, but you have fsspec 2026.7.0 which is incompatible.
+kaggle-environments 1.29.3 requires numpy>=2.0, but you have numpy 1.26.4 which is incompatible.
+cesium 0.12.4 requires numpy<3.0,>=2.0, but you have numpy 1.26.4 which is incompatible.
+google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.
+google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.
+dopamine-rl 4.1.2 requires gym<=0.25.2, but you have gym 0.26.2 which is incompatible.
+jaxlib 0.7.2 requires numpy>=2.0, but you have numpy 1.26.4 which is incompatible.
+cupy-cuda12x 14.0.1 requires numpy<2.6,>=2.0, but you have numpy 1.26.4 which is incompatible.
+moviepy 1.0.3 requires decorator<5.0,>=4.0.2, but you have decorator 5.3.1 which is incompatible.
+tobler 0.14.0 requires numpy>=2.0, but you have numpy 1.26.4 which is incompatible.
+jax 0.7.2 requires numpy>=2.0, but you have numpy 1.26.4 which is incompatible.
+opencv-python-headless 4.13.0.92 requires numpy>=2; python_version >= "3.9", but you have numpy 1.26.4 which is incompatible.
+rasterio 1.5.0 requires numpy>=2, but you have numpy 1.26.4 which is incompatible.
+pytensor 2.38.2 requires numpy>=2.0, but you have numpy 1.26.4 which is incompatible.
+xarray-einstats 0.10.0 requires numpy>=2.0, but you have numpy 1.26.4 which is incompatible.
+tifffile 2026.4.11 requires numpy>=2.0, but you have numpy 1.26.4 which is incompatible.
+opencv-contrib-python 4.13.0.92 requires numpy>=2; python_version >= "3.9", but you have numpy 1.26.4 which is incompatible.
+shap 0.51.0 requires numpy>=2, but you have numpy 1.26.4 which is incompatible.
+gradio 5.50.0 requires pillow<12.0,>=8.0, but you have pillow 12.3.0 which is incompatible.
+Traceback (most recent call last):
+  File "/kaggle/src/script.py", line 210, in <module>
+    main()
+  File "/kaggle/src/script.py", line 202, in main
+    raise FileNotFoundError(f"run 缺少必要证据文件：{missing}")
+FileNotFoundError: run 缺少必要证据文件：['environment.json']
+/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __script__.ipynb to html
+[NbConvertApp] Writing 313649 bytes to __results__.html

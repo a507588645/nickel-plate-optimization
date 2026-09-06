@@ -1,0 +1,11 @@
+{
+  "dry_run": true,
+  "status": "unconfirmed_pending_enterprise",
+  "selected_rows": 1072,
+  "manifest_total": 1072,
+  "weights": "E:\\PythonProject\\models\\runs\\dianjinie0211_medium_yolo11m_640_kaggle_seed0_cm0_d0211clean1\\weights\\best.pt",
+  "weights_sha256": "849fe3c9467bfabc4113fd442723fbb65482ed2e5a1475ba9342f52011144459",
+  "base_columns_count": 13,
+  "texture_columns_count": 20,
+  "total_feature_count": 33
+}

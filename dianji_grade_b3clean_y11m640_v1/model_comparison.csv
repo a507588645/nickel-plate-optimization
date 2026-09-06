@@ -1,0 +1,13 @@
+﻿feature_set,split,model,accuracy,macro_f1,f1_3#,f1_9950,f1_9996,f1_bad,status
+slf_base13,valid,majority,0.5093,0.1687,0.0,0.6749,0.0,0.0,unconfirmed_pending_enterprise
+slf_base13,test,majority,0.5093,0.1687,0.0,0.6749,0.0,0.0,unconfirmed_pending_enterprise
+slf_base13,valid,decision_tree,0.6708,0.5335,0.4348,0.6618,0.7517,0.2857,unconfirmed_pending_enterprise
+slf_base13,test,decision_tree,0.6398,0.5737,0.5185,0.6212,0.6933,0.4615,unconfirmed_pending_enterprise
+slf_base13,valid,lightgbm,0.7516,0.6032,0.4615,0.7843,0.7671,0.4,unconfirmed_pending_enterprise
+slf_base13,test,lightgbm,0.646,0.5708,0.4545,0.6575,0.6712,0.5,unconfirmed_pending_enterprise
+slf_texture33,valid,majority,0.5093,0.1687,0.0,0.6749,0.0,0.0,unconfirmed_pending_enterprise
+slf_texture33,test,majority,0.5093,0.1687,0.0,0.6749,0.0,0.0,unconfirmed_pending_enterprise
+slf_texture33,valid,decision_tree,0.6832,0.63,0.4545,0.6667,0.732,0.6667,unconfirmed_pending_enterprise
+slf_texture33,test,decision_tree,0.6584,0.6301,0.5185,0.6308,0.7044,0.6667,unconfirmed_pending_enterprise
+slf_texture33,valid,lightgbm,0.8075,0.7422,0.6667,0.8354,0.8,0.6667,unconfirmed_pending_enterprise
+slf_texture33,test,lightgbm,0.7578,0.7225,0.8,0.7702,0.7482,0.5714,unconfirmed_pending_enterprise

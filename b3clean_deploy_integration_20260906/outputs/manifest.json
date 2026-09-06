@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-09-06 02:00:13",
+  "arms": {
+    "old": "lgbm v1 (63col, thr 0.7362)",
+    "new": "lgbm b3clean_v1 (33col, thr 0.7819)"
+  },
+  "splits": {
+    "test": 161,
+    "valid": 161
+  },
+  "manifest": "E:\\PythonProject\\archives\\dianjinie_grade_classification_v1\\manifests\\samples.csv",
+  "shas": {
+    "display_onnx": "901ccf6006f44689",
+    "grade_onnx": "e9d090a7a20fbd3f",
+    "lgbm_v1": "19c1063ee786ea72",
+    "lgbm_b3clean": "b49b13bf84e2adef"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "n_business_overfire": 121,
+  "n_tp": 107,
+  "n_fp": 14,
+  "unmatched": 0,
+  "sweep": {
+    "0.25": {
+      "keep": 121,
+      "tp": 107,
+      "fp_killed": 0
+    },
+    "0.30": {
+      "keep": 114,
+      "tp": 105,
+      "fp_killed": 5
+    },
+    "0.35": {
+      "keep": 110,
+      "tp": 103,
+      "fp_killed": 7
+    },
+    "0.40": {
+      "keep": 105,
+      "tp": 100,
+      "fp_killed": 9
+    },
+    "0.45": {
+      "keep": 101,
+      "tp": 97,
+      "fp_killed": 10
+    },
+    "0.50": {
+      "keep": 98,
+      "tp": 94,
+      "fp_killed": 10
+    },
+    "0.55": {
+      "keep": 95,
+      "tp": 92,
+      "fp_killed": 11
+    },
+    "0.60": {
+      "keep": 88,
+      "tp": 86,
+      "fp_killed": 12
+    }
+  },
+  "flagged": {
+    "#07": "dianjienie__train__20221201175230823_0_2.png",
+    "#10": "dianjienie__valid__2024_03_23_095944_0.png",
+    "#16": "dianjienie__valid__20221109165205555_0_2.png",
+    "#20": "dianjienie__valid__929.png"
+  }
+}

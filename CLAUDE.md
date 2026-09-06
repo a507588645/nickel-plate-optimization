@@ -8,11 +8,13 @@ Claude 在本项目中必须首先读取并遵守根目录 `AGENTS.md`。若本�
 1. **必须首先读取**根目录 `AGENTS.md` 与本文件。
 2. **必须读取** `工作日志.md` 的「当前状态摘要」和最近 3～5 条条目；续作时从其中的「下一步」接着做，不得重复已完成步骤。
    - **日志形态（2026-07-27 条目文件夹化后）**：主文件只含摘要区 + 全量「条目索引表」（日期 / 标题链接 / 主线标签）；全部条目正文在 `工作日志条目/` 的独立 `.md` 文件中。读「最近 3～5 条」时：先看摘要区 + 索引表（最新在上）→ 按标题链接打开条目文件，避免逐文件遍历。主线标签为人工归号，可能模糊，**下结论前以正文字段为准**。写入新条目 = 在 `工作日志条目/` 新建文件后运行 `python rebuild_worklog_index.py` 重建索引（标签按标题继承）。
-3. 浏览 `README.md` 文档地图，只打开与当前任务相关的规范/报告。
-4. 使用搜索工具定位实际文件，再读取配置、脚本或实验产物；禁止仅按历史文档直接生成结论。
-5. 涉及数据集时，先做只读审计并报告将要修改的文件范围。
-6. 涉及训练方案时，区分统一基线、模型独立调优和最终测试，不能混用指标。
-7. 涉及 `JinchuanPythonWebapi` 时，先确认 git 分支（优化工作用 `优化分支`，主线为 `308`）。
+   - **日志时间（2026-09-05 立）**：一律北京时间（本机 `date` 即 UTC+8 北京时间）；写日志前必须运行 `date` 核对，禁止凭记忆推断（曾发生误写未来日期）。
+3. **文档先行（2026-09-05 立）**：凡属 WebAPI 检测切换/等级提升范畴的任务，必须先读《检测切换与等级提升路线_20260904.md》对应路线节与 §7 进度清单——有任务书按任务书执行并回填勾选，无任务书先立任务书再动手。
+4. 浏览 `README.md` 文档地图，只打开与当前任务相关的规范/报告。
+5. 使用搜索工具定位实际文件，再读取配置、脚本或实验产物；禁止仅按历史文档直接生成结论。
+6. 涉及数据集时，先做只读审计并报告将要修改的文件范围。
+7. 涉及训练方案时，区分统一基线、模型独立调优和最终测试，不能混用指标。
+8. 涉及 `JinchuanPythonWebapi` 时，先确认 git 分支（优化工作用 `优化分支`，主线为 `308`）。
 
 ## 结束任务
 
@@ -26,6 +28,12 @@ Claude 在本项目中必须首先读取并遵守根目录 `AGENTS.md`。若本�
 细则与检查清单见 `AGENTS.md` 第 5 节。
 
 ## 当前关键事实
+
+- **B3-clean 判级部署集成（2026-09-06 02:05，A 方案显示/判级分离）**：优化分支 commit `5a7bb5c`（worktree 提交，未 push）。`models.yaml` 新增 `detectors.dianji_grade`（判级专用 5 类 ONNX `weights/dianji0211_y11m640_b3clean.onnx`，SHA=`e9d090a7…`，640/0.25/0.45），`grade_models.dianji_lgbm` 切至 `dianji_grade_lgbm_b3clean_v1.txt`+33 列契约（拒判 0.7819，**v1 63 列回退配置以注释保留，改回即回退**）；显示路径仍走 `detectors.dianji` 18 类 ONNX（`901ccf60`）不动，`grade_source=lgbm_b3clean_v1`。验证三绿：冒烟 5 图 PASS、零容差 161/161 test 图（集成 vs 独立参考 max diff=0）、D4 对比页（锚点旧臂精确复现 v1 记录 0.74534/0.67970；test 新臂 acc=0.76398/macroF1=0.72571，Δ=+0.0186/+0.0460；复核率 26.1%→32.9%）。**大坑（已修）：git autocrlf 把 `weights/*.txt` 检出成 CRLF 会让 LightGBM 报 "Model format error"（v1 booster 新检出环境同样中招）；`.gitattributes` 已加 `weights/** -text`，fresh checkout 部署前先验证 booster 可加载**。产物 `优化\b3clean_deploy_integration_20260906\`（review.html 49 分歧图）；路线文档 §7 已回填；**待用户 review.html 裁决 → 部署 → 监控基线重置（复核率基线 ~33%）**。
+
+- **B3 电积镍域内训练任务包（2026-09-05）**：用户已授权 Kaggle 提交（额度刷新后执行）。任务包 `优化\b3_dianjinie0211_y11m640_task_v1\`（README 含提交/回捞/训练后全步骤）：Dianjinie0211 审计后固定划分 **train 774 图/17,655 框、val 216 图/4,337 框**（排除 55 张「- 副本」复制件与 7 张无标签图；nodule train 仅 5 框/val 0 框，逐类不可评）；协议同 L1（yolo11m.pt/seed0/300ep/batch8/SGD/patience100/ultralytics 8.4.66）；免上传 18 GiB——复用账号私有图片集 `lly3323w/dianjinie` + 296 KB config 数据集，kernel 端启动即做 990 标签 + 990 图片全量 SHA-256 对账（失败即中止），18 GiB 扁平上传视图仅作回退（已 gitignore）。**泄漏警示：等级视图 1072 图中 986 张在该数据集（770 train/216 val），B3 结果解读必须带此前提**；权重只做等级特征提取实验（slf 5 类 schema），不导出、不替换部署 ONNX。**后续已完成（2026-09-05 13:55）**：训练 139 epoch 早停（best epoch 39，mAP50=0.243/mAP50-95=0.0997），归档 `models\runs\dianjinie0211_medium_yolo11m_640_kaggle_seed0_cm0_d0211v1\`（best.pt SHA-256=`95b56f70…`）；`extract_dianji_grade_b3_y11m640_features.py` 提取 1072 图/16,605 框 → LGBM slf_texture33 test acc=0.8385/macroF1=0.8180，**vs B0 ΔmacroF1=+0.1383 过 +0.01 闸门**，同泄漏前提 vs arm3 slf.pt Δ=+0.1652；行级复核 grade-test 146/161（90.7%）在 B3 train/val 内，结论引用必须携带泄漏前提。产物 `优化\dianji_grade_b3_y11m640_v1\`，实验记录 `优化\experiments\dianji_grade_b3_domain_detector_20260905.md`。
+
+- **检测切换与等级提升路线（2026-09-04）**：执行入口 `检测切换与等级提升路线_20260904.md`（已登记 README）。用户裁决：①电解镍、电积镍目标都是 YOLO11 ONNX 检测，电解镍先走 parity 评测（已批准试行）；②**电积镍等级标签（archives/dianjinie_grade_classification_v1，1072 图）经用户 2026-09-04 确认按企业真值对待**，取代此前 `unconfirmed_pending_enterprise` 状态（批次混淆等历史注意事项仍记在案）。当日同口径复评（376 图，`优化\ryw_vs_y11m_same_protocol_20260904\`）：电解镍标注口径下部署 ONNX 全面占优（mAP50-95=0.533 vs ryw.pt 0.377，conf=0.25 框 5,107 vs 4,879、FP 更少），但两个部署权重都疑似见过评测图（无泄漏参照 fold01 仅 0.145），数字只作工程对照；`JinchuanYolov5sTrain/val.py:163` 仍是宽松 `linspace(0.1,0.55,10)` 未改。
 
 - **L2 YOLO11m@640 重提取/重训（2026-08-28）**：`dianji_grade_y11m640_v1` 已用归档等级视图 1072 张图和冻结 YOLO11m ONNX（640、CPU、conf=0.25、IoU=0.45，SHA-256=`901ccf6006f44689483aaf6f0d1d1b8c18132a85c7d881be7e62fcdccc255b21`）重建 43 个 BASE 检测特征，并按 SHA-256 接入原 `features_v3_full.csv` 的 20 个 `tx__` 特征。LightGBM `v3_texture_only` 等价配置 test acc=`0.74534`、macroF1=`0.67970`；拒判 0.70 valid coverage 的阈值=`0.7362`，round-trip 已通过。状态仍为 `unconfirmed_pending_enterprise`，WebAPI 尚未修改；详见 `dianji_grade_y11m640_v1/report.md`、`deploy_contract.json`、`experiment_record.md`。
 
@@ -150,7 +158,7 @@ Claude 在本项目中必须首先读取并遵守根目录 `AGENTS.md`。若本�
 - **主分支 `308`**：现场/项目主线，跟踪 `origin/308`。
 - **优化分支 `优化分支`**：用户未来改进用的本地开发分支，**尚未 push**，无 upstream。
 - 改 WebAPI 代码前必须确认当前 git 分支；优化工作应在 `优化分支` 上进行，不得默认改 `308`。
-- **部署切换（2026-08-28，`优化分支`，未 commit）**：`detectors.dianjie` 已从 `ryw.pt`(YOLOv5) 切换为冻结 L1 YOLO11m 640 ONNX `weights/dianjienie_yolo11m_ryw18_640.onnx`（`kind: ultralytics`，SHA-256=`901ccf60...`，类别顺序与 ryw.pt 18 类实证一致）；`detectors.dianji` 仍为 `slf.pt`。`.pth` 分类头覆盖 bug 已修（保留权重自带 fc + 维度断言）。冒烟入口 `tools/smoke_dianjie.py`。依赖新增固定 `ultralytics==8.4.66`。
+- **部署切换（2026-09-04，`优化分支`，未 push）**：`detectors.dianjie` 已从 `ryw.pt`(YOLOv5) 切换为冻结 YOLO11m 640 ONNX（commit **`ce2f166`**，`kind: ultralytics`，SHA-256=`901ccf60...`，conf 0.25/imgsz 640/适配器默认 iou 0.7；依据：376 图 parity type+nodule 一致率 88.30% + 用户裁决「切」，冒烟 5 图 PASS、零容差复核 376/376 框级一致）；`detectors.dianji` 为同一冻结 ONNX + LightGBM（`bdc1291`）——**双端点检测权重统一**。判级链路（ryw.pth + 决策树）不变；overfire 历史标签过标注随切上线，转路线 C0 治理（详见 `检测切换与等级提升路线_20260904.md`）。`.pth` 分类头覆盖 bug 已修（保留权重自带 fc + 维度断言）。冒烟入口 `tools/smoke_dianjie.py`。依赖新增固定 `ultralytics==8.4.66`。
 - 跨会话进度以 `工作日志.md` 为准。
 
 ### 重构 UI（Tauri 桌面端）

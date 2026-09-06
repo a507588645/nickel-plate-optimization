@@ -1,0 +1,178 @@
+{
+  "generated_at": "2026-09-05T00:08:21",
+  "dataset_ref": "lly3323w/dianjinie",
+  "remote_file_count": 2044,
+  "images_checked": 990,
+  "size_mismatches": [],
+  "missing_images": [],
+  "missing_label_dirs": [],
+  "label_size_mismatches": [],
+  "label_sample_downloaded": 0,
+  "label_sample_byte_mismatches": [
+    {
+      "remote": "labels/val/20230515163512376_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/val/20230515163512376_0_2.txt?filename=labels%2Fval%2F20230515163512376_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230510170926650_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230510170926650_0_2.txt?filename=labels%2Ftrain%2F20230510170926650_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/val/113434bottom_0.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/val/113434bottom_0.txt?filename=labels%2Fval%2F113434bottom_0.txt&raw=false"
+    },
+    {
+      "remote": "labels/val/20230519162601238_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/val/20230519162601238_0_2.txt?filename=labels%2Fval%2F20230519162601238_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230510175707679_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230510175707679_0_2.txt?filename=labels%2Ftrain%2F20230510175707679_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/104537top_0.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/104537top_0.txt?filename=labels%2Ftrain%2F104537top_0.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230509161554566_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230509161554566_0_2.txt?filename=labels%2Ftrain%2F20230509161554566_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/val/20230519173429246_0_1.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/val/20230519173429246_0_1.txt?filename=labels%2Fval%2F20230519173429246_0_1.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230511165836980_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230511165836980_0_2.txt?filename=labels%2Ftrain%2F20230511165836980_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230511162945331_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230511162945331_0_2.txt?filename=labels%2Ftrain%2F20230511162945331_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230510172343432_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230510172343432_0_2.txt?filename=labels%2Ftrain%2F20230510172343432_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/val/20230519164719611_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/val/20230519164719611_0_2.txt?filename=labels%2Fval%2F20230519164719611_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/val/20230514160713566_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/val/20230514160713566_0_2.txt?filename=labels%2Fval%2F20230514160713566_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/val/20230515162208198_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/val/20230515162208198_0_2.txt?filename=labels%2Fval%2F20230515162208198_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230509170435562_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230509170435562_0_2.txt?filename=labels%2Ftrain%2F20230509170435562_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230511162339699_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230511162339699_0_2.txt?filename=labels%2Ftrain%2F20230511162339699_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230510154451185_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230510154451185_0_2.txt?filename=labels%2Ftrain%2F20230510154451185_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230512164418905_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230512164418905_0_2.txt?filename=labels%2Ftrain%2F20230512164418905_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/val/20230519162740872_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/val/20230519162740872_0_2.txt?filename=labels%2Fval%2F20230519162740872_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/val/20230519163845763_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/val/20230519163845763_0_2.txt?filename=labels%2Fval%2F20230519163845763_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230508181845999_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230508181845999_0_2.txt?filename=labels%2Ftrain%2F20230508181845999_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230511164419906_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230511164419906_0_2.txt?filename=labels%2Ftrain%2F20230511164419906_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230508162146956_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230508162146956_0_2.txt?filename=labels%2Ftrain%2F20230508162146956_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230509163202868_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230509163202868_0_2.txt?filename=labels%2Ftrain%2F20230509163202868_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230508162229680_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230508162229680_0_2.txt?filename=labels%2Ftrain%2F20230508162229680_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20260212-915.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20260212-915.txt?filename=labels%2Ftrain%2F20260212-915.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230508151134488_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230508151134488_0_2.txt?filename=labels%2Ftrain%2F20230508151134488_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230513155817729_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230513155817729_0_2.txt?filename=labels%2Ftrain%2F20230513155817729_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/val/20230515153914639_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/val/20230515153914639_0_2.txt?filename=labels%2Fval%2F20230515153914639_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230509155941640_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230509155941640_0_2.txt?filename=labels%2Ftrain%2F20230509155941640_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/val/20230519164057060_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/val/20230519164057060_0_2.txt?filename=labels%2Fval%2F20230519164057060_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230511172838971_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230511172838971_0_2.txt?filename=labels%2Ftrain%2F20230511172838971_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230514151823230_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230514151823230_0_2.txt?filename=labels%2Ftrain%2F20230514151823230_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/val/20230515154746366_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/val/20230515154746366_0_2.txt?filename=labels%2Fval%2F20230515154746366_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230512171619887_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230512171619887_0_2.txt?filename=labels%2Ftrain%2F20230512171619887_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/val/20230519163437836_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/val/20230519163437836_0_2.txt?filename=labels%2Fval%2F20230519163437836_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230508162754088_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230508162754088_0_2.txt?filename=labels%2Ftrain%2F20230508162754088_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230509170940990_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230509170940990_0_2.txt?filename=labels%2Ftrain%2F20230509170940990_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20230508151512827_0_2.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20230508151512827_0_2.txt?filename=labels%2Ftrain%2F20230508151512827_0_2.txt&raw=false"
+    },
+    {
+      "remote": "labels/train/20260212-1145.txt",
+      "error": "download_failed:404 Client Error: Not Found for url: https://www.kaggle.com/api/v1/datasets/download/lly3323w/dianjinie/labels/train/20260212-1145.txt?filename=labels%2Ftrain%2F20260212-1145.txt&raw=false"
+    }
+  ],
+  "data_yaml_match": true,
+  "missing_labels": [],
+  "missing_labels_count": 0,
+  "remote_data_yaml_present": true,
+  "verdict": "REUSE_FAILED"
+}

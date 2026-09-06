@@ -1,0 +1,2556 @@
+{
+  "schema_version": "b3_config_v1",
+  "variant": "b3clean_grade_test_key_excluded_v1",
+  "generated_at": "2026-09-05T14:29:42",
+  "source_dataset_root": "E:\\PythonProject\\datasets\\Dianjinie0211",
+  "image_dataset_ref": "lly3323w/dianjinie",
+  "classes": [
+    "waterstain",
+    "waterblock",
+    "colorstain",
+    "nodule",
+    "bubble"
+  ],
+  "counts": {
+    "train": 653,
+    "val": 178
+  },
+  "split_summary": {
+    "schema": "b3clean_split_v1",
+    "generated_at": "2026-09-05T14:26:54",
+    "base_split": {
+      "schema": "b3_split_v1",
+      "path": "E:\\PythonProject\\优化\\b3_dianjinie0211_y11m640_task_v1\\splits",
+      "train": 774,
+      "val": 216
+    },
+    "dataset_root": "E:\\PythonProject\\datasets\\Dianjinie0211",
+    "classes": [
+      "waterstain",
+      "waterblock",
+      "colorstain",
+      "nodule",
+      "bubble"
+    ],
+    "exclusion_rule": "排除采集键命中 grade-test 泄漏行的 B3 图；泄漏判定 = sha256 ∪ stem(image_stem/image_name_raw) ∪ dup_group 传染（同 analyze_b3_leakage_isolated_eval.py）；只排 grade-test，grade-train/valid 重叠保留（LGBM 训练侧，见任务包 README）",
+    "key_families": {
+      "B": 853,
+      "A": 105,
+      "O": 32
+    },
+    "grade_test": {
+      "total": 161,
+      "leaked": 146,
+      "clean": 15,
+      "leaked_capture_keys": 145,
+      "leaked_rows": [
+        {
+          "image_name": "c4_train_3sharp_20230509165356877_0_2.png",
+          "grade": "3#",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509165356877"
+          ]
+        },
+        {
+          "image_name": "c4_train_3sharp_20230509165618211_0_2.png",
+          "grade": "3#",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509165618211"
+          ]
+        },
+        {
+          "image_name": "c4_train_3sharp_20230509170730677_0_2.png",
+          "grade": "3#",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509170730677"
+          ]
+        },
+        {
+          "image_name": "c4_train_3sharp_20230509170814136_0_2.png",
+          "grade": "3#",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509170814136"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_091655bottom_0.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "A:091655"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_092017top_0.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "A:092017"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_110119top_0.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "A:110119"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_110407top_0.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "A:110407"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_113514top_0.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "A:113514"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_141240top_0.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "A:141240"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230508155831068_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230508155831068"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230509154645453_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509154645453"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230509174458456_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509174458456"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230509174539446_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509174539446"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230509180241957_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509180241957"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230509180535822_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509180535822"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230510174959765_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230510174959765"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230510175303455_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230510175303455"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230511163715475_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230511163715475"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230511172838971_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230511172838971"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230511173129977_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230511173129977"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230511173844484_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230511173844484"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230512161231215_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230512161231215"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230512163414266_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230512163414266"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230513160611555_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230513160611555"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230513161401756_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230513161401756"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230513174026211_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230513174026211"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230513174407409_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230513174407409"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230513174900263_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230513174900263"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230513175832455_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230513175832455"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230514150232283_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230514150232283"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230515153500820_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230515153500820"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230515161217117_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230515161217117"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230515162414896_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230515162414896"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230515163008025_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230515163008025"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230515163140813_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230515163140813"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230515163512376_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230515163512376"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230515163556259_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230515163556259"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230515163640425_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230515163640425"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230519153355674_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519153355674"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230519154302030_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519154302030"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230519154708145_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519154708145"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230519155107823_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519155107823"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230519155356236_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519155356236"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230519155603878_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519155603878"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230519155837405_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519155837405"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230519160424683_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519160424683"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230519160512281_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519160512281"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230519163034018_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519163034018"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230519163437836_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519163437836"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230519163845763_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519163845763"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230519165223180_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519165223180"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230519170933300_0_1.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519170933300"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230519171214418_0_1.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519171214418"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230519172524765_0_1.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519172524765"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20230519172607488_0_1.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519172607488"
+          ]
+        },
+        {
+          "image_name": "c4_train_9950_20260212-782.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "O:20260212-782"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_110247bottom_0.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "A:110247"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_111200top_0.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "A:111200"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230508145953091_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230508145953091"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230508150203967_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230508150203967"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230508151221868_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230508151221868"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230508154425205_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230508154425205"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230508155119030_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230508155119030"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230508162229680_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230508162229680"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230508171908494_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230508171908494"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230508173055692_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230508173055692"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230508175510099_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230508175510099"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230508175846861_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230508175846861"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230508181620205_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230508181620205"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230508182202234_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230508182202234"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230509154952408_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509154952408"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230509155544903_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509155544903"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230509155941640_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509155941640"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230509160109103_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509160109103"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230509161236363_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509161236363"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230509163246124_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509163246124"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230510154451185_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230510154451185"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230510154740286_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230510154740286"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230510164239058_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230510164239058"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230510171747344_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230510171747344"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230510171841738_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230510171841738"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230510172554776_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230510172554776"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230510175039458_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230510175039458"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230511153710315_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230511153710315"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230511153751477_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230511153751477"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230511154653871_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230511154653871"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230511164211811_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230511164211811"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230511165543380_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230511165543380"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230512171212821_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230512171212821"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230513155308568_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230513155308568"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230514151912531_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230514151912531"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230514152224860_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230514152224860"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230514155423248_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230514155423248"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230515153542386_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230515153542386"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230515153831938_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230515153831938"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230515154256653_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230515154256653"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230515154340231_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230515154340231"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230519171416655_0_1.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519171416655"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230519171538308_0_1.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519171538308"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230519172028755_0_1.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519172028755"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230519173050813_0_1.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519173050813"
+          ]
+        },
+        {
+          "image_name": "c4_train_9996_20230519173134240_0_1.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230519173134240"
+          ]
+        },
+        {
+          "image_name": "c4_train_bad_110726top_0.png",
+          "grade": "bad",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "A:110726"
+          ]
+        },
+        {
+          "image_name": "c4_train_bad_20230509170604729_0_2.png",
+          "grade": "bad",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509170604729"
+          ]
+        },
+        {
+          "image_name": "c4_valid_3sharp_20230508152537851_0_2.png",
+          "grade": "3#",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230508152537851"
+          ]
+        },
+        {
+          "image_name": "c4_valid_3sharp_20230509170940990_0_2.png",
+          "grade": "3#",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509170940990"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9950_103100top_0.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "A:103100"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9950_104617top_0.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "A:104617"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9950_20230508174035040_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230508174035040"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9950_20230509154240370_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509154240370"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9950_20230509174956245_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509174956245"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9950_20230509175219212_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509175219212"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9950_20230510175626158_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230510175626158"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9950_20230510175748857_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230510175748857"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9950_20230511171909324_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230511171909324"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9950_20230512160034431_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230512160034431"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9950_20230512163454960_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230512163454960"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9950_20230513172312206_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230513172312206"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9950_20230513175743998_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230513175743998"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9950_20230513180238100_0_2.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230513180238100"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9950_20260212-558.png",
+          "grade": "9950",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "O:20260212-558"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_091416bottom_0.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "A:091416"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_091416top_0.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "A:091416"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_105752bottom_0.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "A:105752"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_105831bottom_0.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "A:105831"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_112613top_0.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "A:112613"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_20230508151844043_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230508151844043"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_20230508160057393_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230508160057393"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_20230508163759195_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230508163759195"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_20230508164019037_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230508164019037"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_20230508164108104_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230508164108104"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_20230509160153046_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509160153046"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_20230509163329613_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509163329613"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_20230510153551844_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230510153551844"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_20230510154408976_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230510154408976"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_20230510171622879_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230510171622879"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_20230511153204397_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230511153204397"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_20230511162419674_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230511162419674"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_20230511162701651_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230511162701651"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_20230511163353804_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230511163353804"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_20230511163435810_0_2.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230511163435810"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_20260212-448.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "O:20260212-448"
+          ]
+        },
+        {
+          "image_name": "c4_valid_9996_20260212-659.png",
+          "grade": "9996",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "O:20260212-659"
+          ]
+        },
+        {
+          "image_name": "c4_valid_bad_20230509171218928_0_2.png",
+          "grade": "bad",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "B:20230509171218928"
+          ]
+        },
+        {
+          "image_name": "c4_valid_bad_20260212-2165.png",
+          "grade": "bad",
+          "source_dataset": "classify_4types_dianji",
+          "keys": [
+            "O:20260212-2165"
+          ]
+        }
+      ]
+    },
+    "excluded": [
+      {
+        "relative": "images/train/091416bottom_0.png",
+        "split": "train",
+        "capture_key": "A:091416",
+        "matched_grade_test_images": [
+          "c4_valid_9996_091416bottom_0.png",
+          "c4_valid_9996_091416top_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/091416top_0.png",
+        "split": "train",
+        "capture_key": "A:091416",
+        "matched_grade_test_images": [
+          "c4_valid_9996_091416bottom_0.png",
+          "c4_valid_9996_091416top_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/091655bottom_0.png",
+        "split": "train",
+        "capture_key": "A:091655",
+        "matched_grade_test_images": [
+          "c4_train_9950_091655bottom_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/091655top_0.png",
+        "split": "train",
+        "capture_key": "A:091655",
+        "matched_grade_test_images": [
+          "c4_train_9950_091655bottom_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/092017bottom_0.png",
+        "split": "train",
+        "capture_key": "A:092017",
+        "matched_grade_test_images": [
+          "c4_train_9950_092017top_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/092017top_0.png",
+        "split": "train",
+        "capture_key": "A:092017",
+        "matched_grade_test_images": [
+          "c4_train_9950_092017top_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/103100bottom_0.png",
+        "split": "train",
+        "capture_key": "A:103100",
+        "matched_grade_test_images": [
+          "c4_valid_9950_103100top_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/103100top_0.png",
+        "split": "train",
+        "capture_key": "A:103100",
+        "matched_grade_test_images": [
+          "c4_valid_9950_103100top_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/104617bottom_0.png",
+        "split": "train",
+        "capture_key": "A:104617",
+        "matched_grade_test_images": [
+          "c4_valid_9950_104617top_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/104617top_0.png",
+        "split": "train",
+        "capture_key": "A:104617",
+        "matched_grade_test_images": [
+          "c4_valid_9950_104617top_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/105752bottom_0.png",
+        "split": "train",
+        "capture_key": "A:105752",
+        "matched_grade_test_images": [
+          "c4_valid_9996_105752bottom_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/105752top_0.png",
+        "split": "train",
+        "capture_key": "A:105752",
+        "matched_grade_test_images": [
+          "c4_valid_9996_105752bottom_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/105831bottom_0.png",
+        "split": "train",
+        "capture_key": "A:105831",
+        "matched_grade_test_images": [
+          "c4_valid_9996_105831bottom_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/105831top_0.png",
+        "split": "train",
+        "capture_key": "A:105831",
+        "matched_grade_test_images": [
+          "c4_valid_9996_105831bottom_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/110119bottom_0.png",
+        "split": "train",
+        "capture_key": "A:110119",
+        "matched_grade_test_images": [
+          "c4_train_9950_110119top_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/110119top_0.png",
+        "split": "train",
+        "capture_key": "A:110119",
+        "matched_grade_test_images": [
+          "c4_train_9950_110119top_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/110247bottom_0.png",
+        "split": "train",
+        "capture_key": "A:110247",
+        "matched_grade_test_images": [
+          "c4_train_9996_110247bottom_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/110247top_0.png",
+        "split": "train",
+        "capture_key": "A:110247",
+        "matched_grade_test_images": [
+          "c4_train_9996_110247bottom_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/110407bottom_0.png",
+        "split": "train",
+        "capture_key": "A:110407",
+        "matched_grade_test_images": [
+          "c4_train_9950_110407top_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/110407top_0.png",
+        "split": "train",
+        "capture_key": "A:110407",
+        "matched_grade_test_images": [
+          "c4_train_9950_110407top_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/110726bottom_0.png",
+        "split": "train",
+        "capture_key": "A:110726",
+        "matched_grade_test_images": [
+          "c4_train_bad_110726top_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/110726top_0.png",
+        "split": "train",
+        "capture_key": "A:110726",
+        "matched_grade_test_images": [
+          "c4_train_bad_110726top_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/111200bottom_0.png",
+        "split": "train",
+        "capture_key": "A:111200",
+        "matched_grade_test_images": [
+          "c4_train_9996_111200top_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/111200top_0.png",
+        "split": "train",
+        "capture_key": "A:111200",
+        "matched_grade_test_images": [
+          "c4_train_9996_111200top_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/112613top_0.png",
+        "split": "train",
+        "capture_key": "A:112613",
+        "matched_grade_test_images": [
+          "c4_valid_9996_112613top_0.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230508145953091_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230508145953091",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230508145953091_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230508150203967_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230508150203967",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230508150203967_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230508151221868_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230508151221868",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230508151221868_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230508151844043_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230508151844043",
+        "matched_grade_test_images": [
+          "c4_valid_9996_20230508151844043_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230508152537851_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230508152537851",
+        "matched_grade_test_images": [
+          "c4_valid_3sharp_20230508152537851_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230508154425205_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230508154425205",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230508154425205_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230508155119030_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230508155119030",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230508155119030_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230508155831068_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230508155831068",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230508155831068_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230508160057393_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230508160057393",
+        "matched_grade_test_images": [
+          "c4_valid_9996_20230508160057393_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230508162229680_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230508162229680",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230508162229680_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230508163759195_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230508163759195",
+        "matched_grade_test_images": [
+          "c4_valid_9996_20230508163759195_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230508164019037_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230508164019037",
+        "matched_grade_test_images": [
+          "c4_valid_9996_20230508164019037_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230508164108104_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230508164108104",
+        "matched_grade_test_images": [
+          "c4_valid_9996_20230508164108104_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230508171908494_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230508171908494",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230508171908494_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230508173055692_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230508173055692",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230508173055692_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230508174035040_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230508174035040",
+        "matched_grade_test_images": [
+          "c4_valid_9950_20230508174035040_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230508175510099_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230508175510099",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230508175510099_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230508175846861_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230508175846861",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230508175846861_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230508181620205_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230508181620205",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230508181620205_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230508182202234_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230508182202234",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230508182202234_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509154240370_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509154240370",
+        "matched_grade_test_images": [
+          "c4_valid_9950_20230509154240370_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509154645453_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509154645453",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230509154645453_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509154952408_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509154952408",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230509154952408_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509155544903_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509155544903",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230509155544903_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509155941640_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509155941640",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230509155941640_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509160109103_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509160109103",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230509160109103_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509160153046_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509160153046",
+        "matched_grade_test_images": [
+          "c4_valid_9996_20230509160153046_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509161236363_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509161236363",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230509161236363_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509163246124_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509163246124",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230509163246124_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509163329613_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509163329613",
+        "matched_grade_test_images": [
+          "c4_valid_9996_20230509163329613_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509165356877_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509165356877",
+        "matched_grade_test_images": [
+          "c4_train_3sharp_20230509165356877_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509165618211_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509165618211",
+        "matched_grade_test_images": [
+          "c4_train_3sharp_20230509165618211_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509170604729_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509170604729",
+        "matched_grade_test_images": [
+          "c4_train_bad_20230509170604729_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509170730677_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509170730677",
+        "matched_grade_test_images": [
+          "c4_train_3sharp_20230509170730677_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509170814136_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509170814136",
+        "matched_grade_test_images": [
+          "c4_train_3sharp_20230509170814136_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509170940990_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509170940990",
+        "matched_grade_test_images": [
+          "c4_valid_3sharp_20230509170940990_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509171218928_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509171218928",
+        "matched_grade_test_images": [
+          "c4_valid_bad_20230509171218928_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509174458456_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509174458456",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230509174458456_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509174539446_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509174539446",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230509174539446_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509174956245_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509174956245",
+        "matched_grade_test_images": [
+          "c4_valid_9950_20230509174956245_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509175219212_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509175219212",
+        "matched_grade_test_images": [
+          "c4_valid_9950_20230509175219212_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509180241957_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509180241957",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230509180241957_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230509180535822_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230509180535822",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230509180535822_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230510153551844_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230510153551844",
+        "matched_grade_test_images": [
+          "c4_valid_9996_20230510153551844_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230510154408976_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230510154408976",
+        "matched_grade_test_images": [
+          "c4_valid_9996_20230510154408976_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230510154451185_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230510154451185",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230510154451185_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230510154740286_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230510154740286",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230510154740286_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230510164239058_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230510164239058",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230510164239058_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230510171622879_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230510171622879",
+        "matched_grade_test_images": [
+          "c4_valid_9996_20230510171622879_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230510171747344_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230510171747344",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230510171747344_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230510171841738_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230510171841738",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230510171841738_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230510172554776_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230510172554776",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230510172554776_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230510174959765_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230510174959765",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230510174959765_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230510175039458_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230510175039458",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230510175039458_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230510175303455_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230510175303455",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230510175303455_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230510175626158_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230510175626158",
+        "matched_grade_test_images": [
+          "c4_valid_9950_20230510175626158_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230510175748857_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230510175748857",
+        "matched_grade_test_images": [
+          "c4_valid_9950_20230510175748857_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230511153204397_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230511153204397",
+        "matched_grade_test_images": [
+          "c4_valid_9996_20230511153204397_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230511153710315_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230511153710315",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230511153710315_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230511153751477_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230511153751477",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230511153751477_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230511154653871_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230511154653871",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230511154653871_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230511162419674_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230511162419674",
+        "matched_grade_test_images": [
+          "c4_valid_9996_20230511162419674_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230511162701651_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230511162701651",
+        "matched_grade_test_images": [
+          "c4_valid_9996_20230511162701651_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230511163353804_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230511163353804",
+        "matched_grade_test_images": [
+          "c4_valid_9996_20230511163353804_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230511163435810_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230511163435810",
+        "matched_grade_test_images": [
+          "c4_valid_9996_20230511163435810_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230511163715475_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230511163715475",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230511163715475_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230511164211811_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230511164211811",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230511164211811_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230511165543380_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230511165543380",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230511165543380_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230511171909324_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230511171909324",
+        "matched_grade_test_images": [
+          "c4_valid_9950_20230511171909324_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230511172838971_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230511172838971",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230511172838971_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230511173129977_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230511173129977",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230511173129977_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230511173844484_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230511173844484",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230511173844484_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230512160034431_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230512160034431",
+        "matched_grade_test_images": [
+          "c4_valid_9950_20230512160034431_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230512161231215_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230512161231215",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230512161231215_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230512163414266_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230512163414266",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230512163414266_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230512163454960_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230512163454960",
+        "matched_grade_test_images": [
+          "c4_valid_9950_20230512163454960_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230512171212821_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230512171212821",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230512171212821_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230513155308568_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230513155308568",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230513155308568_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230513160611555_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230513160611555",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230513160611555_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230513161401756_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230513161401756",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230513161401756_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230513172312206_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230513172312206",
+        "matched_grade_test_images": [
+          "c4_valid_9950_20230513172312206_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230513174026211_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230513174026211",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230513174026211_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230513174407409_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230513174407409",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230513174407409_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230513174900263_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230513174900263",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230513174900263_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230513175743998_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230513175743998",
+        "matched_grade_test_images": [
+          "c4_valid_9950_20230513175743998_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230513175832455_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230513175832455",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230513175832455_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230513180238100_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230513180238100",
+        "matched_grade_test_images": [
+          "c4_valid_9950_20230513180238100_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230514150232283_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230514150232283",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230514150232283_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230514151912531_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230514151912531",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230514151912531_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230514152224860_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230514152224860",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230514152224860_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20230514155423248_0_2.png",
+        "split": "train",
+        "capture_key": "B:20230514155423248",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230514155423248_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/train/20260212-2165.png",
+        "split": "train",
+        "capture_key": "O:20260212-2165",
+        "matched_grade_test_images": [
+          "c4_valid_bad_20260212-2165.png"
+        ]
+      },
+      {
+        "relative": "images/train/20260212-448.png",
+        "split": "train",
+        "capture_key": "O:20260212-448",
+        "matched_grade_test_images": [
+          "c4_valid_9996_20260212-448.png"
+        ]
+      },
+      {
+        "relative": "images/train/20260212-558.png",
+        "split": "train",
+        "capture_key": "O:20260212-558",
+        "matched_grade_test_images": [
+          "c4_valid_9950_20260212-558.png"
+        ]
+      },
+      {
+        "relative": "images/train/20260212-659.png",
+        "split": "train",
+        "capture_key": "O:20260212-659",
+        "matched_grade_test_images": [
+          "c4_valid_9996_20260212-659.png"
+        ]
+      },
+      {
+        "relative": "images/train/20260212-782.png",
+        "split": "train",
+        "capture_key": "O:20260212-782",
+        "matched_grade_test_images": [
+          "c4_train_9950_20260212-782.png"
+        ]
+      },
+      {
+        "relative": "images/val/113514bottom_0.png",
+        "split": "val",
+        "capture_key": "A:113514",
+        "matched_grade_test_images": [
+          "c4_train_9950_113514top_0.png"
+        ]
+      },
+      {
+        "relative": "images/val/113514top_0.png",
+        "split": "val",
+        "capture_key": "A:113514",
+        "matched_grade_test_images": [
+          "c4_train_9950_113514top_0.png"
+        ]
+      },
+      {
+        "relative": "images/val/141240bottom_0.png",
+        "split": "val",
+        "capture_key": "A:141240",
+        "matched_grade_test_images": [
+          "c4_train_9950_141240top_0.png"
+        ]
+      },
+      {
+        "relative": "images/val/141240top_0.png",
+        "split": "val",
+        "capture_key": "A:141240",
+        "matched_grade_test_images": [
+          "c4_train_9950_141240top_0.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230515153500820_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230515153500820",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230515153500820_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230515153542386_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230515153542386",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230515153542386_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230515153831938_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230515153831938",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230515153831938_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230515154256653_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230515154256653",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230515154256653_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230515154340231_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230515154340231",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230515154340231_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230515161217117_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230515161217117",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230515161217117_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230515162414896_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230515162414896",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230515162414896_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230515163008025_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230515163008025",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230515163008025_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230515163140813_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230515163140813",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230515163140813_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230515163512376_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230515163512376",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230515163512376_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230515163556259_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230515163556259",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230515163556259_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230515163640425_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230515163640425",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230515163640425_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519153355674_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230519153355674",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230519153355674_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519154302030_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230519154302030",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230519154302030_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519154708145_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230519154708145",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230519154708145_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519155107823_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230519155107823",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230519155107823_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519155356236_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230519155356236",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230519155356236_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519155603878_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230519155603878",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230519155603878_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519155837405_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230519155837405",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230519155837405_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519160424683_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230519160424683",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230519160424683_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519160512281_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230519160512281",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230519160512281_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519163034018_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230519163034018",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230519163034018_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519163437836_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230519163437836",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230519163437836_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519163845763_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230519163845763",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230519163845763_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519165223180_0_2.png",
+        "split": "val",
+        "capture_key": "B:20230519165223180",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230519165223180_0_2.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519170933300_0_1.png",
+        "split": "val",
+        "capture_key": "B:20230519170933300",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230519170933300_0_1.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519171214418_0_1.png",
+        "split": "val",
+        "capture_key": "B:20230519171214418",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230519171214418_0_1.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519171416655_0_1.png",
+        "split": "val",
+        "capture_key": "B:20230519171416655",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230519171416655_0_1.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519171538308_0_1.png",
+        "split": "val",
+        "capture_key": "B:20230519171538308",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230519171538308_0_1.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519172028755_0_1.png",
+        "split": "val",
+        "capture_key": "B:20230519172028755",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230519172028755_0_1.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519172524765_0_1.png",
+        "split": "val",
+        "capture_key": "B:20230519172524765",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230519172524765_0_1.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519172607488_0_1.png",
+        "split": "val",
+        "capture_key": "B:20230519172607488",
+        "matched_grade_test_images": [
+          "c4_train_9950_20230519172607488_0_1.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519173050813_0_1.png",
+        "split": "val",
+        "capture_key": "B:20230519173050813",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230519173050813_0_1.png"
+        ]
+      },
+      {
+        "relative": "images/val/20230519173134240_0_1.png",
+        "split": "val",
+        "capture_key": "B:20230519173134240",
+        "matched_grade_test_images": [
+          "c4_train_9996_20230519173134240_0_1.png"
+        ]
+      }
+    ],
+    "train": {
+      "before": 774,
+      "after": 653,
+      "box_count_before": 17655,
+      "box_count_after": 15149,
+      "class_distribution_before": {
+        "waterblock": 8219,
+        "bubble": 1333,
+        "waterstain": 7532,
+        "colorstain": 566,
+        "nodule": 5
+      },
+      "class_distribution_after": {
+        "waterblock": 7151,
+        "bubble": 1077,
+        "waterstain": 6442,
+        "colorstain": 475,
+        "nodule": 4
+      }
+    },
+    "val": {
+      "before": 216,
+      "after": 178,
+      "box_count_before": 4337,
+      "box_count_after": 3573,
+      "class_distribution_before": {
+        "bubble": 940,
+        "waterblock": 1215,
+        "colorstain": 309,
+        "waterstain": 1873
+      },
+      "class_distribution_after": {
+        "bubble": 766,
+        "waterblock": 987,
+        "colorstain": 226,
+        "waterstain": 1594
+      }
+    },
+    "expect_check": {
+      "grade_test_total": 161,
+      "grade_test_leaked": 146,
+      "leaked_keys": 145,
+      "train_before": 774,
+      "val_before": 216,
+      "train_excluded": 121,
+      "val_excluded": 38,
+      "train_box_excluded": 2506
+    },
+    "status": "unconfirmed_pending_enterprise"
+  },
+  "files": {
+    "meta__train.txt": "bd883850598a7c039d37f66e4430d8b0a14021c2993c9b9e688a67b0e002f512",
+    "meta__val.txt": "88c1aba20131556b38ebe8cd74b8b20c041fedd339dff612c9cc250502d4bf1e",
+    "meta__classes.txt": "e930d04a09c9530e24d7a63eb3d3118b33f181c3996123872e26402a0618f31a",
+    "meta__source_data.yaml": "55b4fb547c3e18693420c3fcb6eae0897c7f3d99700ce1a1e5c3c56ee89b46b7",
+    "label_hashes.json": "cd585696f373c8aac53b26df7d530d3fd0c91d3a7559d891e42f7e5cce38d1c1",
+    "image_hashes.json": "54579e8f93d7187053c5a91e5e9083027757ff9cac65948551f557e6ccc97b8b",
+    "trainer__train_dianjinie0211_b3.py": "15e3a3bb629e8f93565925b99aadd5037f4432fc07a8a8d207e20aa5d241bb86"
+  },
+  "hash_coverage": {
+    "labels": "all 831 labels sha256-verified on kernel start",
+    "images": "all 831 images sha256-verified on kernel start"
+  }
+}
