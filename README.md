@@ -60,6 +60,7 @@
 | `旧数据与新三光数据混合训练指南.md` | 同镍种旧单光 + 新三光混合，防遗忘 |
 | `L1_Kaggle高分辨率验证计划.md` | L1-hr Kaggle-only 执行计划：本机不跑 medium 训练，优先验证 `imgsz=1280` 是否改善小目标 mAP |
 | `L1_小目标优化分阶段计划.md` | L1 小目标研究计划：切片路线、E2 Mosaic=0 与 E1b 严格原始锚点扫描均已停止；E1 WBF 保留，E3 P2 与 E4 Copy-Paste Fold 1 正在两个 GPU 槽并行筛选，仍受独立自动闸门约束 |
+| `YOLO_mAP5095_后续优化任务书_20260910.md` | 已试方法去重、合成框确认的评测匹配口径差异、AP75/误差预算与定位/真实补采/ROI 二阶段条件式方案；不自动启动训练或重启停止分支 |
 | `config/workspace.example.json` / `config/dataset_catalog.json` | 本机路径映射模板与逻辑数据集校验规则 | 真实 `workspace.local.json` 不提交；用 `validate_workspace.py` 验证 |
 
 ### C. 已完成实验记录（专项，非通用规范）

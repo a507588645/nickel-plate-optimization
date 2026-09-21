@@ -59,8 +59,8 @@ Claude 在本项目中必须首先读取并遵守根目录 `AGENTS.md`。若本�
 
 ### 检测数据集（YOLO）
 
-- 电解镍检测：`E:\PythonProject\datasets\Dianjinie0211`，当前 YAML 为 5 类。
-- `dianjienie` 检测：`E:\PythonProject\datasets\dianjienie`，当前 YAML 为 17 类。历史文档对其中文镍种称呼存在冲突；在业务侧确认前，当前锚点和训练结论仅使用目录名，不推断镍种语义。
+- **电积镍**检测：`E:\PythonProject\datasets\Dianjinie0211`，当前 YAML 为 5 类。（镍种归属经用户 2026-09-06 确认：D0211 全系目录均为电积镍物料，如 B3-clean `dianji0211_*` 判级检测器的训练源。）
+- **电解镍**检测：`E:\PythonProject\datasets\dianjienie`，原始 YAML 为 17 类；部署链使用 18 类锚点视图 `dianjienie_ryw18_anchor_v1`（A3 切换后的电解镍检测器即训自该锚点）。历史文档中「Dianjinie0211=电解镍」等相反表述作废（用户 2026-09-06 确认）。
 - 两个检测数据集必须分别训练和报告，除非先完成经过业务确认的类别映射。
 - 企业电解镍 0306 待标注检测硬链接集：`E:\PythonProject\datasets\enterprise_dianjie_0306_detection_unlabeled`，68 张，无可靠标签。
 - 企业电积镍 0309 待标注检测硬链接集：`E:\PythonProject\datasets\enterprise_dianji_0309_detection_unlabeled`，37 张，按缺陷提示目录组织，无框标签。

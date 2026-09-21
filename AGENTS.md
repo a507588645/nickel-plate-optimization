@@ -11,7 +11,7 @@
 
 ## 2. 项目目标
 
-1. 分别在电解镍数据集 `Dianjinie0211` 和电积镍数据集 `dianjienie` 上训练、验证和比较 YOLO11m、YOLO26m 与项目 YOLOv5m 基线。
+1. 分别在电积镍数据集 `Dianjinie0211` 和电解镍数据集 `dianjienie` 上训练、验证和比较 YOLO11m、YOLO26m 与项目 YOLOv5m 基线。（镍种归属经用户 2026-09-06 确认：`Dianjinie0211`=电积镍（d0211 全系目录均为电积镍物料，如 B3-clean `dianji0211_*` 检测器）、`dianjienie`=电解镍（部署链 18 类图集为 `dianjienie_ryw18_anchor_v1`）；与第 6 节命名约定一致，历史文档中相反表述作废。）
 2. 优先解决标签质量、重复图片、类别缺失、极小目标和数据泄漏，再进行模型调参。
 3. 最终选定模型导出 ONNX，并为 FastAPI、Tauri 和 LightGBM 等级判定提供稳定输入。
 
